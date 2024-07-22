@@ -15,11 +15,11 @@ class Solution {
         }
         
         //if charcater not found condition
-        if(start==letters.length){
-            return letters[0];
-        }
+        // if(start==letters.length){
+        //     return letters[0];
+        // }
 
         //smallest value in array which is greater than target
-        return letters[start];
+        return letters[start%letters.length];
     }
 }
