@@ -13,8 +13,9 @@ class Solution {
 
                 int sum=0;
                 int pieces=1;
-                
+
             for(int num:nums){
+                //If sum with the next number has been increased than mid then form next array and increase the   array count accordingly else individual element will be the sum
                 if(sum+num>mid){
                     sum=num;
                     pieces++;
@@ -32,6 +33,7 @@ class Solution {
            
         }
 
+        //return start or end both will be same.
          return start;
     }
 }
