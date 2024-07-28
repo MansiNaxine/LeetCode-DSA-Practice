@@ -4,8 +4,6 @@ class Solution {
         for(int i:arr){
             if(i<=k){
                 k++;
-            }else{
-                break;
             }
         }
         
