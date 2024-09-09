@@ -60,6 +60,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0069-sqrtx](https://github.com/MansiNaxine/LeetCode/tree/master/0069-sqrtx) |
+| [0202-happy-number](https://github.com/MansiNaxine/LeetCode/tree/master/0202-happy-number) |
 | [0268-missing-number](https://github.com/MansiNaxine/LeetCode/tree/master/0268-missing-number) |
 | [0441-arranging-coins](https://github.com/MansiNaxine/LeetCode/tree/master/0441-arranging-coins) |
 | [1444-number-of-steps-to-reduce-a-number-to-zero](https://github.com/MansiNaxine/LeetCode/tree/master/1444-number-of-steps-to-reduce-a-number-to-zero) |
@@ -75,6 +76,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0041-first-missing-positive](https://github.com/MansiNaxine/LeetCode/tree/master/0041-first-missing-positive) |
 | [0141-linked-list-cycle](https://github.com/MansiNaxine/LeetCode/tree/master/0141-linked-list-cycle) |
 | [0142-linked-list-cycle-ii](https://github.com/MansiNaxine/LeetCode/tree/master/0142-linked-list-cycle-ii) |
+| [0202-happy-number](https://github.com/MansiNaxine/LeetCode/tree/master/0202-happy-number) |
 | [0268-missing-number](https://github.com/MansiNaxine/LeetCode/tree/master/0268-missing-number) |
 | [0442-find-all-duplicates-in-an-array](https://github.com/MansiNaxine/LeetCode/tree/master/0442-find-all-duplicates-in-an-array) |
 | [0448-find-all-numbers-disappeared-in-an-array](https://github.com/MansiNaxine/LeetCode/tree/master/0448-find-all-numbers-disappeared-in-an-array) |
@@ -97,6 +99,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0141-linked-list-cycle](https://github.com/MansiNaxine/LeetCode/tree/master/0141-linked-list-cycle) |
 | [0142-linked-list-cycle-ii](https://github.com/MansiNaxine/LeetCode/tree/master/0142-linked-list-cycle-ii) |
+| [0202-happy-number](https://github.com/MansiNaxine/LeetCode/tree/master/0202-happy-number) |
 | [0287-find-the-duplicate-number](https://github.com/MansiNaxine/LeetCode/tree/master/0287-find-the-duplicate-number) |
 | [0861-flipping-an-image](https://github.com/MansiNaxine/LeetCode/tree/master/0861-flipping-an-image) |
 ## Simulation
