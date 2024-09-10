@@ -40,9 +40,7 @@ class Solution {
 
     public ListNode reverseList(ListNode head){
 
-        if(head==null){
-            return head;
-        }
+       
         ListNode prev=null;
         ListNode current=head;
         ListNode next=current.next;
