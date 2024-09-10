@@ -24,10 +24,10 @@ class Solution {
         }
 
         last.next=head;
-        
+        ListNode newLast=head;
         int rotations=k%length;
         int skip=length-rotations;
-        ListNode newLast=head;
+        
         for(int i=0;i<skip-1;i++){
             newLast=newLast.next;
         }
