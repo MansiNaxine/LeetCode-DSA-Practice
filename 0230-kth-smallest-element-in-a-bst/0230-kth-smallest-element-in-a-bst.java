@@ -31,16 +31,17 @@ class Solution {
 
         TreeNode left=helper(root.left,k);
 
-        if(left!=null){
-                return left;
-            
-        }
+        
             count++;
 
         if(count==k){
             return root;
         }
         
+        if(left!=null){
+                return left;
+            
+        }
 
         return helper(root.right,k);
     }
