@@ -73,6 +73,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0202-happy-number](https://github.com/MansiNaxine/LeetCode/tree/master/0202-happy-number) |
 | [0231-power-of-two](https://github.com/MansiNaxine/LeetCode/tree/master/0231-power-of-two) |
 | [0268-missing-number](https://github.com/MansiNaxine/LeetCode/tree/master/0268-missing-number) |
+| [0342-power-of-four](https://github.com/MansiNaxine/LeetCode/tree/master/0342-power-of-four) |
 | [0441-arranging-coins](https://github.com/MansiNaxine/LeetCode/tree/master/0441-arranging-coins) |
 | [1444-number-of-steps-to-reduce-a-number-to-zero](https://github.com/MansiNaxine/LeetCode/tree/master/1444-number-of-steps-to-reduce-a-number-to-zero) |
 ## Interactive
@@ -100,6 +101,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0231-power-of-two](https://github.com/MansiNaxine/LeetCode/tree/master/0231-power-of-two) |
 | [0268-missing-number](https://github.com/MansiNaxine/LeetCode/tree/master/0268-missing-number) |
 | [0287-find-the-duplicate-number](https://github.com/MansiNaxine/LeetCode/tree/master/0287-find-the-duplicate-number) |
+| [0342-power-of-four](https://github.com/MansiNaxine/LeetCode/tree/master/0342-power-of-four) |
 | [0645-set-mismatch](https://github.com/MansiNaxine/LeetCode/tree/master/0645-set-mismatch) |
 | [0861-flipping-an-image](https://github.com/MansiNaxine/LeetCode/tree/master/0861-flipping-an-image) |
 | [1444-number-of-steps-to-reduce-a-number-to-zero](https://github.com/MansiNaxine/LeetCode/tree/master/1444-number-of-steps-to-reduce-a-number-to-zero) |
@@ -165,6 +167,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0206-reverse-linked-list](https://github.com/MansiNaxine/LeetCode/tree/master/0206-reverse-linked-list) |
 | [0231-power-of-two](https://github.com/MansiNaxine/LeetCode/tree/master/0231-power-of-two) |
 | [0234-palindrome-linked-list](https://github.com/MansiNaxine/LeetCode/tree/master/0234-palindrome-linked-list) |
+| [0342-power-of-four](https://github.com/MansiNaxine/LeetCode/tree/master/0342-power-of-four) |
 ## Divide and Conquer
 |  |
 | ------- |
