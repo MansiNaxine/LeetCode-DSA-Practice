@@ -4,6 +4,7 @@ class Solution {
       int i=0;
       int j=numbers.length-1;
 
+        //Arrays is already sorted so u can solve it directly by using two pointers easily 
       while(i<numbers.length){
 
         if(numbers[i]+numbers[j]>target){
