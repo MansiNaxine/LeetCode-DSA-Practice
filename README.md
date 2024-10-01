@@ -29,6 +29,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1421-find-numbers-with-even-number-of-digits](https://github.com/MansiNaxine/LeetCode/tree/master/1421-find-numbers-with-even-number-of-digits) |
 | [1646-kth-missing-positive-number](https://github.com/MansiNaxine/LeetCode/tree/master/1646-kth-missing-positive-number) |
 | [1791-richest-customer-wealth](https://github.com/MansiNaxine/LeetCode/tree/master/1791-richest-customer-wealth) |
+| [3582-find-indices-of-stable-mountains](https://github.com/MansiNaxine/LeetCode/tree/master/3582-find-indices-of-stable-mountains) |
 ## Matrix
 |  |
 | ------- |
