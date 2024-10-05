@@ -32,6 +32,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1421-find-numbers-with-even-number-of-digits](https://github.com/MansiNaxine/LeetCode/tree/master/1421-find-numbers-with-even-number-of-digits) |
 | [1646-kth-missing-positive-number](https://github.com/MansiNaxine/LeetCode/tree/master/1646-kth-missing-positive-number) |
 | [1791-richest-customer-wealth](https://github.com/MansiNaxine/LeetCode/tree/master/1791-richest-customer-wealth) |
+| [2099-number-of-strings-that-appear-as-substrings-in-word](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2099-number-of-strings-that-appear-as-substrings-in-word) |
 | [3582-find-indices-of-stable-mountains](https://github.com/MansiNaxine/LeetCode/tree/master/3582-find-indices-of-stable-mountains) |
 ## Matrix
 |  |
@@ -149,6 +150,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0020-valid-parentheses](https://github.com/MansiNaxine/LeetCode/tree/master/0020-valid-parentheses) |
 | [0058-length-of-last-word](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0058-length-of-last-word) |
 | [0957-minimum-add-to-make-parentheses-valid](https://github.com/MansiNaxine/LeetCode/tree/master/0957-minimum-add-to-make-parentheses-valid) |
+| [2099-number-of-strings-that-appear-as-substrings-in-word](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2099-number-of-strings-that-appear-as-substrings-in-word) |
 ## Backtracking
 |  |
 | ------- |
