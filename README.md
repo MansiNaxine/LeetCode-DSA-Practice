@@ -33,6 +33,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1528-kids-with-the-greatest-number-of-candies](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1528-kids-with-the-greatest-number-of-candies) |
 | [1580-shuffle-the-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1580-shuffle-the-array) |
 | [1603-running-sum-of-1d-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1603-running-sum-of-1d-array) |
+| [1635-number-of-good-pairs](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1635-number-of-good-pairs) |
 | [1646-kth-missing-positive-number](https://github.com/MansiNaxine/LeetCode/tree/master/1646-kth-missing-positive-number) |
 | [1791-richest-customer-wealth](https://github.com/MansiNaxine/LeetCode/tree/master/1791-richest-customer-wealth) |
 | [2048-build-array-from-permutation](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2048-build-array-from-permutation) |
@@ -90,6 +91,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0342-power-of-four](https://github.com/MansiNaxine/LeetCode/tree/master/0342-power-of-four) |
 | [0441-arranging-coins](https://github.com/MansiNaxine/LeetCode/tree/master/0441-arranging-coins) |
 | [1444-number-of-steps-to-reduce-a-number-to-zero](https://github.com/MansiNaxine/LeetCode/tree/master/1444-number-of-steps-to-reduce-a-number-to-zero) |
+| [1635-number-of-good-pairs](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1635-number-of-good-pairs) |
 ## Interactive
 |  |
 | ------- |
@@ -110,6 +112,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0442-find-all-duplicates-in-an-array](https://github.com/MansiNaxine/LeetCode/tree/master/0442-find-all-duplicates-in-an-array) |
 | [0448-find-all-numbers-disappeared-in-an-array](https://github.com/MansiNaxine/LeetCode/tree/master/0448-find-all-numbers-disappeared-in-an-array) |
 | [0645-set-mismatch](https://github.com/MansiNaxine/LeetCode/tree/master/0645-set-mismatch) |
+| [1635-number-of-good-pairs](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1635-number-of-good-pairs) |
 ## Bit Manipulation
 |  |
 | ------- |
@@ -307,4 +310,5 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0169-majority-element](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0169-majority-element) |
+| [1635-number-of-good-pairs](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1635-number-of-good-pairs) |
 <!---LeetCode Topics End-->
