@@ -13,12 +13,8 @@ class Solution {
 
             if(count>max){
             max=count;
-            continue;
           }
         }
-
-        
-        
 
         return max;
         
