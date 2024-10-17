@@ -12,6 +12,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0037-sudoku-solver](https://github.com/MansiNaxine/LeetCode/tree/master/0037-sudoku-solver) |
 | [0041-first-missing-positive](https://github.com/MansiNaxine/LeetCode/tree/master/0041-first-missing-positive) |
 | [0048-rotate-image](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0048-rotate-image) |
+| [0053-maximum-subarray](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0053-maximum-subarray) |
 | [0075-sort-colors](https://github.com/MansiNaxine/LeetCode/tree/master/0075-sort-colors) |
 | [0088-merge-sorted-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0088-merge-sorted-array) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/MansiNaxine/LeetCode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
@@ -69,6 +70,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Dynamic Programming
 |  |
 | ------- |
+| [0053-maximum-subarray](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0053-maximum-subarray) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/MansiNaxine/LeetCode/tree/master/0124-binary-tree-maximum-path-sum) |
 | [0410-split-array-largest-sum](https://github.com/MansiNaxine/LeetCode/tree/master/0410-split-array-largest-sum) |
 ## Greedy
@@ -202,6 +204,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Divide and Conquer
 |  |
 | ------- |
+| [0053-maximum-subarray](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0053-maximum-subarray) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/MansiNaxine/LeetCode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/MansiNaxine/LeetCode/tree/master/0108-convert-sorted-array-to-binary-search-tree) |
 | [0148-sort-list](https://github.com/MansiNaxine/LeetCode/tree/master/0148-sort-list) |
