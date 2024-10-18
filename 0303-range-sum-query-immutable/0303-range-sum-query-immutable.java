@@ -14,12 +14,6 @@ class NumArray {
                 sum1 +=nums[i];
                 preSum[i]=sum1;
         }
-
-        int totalSum=0;
-        for(int i=0;i<nums.length;i++){
-            totalSum +=nums[i];
-        }
-
         if(left==0){
                 return preSum[right];
         }
