@@ -12,16 +12,13 @@ class Solution {
             j++;
         }
 
-        //move elements from original array to the remaining index of nums;
-        for(int i=n-1;i>=k;i--){
-            nums[i]=nums[i-k];
-        }
-
-        //move elements which are stored in new created arr into nums;
-        for(int i=0;i<k;i++){
-            nums[i]=arr[i];
-        }
-
-        
+        //move elements from original array to the remaining index of nums and also from newly created array into original array;
+        for(int i=n-1;i>=0;i--){
+            if(i<k){
+                nums[i]=arr[i];
+            }else{
+                nums[i]=nums[i-k];
+            }
+        }  
     }
 }
