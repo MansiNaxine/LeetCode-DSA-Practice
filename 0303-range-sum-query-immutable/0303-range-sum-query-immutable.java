@@ -1,13 +1,9 @@
 class NumArray {
 
-    int[] nums;
+    int[] preSum;
 
     public NumArray(int[] nums) {
-        this.nums=nums;
-    }
-    
-    public int sumRange(int left, int right) {
-        int preSum[]=new int[nums.length];
+        this.preSum=nums;
         for(int i=0;i<nums.length;i++){
                 if(i==0){
                     preSum[i]=nums[i];
@@ -16,6 +12,10 @@ class NumArray {
                 }
                 
         }
+    }
+    
+    public int sumRange(int left, int right) {
+        
         if(left==0){
                 return preSum[right];
         }
