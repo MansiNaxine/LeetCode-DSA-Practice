@@ -14,11 +14,7 @@ class Solution {
 
         //move elements from original array to the remaining index of nums and also from newly created array into original array;
         for(int i=n-1;i>=0;i--){
-            if(i<k){
-                nums[i]=arr[i];
-            }else{
-                nums[i]=nums[i-k];
-            }
+            nums[i]=i<k?arr[i]:nums[i-k];
         }  
     }
 }
