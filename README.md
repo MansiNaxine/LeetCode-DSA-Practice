@@ -43,6 +43,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2048-build-array-from-permutation](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2048-build-array-from-permutation) |
 | [2058-concatenation-of-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2058-concatenation-of-array) |
 | [2099-number-of-strings-that-appear-as-substrings-in-word](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2099-number-of-strings-that-appear-as-substrings-in-word) |
+| [2144-maximum-difference-between-increasing-elements](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2144-maximum-difference-between-increasing-elements) |
 | [3582-find-indices-of-stable-mountains](https://github.com/MansiNaxine/LeetCode/tree/master/3582-find-indices-of-stable-mountains) |
 ## Matrix
 |  |
