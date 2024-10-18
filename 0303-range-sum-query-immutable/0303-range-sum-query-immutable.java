@@ -4,13 +4,9 @@ class NumArray {
 
     public NumArray(int[] nums) {
         this.preSum=nums;
-        for(int i=0;i<nums.length;i++){
-                if(i==0){
-                    preSum[i]=nums[i];
-                }else{
-                    preSum[i]=nums[i]+preSum[i-1];
-                }
-                
+        preSum[0]=nums[0];
+        for(int i=1;i<nums.length;i++){
+             preSum[i]=nums[i]+preSum[i-1];
         }
     }
     
