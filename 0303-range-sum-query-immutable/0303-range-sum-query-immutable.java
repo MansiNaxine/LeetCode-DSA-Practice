@@ -7,12 +7,16 @@ class NumArray {
     }
     
     public int sumRange(int left, int right) {
-
-        int sum1=0;
+        //int sum1=0;
         int preSum[]=new int[nums.length];
         for(int i=0;i<nums.length;i++){
-                sum1 +=nums[i];
-                preSum[i]=sum1;
+                // sum1 +=nums[i];
+                if(i==0){
+                    preSum[i]=nums[i];
+                }else{
+                    preSum[i]=nums[i]+preSum[i-1];
+                }
+                
         }
         if(left==0){
                 return preSum[right];
