@@ -15,13 +15,6 @@ class NumArray {
                 preSum[i]=sum1;
         }
 
-        int sum2=0;
-        int sufSum[]=new int[nums.length];
-        for(int i=nums.length-1;i>=0;i--){
-                sum2 +=nums[i];
-                sufSum[i]=sum2;
-        }
-
         int totalSum=0;
         for(int i=0;i<nums.length;i++){
             totalSum +=nums[i];
@@ -30,12 +23,8 @@ class NumArray {
         if(left==0){
                 return preSum[right];
         }
-
-        if(right==nums.length-1){
-            return sufSum[left];
-        }
         
-        return totalSum-(preSum[left-1]+sufSum[right+1]);
+        return preSum[right]-preSum[left-1];
     }
 }
 
