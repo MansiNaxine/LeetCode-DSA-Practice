@@ -7,13 +7,12 @@ class Solution {
             int mul=1;
 
             for(int j=i;j<nums.length;j++){
-                
+
                 mul *=nums[j];
-                    
+
                     if(mul>=k){
                         break;
                     }
-                
                 count++;
                 
             }
