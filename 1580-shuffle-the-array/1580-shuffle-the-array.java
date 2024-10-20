@@ -6,7 +6,7 @@ class Solution {
         int ans[]=new int[nums.length];
         int k=0;
 
-        while(i<nums.length && j<nums.length){
+        while(k<nums.length){
             if(k%2==0){
                 ans[k]=nums[i];
                 i++;
