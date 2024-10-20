@@ -7,8 +7,8 @@ class Solution {
             max=Math.max(max,candy);
         }
 
-        for(int i=0;i<candies.length;i++){
-            if(candies[i]+extraCandies>=max){
+        for(int candy:candies){
+            if(candy+extraCandies>=max){
                 list.add(true);
             }else{
                 list.add(false);
