@@ -7,8 +7,7 @@ class Solution {
             sum +=nums[i];
             ans[i]=sum;
         }
-
-        return ans;
         
+        return ans;
     }
 }
