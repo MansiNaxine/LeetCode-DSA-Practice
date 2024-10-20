@@ -3,21 +3,23 @@ class Solution {
 
         int i=0;
         int j=n;
-        int k=0;
         int ans[]=new int[nums.length];
-        while(i<nums.length && j<nums.length){
-            
-           if(i%2==0){
-            ans[i]=nums[k];
-            k++;
-           }else{
-            ans[i]=nums[j];
-            j++;
-           }
+        int k=0;
 
-           i++;
+        while(i<nums.length && j<nums.length){
+            if(k%2==0){
+                ans[k]=nums[i];
+                i++;
+            }else{
+                ans[k]=nums[j];
+                j++;
+            }
+
+            k++;
+            
         }
-        
+
         return ans;
+        
     }
 }
