@@ -31,7 +31,7 @@ class Solution {
 
         
         //with optimized solution
-        List<Integer> list=new LinkedList<>();
+        List<Integer> list=new ArrayList<>();
         for(int i=0;i<n;i++){
             list.add(index[i],nums[i]);
         }
