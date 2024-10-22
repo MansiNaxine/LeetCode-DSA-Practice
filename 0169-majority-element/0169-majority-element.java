@@ -16,14 +16,12 @@ class Solution {
                 map.put(nums[i],map.get(nums[i])+1);
             }
 
-
-        }
-
-        for(Map.Entry<Integer,Integer> entry:map.entrySet()){
-            if(entry.getValue()>n){
-                ans=entry.getKey();
+            if(map.get(nums[i])>n){
+                ans=nums[i];
                 break;
             }
+
+
         }
 
         return ans;
