@@ -46,6 +46,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1603-running-sum-of-1d-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1603-running-sum-of-1d-array) |
 | [1635-number-of-good-pairs](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1635-number-of-good-pairs) |
 | [1646-kth-missing-positive-number](https://github.com/MansiNaxine/LeetCode/tree/master/1646-kth-missing-positive-number) |
+| [1651-shuffle-string](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1651-shuffle-string) |
 | [1791-richest-customer-wealth](https://github.com/MansiNaxine/LeetCode/tree/master/1791-richest-customer-wealth) |
 | [1833-find-the-highest-altitude](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1833-find-the-highest-altitude) |
 | [2048-build-array-from-permutation](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2048-build-array-from-permutation) |
@@ -196,6 +197,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0058-length-of-last-word](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0058-length-of-last-word) |
 | [0957-minimum-add-to-make-parentheses-valid](https://github.com/MansiNaxine/LeetCode/tree/master/0957-minimum-add-to-make-parentheses-valid) |
 | [1205-defanging-an-ip-address](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1205-defanging-an-ip-address) |
+| [1651-shuffle-string](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1651-shuffle-string) |
 | [1960-check-if-the-sentence-is-pangram](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1960-check-if-the-sentence-is-pangram) |
 | [2099-number-of-strings-that-appear-as-substrings-in-word](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2099-number-of-strings-that-appear-as-substrings-in-word) |
 ## Backtracking
