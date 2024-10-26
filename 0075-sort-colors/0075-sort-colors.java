@@ -7,10 +7,7 @@ class Solution {
         for(int i=0;i<nums.length;i++){
             arr[nums[i]]++;
         }
-
-        // int z=arr[0];
-        // int o=arr[1];
-        // int t=arr[2];
+        
         int j=0;
 
          while(j<nums.length){
