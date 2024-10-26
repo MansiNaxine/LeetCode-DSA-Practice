@@ -8,29 +8,27 @@ class Solution {
             arr[nums[i]]++;
         }
 
-        int z=0;
+        int z=arr[0];
+        int o=arr[1];
+        int t=arr[2];
         int j=0;
 
          while(j<nums.length){
-            while(z<arr[0]){
+            while(z>0){
                 nums[j]=0;
 
-                z++;
+                z--;
                 j++;
             }
 
-            int o=0;
-
-             while(o<arr[1]){
+             while(o>0){
                 nums[j]=1;
-                o++;
+                o--;
                 j++;
             }
-            
-            int t=0;
-             while(t<arr[2]){
+             while(t>0){
                 nums[j]=2;
-                t++;
+                t--;
                 j++;
             }
       }
