@@ -23,7 +23,7 @@ class Solution {
 
                     list.add(new ArrayList<Integer>(currentArray));
 
-                    while(j<n && nums[j]==currentArray.get(1)){
+                    while(j<k && nums[j]==currentArray.get(1)){
                         j++;
                     }
 
