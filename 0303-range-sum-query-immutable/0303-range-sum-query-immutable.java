@@ -14,15 +14,8 @@ class NumArray {
     }
     
     public int sumRange(int left, int right) {
-        int sum=0;
-
-        if(left==0){
-            sum=prefix[right];
-        }else{
-            sum=prefix[right]-prefix[left-1];
-        }
-         
-        return sum;
+        
+        return left==0?prefix[right]:prefix[right]-prefix[left-1];
     }
 }
 
