@@ -5,7 +5,6 @@ class NumArray {
     public NumArray(int[] nums) {
         this.prefix=nums;
         int sum=0;
-        prefix[0]=nums[0];
         for(int i=0;i<nums.length;i++){
             sum +=nums[i];
             prefix[i]=sum;
@@ -14,7 +13,7 @@ class NumArray {
     }
     
     public int sumRange(int left, int right) {
-        
+
         return left==0?prefix[right]:prefix[right]-prefix[left-1];
     }
 }
