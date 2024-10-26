@@ -3,18 +3,16 @@ class Solution {
 
         int i=0;
         int j=0;
-        int index=0;
 
         while(j<nums.length){
             if(nums[i]!=nums[j]){
-                i=j;
-                index++;
+                i=i+1;
             }
-            nums[index]=nums[i];
+            nums[i]=nums[j];
             j++;
         }
 
-        return index+1;
+        return i+1;
         
     }
 }
