@@ -3,13 +3,12 @@ class Solution {
 
         int count=0;
         int matches=0;
-        int i=n;
 
-        while(i>1){
+        while(n>1){
             
-            matches = i/2; 
+            matches = n/2; 
             count +=matches;
-            i = i%2==0?matches:matches+1;
+            n = n%2==0?matches:matches+1;
         }
 
         return count;
