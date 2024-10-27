@@ -17,9 +17,9 @@ class Solution {
 
         int ans=0;
 
-        for(int i=0;i<nums.length;i++){
-            if(divisor[nums[i]]==4){
-                ans += sumDivisor[nums[i]];
+        for(int num:nums){
+            if(divisor[num]==4){
+                ans += sumDivisor[num];
             }
         }
 
