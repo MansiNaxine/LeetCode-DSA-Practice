@@ -5,11 +5,7 @@ class Solution {
             return true;
         }
 
-        if(n<=0){
-            return false;
-        }
-
-        if(n%2==1){
+        if(n<=0 || n%2==1){
             return false;
         }
 
