@@ -150,6 +150,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0268-missing-number](https://github.com/MansiNaxine/LeetCode/tree/master/0268-missing-number) |
 | [0442-find-all-duplicates-in-an-array](https://github.com/MansiNaxine/LeetCode/tree/master/0442-find-all-duplicates-in-an-array) |
 | [0448-find-all-numbers-disappeared-in-an-array](https://github.com/MansiNaxine/LeetCode/tree/master/0448-find-all-numbers-disappeared-in-an-array) |
+| [0451-sort-characters-by-frequency](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0451-sort-characters-by-frequency) |
 | [0645-set-mismatch](https://github.com/MansiNaxine/LeetCode/tree/master/0645-set-mismatch) |
 | [1482-how-many-numbers-are-smaller-than-the-current-number](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1482-how-many-numbers-are-smaller-than-the-current-number) |
 | [1635-number-of-good-pairs](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1635-number-of-good-pairs) |
@@ -175,6 +176,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0169-majority-element](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0169-majority-element) |
 | [0179-largest-number](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0179-largest-number) |
 | [0268-missing-number](https://github.com/MansiNaxine/LeetCode/tree/master/0268-missing-number) |
+| [0451-sort-characters-by-frequency](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0451-sort-characters-by-frequency) |
 | [0581-shortest-unsorted-continuous-subarray](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0581-shortest-unsorted-continuous-subarray) |
 | [0645-set-mismatch](https://github.com/MansiNaxine/LeetCode/tree/master/0645-set-mismatch) |
 | [1019-squares-of-a-sorted-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1019-squares-of-a-sorted-array) |
@@ -217,6 +219,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0020-valid-parentheses](https://github.com/MansiNaxine/LeetCode/tree/master/0020-valid-parentheses) |
 | [0058-length-of-last-word](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0058-length-of-last-word) |
 | [0179-largest-number](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0179-largest-number) |
+| [0451-sort-characters-by-frequency](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0451-sort-characters-by-frequency) |
 | [0957-minimum-add-to-make-parentheses-valid](https://github.com/MansiNaxine/LeetCode/tree/master/0957-minimum-add-to-make-parentheses-valid) |
 | [1205-defanging-an-ip-address](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1205-defanging-an-ip-address) |
 | [1651-shuffle-string](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1651-shuffle-string) |
@@ -377,6 +380,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0169-majority-element](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0169-majority-element) |
+| [0451-sort-characters-by-frequency](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0451-sort-characters-by-frequency) |
 | [1482-how-many-numbers-are-smaller-than-the-current-number](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1482-how-many-numbers-are-smaller-than-the-current-number) |
 | [1635-number-of-good-pairs](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1635-number-of-good-pairs) |
 ## Sliding Window
@@ -396,4 +400,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0204-count-primes](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0204-count-primes) |
+## Heap (Priority Queue)
+|  |
+| ------- |
+| [0451-sort-characters-by-frequency](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0451-sort-characters-by-frequency) |
+## Bucket Sort
+|  |
+| ------- |
+| [0451-sort-characters-by-frequency](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0451-sort-characters-by-frequency) |
 <!---LeetCode Topics End-->
