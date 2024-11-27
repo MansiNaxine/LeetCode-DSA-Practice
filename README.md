@@ -94,6 +94,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Dynamic Programming
 |  |
 | ------- |
+| [0022-generate-parentheses](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0022-generate-parentheses) |
 | [0053-maximum-subarray](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0053-maximum-subarray) |
 | [0118-pascals-triangle](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0118-pascals-triangle) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/MansiNaxine/LeetCode/tree/master/0124-binary-tree-maximum-path-sum) |
@@ -221,6 +222,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/MansiNaxine/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0020-valid-parentheses](https://github.com/MansiNaxine/LeetCode/tree/master/0020-valid-parentheses) |
+| [0022-generate-parentheses](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0022-generate-parentheses) |
 | [0058-length-of-last-word](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0058-length-of-last-word) |
 | [0179-largest-number](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0179-largest-number) |
 | [0451-sort-characters-by-frequency](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0451-sort-characters-by-frequency) |
@@ -233,6 +235,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0017-letter-combinations-of-a-phone-number](https://github.com/MansiNaxine/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
+| [0022-generate-parentheses](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0022-generate-parentheses) |
 | [0037-sudoku-solver](https://github.com/MansiNaxine/LeetCode/tree/master/0037-sudoku-solver) |
 | [0039-combination-sum](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0039-combination-sum) |
 | [0078-subsets](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0078-subsets) |
