@@ -1,7 +1,7 @@
 class Solution {
 
     List<String> answer = new ArrayList<>();
-    ArrayList<Character> currSeq = new ArrayList<>();
+    List<Character> currSeq = new ArrayList<>();
 
     public List<String> generateParenthesis(int n) {
 
