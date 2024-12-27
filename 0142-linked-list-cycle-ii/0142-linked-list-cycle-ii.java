@@ -10,66 +10,35 @@
  * }
  */
 public class Solution {
-
-    
-
     public ListNode detectCycle(ListNode head) {
 
-        ListNode fast=head;
-        ListNode slow=head;
-        int length=0;
+        ListNode slow = head;
+        ListNode fast = head;
+        boolean isCycle = false;
 
+        //First find out the cycle
+        while(fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
 
-        while(fast!=null && fast.next!=null){
-            fast=fast.next.next;
-            slow=slow.next;
-
-            if(fast==slow){
-                    length=calculateLength(slow);
-                    break;
+            if(slow == fast) {
+                isCycle = true;
+                break;
             }
         }
 
-        if(length==0){
+        if(!isCycle){
             return null;
         }
-    ListNode f=head;
-    ListNode s=head;
-        while(length>0){
-            s=s.next;
-            length--;
+
+        fast = head;
+
+        while(slow != fast) {
+            slow = slow.next;
+            fast = fast.next;
         }
 
-        while(f!=s){
-            f=f.next;
-            s=s.next;
-        }
-
-        return s;
+        return slow;
         
-    }
-
-    public int calculateLength(ListNode head){
-        ListNode fast=head;
-        ListNode slow=head;
-        
-
-        while(fast!=null && fast.next!=null){
-            fast=fast.next.next;
-            slow=slow.next;
-
-            if(fast==slow){
-                    ListNode temp=slow;
-                    int length=0;
-                    do{
-                        temp=temp.next;
-                        length++;
-                    }while(temp!=slow);
-
-                    return length;
-            }
-        }
-
-        return 0;
     }
 }
