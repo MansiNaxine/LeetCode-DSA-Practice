@@ -10,33 +10,33 @@
  */
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
-        //check case 1
-        if(head.next==null){
-            return null;
+
+        ListNode slow = head;
+        ListNode fast = head;
+
+        //we are moving fast pointer to reach at nth node to start traversing
+        while(n > 0) {
+            fast = fast.next;
+            n--;
         }
 
-       
-        int size=0;
-        ListNode curr=head;
-        while(curr!=null){
-            curr=curr.next;
-            size++;
+        ListNode prev = null;
+
+        //now slow and fast pointer will move and slow pointer will move at nth node which we want to remove
+        while(fast != null) {
+            prev = slow;
+            slow = slow.next;
+            fast = fast.next;
         }
 
-         if(n==size){
-            return head.next;
+        if(prev == null) {
+            head = head.next;
+        } else {
+            prev.next = prev.next.next;
         }
-
-        int indexToSearch=size-n;
-        ListNode prev=head;
-        int i=1;
-        while(i<indexToSearch){
-            prev=prev.next;
-            i++;
-        }
-        prev.next=prev.next.next;
 
         return head;
+
         
     }
 }
