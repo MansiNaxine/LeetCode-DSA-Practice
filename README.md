@@ -143,6 +143,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0326-power-of-three](https://github.com/MansiNaxine/LeetCode/tree/master/0326-power-of-three) |
 | [0342-power-of-four](https://github.com/MansiNaxine/LeetCode/tree/master/0342-power-of-four) |
 | [0441-arranging-coins](https://github.com/MansiNaxine/LeetCode/tree/master/0441-arranging-coins) |
+| [0445-add-two-numbers-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0445-add-two-numbers-ii) |
 | [1284-four-divisors](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1284-four-divisors) |
 | [1444-number-of-steps-to-reduce-a-number-to-zero](https://github.com/MansiNaxine/LeetCode/tree/master/1444-number-of-steps-to-reduce-a-number-to-zero) |
 | [1635-number-of-good-pairs](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1635-number-of-good-pairs) |
@@ -274,6 +275,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0160-intersection-of-two-linked-lists](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0160-intersection-of-two-linked-lists) |
 | [0206-reverse-linked-list](https://github.com/MansiNaxine/LeetCode/tree/master/0206-reverse-linked-list) |
 | [0234-palindrome-linked-list](https://github.com/MansiNaxine/LeetCode/tree/master/0234-palindrome-linked-list) |
+| [0445-add-two-numbers-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0445-add-two-numbers-ii) |
 | [0838-design-linked-list](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0838-design-linked-list) |
 | [0908-middle-of-the-linked-list](https://github.com/MansiNaxine/LeetCode/tree/master/0908-middle-of-the-linked-list) |
 ## Recursion
@@ -310,6 +312,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0143-reorder-list](https://github.com/MansiNaxine/LeetCode/tree/master/0143-reorder-list) |
 | [0232-implement-queue-using-stacks](https://github.com/MansiNaxine/LeetCode/tree/master/0232-implement-queue-using-stacks) |
 | [0234-palindrome-linked-list](https://github.com/MansiNaxine/LeetCode/tree/master/0234-palindrome-linked-list) |
+| [0445-add-two-numbers-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0445-add-two-numbers-ii) |
 | [0581-shortest-unsorted-continuous-subarray](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0581-shortest-unsorted-continuous-subarray) |
 | [0957-minimum-add-to-make-parentheses-valid](https://github.com/MansiNaxine/LeetCode/tree/master/0957-minimum-add-to-make-parentheses-valid) |
 ## Design
