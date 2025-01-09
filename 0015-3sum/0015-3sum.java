@@ -22,7 +22,7 @@ class Solution {
 
                         answer.add(new ArrayList<>(currSeq));
 
-                        while (j < k && nums[j] == currSeq.get(1)){
+                        while (j < n && nums[j] == currSeq.get(1)){
                             j++;
                         }
 
