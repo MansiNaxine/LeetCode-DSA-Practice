@@ -6,7 +6,7 @@ class Solution {
 
         int k = 0;
 
-        while(k<n ){
+       // while(k<n){
             for(int j=0; j<n; j++) {
                 int l = 0;
                 for(int i=n-1; i>=0; i--) {
@@ -15,7 +15,7 @@ class Solution {
                 }
              k++;
             }
-        }
+       // }
         
         
         for(int i=0; i<n; i++) {
