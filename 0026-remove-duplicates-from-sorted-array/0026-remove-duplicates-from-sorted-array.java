@@ -9,7 +9,7 @@ class Solution {
         nums[index] = nums[i];
         index++;
 
-        while( i < n && j < n) {
+        while(j < n) {
             
             if( nums[i] != nums[j]) {
                 i = j;
