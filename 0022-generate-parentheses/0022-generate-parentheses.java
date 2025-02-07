@@ -1,45 +1,45 @@
 class Solution {
 
     List<String> answer = new ArrayList<>();
-    List<Character> currSeq = new ArrayList<>();
+    List<Character> currentSeq = new ArrayList<>();
 
     public List<String> generateParenthesis(int n) {
 
-        recursion(0, 0, 2*n);
+        int length = 2*n;
+
+        recursion(0,0,length);
+
         return answer;
     }
 
-    public void recursion(int index, int sum, int length){
+    public void recursion(int start, int sum, int L) {
 
         //base case
-        if(index == length){
-
-            if(sum == 0){
-
-                StringBuilder sb= new StringBuilder();
-                for(int i=0; i< currSeq.size(); i++){
-                    sb.append(currSeq.get(i));
+        if(start == L) {
+            if(sum == 0) {
+                StringBuilder str = new StringBuilder("");
+                for(int i=0; i<currentSeq.size(); i++) {
+                    str.append(currentSeq.get(i));
                 }
-                answer.add(sb.toString());
+                answer.add(str.toString());
             }
-                return;
-            
-            
+           return; 
         }
+        
         //recursive case
-        //first for open paranthesis
-        if(sum < length/2){
-            currSeq.add('(');
-            recursion(index+1, sum+1, length);
-            currSeq.remove(currSeq.size()-1);
+        //1st for open bracket
+        if(sum < L/2) {
+            currentSeq.add('(');
+            recursion(start+1, sum+1, L);
+            currentSeq.remove(currentSeq.size() - 1);
         }
 
-        //Second for close paranthesis
-        if(sum > 0){
-            currSeq.add(')');
-            recursion(index+1, sum-1, length);
-            currSeq.remove(currSeq.size()-1);
-         }
-        
+        //2nd for closing bracket
+        if(sum > 0) {
+            currentSeq.add(')');
+            recursion(start+1, sum-1, L);
+            currentSeq.remove(currentSeq.size() - 1);
+        }
+
     }
 }
