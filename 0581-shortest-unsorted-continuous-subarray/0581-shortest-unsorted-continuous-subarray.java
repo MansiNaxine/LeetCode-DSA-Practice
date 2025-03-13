@@ -1,24 +1,19 @@
 class Solution {
-
-    
     public int findUnsortedSubarray(int[] nums) {
 
-        int first=-1;
-        int last=-2;
+        int[] sorted_nums = Arrays.copyOf(nums, nums.length);
+        Arrays.sort(sorted_nums);
 
-        int copy_arr[]=nums.clone();
-        Arrays.sort(copy_arr);
+        int s = -1;
+        int e = -2;
 
-        for(int i=0;i<nums.length;i++){
-            if(nums[i]!=copy_arr[i]){
-                if(first==-1){
-                    first=i;
-                }else{
-                    last=i;
-                }
+        for(int i = 0; i < nums.length; i++) {
+            if(nums[i] != sorted_nums[i]) {
+                if (s == -1) s = i;
+                else e = i;
             }
         }
-
-        return last-first+1;
+        
+        return e - s + 1;
     }
 }
