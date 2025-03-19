@@ -2,30 +2,33 @@ class Solution {
     public List<List<Integer>> generate(int numRows) {
         
         List<List<Integer>> answer = new ArrayList<>();
-
         List<Integer> firstRow = new ArrayList<>();
         firstRow.add(1);
 
+        //firstRow we have added
         answer.add(new ArrayList<>(firstRow));
 
-        int middleElement = 0;
+        //taking integer for calculating middle Element
+        //for the first 0th row it won't have middle element
+        int midElement = 0;
 
-        for(int i=1; i<numRows; i++) {
+        //now we wil iterate from the first row
+        for(int i = 1; i < numRows; i++) {
             List<Integer> currentRow = new ArrayList<>();
-            currentRow.add(1);//first element
+            currentRow.add(1);
 
-            //Middle Element
-            for(int j=1; j<=middleElement; j++) {
-                int element = answer.get(i - 1).get(j) + answer.get(i - 1).get(j - 1);
+            //adding middle elements
+            for(int j = 1; j <= midElement; j++) {
+                int element = answer.get(i - 1).get(j - 1) + answer.get(i - 1).get(j);
                 currentRow.add(element);
-            }
+            } 
 
-            middleElement++;
-            currentRow.add(1);//last element
+            midElement++;
+            //last element should also be equals to 1
+            currentRow.add(1);
             answer.add(new ArrayList<>(currentRow));
-
         }
-        
-       return answer; 
+
+        return answer;
     }
 }
