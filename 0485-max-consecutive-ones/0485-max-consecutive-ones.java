@@ -6,12 +6,12 @@ class Solution {
         for (int num : nums) {
             if(num != 0) {
                 count++;
-                max = Math.max(max, count);
             } else {
+                max = Math.max(max, count);
                 count = 0;
             }
         }
         
-        return max;
+        return Math.max(max, count);
     }
 }
