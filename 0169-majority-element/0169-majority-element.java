@@ -9,11 +9,7 @@ class Solution {
                 element = nums[i];
                 count++;
             } else {
-                if (nums[i] == element) {
-                    count++;
-                } else {
-                    count--;
-                }
+                count = (nums[i] == element) ? count+1 : count-1;
             }
         }
 
