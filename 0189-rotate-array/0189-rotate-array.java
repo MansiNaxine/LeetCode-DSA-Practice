@@ -1,6 +1,6 @@
 class Solution {
     public void rotate(int[] nums, int k) {
-
+        //BruteForce Approach
         int n = nums.length;
         k = k % n;
         int index = 0;
