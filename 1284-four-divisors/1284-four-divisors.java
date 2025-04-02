@@ -2,8 +2,10 @@ class Solution {
 
     public int sumFourDivisors(int[] nums) {
         int n = nums.length;
-        int N = nums[0];
+        int N = nums[0];// rather than iterating till 100001 we can calculate maximum
         int max = nums[0];
+
+        //Calculate maximum to get the size for div and sunDiv array
         for(int i = 0; i < n; i++) {
             max = Math.max(max,nums[i]);
         }
@@ -12,7 +14,7 @@ class Solution {
         int div[] = new int[N];
         int sumDiv[] = new int[N];
 
-
+        //Sieve of eranthosis
         for(int i = 1; i < N; i++) {
             for(int j = i; j < N; j+=i) {
                 div[j]++;
