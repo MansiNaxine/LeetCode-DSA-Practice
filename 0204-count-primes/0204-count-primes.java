@@ -12,7 +12,11 @@ class Solution {
         arr[0] = false;
         arr[1] = false;
 
-        for(long i = 2; i < n; i++) {
+        for(int i = 4; i < n; i+=2) {
+            arr[i] = false;
+        }
+
+        for(long i = 3; i < n; i+=2) {
             if(arr[(int)i]) {
                 for(long j = i * i ; j < n; j+=i) {
                     arr[(int)j] = false;
