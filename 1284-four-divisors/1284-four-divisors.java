@@ -1,29 +1,26 @@
 class Solution {
+
     public int sumFourDivisors(int[] nums) {
+        int n = nums.length;
+        int N = 100001;
+        int div[] = new int[N];
+        int sumDiv[] = new int[N];
 
-        int N=100001;
-
-        int divisor[]=new int[N];
-        int sumDivisor[]=new int[N];
-
-        for(int i=1;i<divisor.length;i++){
-            for(int j=i;j<divisor.length;j +=i){
-                divisor[j]++;
-                sumDivisor[j] +=i;
-            }
-
-            
-        }
-
-        int ans=0;
-
-        for(int num:nums){
-            if(divisor[num]==4){
-                ans += sumDivisor[num];
+        for(int i = 1; i < N; i++) {
+            for(int j = i; j < N; j+=i) {
+                div[j]++;
+                sumDiv[j] += i ;
             }
         }
 
-        return ans;
+        int answer = 0;
+        for(int i = 0; i < n; i++) {
+            if(div[nums[i]] == 4) {
+                answer += sumDiv[nums[i]];
+            }
+        }
+
+        return answer;
         
     }
 }
