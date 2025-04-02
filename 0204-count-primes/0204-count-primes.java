@@ -13,8 +13,10 @@ class Solution {
         arr[1] = false;
 
         for(long i = 2; i < n; i++) {
-            for(long j = i * i ; j < n; j+=i) {
-                arr[(int)j] = false;
+            if(arr[(int)i]) {
+                for(long j = i * i ; j < n; j+=i) {
+                    arr[(int)j] = false;
+                }
             }
         }
 
