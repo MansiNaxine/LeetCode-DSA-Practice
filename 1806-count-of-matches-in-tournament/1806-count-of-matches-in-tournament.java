@@ -1,17 +1,20 @@
 class Solution {
     public int numberOfMatches(int n) {
+        int answer = 0;
 
-        // int count=0;
-        // int matches=0;
+        while(n > 1) {
 
-        // while(n>1){
+            answer += n/2;
             
-        //     matches = n/2; 
-        //     count +=matches;
-        //     n = n%2==0?matches:matches+1;
-        // }
+            if( n % 2 == 0) {
+                n = n/2;
+            } else {
+                n = n/2 + 1;
+            }
 
-        return n-1;
+        }
+        
+        return answer;
         
     }
 }
