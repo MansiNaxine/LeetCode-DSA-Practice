@@ -3,8 +3,9 @@ class Solution {
         
         int answer[] = new int[2];
         for(int i = 0; i < nums.length; i++) {
+            int secondNum = target - nums[i];
             for(int j = i + 1; j < nums.length; j++) {
-                if (nums[i] + nums[j] == target) {
+                if (nums[j] == secondNum) {
                     answer[0] = i;
                     answer[1] = j;
                 }
