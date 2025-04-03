@@ -8,6 +8,7 @@ class Solution {
                 if (nums[j] == secondNum) {
                     answer[0] = i;
                     answer[1] = j;
+                    break;
                 }
             }
         }
