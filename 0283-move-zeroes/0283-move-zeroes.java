@@ -6,17 +6,14 @@ class Solution {
         int index = 0;
 
         for(int i = 0; i < n; i++) {
-            if(nums[i] == 0) {
-                count++;
-            } else {
+            if (nums[i] != 0) {
                 nums[index] = nums[i];
                 index++;
             }
         }
 
-        while(count > 0) {
+        while(index < n) {
             nums[index] = 0;
-            count--;
             index++;
         }
     }
