@@ -7,7 +7,7 @@ class Solution {
 
         int i = 0;
         int n = nums.length;
-        int j = i;
+        int j = 0;
         while(i < n && j < n) {
             
             product *= nums[j];
