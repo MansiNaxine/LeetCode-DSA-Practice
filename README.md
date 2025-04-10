@@ -73,6 +73,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2058-concatenation-of-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2058-concatenation-of-array) |
 | [2099-number-of-strings-that-appear-as-substrings-in-word](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2099-number-of-strings-that-appear-as-substrings-in-word) |
 | [2144-maximum-difference-between-increasing-elements](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2144-maximum-difference-between-increasing-elements) |
+| [2271-rearrange-array-elements-by-sign](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2271-rearrange-array-elements-by-sign) |
 | [3582-find-indices-of-stable-mountains](https://github.com/MansiNaxine/LeetCode/tree/master/3582-find-indices-of-stable-mountains) |
 ## Matrix
 |  |
@@ -237,6 +238,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0861-flipping-an-image](https://github.com/MansiNaxine/LeetCode/tree/master/0861-flipping-an-image) |
 | [0908-middle-of-the-linked-list](https://github.com/MansiNaxine/LeetCode/tree/master/0908-middle-of-the-linked-list) |
 | [1019-squares-of-a-sorted-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1019-squares-of-a-sorted-array) |
+| [2271-rearrange-array-elements-by-sign](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2271-rearrange-array-elements-by-sign) |
 ## Simulation
 |  |
 | ------- |
@@ -245,6 +247,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1806-count-of-matches-in-tournament](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1806-count-of-matches-in-tournament) |
 | [2048-build-array-from-permutation](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2048-build-array-from-permutation) |
 | [2058-concatenation-of-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2058-concatenation-of-array) |
+| [2271-rearrange-array-elements-by-sign](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2271-rearrange-array-elements-by-sign) |
 ## String
 |  |
 | ------- |
