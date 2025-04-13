@@ -1,50 +1,31 @@
 class Solution {
     public int pivotIndex(int[] nums) {
+        int n = nums.length;
+        int prefixSum[] = new int[n];
+        int suffixSum[] = new int[n];
+        int sum = 0;
 
-    //     int n= nums.length;
-    //     int leftSum = 0;
-    //     int rightSum = -1;
-
-    //     for(int  i = 0; i < n; i++) {
-    //         rightSum = findSum(i + 1, nums);
-    //         if(leftSum == rightSum) {
-    //             return i;
-    //         } else {
-    //             leftSum += nums[i];
-    //         }
-    //     }
-
-    //     return rightSum == 0 ? -1 : rightSum;
+        for(int i = 0; i < n ; i++ ) {
+            sum += nums[i];
+            prefixSum[i] = sum;
+        }
         
-    // }
-
-    // public int findSum(int index, int[] nums) {
-    //     int sum = 0;
-    //     for(int i = index; i < nums.length; i++) {
-    //         sum += nums[i];
-    //     }
-
-    //     return sum;
-    // }
-
-    int n = nums.length;
-
-    int leftSum = 0;
-    int sum = 0;
-
-    for(int i = 0; i < n; i++) {
-        sum += nums[i];
-    }
-
-    for(int i = 0; i < n; i++) {
-        if(leftSum == sum - leftSum - nums[i]) {
-            return i;
+        sum = 0;
+        for(int j = n - 1; j >= 0; j--) {
+            sum += nums[j];
+            suffixSum[j] = sum;
         }
 
-        leftSum += nums[i];
-    }
+        int i = 0; 
+        int j = 0;
+        while(i < n && j < n) {
+            if(prefixSum[i] == suffixSum[j]) {
+                return i;
+            }
+            i++;
+            j++;
+        }
 
-    return -1;
-
+        return -1;
     }
 }
