@@ -1,7 +1,6 @@
 class Solution {
     public void nextPermutation(int[] nums) {
-
-        //we have to find lexiographically next permutation combination
+        
         int n = nums.length;
         int i = n - 2;
 
@@ -9,9 +8,9 @@ class Solution {
             i--;
         }
 
-        if( i >= 0) {
+        if(i >= 0) {
             int j = n - 1;
-            while( nums[j] <= nums[i]) {
+            while(j >=0 && nums[j] <= nums[i]) {
                 j--;
             }
 
@@ -20,21 +19,14 @@ class Solution {
             nums[j] = temp;
         }
 
-        
-
         int k = i + 1;
-        int m = n -1;
-
+        int m = n - 1;
         while(k < m) {
-
-            int temp1 = nums[k];
+            int temp = nums[k];
             nums[k] = nums[m];
-            nums[m] =temp1;
-
+            nums[m] = temp;
             k++;
             m--;
         }
-
-        
     }
 }
