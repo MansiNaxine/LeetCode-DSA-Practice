@@ -1,26 +1,24 @@
 class Solution {
     public List<Integer> findDuplicates(int[] nums) {
 
-        int i=0;
-        while(i<nums.length){
-            int correct=nums[i]-1;
-            if(nums[i]!=nums[correct]){
-                int temp=nums[i];
-                nums[i]=nums[correct];
-                nums[correct]=temp;
-            }else{
-                i++;
+        int n = nums.length;
+        List<Integer> answer = new ArrayList<>();
+
+        int max = 0;
+        for(int i = 0; i < n; i++) {
+            max = Math.max(nums[i], max);
+        }
+
+        int freq[] = new int[max + 1];
+
+        for(int i = 0; i < n; i++) {
+            freq[nums[i]]++;
+            if(freq[nums[i]] == 2) {
+                answer.add(nums[i]);
             }
         }
 
-        List<Integer> num=new ArrayList<>();
-        for(int j=0;j<nums.length;j++){
-            if(nums[j]!=j+1){
-                num.add(nums[j]);
-            }
-        }
-
-        return num;
+        return answer;
         
     }
 }
