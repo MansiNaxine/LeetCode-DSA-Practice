@@ -4,42 +4,38 @@ class Solution {
     List<Character> currentSeq = new ArrayList<>();
 
     public List<String> generateParenthesis(int n) {
-
-        int length = 2*n;
-
-        recursion(0,0,length);
-
+        
+        recursion(2*n, 0, 0);
         return answer;
     }
 
-    public void recursion(int start, int sum, int L) {
-
+    public void recursion(int length, int sum, int index) {
         //base case
-        if(start == L) {
+        if(index == length) {
             if(sum == 0) {
-                StringBuilder str = new StringBuilder("");
-                for(int i=0; i<currentSeq.size(); i++) {
-                    str.append(currentSeq.get(i));
+                StringBuilder sb = new StringBuilder("");
+                for(int i = 0; i < currentSeq.size(); i++) {
+                    sb.append(currentSeq.get(i));
                 }
-                answer.add(str.toString());
+                answer.add(sb.toString());
             }
-           return; 
+
+            return;
         }
-        
+
         //recursive case
-        //1st for open bracket
-        if(sum < L/2) {
+        //for adding '(' paranthesis
+        if(sum <= length/2) {
             currentSeq.add('(');
-            recursion(start+1, sum+1, L);
+            recursion(length, sum+1, index+1);
             currentSeq.remove(currentSeq.size() - 1);
         }
 
-        //2nd for closing bracket
+        //for adding ')' paranthesis
         if(sum > 0) {
             currentSeq.add(')');
-            recursion(start+1, sum-1, L);
+            recursion(length, sum-1, index+1);
             currentSeq.remove(currentSeq.size() - 1);
         }
-
     }
 }
