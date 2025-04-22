@@ -5,25 +5,25 @@ class Solution {
 
     public List<List<Integer>> subsets(int[] nums) {
         
-      recursion(0, nums);
-      return answer;
+        recursion(0, nums);
+        return answer;
     }
 
     public void recursion(int index, int[] nums) {
 
+        //base case
         if(index == nums.length) {
-
             answer.add(new ArrayList<>(currentSeq));
-            return ;
+            return;
         }
 
-        //2 operations are required
-        //1st is to add the element
+        //recursion steps
         currentSeq.add(nums[index]);
-        recursion(index+1, nums);
+        recursion(index + 1, nums);
 
-        //2nd is to remove the element
+        //backtracking
         currentSeq.remove(currentSeq.size() - 1);
-        recursion(index+1, nums);
+        recursion(index + 1, nums);
+
     }
 }
