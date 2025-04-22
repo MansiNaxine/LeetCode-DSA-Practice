@@ -25,7 +25,7 @@ class Solution {
 
         //recursive case
         //for adding '(' paranthesis
-        if(sum < length/2) {
+        if(sum <= length/2) {
             currentSeq.add('(');
             recursion(length, sum+1, index+1);
             currentSeq.remove(currentSeq.size() - 1);
