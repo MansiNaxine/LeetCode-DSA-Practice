@@ -1,22 +1,27 @@
 class Solution {
 
     List<String> answer = new ArrayList<>();
-    List<Character> currentSeq = new ArrayList<>();
+    List<Character> currSeq = new ArrayList<>();
 
     public List<String> generateParenthesis(int n) {
-        
-        recursion(2*n, 0, 0);
+
+        int sum = 0;
+        int len = 2*n;
+        recursion(sum, len, 0);
         return answer;
+        
     }
 
-    public void recursion(int length, int sum, int index) {
+    public void recursion(int sum, int len, int i) {
+
         //base case
-        if(index == length) {
+        if(i == len) {
             if(sum == 0) {
                 StringBuilder sb = new StringBuilder("");
-                for(int i = 0; i < currentSeq.size(); i++) {
-                    sb.append(currentSeq.get(i));
+                for(int k = 0; k < currSeq.size(); k++) {
+                    sb.append(currSeq.get(k));
                 }
+
                 answer.add(sb.toString());
             }
 
@@ -24,18 +29,18 @@ class Solution {
         }
 
         //recursive case
-        //for adding '(' paranthesis
-        if(sum <= length/2) {
-            currentSeq.add('(');
-            recursion(length, sum+1, index+1);
-            currentSeq.remove(currentSeq.size() - 1);
+        if(sum < len/2) {
+            currSeq.add('(');
+            recursion(sum+1, len, i+1);
+            currSeq.remove(currSeq.size() - 1);
         }
 
-        //for adding ')' paranthesis
         if(sum > 0) {
-            currentSeq.add(')');
-            recursion(length, sum-1, index+1);
-            currentSeq.remove(currentSeq.size() - 1);
+            currSeq.add(')');
+            recursion(sum-1, len, i+1);
+            currSeq.remove(currSeq.size() - 1);
         }
+
+
     }
 }
