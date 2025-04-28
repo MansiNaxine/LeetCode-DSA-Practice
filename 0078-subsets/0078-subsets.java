@@ -1,29 +1,26 @@
 class Solution {
-
     List<List<Integer>> answer = new ArrayList<>();
-    List<Integer> currentSeq = new ArrayList<>();
+    List<Integer> currSeq = new ArrayList<>();
 
     public List<List<Integer>> subsets(int[] nums) {
         
-        recursion(0, nums);
+        recursion(nums, 0);
         return answer;
     }
 
-    public void recursion(int index, int[] nums) {
+    public void recursion(int[] nums, int index) {
 
         //base case
         if(index == nums.length) {
-            answer.add(new ArrayList<>(currentSeq));
+
+            answer.add(new ArrayList<>(currSeq));
             return;
         }
 
-        //recursion steps
-        currentSeq.add(nums[index]);
-        recursion(index + 1, nums);
-
-        //backtracking
-        currentSeq.remove(currentSeq.size() - 1);
-        recursion(index + 1, nums);
-
+        //recursive case
+        currSeq.add(nums[index]);
+        recursion(nums, index+1);
+        currSeq.remove(currSeq.size() - 1);
+        recursion(nums, index+1);
     }
 }
