@@ -37,6 +37,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0189-rotate-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0189-rotate-array) |
 | [0204-count-primes](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0204-count-primes) |
 | [0215-kth-largest-element-in-an-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0215-kth-largest-element-in-an-array) |
+| [0216-combination-sum-iii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0216-combination-sum-iii) |
 | [0240-search-a-2d-matrix-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0240-search-a-2d-matrix-ii) |
 | [0268-missing-number](https://github.com/MansiNaxine/LeetCode/tree/master/0268-missing-number) |
 | [0283-move-zeroes](https://github.com/MansiNaxine/LeetCode/tree/master/0283-move-zeroes) |
@@ -283,6 +284,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0040-combination-sum-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0040-combination-sum-ii) |
 | [0046-permutations](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0046-permutations) |
 | [0078-subsets](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0078-subsets) |
+| [0216-combination-sum-iii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0216-combination-sum-iii) |
 ## Linked List
 |  |
 | ------- |
