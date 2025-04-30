@@ -120,6 +120,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0118-pascals-triangle](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0118-pascals-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0124-binary-tree-maximum-path-sum](https://github.com/MansiNaxine/LeetCode/tree/master/0124-binary-tree-maximum-path-sum) |
+| [0131-palindrome-partitioning](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0131-palindrome-partitioning) |
 | [0152-maximum-product-subarray](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0152-maximum-product-subarray) |
 | [0410-split-array-largest-sum](https://github.com/MansiNaxine/LeetCode/tree/master/0410-split-array-largest-sum) |
 | [0647-palindromic-substrings](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0647-palindromic-substrings) |
@@ -264,6 +265,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0022-generate-parentheses](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0022-generate-parentheses) |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0058-length-of-last-word](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0058-length-of-last-word) |
+| [0131-palindrome-partitioning](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0131-palindrome-partitioning) |
 | [0179-largest-number](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0179-largest-number) |
 | [0451-sort-characters-by-frequency](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0451-sort-characters-by-frequency) |
 | [0557-reverse-words-in-a-string-iii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0557-reverse-words-in-a-string-iii) |
@@ -284,6 +286,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0040-combination-sum-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0040-combination-sum-ii) |
 | [0046-permutations](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0046-permutations) |
 | [0078-subsets](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0078-subsets) |
+| [0131-palindrome-partitioning](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0131-palindrome-partitioning) |
 | [0216-combination-sum-iii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0216-combination-sum-iii) |
 ## Linked List
 |  |
