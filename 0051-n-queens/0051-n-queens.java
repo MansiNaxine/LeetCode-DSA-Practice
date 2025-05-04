@@ -1,96 +1,78 @@
 class Solution {
+
+    List<List<String>> answer = new ArrayList<>();
+    List<StringBuilder> chessBoard = new ArrayList<>();
+
     public List<List<String>> solveNQueens(int n) {
-        List<List<String>> allBoards=new ArrayList<>();
-        char[][] boards=new char[n][n];
+        
+        //for the empty chessboard
+        for(int i = 0; i < n; i++) {
+            StringBuilder sb = new StringBuilder("");
+            for(int j = 0; j < n; j++) {
+                sb.append(".");
+            }
+            chessBoard.add(sb);
+        }
 
-        helper(boards,allBoards,0);
-        return allBoards;
+        solveNQueensHelper(n, chessBoard, 0);
+        return answer;
     }
 
-    public void helper(char[][] board,List<List<String>> allBoards,int col){
-        //BASE CASE
-        if(col==board.length){
-            saveBoard(board,allBoards);
-                return;
+    public void solveNQueensHelper(int n, List<StringBuilder> chessBoard, int row) {
+
+        //base case
+        if(row == n) {
+            List<String> currSeq = new ArrayList<>();
+            for(int i = 0; i < chessBoard.size(); i++) {
+                currSeq.add(chessBoard.get(i).toString());
             }
 
-        for(int row=0;row<board.length;row++){
-            if(isSafe(row,col,board)){
-                //adding 'Q' IF true
-                board[row][col]='Q';
-                helper(board, allBoards,col+1);
-                //removing 'Q' in the next position
-                board[row][col]='.';
+            answer.add(new ArrayList<>(currSeq));
+            return;
+        }
+
+        //recursive case
+        for(int j = 0; j < n; j++) {
+            if(isSafe(chessBoard, n,row, j)) {
+                chessBoard.get(row).setCharAt(j, 'Q');
+                solveNQueensHelper(n, chessBoard, row + 1);
+                chessBoard.get(row).setCharAt(j, '.');
             }
         }
     }
 
-    public void saveBoard(char[][] board,List<List<String>> allBoards){
-        String row="";
-        List<String> newBoard=new ArrayList<>();
 
-        for(int i=0;i<board.length;i++){
-            row="";
-            for(int j=0;j<board.length;j++){
-                if(board[i][j]=='Q'){
-                    row +='Q';
-                }else{
-                    row +='.';
-                }
-            }
-            newBoard.add(row);
-        }
-        allBoards.add(newBoard);
-    }
-    public boolean isSafe(int row,int col,char[][] board){
+    public boolean isSafe(List<StringBuilder> chessBoard, int n, int row, int col) {
 
-        //horizontal
-        for(int j=0;j<board.length;j++){
-            if(board[row][j]=='Q'){
-                return false;
-            }
+        //check top left
+        int r = row;
+        int c = col;
+
+        while(r >= 0 && c >= 0) {
+            if(chessBoard.get(r).charAt(c) == 'Q') return false;
+            r--;
+            c--;
         }
 
-        //vertical
-        for(int i=0;i<board.length;i++){
-            if(board[i][col]=='Q'){
-                return false;
-            }
+        //check for top
+
+        r = row;
+
+        while(r >= 0) {
+            if(chessBoard.get(r).charAt(col) == 'Q') return false;
+            r--;
         }
 
-        //upper left
-        int r=row;
-        for(int c=col;c>=0&&r>=0;c--,r--){
-            if(board[r][c]=='Q'){
-                return false;
-            }
-        }
+        //top right
+        r = row;
+        c = col;
 
-        //upper right
-        r=row;
-        for(int c=col;c<board.length && r>=0;c++,r--){
-           if(board[r][c]=='Q'){
-                return false;
-            } 
-        }
-
-        //lower left
-        r=row;
-        for(int c=col;c>=0&&r<board.length;c--,r++){
-            if(board[r][c]=='Q'){
-                return false;
-            } 
-        }
-
-        //lower right
-        r=row;
-        for(int c=col;c<board.length && r<board.length;c++,r++){
-            if(board[r][c]=='Q'){
-                return false;
-            } 
+        while(r >= 0 && c < n) {
+            if(chessBoard.get(r).charAt(c) == 'Q') return false;
+            r--;
+            c++;
         }
 
         return true;
     }
-    
 }
