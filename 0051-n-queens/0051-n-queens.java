@@ -14,11 +14,13 @@ class Solution {
             chessBoard.add(sb);
         }
 
-        solveNQueensHelper(n, chessBoard, 0);
+        //For optimization
+        int[] colArr = new int[n];
+        solveNQueensHelper(n, chessBoard, 0, colArr);
         return answer;
     }
 
-    public void solveNQueensHelper(int n, List<StringBuilder> chessBoard, int row) {
+    public void solveNQueensHelper(int n, List<StringBuilder> chessBoard, int row, int[] colArr) {
 
         //base case
         if(row == n) {
@@ -33,16 +35,18 @@ class Solution {
 
         //recursive case
         for(int j = 0; j < n; j++) {
-            if(isSafe(chessBoard, n,row, j)) {
+            if(isSafe(chessBoard, n,row, j, colArr)) {
                 chessBoard.get(row).setCharAt(j, 'Q');
-                solveNQueensHelper(n, chessBoard, row + 1);
+                colArr[j] = 1;
+                solveNQueensHelper(n, chessBoard, row + 1, colArr);
+                colArr[j] = 0;
                 chessBoard.get(row).setCharAt(j, '.');
             }
         }
     }
 
 
-    public boolean isSafe(List<StringBuilder> chessBoard, int n, int row, int col) {
+    public boolean isSafe(List<StringBuilder> chessBoard, int n, int row, int col, int[] colArr) {
 
         //check top left
         int r = row;
@@ -56,12 +60,15 @@ class Solution {
 
         //check for top
 
-        r = row;
+        // r = row;
 
-        while(r >= 0) {
-            if(chessBoard.get(r).charAt(col) == 'Q') return false;
-            r--;
-        }
+        // while(r >= 0) {
+        //     if(chessBoard.get(r).charAt(col) == 'Q') return false;
+        //     r--;
+        // }
+
+        //for optimization purpose
+        if(colArr[col] == 1) return false;
 
         //top right
         r = row;
