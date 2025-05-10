@@ -1,49 +1,40 @@
 class Solution {
-
-    //Not a optimal Solution
-    
     public int findKthLargest(int[] nums, int k) {
-
         int n = nums.length;
-        int index = n - k;
-
-        return quickSort(nums, 0, n-1, index);
+        return quickSort(nums, n - k, 0, n-1);
+        
     }
 
-    public int quickSort(int[] nums, int start, int end, int index){
-
-        if(start == end){
+    public int quickSort(int[] nums, int index, int start, int end) {
+        
+        //base index
+        if(start == end) {
             return nums[start];
         }
 
-        int k = partition(nums, start, end);
+        //recursive case
+        int k = pivot(nums, start, end);
 
-        if(k == index){
-
-            return nums[index];
-
-        }else if( k < index){
-
-            return quickSort(nums, k+1, end, index);
-
-        }else{
-
-            return quickSort(nums, start, k-1, index);
+        if(k == index) {
+            return nums[k];
+        } else if (k < index) {
+            return quickSort(nums, index, k + 1, end);
+        } else {
+            return quickSort(nums, index, start, k - 1);
         }
     }
 
-    public int partition(int[] nums, int start, int end){
+
+    public int pivot(int[] nums, int start, int end) {
 
         int pivot = nums[end];
+        int  i = start;
 
-        int i = start;
-
-        for(int j=start; j<=end-1; j++){
-
-            if(nums[j] < pivot){
-                int temp = nums[i];
-                nums[i] = nums[j];
-                nums[j] = temp;
+        for(int j = start; j <= end-1; j++) {
+            if(nums[j] < pivot) {
+                int temp = nums[j];
+                nums[j] = nums[i];
+                nums[i] = temp;
 
                 i++;
             }
@@ -52,6 +43,7 @@ class Solution {
         int temp = nums[i];
         nums[i] = nums[end];
         nums[end] = temp;
+
 
         return i;
     }
