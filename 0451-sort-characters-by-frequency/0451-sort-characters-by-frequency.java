@@ -27,11 +27,11 @@ class Solution {
 
         StringBuilder str = new StringBuilder();
         for(int i = 0; i < answer.size(); i++) {
-            int ch = answer.get(i).get(0);
+            char ch = (char)(int)(answer.get(i).get(0));
             int fr = answer.get(i).get(1);
 
             while(fr > 0) {
-                str.append((char)ch);
+                str.append(ch);
                 fr--;
             }
 
