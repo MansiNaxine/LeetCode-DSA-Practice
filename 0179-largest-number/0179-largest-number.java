@@ -1,35 +1,38 @@
 class Solution {
     public String largestNumber(int[] nums) {
-
-        ArrayList<String> arr=new ArrayList<>();
         
-        for(int i=0;i<nums.length;i++){
+        //use custom comparator
+        //we need list for comparator
+        ArrayList<String> arr = new ArrayList<>();
+        int n = nums.length;
+
+        for(int i = 0; i < n; i++) {
             arr.add(Integer.toString(nums[i]));
         }
 
-        Collections.sort(arr,(x,y)->{
-            String X=x+y;
-            String Y=y+x;
+        //we will sort if Y > X
+        Collections.sort(arr, (x, y) -> {
+            String X = x + y;
+            String Y = y + x;
 
             return Y.compareTo(X);
         });
 
-        StringBuilder sb=new StringBuilder("");
-        for(int i=0;i<nums.length;i++){
-            sb.append(arr.get(i));
+        StringBuilder str = new StringBuilder();
+        for(int i = 0; i < arr.size(); i++) {
+            str.append(arr.get(i));
         }
 
-        int i=0;
-        while(i<nums.length && sb.charAt(i)=='0'){
+        int i = 0; 
+        while(i < n && str.charAt(i) == '0') {
             i++;
-            
         }
 
-        if(i==nums.length){
+        if(i == n) {
             return "0";
+        } else {
+            return str.toString();
         }
 
-        return sb.toString();
-        
     }
 }
