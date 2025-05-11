@@ -1,17 +1,14 @@
 class Solution {
     public String largestNumber(int[] nums) {
         
-        //use custom comparator
-        //we need list for comparator
-        ArrayList<String> arr = new ArrayList<>();
+        ArrayList<String> answer = new ArrayList<>();
         int n = nums.length;
 
         for(int i = 0; i < n; i++) {
-            arr.add(Integer.toString(nums[i]));
+            answer.add(Integer.toString(nums[i]));
         }
 
-        //we will sort if Y > X
-        Collections.sort(arr, (x, y) -> {
+        Collections.sort(answer, (x, y) -> {
             String X = x + y;
             String Y = y + x;
 
@@ -19,8 +16,9 @@ class Solution {
         });
 
         StringBuilder str = new StringBuilder();
-        for(int i = 0; i < arr.size(); i++) {
-            str.append(arr.get(i));
+
+        for(int i = 0; i < answer.size(); i++) {
+            str.append(answer.get(i));
         }
 
         int i = 0; 
@@ -28,7 +26,7 @@ class Solution {
             i++;
         }
 
-        if(i == n) {
+        if (i == n) {
             return "0";
         } else {
             return str.toString();
