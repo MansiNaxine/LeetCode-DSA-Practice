@@ -1,24 +1,21 @@
 class Solution {
     public int mySqrt(int x) {
-        
 
         long start = 1;
-        long end  = x;
-        long answer = 0;
+        long end = x;
+        int answer = 0;
 
-        while(start <= end){
-            long mid = (start + end)/2;
-
-            if((mid * mid) <= x){
-                answer = mid;
-                start = mid + 1;
-            }
-            else{
-                
+        while( start <= end) {
+            long mid = (start + end) / 2;
+            if(mid * mid  <= x) {
+                answer = (int) mid;
+                start = mid + 1;//we have to check highest one sqrt which is <= x
+            } else {
                 end = mid - 1;
             }
         }
 
-        return (int)answer;
+        return answer;
+        
     }
 }
