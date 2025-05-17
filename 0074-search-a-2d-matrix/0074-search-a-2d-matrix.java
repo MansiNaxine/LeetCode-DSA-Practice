@@ -11,6 +11,8 @@ class Solution {
         int row = 0;
         int start = 0;
         int end = m - 1;
+
+        //if row i single then no need to apply binary search over last column
         if(m > 1) {
             while(start <= end) {
                 int mid = (start + end) / 2;
