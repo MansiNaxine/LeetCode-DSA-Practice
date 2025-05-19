@@ -1,50 +1,47 @@
 class Solution {
     public int minEatingSpeed(int[] piles, int h) {
 
-        long n = piles.length;
+        int n = piles.length;
+        
+        //calculate max from piles of bananas array to initiate the end variable
         long max = 0;
-
-        for(int i = 0 ; i < n ; i++){
+        for(int i = 0; i < piles.length; i++) {
             max = Math.max(max, piles[i]);
         }
 
         long start = 1;
         long end = max;
-        long answer = 0;
+        long answer = 1;
 
-        while(start <= end){   
-            long mid = (start + end)/2;
-
-            if(isPossible(piles,mid,n,h)){
+        while(start <= end) {
+            long mid = (start + end) / 2;
+            if(isPossible(mid, piles, h)) {
                 answer = mid;
                 end = mid - 1;
             } else {
                 start = mid + 1;
             }
         }
-       
-      return (int)answer;         
+
+        return (int)answer;
+        
     }
 
-    public boolean isPossible(int[] piles, long mid, long n, long h){
+    public boolean isPossible(long mid, int[] piles, int h) {
 
-        long answer = 0;
-         for(int i = 0; i < n ; i++){
-  
-            if (piles[i] < (int)mid) {
-                answer +=1;
-            }
-            if (piles[i] >= (int)mid) {
-
-                if(piles[i] % (int)mid == 0 ){
-
-                    answer += piles[i] / (int)mid;
+        long count = 0;
+        for(int i = 0; i < piles.length; i++) {
+            if(piles[i] <= mid) {
+                count += 1;
+            } else if (piles[i] > mid) {
+                if ((piles[i]%mid) != 0) {
+                    count += piles[i]/mid + 1;
                 } else {
-                    answer += (piles[i] / (int)mid + 1);
+                    count += piles[i]/mid;
                 }
             }
         }
 
-        return (answer <= h);
+        return count <= h;
     }
 }
