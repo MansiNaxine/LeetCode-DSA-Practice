@@ -34,10 +34,10 @@ class Solution {
             if(piles[i] <= mid) {
                 count += 1;
             } else if ((piles[i]%mid) != 0) {
-                    count += piles[i]/mid + 1;
-                } else {
-                    count += piles[i]/mid;
-                }
+                count += piles[i]/mid + 1;
+            } else {
+                count += piles[i]/mid;
+            }
         }
 
         return count <= h;
