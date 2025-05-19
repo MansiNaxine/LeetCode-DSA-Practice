@@ -33,13 +33,11 @@ class Solution {
         for(int i = 0; i < piles.length; i++) {
             if(piles[i] <= mid) {
                 count += 1;
-            } else if (piles[i] > mid) {
-                if ((piles[i]%mid) != 0) {
+            } else if ((piles[i]%mid) != 0) {
                     count += piles[i]/mid + 1;
                 } else {
                     count += piles[i]/mid;
                 }
-            }
         }
 
         return count <= h;
