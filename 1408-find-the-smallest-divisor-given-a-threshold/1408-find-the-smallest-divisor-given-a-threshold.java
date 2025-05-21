@@ -24,6 +24,8 @@ class Solution {
 
         int sum = 0;
         for(int i = 0; i < nums.length; i++) {
+            if(sum > key) break;
+            
             if(nums[i] <= mid) {
                 sum += 1;
             } else if(nums[i] % mid == 0) {
