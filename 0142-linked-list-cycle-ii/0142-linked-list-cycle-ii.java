@@ -16,7 +16,6 @@ public class Solution {
         ListNode fast = head;
         boolean isCycle = false;
 
-        //First find out the cycle
         while(fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
@@ -27,18 +26,17 @@ public class Solution {
             }
         }
 
-        if(!isCycle){
-            return null;
+        if(isCycle) {
+            fast = head;
+            while(slow != fast) {
+                slow = slow.next;
+                fast = fast.next;
+            }
+
+            return slow;
         }
 
-        fast = head;
-
-        while(slow != fast) {
-            slow = slow.next;
-            fast = fast.next;
-        }
-
-        return slow;
+        return null;
         
     }
 }
