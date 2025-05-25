@@ -26,6 +26,8 @@ public class Solution {
             }
         }
 
+        //if cycle is present then start the fast index from head position and keep the speed same as slow , at some point both slow and fast pointer will reach at the same position.
+        
         if(isCycle) {
             fast = head;
             while(slow != fast) {
