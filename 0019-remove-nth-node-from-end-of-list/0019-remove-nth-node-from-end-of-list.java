@@ -11,31 +11,29 @@
 class Solution {
     public ListNode removeNthFromEnd(ListNode head, int n) {
 
-        ListNode slow = head;
-        ListNode fast = head;
+        //first we have to calculate the count of nodes list
+        int count = 1;
+        ListNode temp = head;
 
-        //we are moving fast pointer to reach at nth node to start traversing
-        while(n > 0) {
-            fast = fast.next;
-            n--;
+        while(temp.next != null) {
+            temp = temp.next;
+            count++;
         }
 
-        ListNode prev = null;
+        int index = count - n + 1;
+        int countResult = 1;
+        temp = head;
+        ListNode prev = head;
 
-        //now slow and fast pointer will move and slow pointer will move at nth node which we want to remove
-        while(fast != null) {
-            prev = slow;
-            slow = slow.next;
-            fast = fast.next;
+        while(countResult != index) {
+            prev = temp;
+            temp = temp.next;
+            countResult++;
         }
 
-        if(prev == null) {
-            head = head.next;
-        } else {
-            prev.next = prev.next.next;
-        }
+        prev.next = temp.next;
 
-        return head;
+        return count == n ? head.next : head;
 
         
     }
