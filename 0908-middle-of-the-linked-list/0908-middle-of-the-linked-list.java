@@ -10,30 +10,26 @@
  */
 class Solution {
     public ListNode middleNode(ListNode head) {
-        
-        // int length = 0;
-        // ListNode temp = head;
-        // while(temp != null){
-        //     temp = temp.next;
-        //     length++;
-        // }
 
-        // int mid = length/2;
-        // temp = head;
-        // while(mid > 0){
-        //     temp = temp.next;
-        //     mid--;
-        // }
-
-        // return temp;
-
-        ListNode slow = head;
-        ListNode fast = head;
-
-        while(fast != null && fast.next != null) {
-            slow = slow.next;
-            fast = fast.next.next;
+        //first calculating the lnegth;
+        int count = 1;
+        ListNode temp = head;
+        while(temp.next != null) {
+            temp = temp.next;
+            count++;
         }
-        return slow;
+
+        int middle = count/2;
+        //Always middle element in Nodes list will be middle + 1
+        int countResult = 1;
+        temp = head;
+        while(countResult != middle + 1) {
+            temp = temp.next;
+            countResult++;
+        }
+        
+
+        return temp;
+        
     }
 }
