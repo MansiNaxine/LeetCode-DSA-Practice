@@ -10,20 +10,17 @@
  */
 class Solution {
     public ListNode swapPairs(ListNode head) {
+        
+        //we can do it by using recursion
+        if(head == null || head.next == null) return head;
 
-        if(head == null || head.next == null) {
-            return head;
-        }
-        ListNode next = head.next;
-
-        //to save the next part
+        ListNode temp = head;
+        ListNode next = temp.next;
         ListNode nextPart = next.next;
-
-        next.next = head;
-        head.next = swapPairs(nextPart);
+        next.next = temp;
+        temp.next = swapPairs(nextPart);
 
         return next;
-
 
     }
 }
