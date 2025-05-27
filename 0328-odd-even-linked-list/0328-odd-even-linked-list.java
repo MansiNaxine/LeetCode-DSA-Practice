@@ -11,50 +11,41 @@
 class Solution {
     public ListNode oddEvenList(ListNode head) {
 
-        if(head == null) {
-            return head;
+        if(head == null || head.next == null || head.next.next == null) return head;
+        ListNode eH = null;
+        ListNode eT = null;
+
+        ListNode oH = null;
+        ListNode oT = null;
+
+        int index = 1;
+        ListNode temp = head;
+
+        while(temp != null) {
+            if(index%2 == 0) {
+                if(eH == null) {
+                    eH = temp;
+                    eT = temp;
+                } else {
+                    eT.next = temp;
+                    eT = temp;
+                }
+            } else {
+                 if(oH == null) {
+                    oH = temp;
+                    oT = temp;
+                } else {
+                    oT.next = temp;
+                    oT = temp;
+                }
+            }
+
+            temp = temp.next;
+            index++;
         }
 
-            ListNode oH = null;
-            ListNode oT = null;
-            ListNode eH = null;
-            ListNode eT = null;
-
-            ListNode temp = head;
-            int index = 1;
-
-            while (temp != null) {
-                
-                if (index % 2 == 0) {
-
-                    if(eH == null && eT == null) {
-                        eH = temp;
-                        eT = temp;
-                    } else {
-                        eT.next = temp;
-                        eT = temp;
-                    }
-
-                } else {
-
-                    if(oH == null && oT == null) {
-                        oH = temp;
-                        oT = temp;
-                    } else {
-                        oT.next = temp;
-                        oT = temp;
-                    }
-                }
-
-                temp = temp.next;
-                index++;
-            }
-
-            oT.next = eH;
-
-            if(eT != null) {
-                eT.next = null;
-            }
+        eT.next = null;
+        oT.next = eH;
 
         return oH;
     }
