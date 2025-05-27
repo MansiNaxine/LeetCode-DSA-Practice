@@ -11,64 +11,83 @@
 class Solution {
     public void reorderList(ListNode head) {
         
+        if(head == null || head.next == null) return;
+        //get the middle element
+        ListNode middle = getMiddleElement(head);
+        ListNode nextPart = middle.next;
+        middle.next = null;
+        //reverse the next part
+        nextPart = reverseList(nextPart);
+        //add accordingly
+        int index = 0;
+        ListNode i = head;
+        ListNode j = nextPart;
 
-        if(head==null || head.next==null){
-            return;
+        ListNode aH = null;
+        ListNode aT = null;
+
+        while(i != null && j != null) {
+            if(index%2 == 0) {
+                if(aH == null) {
+                    aH = i;
+                    aT = i;
+                } else {
+                    aT.next = i;
+                    aT = aT.next;
+                }
+                i = i.next;
+            } else {
+                if(aH == null && aT == null) {
+                    aH = j;
+                    aT = j;
+                } else {
+                    aT.next = j;
+                    aT = aT.next;
+                }
+                j = j.next;
+            }
+
+            index++;
         }
 
-        ListNode mid=getMid(head);
-        ListNode end=reverseList(mid);
-        ListNode start=head;
+        if(i != null) {
+            aT.next = i;
+            aT = aT.next;
+        }
 
-        while(start!=null && end!=null){
-            ListNode temp=start.next;
-            start.next=end;
-            start=temp;
-
-            temp=end.next;
-            end.next=start;
-            end=temp;
+        if(j != null) {
+            aT.next = j;
+            aT = aT.next;
+        }
 
 
-            }
-
-            if(start!=null){
-                start.next=null;
-            }
-        
-
+        head = aH;
         
     }
 
-    public ListNode reverseList(ListNode head){
-        if(head==null){
-            return head;
-        }
 
-        ListNode  prev=null;
-        ListNode  current=head;
-        ListNode  next=current.next;
+    public ListNode reverseList(ListNode head) {
+        ListNode temp = head;
+        ListNode prev = null;
 
-        while(current!=null){
-            current.next=prev;
-            prev=current;
-            current=next;
-            if(next!=null){
-                next=next.next;
-            }
+        while(temp != null) {
+            ListNode next = temp.next;
+            temp.next = prev;
+            prev = temp;
+            temp = next;
         }
 
         return prev;
     }
 
-    public ListNode getMid(ListNode head){
-        ListNode fast=head;
-        ListNode slow=head;
+    public ListNode getMiddleElement(ListNode head) {
 
-        while(fast!=null && fast.next!=null){
-            slow=slow.next;
-            fast=fast.next.next;
+        ListNode slow = head;
+        ListNode fast = head;
 
+        while(fast != null && fast.next != null && fast.next.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
         }
 
         return slow;
