@@ -11,44 +11,61 @@
 class Solution {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 
-        // if (list1 == null) return list2;
-        // if (list2 == null) return list1;
+        ListNode i = list1;
+        ListNode j = list2;
+        ListNode aH = null;
+        ListNode aT = null;
 
-        // if (list1.val < list2.val) {
-        //     list1.next = mergeTwoLists(list1.next, list2);
-        //     return list1;
-        // } else {
-        //     list2.next = mergeTwoLists(list1, list2.next);
-        //     return list2;
-        // }
+        while(i != null && j != null) {
+            if(i.val < j.val) {
+                if(aH == null && aT == null) {
+                    aH = i;
+                    aT = i;
+                } else {
+                    aT.next = i;
+                    aT = i;
+                }
 
-        ListNode l1 = list1;
-        ListNode l2 = list2;
-        ListNode temp = new ListNode(0);
-        ListNode curr = temp;
-
-        while (l1 != null && l2 != null) {
-            if (l1.val < l2.val) {
-                curr.next = l1;
-                l1 = l1.next;
-                
+                i = i.next;
             } else {
-                curr.next = l2;
-                l2 = l2.next;
+                 if(aH == null && aT == null) {
+                    aH = j;
+                    aT = j;
+                } else {
+                    aT.next = j;
+                    aT = j;
+                }
+
+                j = j.next;
             }
-
-            curr = curr.next;
         }
 
-        if(l1 != null) {
-            curr.next = l1;
+
+        while(i != null) {
+            if(aH == null && aT == null) {
+                    aH = i;
+                    aT = i;
+                } else {
+                    aT.next = i;
+                    aT = i;
+                }
+
+                i = i.next;
         }
 
-        if(l2 != null) {
-            curr.next = l2;
-        }
+        while(j != null) {
+            if(aH == null && aT == null) {
+                    aH = j;
+                    aT = j;
+                } else {
+                    aT.next = j;
+                    aT = j;
+                }
 
-        return temp.next;
+                j = j.next;
+        }
+        
+        return aH;
         
     }
 }
