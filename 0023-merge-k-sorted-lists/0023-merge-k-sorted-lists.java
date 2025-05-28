@@ -10,13 +10,13 @@
  */
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
-        
-        int minVal = (int)(1e9);
-        int index = -1;
-        for(int i = 0 ; i < lists.length ; i++) {
 
-            if (lists[i] != null && lists[i].val < minVal) {
-                minVal = lists[i].val;
+        int minValue = Integer.MAX_VALUE;
+        int index = -1;
+
+        for(int i =0 ; i < lists.length; i++) {
+            if(lists[i] != null && lists[i].val <= minValue) {
+                minValue = lists[i].val ;
                 index = i;
             }
         }
@@ -25,10 +25,12 @@ class Solution {
             return null;
         }
 
+        //for the starting Node
         ListNode startingNode = lists[index];
         lists[index] = lists[index].next;
         startingNode.next = mergeKLists(lists);
 
         return startingNode;
+        
     }
 }
