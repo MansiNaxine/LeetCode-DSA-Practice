@@ -360,6 +360,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0020-valid-parentheses](https://github.com/MansiNaxine/LeetCode/tree/master/0020-valid-parentheses) |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/MansiNaxine/LeetCode/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0143-reorder-list](https://github.com/MansiNaxine/LeetCode/tree/master/0143-reorder-list) |
+| [0155-min-stack](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0155-min-stack) |
 | [0232-implement-queue-using-stacks](https://github.com/MansiNaxine/LeetCode/tree/master/0232-implement-queue-using-stacks) |
 | [0234-palindrome-linked-list](https://github.com/MansiNaxine/LeetCode/tree/master/0234-palindrome-linked-list) |
 | [0445-add-two-numbers-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0445-add-two-numbers-ii) |
@@ -368,6 +369,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Design
 |  |
 | ------- |
+| [0155-min-stack](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0155-min-stack) |
 | [0232-implement-queue-using-stacks](https://github.com/MansiNaxine/LeetCode/tree/master/0232-implement-queue-using-stacks) |
 | [0303-range-sum-query-immutable](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0303-range-sum-query-immutable) |
 | [0304-range-sum-query-2d-immutable](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0304-range-sum-query-2d-immutable) |
