@@ -24,7 +24,7 @@ class Solution {
                     curr.add((int)s.charAt(i));
                     curr.add(1);
 
-                    stack.push(new ArrayList<>(curr));
+                    stack.push(curr);
                 }
 
                 
