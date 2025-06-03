@@ -12,7 +12,7 @@ class Solution {
                 curr.add((int)s.charAt(i));
                 curr.add(1);
 
-                stack.push(new ArrayList<>(curr));
+                stack.push(curr);
             } else {
                 ArrayList<Integer> topElement = stack.peek();
                 int topCharacter = topElement.get(0);
