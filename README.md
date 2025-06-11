@@ -295,6 +295,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1205-defanging-an-ip-address](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1205-defanging-an-ip-address) |
 | [1320-remove-all-adjacent-duplicates-in-string-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1320-remove-all-adjacent-duplicates-in-string-ii) |
 | [1651-shuffle-string](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1651-shuffle-string) |
+| [1737-maximum-nesting-depth-of-the-parentheses](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1737-maximum-nesting-depth-of-the-parentheses) |
 | [1960-check-if-the-sentence-is-pangram](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1960-check-if-the-sentence-is-pangram) |
 | [2099-number-of-strings-that-appear-as-substrings-in-word](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2099-number-of-strings-that-appear-as-substrings-in-word) |
 ## Backtracking
@@ -382,6 +383,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0957-minimum-add-to-make-parentheses-valid](https://github.com/MansiNaxine/LeetCode/tree/master/0957-minimum-add-to-make-parentheses-valid) |
 | [1128-remove-all-adjacent-duplicates-in-string](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1128-remove-all-adjacent-duplicates-in-string) |
 | [1320-remove-all-adjacent-duplicates-in-string-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1320-remove-all-adjacent-duplicates-in-string-ii) |
+| [1737-maximum-nesting-depth-of-the-parentheses](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1737-maximum-nesting-depth-of-the-parentheses) |
 ## Design
 |  |
 | ------- |
