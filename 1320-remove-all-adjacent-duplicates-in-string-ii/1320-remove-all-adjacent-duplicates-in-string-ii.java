@@ -1,52 +1,61 @@
 class Solution {
     public String removeDuplicates(String s, int k) {
 
-        //first form the stack and store arrayList inside that which will contain ASCII value of character + frequency of that same character
+        //first take stack of list, in which list will contains all the caharcaters and there frequency
+        Stack<List<Integer>> st = new Stack<>();
+        int n = s.length();
 
-        Stack<ArrayList<Integer>> stack = new Stack<>();
+        for(int i = 0 ; i < n; i++) {
+            
+            if(st.isEmpty()) {
+                List<Integer> list = new ArrayList<>();
+                list.add((int)s.charAt(i));
+                list.add(1);
 
-        //iterate through string
-        for(int i = 0; i < s.length(); i++) {
-            if(stack.isEmpty()) {
-                ArrayList<Integer> curr = new ArrayList<>();
-                curr.add((int)s.charAt(i));
-                curr.add(1);
-
-                stack.push(curr);
+                st.push(list);
             } else {
-                ArrayList<Integer> topElement = stack.peek();
-                int topCharacter = topElement.get(0);
-                int topCharFreq = topElement.get(1);
-                if(topCharacter == (int)s.charAt(i)) {
-                    topElement.set(1, topCharFreq+1);
-                } else {
-                    ArrayList<Integer> curr = new ArrayList<>();
-                    curr.add((int)s.charAt(i));
-                    curr.add(1);
 
-                    stack.push(curr);
+                char ch = (char)(int)st.peek().get(0);
+                int freq = st.peek().get(1);
+
+                if(ch == s.charAt(i)) {
+                    freq++;
+                    List<Integer> sameChar = st.peek();
+                    sameChar.set(1, freq);
+                } else {
+                    List<Integer> list = new ArrayList<>();
+                    list.add((int)s.charAt(i));
+                    list.add(1);
+
+                    st.push(list);
                 }
 
-                
-            }
 
-            if(stack.peek().get(1) == k) stack.pop();
+                if(freq == k) {
+                st.pop();
+                }
+            }
+            
         }
 
         StringBuilder sb = new StringBuilder();
 
-        while(!stack.isEmpty()) {
-            ArrayList<Integer> topElement = stack.peek();
-            int freq = topElement.get(1);
-            while(freq > 0) {
-                sb.append((char)(int)topElement.get(0));
-                freq--;
-            }
-            stack.pop();
+        while(!st.isEmpty()) {
+
+            char ch = (char)(int)st.peek().get(0);
+            int freq = st.peek().get(1);
+         
+                
+                while(freq > 0) {
+                    sb.append(ch);
+                    freq--;
+                 }
+                 st.pop();
             
         }
 
         return sb.reverse().toString();
+
         
     }
 }
