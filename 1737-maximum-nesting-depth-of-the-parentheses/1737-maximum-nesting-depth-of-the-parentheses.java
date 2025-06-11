@@ -7,11 +7,8 @@ class Solution {
         int max = 0;
 
         for(int i = 0; i < n; i++) {
-                if(s.charAt(i) == '(') {
-                    count++;
-                }else if(s.charAt(i) == ')') {
-                    count--;
-                }
+            if(s.charAt(i) == '(') count++;
+            else if(s.charAt(i) == ')') count--;
 
             st.push(s.charAt(i));
             max = Math.max(count,max);
