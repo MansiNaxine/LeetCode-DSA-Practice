@@ -1,31 +1,35 @@
 class Solution {
     public boolean isValid(String s) {
 
-        Stack<Character> stack=new Stack<>();
+        Stack<Character> st = new Stack<>();
+        int n = s.length();
+        int count = 0;
 
-        for(char ch:s.toCharArray()){
-
-            if(ch=='(' || ch=='{' || ch=='['){
-                stack.push(ch);
+        for(int i = 0; i < n; i++) {
+            if(st.isEmpty()) {
+                if(s.charAt(i) == '(' || s.charAt(i) == '{' || s.charAt(i) == '[') {
+                    count++;
+                    st.push(s.charAt(i));
+                } else{
+                    return false;
+                }
             }else{
-                if(ch==')'){
-                    if(stack.isEmpty() || stack.pop()!='(' ){
+                 if(s.charAt(i) == '(' || s.charAt(i) == '{' || s.charAt(i) == '[') {
+                    count++;
+                    st.push(s.charAt(i));
+                }else {
+                    if(s.charAt(i) == ')' && st.pop() != '(' ||
+                       s.charAt(i) == '}' && st.pop() != '{' ||
+                       s.charAt(i) == ']' && st.pop() != '[') {
                         return false;
-                    }
-                }
-                if(ch=='}'){
-                    if(stack.isEmpty() || stack.pop()!='{'){
-                        return false;
-                    }
-                }
-                if(ch==']'){
-                    if(stack.isEmpty() || stack.pop()!='['){
-                        return false;
+                       } else if(s.charAt(i) == ')' || s.charAt(i) == '}' || s.charAt(i) == ']' ){
+                        count--;
                     }
                 }
             }
         }
 
-       return stack.isEmpty(); 
+        return count == 0;
+        
     }
 }
