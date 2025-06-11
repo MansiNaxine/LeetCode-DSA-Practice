@@ -1,33 +1,37 @@
 class Solution {
-    public String getResultString(String s) {
-        int len = s.length();
-        Stack<Character> stack = new Stack<>();
+    public String getFormattedString(String s) {
 
-        for(int i = 0; i < len; i++) {
-            if(stack.isEmpty()) {
+        int n = s.length();
+        Stack<Character> st = new Stack<>();
+
+        for(int i = 0; i < n; i++) {
+            if(st.isEmpty()) {
                 if(s.charAt(i) == '#') continue;
-                 else stack.push(s.charAt(i));
+                else st.push(s.charAt(i));
             } else {
-                if(s.charAt(i) == '#') stack.pop();
-                 else stack.push(s.charAt(i));
+                if(s.charAt(i) == '#') {
+                    st.pop();
+                } else {
+                    st.push(s.charAt(i));
+                }
             }
         }
 
-        StringBuilder sb = new StringBuilder("");
-        while(!stack.isEmpty()) {
-            sb.append(stack.pop());
+        StringBuilder sb = new StringBuilder();
+
+        while(!st.isEmpty()) {
+            sb.append(st.pop());
         }
 
         return sb.toString();
     }
     public boolean backspaceCompare(String s, String t) {
         
-        String a1 = getResultString(s);
-        String b1 = getResultString(t);
+      String A = getFormattedString(s);
+      String B = getFormattedString(t);
 
-        if(a1.equals(b1)) return true;
+      if(A.equalsIgnoreCase(B)) return true;
 
-
-        return false;
+      return false;
     }
 }
