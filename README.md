@@ -31,6 +31,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/MansiNaxine/LeetCode/tree/master/0108-convert-sorted-array-to-binary-search-tree) |
 | [0118-pascals-triangle](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0118-pascals-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0121-best-time-to-buy-and-sell-stock) |
+| [0150-evaluate-reverse-polish-notation](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0152-maximum-product-subarray](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0152-maximum-product-subarray) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0162-find-peak-element](https://github.com/MansiNaxine/LeetCode/tree/master/0162-find-peak-element) |
@@ -164,6 +165,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0048-rotate-image](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0048-rotate-image) |
 | [0050-powx-n](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0050-powx-n) |
 | [0069-sqrtx](https://github.com/MansiNaxine/LeetCode/tree/master/0069-sqrtx) |
+| [0150-evaluate-reverse-polish-notation](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0189-rotate-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0189-rotate-array) |
 | [0202-happy-number](https://github.com/MansiNaxine/LeetCode/tree/master/0202-happy-number) |
 | [0204-count-primes](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0204-count-primes) |
@@ -375,6 +377,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0085-maximal-rectangle](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0085-maximal-rectangle) |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/MansiNaxine/LeetCode/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0143-reorder-list](https://github.com/MansiNaxine/LeetCode/tree/master/0143-reorder-list) |
+| [0150-evaluate-reverse-polish-notation](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0155-min-stack](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0155-min-stack) |
 | [0232-implement-queue-using-stacks](https://github.com/MansiNaxine/LeetCode/tree/master/0232-implement-queue-using-stacks) |
 | [0234-palindrome-linked-list](https://github.com/MansiNaxine/LeetCode/tree/master/0234-palindrome-linked-list) |
