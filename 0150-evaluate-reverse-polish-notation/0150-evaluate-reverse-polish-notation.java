@@ -14,7 +14,7 @@ class Solution {
 
         for(int i = 0 ; i < n; i++) {
             String a = tokens[i];
-            if(isOperator(a) == false) {
+            if(!isOperator(a)) {
                 st.push(Integer.parseInt(a));
             } else {
                 int A = st.pop();
@@ -29,13 +29,7 @@ class Solution {
                 st.push(result);
             }
         }
-        
-        int answer = 0;
-        while(!st.isEmpty()) {
-            answer = st.pop();
-        }
-
-        return answer;
+        return st.pop();
 
     }
 }
