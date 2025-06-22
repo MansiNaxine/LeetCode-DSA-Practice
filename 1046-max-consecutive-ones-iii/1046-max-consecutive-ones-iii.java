@@ -28,28 +28,23 @@ class Solution {
     int j = 0;
     int n = nums.length;
 
-    while(i < n && j < n) {
+    while(j < n) {
        
+        if(nums[j] == 0) {
+            zero++;
+        }
 
-        if(zero <= k) {
-             if(nums[j] == 0) {
-                zero++;
-             }
-            
-            j++;
-
-        } else {
+        while(i <= j && zero > k) {
             if(nums[i] == 0) {
                 zero--;
             }
             i++;
         }
-
-        if(zero <= k) {
-
-            answer = Math.max(answer, (j - i));
-        }
+         
+        int len = j - i + 1;
+        answer = Math.max(answer, len);
         
+        j++;
     }
         return answer;
         
