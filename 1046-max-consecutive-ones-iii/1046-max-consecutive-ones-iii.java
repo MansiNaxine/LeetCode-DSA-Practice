@@ -1,25 +1,29 @@
 class Solution {
     public int longestOnes(int[] nums, int k) {
 
-        int left=0;
-        int zeroCount=0;
-        int ans=0;
-        for(int right=0;right<nums.length;right++){
-            if(nums[right]==0){
-                zeroCount++;
+        int answer = 0;
+        Queue<Integer> q = new LinkedList<>();
+        int zero = 0;
+
+        for(int i = 0; i < nums.length; i++) {
+
+            q.add(nums[i]);
+            if(nums[i] == 0) {
+                zero++;
             }
 
-            while(zeroCount>k){
-                if(nums[left]==0){
-                    zeroCount--;
+            while(zero > k && !q.isEmpty()) {
+
+                if(q.peek() == 0) {
+                    zero--;
                 }
-               left++; 
+                q.remove();
             }
 
-            ans=Math.max(ans,right-left+1);
+            answer = Math.max(answer, q.size());
         }
-       
-       return ans;
+
+        return answer;
         
     }
 }
