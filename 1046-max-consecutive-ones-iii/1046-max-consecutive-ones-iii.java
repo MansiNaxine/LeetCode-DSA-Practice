@@ -2,50 +2,33 @@ class Solution {
     public int longestOnes(int[] nums, int k) {
 
         int answer = 0;
-        //Deque<Integer> q = new LinkedList<>();
         int zero = 0;
+        int sum = 0;
 
-        // for(int i = 0; i < nums.length; i++) {
+        int i = 0;
+        int j = 0;
+        int n = nums.length;
 
-        //     q.addLast(nums[i]);
-        //     if(nums[i] == 0) {
-        //         zero++;
-        //     }
+        while(j < n) {
+            sum += 1;
 
-        //     while(zero > k && !q.isEmpty()) {
-
-        //         if(q.peekFirst() == 0) {
-        //             zero--;
-        //         }
-        //         q.removeFirst();
-        //     }
-
-        //     answer = Math.max(answer, q.size());
-        // }
-
-        //with optimized space complexity
-    int i = 0; 
-    int j = 0;
-    int n = nums.length;
-
-    while(j < n) {
-       
-        if(nums[j] == 0) {
-            zero++;
-        }
-
-        while(i <= j && zero > k) {
-            if(nums[i] == 0) {
-                zero--;
+            if(nums[j] == 0) {
+                zero++;
             }
-            i++;
+
+            while(i <=j && zero > k) {
+                sum -= 1;
+                if(nums[i] == 0) {
+                    zero--;
+                }
+                i++;
+            }
+
+            answer = Math.max(answer, j - i + 1);
+
+            j++;
         }
-         
-        int len = j - i + 1;
-        answer = Math.max(answer, len);
-        
-        j++;
-    }
+
         return answer;
         
     }
