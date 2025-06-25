@@ -24,8 +24,7 @@ class Solution {
                 i++;
             }
 
-            answer = Math.max(answer, j - i + 1);
-
+            if(zero <= k) answer = Math.max(answer, j - i + 1);
             j++;
         }
 
