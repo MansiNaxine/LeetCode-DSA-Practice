@@ -1,59 +1,59 @@
 class MyQueue {
 
-    private Stack<Integer> first;
-    private Stack<Integer> second;
+    Stack<Integer> st1;
+    Stack<Integer> st2;
+    int size;
 
     public MyQueue() {
-        first=new Stack<>();
-        second=new Stack<>();
+        st1 = new Stack<>();
+        st2 = new Stack<>();
+        size = 0;
     }
     
     public void push(int x) {
-
-
-        first.push(x);
-
-
-        
+        st1.push(x);
+        size++;
     }
     
     public int pop() {
-        while(!first.isEmpty()){
-            second.push(first.pop());
-        }
-        int removed=second.pop();
+        int answer = -1;
+        if(st1.isEmpty()) {
+            return answer;
+        } else {
+            for(int i = 0; i < size - 1; i++) {
+                st2.push(st1.pop());
+            }
+            answer = st1.pop();
+            size--;
+            for(int i = 0; i < size; i++) {
+                st1.push(st2.pop());
+            }
+            
+        } 
 
-        while(!second.isEmpty()){
-            first.push(second.pop());
-        }
-
-        return removed;
-
-
-        
+        return answer;
     }
     
     public int peek() {
+        int answer = -1;
+        if(st1.isEmpty()) {
+            return answer;
+        } else {
+            for(int i = 0; i < size - 1; i++) {
+                st2.push(st1.pop());
+            }
+            answer = st1.peek();
+            for(int i = 0; i < size - 1; i++) {
+                st1.push(st2.pop());
+            }
+            
+        } 
 
-       while(!first.isEmpty()){
-            second.push(first.pop());
-        }
-
-        int displayFirst=second.peek();
-
-        while(!second.isEmpty()){
-            first.push(second.pop());
-        }
-
-        
-
-        return displayFirst;
-        
+        return answer;
     }
     
     public boolean empty() {
-        
-        return first.isEmpty();
+         return st1.isEmpty();
     }
 }
 
