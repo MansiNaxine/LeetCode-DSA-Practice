@@ -43,6 +43,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0209-minimum-size-subarray-sum](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0209-minimum-size-subarray-sum) |
 | [0215-kth-largest-element-in-an-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0215-kth-largest-element-in-an-array) |
 | [0216-combination-sum-iii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0216-combination-sum-iii) |
+| [0239-sliding-window-maximum](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0239-sliding-window-maximum) |
 | [0240-search-a-2d-matrix-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0240-search-a-2d-matrix-ii) |
 | [0268-missing-number](https://github.com/MansiNaxine/LeetCode/tree/master/0268-missing-number) |
 | [0283-move-zeroes](https://github.com/MansiNaxine/LeetCode/tree/master/0283-move-zeroes) |
@@ -411,6 +412,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0232-implement-queue-using-stacks](https://github.com/MansiNaxine/LeetCode/tree/master/0232-implement-queue-using-stacks) |
+| [0239-sliding-window-maximum](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0239-sliding-window-maximum) |
 ## Tree
 |  |
 | ------- |
@@ -509,6 +511,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0209-minimum-size-subarray-sum](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0209-minimum-size-subarray-sum) |
+| [0239-sliding-window-maximum](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0239-sliding-window-maximum) |
 | [0713-subarray-product-less-than-k](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0713-subarray-product-less-than-k) |
 | [1046-max-consecutive-ones-iii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1046-max-consecutive-ones-iii) |
 | [1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold) |
@@ -533,6 +536,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0023-merge-k-sorted-lists](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0023-merge-k-sorted-lists) |
 | [0215-kth-largest-element-in-an-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0215-kth-largest-element-in-an-array) |
+| [0239-sliding-window-maximum](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0239-sliding-window-maximum) |
 | [0451-sort-characters-by-frequency](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0451-sort-characters-by-frequency) |
 | [0948-sort-an-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0948-sort-an-array) |
 ## Bucket Sort
@@ -561,4 +565,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1039-find-the-town-judge](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1039-find-the-town-judge) |
+## Monotonic Queue
+|  |
+| ------- |
+| [0239-sliding-window-maximum](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0239-sliding-window-maximum) |
 <!---LeetCode Topics End-->
