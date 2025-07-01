@@ -34,6 +34,8 @@ class Solution {
 
         String str1 = new String(ch);
 
+        //there is also one way to use stringBuilder and append all characters
+
         return str1;
     }
 }
