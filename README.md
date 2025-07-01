@@ -18,6 +18,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0041-first-missing-positive](https://github.com/MansiNaxine/LeetCode/tree/master/0041-first-missing-positive) |
 | [0046-permutations](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0046-permutations) |
 | [0048-rotate-image](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0048-rotate-image) |
+| [0049-group-anagrams](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0049-group-anagrams) |
 | [0051-n-queens](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0051-n-queens) |
 | [0053-maximum-subarray](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0053-maximum-subarray) |
 | [0056-merge-intervals](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0056-merge-intervals) |
@@ -202,6 +203,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0017-letter-combinations-of-a-phone-number](https://github.com/MansiNaxine/LeetCode/tree/master/0017-letter-combinations-of-a-phone-number) |
 | [0037-sudoku-solver](https://github.com/MansiNaxine/LeetCode/tree/master/0037-sudoku-solver) |
 | [0041-first-missing-positive](https://github.com/MansiNaxine/LeetCode/tree/master/0041-first-missing-positive) |
+| [0049-group-anagrams](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0049-group-anagrams) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/MansiNaxine/LeetCode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0141-linked-list-cycle](https://github.com/MansiNaxine/LeetCode/tree/master/0141-linked-list-cycle) |
 | [0142-linked-list-cycle-ii](https://github.com/MansiNaxine/LeetCode/tree/master/0142-linked-list-cycle-ii) |
@@ -235,6 +237,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0015-3sum](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0015-3sum) |
+| [0049-group-anagrams](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0049-group-anagrams) |
 | [0056-merge-intervals](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0056-merge-intervals) |
 | [0075-sort-colors](https://github.com/MansiNaxine/LeetCode/tree/master/0075-sort-colors) |
 | [0088-merge-sorted-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0088-merge-sorted-array) |
@@ -301,6 +304,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0020-valid-parentheses](https://github.com/MansiNaxine/LeetCode/tree/master/0020-valid-parentheses) |
 | [0022-generate-parentheses](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0022-generate-parentheses) |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
+| [0049-group-anagrams](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0049-group-anagrams) |
 | [0058-length-of-last-word](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0058-length-of-last-word) |
 | [0125-valid-palindrome](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0125-valid-palindrome) |
 | [0131-palindrome-partitioning](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0131-palindrome-partitioning) |
