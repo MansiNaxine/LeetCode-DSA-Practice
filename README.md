@@ -67,6 +67,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0882-peak-index-in-a-mountain-array](https://github.com/MansiNaxine/LeetCode/tree/master/0882-peak-index-in-a-mountain-array) |
 | [0907-koko-eating-bananas](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0907-koko-eating-bananas) |
 | [0948-sort-an-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0948-sort-an-array) |
+| [1016-subarray-sums-divisible-by-k](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1016-subarray-sums-divisible-by-k) |
 | [1019-squares-of-a-sorted-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1019-squares-of-a-sorted-array) |
 | [1036-rotting-oranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1036-rotting-oranges) |
 | [1039-find-the-town-judge](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1039-find-the-town-judge) |
@@ -164,6 +165,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0560-subarray-sum-equals-k](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0560-subarray-sum-equals-k) |
 | [0713-subarray-product-less-than-k](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0713-subarray-product-less-than-k) |
 | [0724-find-pivot-index](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0724-find-pivot-index) |
+| [1016-subarray-sums-divisible-by-k](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1016-subarray-sums-divisible-by-k) |
 | [1046-max-consecutive-ones-iii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1046-max-consecutive-ones-iii) |
 | [1603-running-sum-of-1d-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1603-running-sum-of-1d-array) |
 | [1833-find-the-highest-altitude](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1833-find-the-highest-altitude) |
@@ -213,6 +215,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0496-next-greater-element-i](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0496-next-greater-element-i) |
 | [0560-subarray-sum-equals-k](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0560-subarray-sum-equals-k) |
 | [0645-set-mismatch](https://github.com/MansiNaxine/LeetCode/tree/master/0645-set-mismatch) |
+| [1016-subarray-sums-divisible-by-k](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1016-subarray-sums-divisible-by-k) |
 | [1039-find-the-town-judge](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1039-find-the-town-judge) |
 | [1482-how-many-numbers-are-smaller-than-the-current-number](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1482-how-many-numbers-are-smaller-than-the-current-number) |
 | [1635-number-of-good-pairs](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1635-number-of-good-pairs) |
