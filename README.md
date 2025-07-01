@@ -55,6 +55,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0448-find-all-numbers-disappeared-in-an-array](https://github.com/MansiNaxine/LeetCode/tree/master/0448-find-all-numbers-disappeared-in-an-array) |
 | [0485-max-consecutive-ones](https://github.com/MansiNaxine/LeetCode/tree/master/0485-max-consecutive-ones) |
 | [0496-next-greater-element-i](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0496-next-greater-element-i) |
+| [0560-subarray-sum-equals-k](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0560-subarray-sum-equals-k) |
 | [0581-shortest-unsorted-continuous-subarray](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0581-shortest-unsorted-continuous-subarray) |
 | [0645-set-mismatch](https://github.com/MansiNaxine/LeetCode/tree/master/0645-set-mismatch) |
 | [0713-subarray-product-less-than-k](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0713-subarray-product-less-than-k) |
@@ -160,6 +161,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0303-range-sum-query-immutable](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0303-range-sum-query-immutable) |
 | [0304-range-sum-query-2d-immutable](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0304-range-sum-query-2d-immutable) |
 | [0410-split-array-largest-sum](https://github.com/MansiNaxine/LeetCode/tree/master/0410-split-array-largest-sum) |
+| [0560-subarray-sum-equals-k](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0560-subarray-sum-equals-k) |
 | [0713-subarray-product-less-than-k](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0713-subarray-product-less-than-k) |
 | [0724-find-pivot-index](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0724-find-pivot-index) |
 | [1046-max-consecutive-ones-iii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1046-max-consecutive-ones-iii) |
@@ -209,6 +211,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0448-find-all-numbers-disappeared-in-an-array](https://github.com/MansiNaxine/LeetCode/tree/master/0448-find-all-numbers-disappeared-in-an-array) |
 | [0451-sort-characters-by-frequency](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0451-sort-characters-by-frequency) |
 | [0496-next-greater-element-i](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0496-next-greater-element-i) |
+| [0560-subarray-sum-equals-k](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0560-subarray-sum-equals-k) |
 | [0645-set-mismatch](https://github.com/MansiNaxine/LeetCode/tree/master/0645-set-mismatch) |
 | [1039-find-the-town-judge](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1039-find-the-town-judge) |
 | [1482-how-many-numbers-are-smaller-than-the-current-number](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1482-how-many-numbers-are-smaller-than-the-current-number) |
