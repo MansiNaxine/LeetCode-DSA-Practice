@@ -32,8 +32,11 @@ class Solution {
         char[] ch = str.toCharArray();
         Arrays.sort(ch);
 
-        String str1 = new String(ch);
+        StringBuilder str1 = new StringBuilder();
+        for(int i = 0; i < ch.length; i++) {
+            str1.append(ch[i]);
+        }
 
-        return str1;
+        return str1.toString();
     }
 }
