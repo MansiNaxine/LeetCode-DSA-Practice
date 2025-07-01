@@ -11,12 +11,14 @@ class Solution {
             sum += nums[i];
             answer += map.getOrDefault((sum - k), 0);
 
-            if(map.containsKey(sum)) {
-                map.put(sum, map.get(sum) + 1);
+            // if(map.containsKey(sum)) {
+            //     map.put(sum, map.get(sum) + 1);
 
-            } else {
-                map.put(sum, 1);
-            }
+            // } else {
+            //     map.put(sum, 1);
+            // }
+
+            map.put(sum,map.getOrDefault(sum,0) + 1);
         }
 
         return answer;
