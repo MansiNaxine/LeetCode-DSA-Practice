@@ -73,6 +73,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1036-rotting-oranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1036-rotting-oranges) |
 | [1039-find-the-town-judge](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1039-find-the-town-judge) |
 | [1046-max-consecutive-ones-iii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1046-max-consecutive-ones-iii) |
+| [1055-pairs-of-songs-with-total-durations-divisible-by-60](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1055-pairs-of-songs-with-total-durations-divisible-by-60) |
 | [1284-four-divisors](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1284-four-divisors) |
 | [1408-find-the-smallest-divisor-given-a-threshold](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1408-find-the-smallest-divisor-given-a-threshold) |
 | [1421-find-numbers-with-even-number-of-digits](https://github.com/MansiNaxine/LeetCode/tree/master/1421-find-numbers-with-even-number-of-digits) |
@@ -221,6 +222,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0645-set-mismatch](https://github.com/MansiNaxine/LeetCode/tree/master/0645-set-mismatch) |
 | [1016-subarray-sums-divisible-by-k](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1016-subarray-sums-divisible-by-k) |
 | [1039-find-the-town-judge](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1039-find-the-town-judge) |
+| [1055-pairs-of-songs-with-total-durations-divisible-by-60](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1055-pairs-of-songs-with-total-durations-divisible-by-60) |
 | [1482-how-many-numbers-are-smaller-than-the-current-number](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1482-how-many-numbers-are-smaller-than-the-current-number) |
 | [1635-number-of-good-pairs](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1635-number-of-good-pairs) |
 | [1960-check-if-the-sentence-is-pangram](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1960-check-if-the-sentence-is-pangram) |
@@ -518,6 +520,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0169-majority-element](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0169-majority-element) |
 | [0451-sort-characters-by-frequency](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0451-sort-characters-by-frequency) |
+| [1055-pairs-of-songs-with-total-durations-divisible-by-60](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1055-pairs-of-songs-with-total-durations-divisible-by-60) |
 | [1482-how-many-numbers-are-smaller-than-the-current-number](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1482-how-many-numbers-are-smaller-than-the-current-number) |
 | [1635-number-of-good-pairs](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1635-number-of-good-pairs) |
 | [2270-find-all-lonely-numbers-in-the-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2270-find-all-lonely-numbers-in-the-array) |
