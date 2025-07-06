@@ -32,6 +32,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/MansiNaxine/LeetCode/tree/master/0108-convert-sorted-array-to-binary-search-tree) |
 | [0118-pascals-triangle](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0118-pascals-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0121-best-time-to-buy-and-sell-stock) |
+| [0128-longest-consecutive-sequence](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0128-longest-consecutive-sequence) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0152-maximum-product-subarray](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0152-maximum-product-subarray) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0153-find-minimum-in-rotated-sorted-array) |
@@ -208,6 +209,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0041-first-missing-positive](https://github.com/MansiNaxine/LeetCode/tree/master/0041-first-missing-positive) |
 | [0049-group-anagrams](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0049-group-anagrams) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/MansiNaxine/LeetCode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
+| [0128-longest-consecutive-sequence](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0128-longest-consecutive-sequence) |
 | [0141-linked-list-cycle](https://github.com/MansiNaxine/LeetCode/tree/master/0141-linked-list-cycle) |
 | [0142-linked-list-cycle-ii](https://github.com/MansiNaxine/LeetCode/tree/master/0142-linked-list-cycle-ii) |
 | [0160-intersection-of-two-linked-lists](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0160-intersection-of-two-linked-lists) |
@@ -589,4 +591,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0239-sliding-window-maximum](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0239-sliding-window-maximum) |
+## Union Find
+|  |
+| ------- |
+| [0128-longest-consecutive-sequence](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0128-longest-consecutive-sequence) |
 <!---LeetCode Topics End-->
