@@ -93,6 +93,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2058-concatenation-of-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2058-concatenation-of-array) |
 | [2099-number-of-strings-that-appear-as-substrings-in-word](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2099-number-of-strings-that-appear-as-substrings-in-word) |
 | [2144-maximum-difference-between-increasing-elements](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2144-maximum-difference-between-increasing-elements) |
+| [2270-find-all-lonely-numbers-in-the-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2270-find-all-lonely-numbers-in-the-array) |
 | [2271-rearrange-array-elements-by-sign](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2271-rearrange-array-elements-by-sign) |
 | [3420-find-occurrences-of-an-element-in-an-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/3420-find-occurrences-of-an-element-in-an-array) |
 | [3582-find-indices-of-stable-mountains](https://github.com/MansiNaxine/LeetCode/tree/master/3582-find-indices-of-stable-mountains) |
@@ -223,6 +224,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1482-how-many-numbers-are-smaller-than-the-current-number](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1482-how-many-numbers-are-smaller-than-the-current-number) |
 | [1635-number-of-good-pairs](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1635-number-of-good-pairs) |
 | [1960-check-if-the-sentence-is-pangram](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1960-check-if-the-sentence-is-pangram) |
+| [2270-find-all-lonely-numbers-in-the-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2270-find-all-lonely-numbers-in-the-array) |
 | [3420-find-occurrences-of-an-element-in-an-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/3420-find-occurrences-of-an-element-in-an-array) |
 ## Bit Manipulation
 |  |
@@ -518,6 +520,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0451-sort-characters-by-frequency](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0451-sort-characters-by-frequency) |
 | [1482-how-many-numbers-are-smaller-than-the-current-number](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1482-how-many-numbers-are-smaller-than-the-current-number) |
 | [1635-number-of-good-pairs](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1635-number-of-good-pairs) |
+| [2270-find-all-lonely-numbers-in-the-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2270-find-all-lonely-numbers-in-the-array) |
 ## Sliding Window
 |  |
 | ------- |
