@@ -3,15 +3,12 @@ class Solution {
         
 
         int n = nums.length;
-        Map<Integer, Integer> map = new HashMap<>();
+        int[] freq = new int[nums.length];
 
-        for(int num : nums) {
-            map.put(num, map.getOrDefault(num, 0) + 1);
-            if(map.get(num) > 1) {
-                return num;
-            }
-        }
-
+       for(int i = 0; i < n; i++) {
+        freq[nums[i]]++;
+        if(freq[nums[i]] > 1) return nums[i];
+       }
         return 0;
     }
 }
