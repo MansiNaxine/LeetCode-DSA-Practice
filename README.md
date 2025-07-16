@@ -33,6 +33,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0118-pascals-triangle](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0118-pascals-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0128-longest-consecutive-sequence](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0128-longest-consecutive-sequence) |
+| [0136-single-number](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0136-single-number) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0152-maximum-product-subarray](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0152-maximum-product-subarray) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0153-find-minimum-in-rotated-sorted-array) |
@@ -235,6 +236,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0078-subsets](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0078-subsets) |
+| [0136-single-number](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0136-single-number) |
 | [0231-power-of-two](https://github.com/MansiNaxine/LeetCode/tree/master/0231-power-of-two) |
 | [0268-missing-number](https://github.com/MansiNaxine/LeetCode/tree/master/0268-missing-number) |
 | [0287-find-the-duplicate-number](https://github.com/MansiNaxine/LeetCode/tree/master/0287-find-the-duplicate-number) |
