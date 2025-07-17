@@ -1,26 +1,27 @@
 class Solution {
-    List<List<Integer>> answer = new ArrayList<>();
-    List<Integer> currSeq = new ArrayList<>();
-
     public List<List<Integer>> subsets(int[] nums) {
-        
-        recursion(nums, 0);
-        return answer;
-    }
 
-    public void recursion(int[] nums, int index) {
+        int n = nums.length;
+        List<List<Integer>> answer = new ArrayList<>();
 
-        //base case
-        if(index == nums.length) {
+        int len = (int) Math.pow(2, n);
 
-            answer.add(new ArrayList<>(currSeq));
-            return;
+        for(int i = 0; i < len; i++) {
+            List<Integer> arr = new ArrayList<>();
+
+            int index = 0;
+            int numIn = i;
+            while(numIn > 0) {
+                int num = numIn % 2;
+                if(num == 1) arr.add(nums[index]);
+                numIn /= 2;
+                index++;
+            }
+
+            answer.add(new ArrayList<>(arr));
         }
 
-        //recursive case
-        currSeq.add(nums[index]);
-        recursion(nums, index+1);
-        currSeq.remove(currSeq.size() - 1);
-        recursion(nums, index+1);
+        return answer;
+        
     }
 }
