@@ -14,25 +14,28 @@
  * }
  */
 class Solution {
-    public int sumNumbers(TreeNode root) {
+    int answer = 0;
 
-        return pathSum(root,0);
-        
-    }
+    public void recursion(TreeNode root, int sum) {
 
-    public int pathSum(TreeNode root,int sum){
-        if(root==null){
-            return 0;
+        //base case
+        if(root == null) return;
+
+        sum = (sum * 10) + root.val;
+
+        if(root.left == null && root.right == null) {
+            answer += sum;
         }
 
-        sum=sum*10+root.val;
-
-            if(root.left==null && root.right==null){
-                return sum;
-            }
-
-        return pathSum(root.left,sum)+pathSum(root.right,sum);
+        //recursive case
+        recursion(root.left, sum);
+        recursion(root.right, sum);
+        sum /= 10;
 
     }
-
+    public int sumNumbers(TreeNode root) {
+        
+        recursion(root, 0);
+        return answer;
+    }
 }
