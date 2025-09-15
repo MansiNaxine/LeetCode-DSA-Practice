@@ -15,20 +15,25 @@
  */
 class Solution {
 
-    List<Integer> list = new ArrayList<>();
+    //List<Integer> list = new ArrayList<>();
+    int answer = 0;
+    int count = 0;
 
     void recursion(TreeNode root, int k) {
         if(root == null) {
             return ;
         }
         recursion(root.left, k);
-        list.add(root.val);
+        count++;
+        if(count == k) {
+            answer = root.val;
+        }
         recursion(root.right, k);
        
 
     }
     public int kthSmallest(TreeNode root, int k) {
         recursion(root, k);
-        return list.get(k-1);
+        return answer;
     }
 }
