@@ -14,14 +14,14 @@
  * }
  */
 class Solution {
-    int answer = (int)-1e9;
+    int answer = -1000;
 
     int recursion(TreeNode root) {
 
         if(root == null) return 0;
         int option1 = root.val;
-        int left = root.left == null ? (int) -1e9 : recursion(root.left);
-        int right = root.right == null ? (int)-1e9: recursion(root.right);
+        int left = root.left == null ? -1000 : recursion(root.left);
+        int right = root.right == null ? -1000 : recursion(root.right);
         int option2 = Math.max(option1, Math.max(left + option1, right + option1));
         int option3 = Math.max(left, right);
         int option4 = option1 + left + right;
