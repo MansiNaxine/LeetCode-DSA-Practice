@@ -17,18 +17,18 @@ class Solution {
 
     List<Integer> list = new ArrayList<>();
 
-    void recursion(TreeNode root, int k, int count) {
+    void recursion(TreeNode root, int k) {
         if(root == null) {
             return ;
         }
-        recursion(root.left, k, count++);
+        recursion(root.left, k);
         list.add(root.val);
-        recursion(root.right, k, count++);
+        recursion(root.right, k);
        
 
     }
     public int kthSmallest(TreeNode root, int k) {
-        recursion(root, k, 0);
+        recursion(root, k);
         return list.get(k-1);
     }
 }
