@@ -23,8 +23,9 @@ class Solution {
             sum += root.val;
         }
 
-        recursion(root.left, low, high);
-        recursion(root.right, low, high);
+        if(low < root.val) recursion(root.left, low, high);
+        
+        if(high > root.val) recursion(root.right, low, high);
 
 
     }
