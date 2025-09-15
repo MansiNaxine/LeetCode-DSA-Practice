@@ -14,31 +14,28 @@
  * }
  */
 class Solution {
+    int answer = (int)-1e9;
 
-    int ans=Integer.MIN_VALUE;
-    public int maxPathSum(TreeNode root) {
+    int recursion(TreeNode root) {
 
-        helper(root);
-        return ans;
-        
+        if(root == null) return 0;
+        int option1 = root.val;
+        int left = root.left == null ? (int) -1e9 : recursion(root.left);
+        int right = root.right == null ? (int)-1e9: recursion(root.right);
+        int option2 = Math.max(option1, Math.max(left + option1, right + option1));
+        int option3 = Math.max(left, right);
+        int option4 = option1 + left + right;
+
+        answer = Math.max(answer, Math.max(option1, Math.max(option2, Math.max(option3, option4))));
+
+        return option2;
+
     }
 
-    public int helper(TreeNode root){
+    public int maxPathSum(TreeNode root) {
+        
+        recursion(root);
 
-            if(root==null){
-                return 0;
-            }
-            
-            int left=helper(root.left);
-            int right=helper(root.right);
-
-            left=Math.max(0,left);
-            right=Math.max(0,right);
-
-            int pathSum=left+right+root.val;
-            ans=Math.max(ans,pathSum);
-
-            return Math.max(left,right)+root.val;
-
+        return answer;
     }
 }
