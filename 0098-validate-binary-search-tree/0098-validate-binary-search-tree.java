@@ -14,27 +14,27 @@
  * }
  */
 class Solution {
-    public boolean isValidBST(TreeNode root) {
+    List<Integer> list = new ArrayList<>();
 
-        return helper(root,null,null);
+    void recursion(TreeNode root) {
+        // base case
+        if(root == null) return;
+
+        // recursive case
+        recursion(root.left);
+        list.add(root.val);
+        recursion(root.right);
     }
 
-    public boolean helper(TreeNode root,Integer low,Integer high){
-        if(root==null){
-            return true;
-        }
-                if(low!=null && root.val<=low){
-                    return false;
-                }
-                if(high!=null && root.val>=high){
-                    return false;
-                }
-
-        boolean left=helper(root.left,low,root.val);
-        boolean right=helper(root.right,root.val,high);
-
-        return  left && right ;
-
+    public boolean isValidBST(TreeNode root) {
         
+        recursion(root);
+        for(int i = 0 ; i < list.size() - 1; i++) {
+            if(list.get(i) >= list.get(i + 1)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
