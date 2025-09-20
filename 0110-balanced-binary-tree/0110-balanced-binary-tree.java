@@ -27,16 +27,7 @@ class Solution {
         int Right = recursion(root.right);
 
         int answer = Math.abs((recursion(root.left) - recursion(root.right)));
-
-        if(answer <= 1) {
-           boolean LeftPart =  isBalanced(root.left);
-           boolean RightPart = isBalanced(root.right);
-
-           return LeftPart && RightPart;
-
-        } else {
-            return false;
-        }
         
+        return answer > 1 ? false : isBalanced(root.left) && isBalanced(root.right);
     }
 }
