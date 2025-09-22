@@ -19,17 +19,18 @@ class Solution {
         if(p == null && q == null) return true;
         if(p == null || q == null) return false;
 
-        int pVal = p.val;
-        int qVal = q.val;
+        int valp = p.val;
+        int valq = q.val;
 
-        if(pVal == qVal) {
-            boolean leftPart = isSameTree(p.left, q.left);
+        if(valp == valq) {
+            boolean leftPart =  isSameTree(p.left, q.left);
             boolean rightPart = isSameTree(p.right, q.right);
 
-            return (leftPart && rightPart);
+            return leftPart && rightPart;
         } else {
             return false;
         }
-        
+
+
     }
 }
