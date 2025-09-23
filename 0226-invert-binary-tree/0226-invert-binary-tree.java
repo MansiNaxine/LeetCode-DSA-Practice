@@ -14,19 +14,27 @@
  * }
  */
 class Solution {
+
+    public void helper(TreeNode root) {
+        //base case
+        if(root == null) return ;
+
+        //recursive case
+        TreeNode right = root.right != null ? root.right : null;
+        TreeNode left = root.left != null ? root.left : null;
+        root.left = right;
+        root.right = left;
+
+        helper(root.left);
+        helper(root.right);
+
+
+    }
     public TreeNode invertTree(TreeNode root) {
-
-        if(root==null){
-            return null;
-        }
         
-        TreeNode left=invertTree(root.left);
-        TreeNode right=invertTree(root.right);
+        
+         helper(root);
+         return root;
 
-        root.left=right;
-        root.right=left;
-
-
-        return root;
     }
 }
