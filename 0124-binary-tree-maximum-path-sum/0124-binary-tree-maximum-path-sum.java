@@ -24,9 +24,8 @@ class Solution {
         int right = root.right != null ? recursion(root.right) : -1000;
         int option2 = Math.max(option1, Math.max(option1 + left, option1 + right));
         int option3 = option1 + left + right;
-        int option4 = Math.max(option1 + left, option1 + right);
 
-         answer = Math.max(answer, Math.max(option2, Math.max(option3, option4)));
+         answer = Math.max(answer, Math.max(option2, option3));
 
         return option2;
     }
