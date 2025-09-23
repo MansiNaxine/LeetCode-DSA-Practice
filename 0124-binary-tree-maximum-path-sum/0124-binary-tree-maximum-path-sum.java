@@ -15,27 +15,24 @@
  */
 class Solution {
     int answer = -1000;
-
-    int recursion(TreeNode root) {
+    public int recursion(TreeNode root) {
 
         if(root == null) return 0;
-        int option1 = root.val;
-        int left = root.left == null ? -1000 : recursion(root.left);
-        int right = root.right == null ? -1000 : recursion(root.right);
-        int option2 = Math.max(option1, Math.max(left + option1, right + option1));
-        int option3 = Math.max(left, right);
-        int option4 = option1 + left + right;
 
-        answer = Math.max(answer, Math.max(option1, Math.max(option2, Math.max(option3, option4))));
+        int option1 = root.val;
+        int left = root.left != null ? recursion(root.left) : -1000;
+        int right = root.right != null ? recursion(root.right) : -1000;
+        int option2 = Math.max(option1, Math.max(option1 + left, option1 + right));
+        int option3 = option1 + left + right;
+        int option4 = Math.max(option1 + left, option1 + right);
+
+         answer = Math.max(answer, Math.max(option2, Math.max(option3, option4)));
 
         return option2;
-
     }
-
     public int maxPathSum(TreeNode root) {
         
         recursion(root);
-
         return answer;
     }
 }
