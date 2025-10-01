@@ -11,16 +11,15 @@ class Solution {
             //String.valueOf(ch).matches("^[a-z0-9]+$")
         }
 
-       // String p = reverse(sb.toString(), "", sb.length() >= 1 ? sb.length() - 1 : 0);
+        String p = reverse(sb.toString(), "", sb.length() - 1);
         String up = sb.toString();
-       // up = up.substring(0, up.length()/2);
 
-        return up.equals(sb.reverse().toString());
+        return up.equals(p);
         
     }
 
     public String reverse(String up, String p, int len) {
-        if(len == up.length()/2) {
+        if(len == -1) {
             return p;
         }
 
