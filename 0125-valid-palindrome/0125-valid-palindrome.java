@@ -3,36 +3,25 @@ class Solution {
         s = s.toLowerCase();
         StringBuilder sb = new StringBuilder("");
 
-        for(int i = 0; i < s.length(); i++) {
-
-            if(!checkNumOrLetter(s.charAt(i))) continue;
-            sb.append(s.charAt(i));
+        for(int i = 0;  i < s.length();  i++) {
+            if((s.charAt(i) >= 48 && s.charAt(i) <= 57 ) || (s.charAt(i) >= 97 && s.charAt(i) <= 122) ) {
+                sb.append(s.charAt(i));
+            } 
         }
 
+        String p = reverse(sb.toString(), "", sb.length()-1);
+        String up = sb.toString();
 
-
-        int i = 0; 
-        int j = sb.length() - 1;
-
-        while(i < j) {
-
-            if(sb.charAt(i) != sb.charAt(j)) return false;
-
-            i++;
-            j--;
-        }
-
-        return true;
+        return up.equals(p);
         
     }
 
+    public String reverse(String up, String p, int len) {
+        if(len == -1) {
+            return p;
+        }
 
-    public boolean checkNumOrLetter(char num) {
-
-        if(num >= 48 && num <= 57) return true;
-        if(num >= 97 && num <= 122) return true;
-
-        return false;
+        char ch = up.charAt(len);
+        return reverse(up, p + ch, len - 1);
     }
-
 }
