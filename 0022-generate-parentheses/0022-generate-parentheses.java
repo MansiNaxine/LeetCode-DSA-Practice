@@ -1,35 +1,46 @@
 class Solution {
+
     List<String> answer = new ArrayList<>();
-    StringBuilder str = new StringBuilder();
+    List<Character> currSeq = new ArrayList<>();
 
     public List<String> generateParenthesis(int n) {
-        int len = 2 * n;
-        generateParenthesisHelper(len, 0, 0);
+
+        int sum = 0;
+        int len = 2*n;
+        recursion(sum, len, 0);
         return answer;
+        
     }
 
-    public void generateParenthesisHelper(int length, int index, int sum) {
+    public void recursion(int sum, int len, int i) {
 
         //base case
-        if(index == length) {
+        if(i == len) {
             if(sum == 0) {
-                answer.add(str.toString());
-                return;
+                StringBuilder sb = new StringBuilder("");
+                for(int k = 0; k < currSeq.size(); k++) {
+                    sb.append(currSeq.get(k));
+                }
+
+                answer.add(sb.toString());
             }
+
             return;
         }
-        
+
         //recursive case
-        if(sum <= length/2) {
-            str.append('(');
-            generateParenthesisHelper(length, index + 1, sum + 1);
-            str.deleteCharAt(str.length() - 1);
+        if(sum < len/2) {
+            currSeq.add('(');
+            recursion(sum+1, len, i+1);
+            currSeq.remove(currSeq.size() - 1);
         }
 
         if(sum > 0) {
-            str.append(')');
-            generateParenthesisHelper(length, index + 1, sum - 1);
-            str.deleteCharAt(str.length() - 1);
+            currSeq.add(')');
+            recursion(sum-1, len, i+1);
+            currSeq.remove(currSeq.size() - 1);
         }
+
+
     }
 }
