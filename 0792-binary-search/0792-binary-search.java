@@ -9,7 +9,10 @@ class Solution {
     public void helper(int[] nums, int target, int start, int end) {
 
         //base case
-        
+        if(start > end) {
+            return;
+        }
+
 
         int mid = (start + end) / 2;
 
@@ -18,12 +21,9 @@ class Solution {
             return;
         } 
 
-        if(start >= end) {
-            return;
-        }
-
+        
         if(target < nums[mid]) {
-            helper(nums, target, start, mid);
+            helper(nums, target, start, mid - 1);
         } else {
             helper(nums, target, mid + 1, end);
         }
