@@ -1,22 +1,33 @@
 class Solution {
+    int answer = -1;
     public int search(int[] nums, int target) {
 
-        int n = nums.length;
-        int start = 0;
-        int end = n - 1;
+         helper(nums, target, 0, nums.length - 1);
+         return answer;
+    }
 
-        while(start <= end) {
-            int mid = (start + end) / 2;
-            if (nums[mid] == target) {
-                return mid;
-            } else if(nums[mid] < target) {
-                start = mid + 1;
-            } else {
-                end = mid - 1;
-            }
+    public void helper(int[] nums, int target, int start, int end) {
+
+        //base case
+        
+
+        int mid = (start + end) / 2;
+
+        if(nums[mid] == target) {
+            answer = mid;
+            return;
+        } 
+
+        if(start >= end) {
+            return;
         }
 
-        return -1;
+        if(target < nums[mid]) {
+            helper(nums, target, start, mid);
+        } else {
+            helper(nums, target, mid + 1, end);
+        }
+
         
     }
 }
