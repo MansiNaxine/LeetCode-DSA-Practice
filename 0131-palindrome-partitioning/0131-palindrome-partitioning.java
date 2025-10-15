@@ -1,45 +1,36 @@
-class Solution {
-    List<List<String>> answer = new ArrayList<>();
-    List<String> currSeq = new ArrayList<>();
+import java.util.*;
 
+class Solution {
     public List<List<String>> partition(String s) {
-        
-        recursion(s, 0);
+
+        List<List<String>> answer = new ArrayList<>();
+        List<String> currSeq = new ArrayList<>();
+
+        helper(s, answer, currSeq, 0);
         return answer;
+        
     }
 
-    public void recursion(String str, int index) {
-        //base case
-        if(index == str.length()) {
 
+    public void helper(String s, List<List<String>> answer, List<String> currSeq, int index) {
+
+        //base case
+        if(index == s.length()) {
             answer.add(new ArrayList<>(currSeq));
             return;
         }
 
         //recursive case
-        for(int i = index; i < str.length(); i++) {
-            if(isPalindrome(str.substring(index, i + 1))) {
-                currSeq.add(str.substring(index, i + 1));
-                recursion(str, i + 1);
-                currSeq.remove(currSeq.size() - 1);
-            }
-
+        for(int i = index; i < s.length(); i++) {
+            StringBuilder sb = new StringBuilder(s.substring(index, i + 1));
+            String str = s.substring(index, i + 1);
+            if(str.equals(sb.reverse().toString()))  {
+                currSeq.add(str);
+                helper(s, answer, currSeq, i + 1);
+                currSeq.removeLast();
+            }   
+            
         }
     }
 
-    public boolean isPalindrome(String str) {
-        int i = 0;
-        int j = str.length() - 1;
-
-        while(i < j) {
-            if(str.charAt(i) != str.charAt(j)) {
-                return false;
-            }
-
-            i++;
-            j--;
-        }
-
-        return true;
-    }
 }
