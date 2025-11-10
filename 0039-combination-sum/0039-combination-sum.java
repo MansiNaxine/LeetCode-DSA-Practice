@@ -3,7 +3,6 @@ class Solution {
 
         List<List<Integer>> answer = new ArrayList<>();
         List<Integer> currSeq = new ArrayList<>();
-        Arrays.sort(candidates);
         helper(candidates, target, answer, currSeq, 0);
         return answer;
         
