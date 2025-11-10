@@ -1,34 +1,38 @@
 class Solution {
     public boolean isPalindrome(String s) {
+        s = s.toLowerCase();
+        StringBuilder sb = new StringBuilder("");
 
-        if(s.length() == 0) return true;
+        for(int i = 0; i < s.length(); i++) {
 
-        //1.Convert all letters into lower case letters
-        String lowerCase = s.toLowerCase();
-
-        //2.Capture all letters into 1 StringBuilder
-        StringBuilder sb = new StringBuilder();
-        for(int i = 0; i < lowerCase.length(); i++) {
-            int currentChar = (int)lowerCase.charAt(i);
-            if((currentChar >= 48 && currentChar <= 57) || (currentChar >= 97 && currentChar <= 122)) {
-                sb.append((char)currentChar);
-            }
+            if(!checkNumOrLetter(s.charAt(i))) continue;
+            sb.append(s.charAt(i));
         }
 
-        //3.Apply recursion by passing string, start, end
-        return checkBoolean(sb.toString(), 0, sb.length() - 1);
+
+
+        int i = 0; 
+        int j = sb.length() - 1;
+
+        while(i < j) {
+
+            if(sb.charAt(i) != sb.charAt(j)) return false;
+
+            i++;
+            j--;
+        }
+
+        return true;
         
     }
 
-    public boolean checkBoolean(String str, int start, int end) {
-        if(str.length() == 0) return true;
 
-        if(start >= end) return true;
+    public boolean checkNumOrLetter(char num) {
 
-        if(str.charAt(start) != str.charAt(end)) {
-            return false;
-        } else {
-            return checkBoolean(str, start+1, end-1);
-        }
+        if(num >= 48 && num <= 57) return true;
+        if(num >= 97 && num <= 122) return true;
+
+        return false;
     }
+
 }
