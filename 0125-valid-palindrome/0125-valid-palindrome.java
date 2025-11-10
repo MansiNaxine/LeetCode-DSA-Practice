@@ -1,29 +1,34 @@
 class Solution {
     public boolean isPalindrome(String s) {
-        s = s.toLowerCase();
-        StringBuilder sb = new StringBuilder();
 
-        for(int i = 0;  i < s.length();  i++) {
-            char ch = s.charAt(i);
-            if((s.charAt(i) >= 48 && s.charAt(i) <= 57 ) || (s.charAt(i) >= 97 && s.charAt(i) <= 122) ) {
-                sb.append(s.charAt(i));
-            } 
-            //String.valueOf(ch).matches("^[a-z0-9]+$")
+        if(s.length() == 0) return true;
+
+        //1.Convert all letters into lower case letters
+        String lowerCase = s.toLowerCase();
+
+        //2.Capture all letters into 1 StringBuilder
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < lowerCase.length(); i++) {
+            int currentChar = (int)lowerCase.charAt(i);
+            if((currentChar >= 48 && currentChar <= 57) || (currentChar >= 97 && currentChar <= 122)) {
+                sb.append((char)currentChar);
+            }
         }
 
-        String p = reverse(sb.toString(), "", sb.length() - 1);
-        String up = sb.toString();
-
-        return up.equals(p);
+        //3.Apply recursion by passing string, start, end
+        return checkBoolean(sb.toString(), 0, sb.length() - 1);
         
     }
 
-    public String reverse(String up, String p, int len) {
-        if(len == -1) {
-            return p;
-        }
+    public boolean checkBoolean(String str, int start, int end) {
+        if(str.length() == 0) return true;
 
-        char ch = up.charAt(len);
-        return reverse(up, p + ch, len - 1);
+        if(start >= end) return true;
+
+        if(str.charAt(start) != str.charAt(end)) {
+            return false;
+        } else {
+            return checkBoolean(str, start+1, end-1);
+        }
     }
 }
