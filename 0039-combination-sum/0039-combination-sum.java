@@ -3,6 +3,7 @@ class Solution {
 
         List<List<Integer>> answer = new ArrayList<>();
         List<Integer> currSeq = new ArrayList<>();
+        Arrays.sort(candidates);
         helper(candidates, target, answer, currSeq, 0);
         return answer;
         
@@ -19,12 +20,11 @@ class Solution {
         }
 
         //recursive case
-        for(int i = index; i < candidates.length; i++) {
-            if(target >= candidates[i]) {
-                currSeq.add(candidates[i]);
-                helper(candidates, target - candidates[i], answer, currSeq, i);
+            if(target >= candidates[index]) {
+                currSeq.add(candidates[index]);
+                helper(candidates, target - candidates[index], answer, currSeq, index);
                 currSeq.removeLast();
+                helper(candidates, target, answer, currSeq, index + 1);
             }
-        }
     }
 }
