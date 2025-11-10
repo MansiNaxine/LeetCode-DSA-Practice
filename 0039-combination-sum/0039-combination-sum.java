@@ -20,11 +20,12 @@ class Solution {
         }
 
         //recursive case
-            if(target >= candidates[index]) {
-                currSeq.add(candidates[index]);
-                helper(candidates, target - candidates[index], answer, currSeq, index);
+        for(int i = index; i < candidates.length; i++) {
+            if(target >= candidates[i]) {
+                currSeq.add(candidates[i]);
+                helper(candidates, target - candidates[i], answer, currSeq, i);
                 currSeq.removeLast();
-                helper(candidates, target, answer, currSeq, index + 1);
             }
+        }
     }
 }
