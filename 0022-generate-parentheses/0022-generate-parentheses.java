@@ -1,46 +1,40 @@
 class Solution {
-
-    List<String> answer = new ArrayList<>();
-    List<Character> currSeq = new ArrayList<>();
-
     public List<String> generateParenthesis(int n) {
+        // we have to make 1 helper function
 
-        int sum = 0;
-        int len = 2*n;
-        recursion(sum, len, 0);
+        List<String> answer = new ArrayList<>();
+        List<Character> currSeq = new ArrayList<>();
+        int len = 2 * n;
+        helper(answer, len, 0, 0, currSeq);//answer, length, sum and index
         return answer;
-        
     }
 
-    public void recursion(int sum, int len, int i) {
-
+    public void helper(List<String> answer, int len, int sum, int index, List<Character> currSeq) {
         //base case
-        if(i == len) {
+        if(index == len) {
             if(sum == 0) {
-                StringBuilder sb = new StringBuilder("");
-                for(int k = 0; k < currSeq.size(); k++) {
-                    sb.append(currSeq.get(k));
+                StringBuilder sb = new StringBuilder();
+                for(char ch : currSeq) {
+                    sb.append(ch);
                 }
-
                 answer.add(sb.toString());
             }
-
             return;
         }
 
         //recursive case
+        //first should be the opening bracket
         if(sum < len/2) {
             currSeq.add('(');
-            recursion(sum+1, len, i+1);
-            currSeq.remove(currSeq.size() - 1);
+            helper(answer, len, sum + 1, index + 1, currSeq);
+            currSeq.removeLast();
         }
-
+        //condition for closing bracket
         if(sum > 0) {
             currSeq.add(')');
-            recursion(sum-1, len, i+1);
-            currSeq.remove(currSeq.size() - 1);
-        }
-
+            helper(answer, len, sum - 1, index + 1, currSeq);
+            currSeq.removeLast();
+        } 
 
     }
 }
