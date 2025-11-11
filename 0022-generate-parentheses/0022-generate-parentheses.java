@@ -3,21 +3,17 @@ class Solution {
         // we have to make 1 helper function
 
         List<String> answer = new ArrayList<>();
-        List<Character> currSeq = new ArrayList<>();
+        StringBuilder sb = new StringBuilder();
         int len = 2 * n;
-        helper(answer, len, 0, 0, currSeq);//answer, length, sum and index
+        helper(answer, len, 0, 0, sb);//answer, length, sum and index
         return answer;
     }
 
-    public void helper(List<String> answer, int len, int sum, int index, List<Character> currSeq) {
+    public void helper(List<String> answer, int len, int sum, int index, StringBuilder result) {
         //base case
         if(index == len) {
             if(sum == 0) {
-                StringBuilder sb = new StringBuilder();
-                for(char ch : currSeq) {
-                    sb.append(ch);
-                }
-                answer.add(sb.toString());
+                answer.add(result.toString());
             }
             return;
         }
@@ -25,15 +21,15 @@ class Solution {
         //recursive case
         //first should be the opening bracket
         if(sum < len/2) {
-            currSeq.add('(');
-            helper(answer, len, sum + 1, index + 1, currSeq);
-            currSeq.removeLast();
+            result.append('(');
+            helper(answer, len, sum + 1, index + 1, result);
+            result.deleteCharAt(result.length() -  1);
         }
         //condition for closing bracket
         if(sum > 0) {
-            currSeq.add(')');
-            helper(answer, len, sum - 1, index + 1, currSeq);
-            currSeq.removeLast();
+            result.append(')');
+            helper(answer, len, sum - 1, index + 1, result);
+            result.deleteCharAt(result.length() -  1);
         } 
 
     }
