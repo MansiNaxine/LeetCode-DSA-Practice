@@ -1,44 +1,32 @@
 class Solution {
-
-    List<List<Integer>> answer = new ArrayList<>();
-    List<Integer> currSeq = new ArrayList<>();
-
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
-        if(candidates.length <= 1 && target > candidates[0]) return answer;
+
+        //first of all sort the array
         Arrays.sort(candidates);
-        
-        helper(candidates, target, 0);
+        List<List<Integer>> answer = new ArrayList<>();
+        List<Integer> currSeq = new ArrayList<>();
+        int index = 0;
+        helper(candidates, target, answer, currSeq, index);
         return answer;
-        
     }
 
-    public void helper(int[] candidates, int target, int index) {
-
-        //base cases
-
-        if(target == 0) {
-
-            answer.add(new ArrayList<>(currSeq)) ;
-
+    public void helper(int[] candidates, int target, List<List<Integer>> answer, List<Integer> currSeq, int index) {
+        //base case
+            if(target == 0) {
+            answer.add(new ArrayList<>(currSeq));
             return;
-        }
+            }
 
-        if(index >= candidates.length) return;
+            if(index >= candidates.length) return;
 
         //recursive case
-        if(candidates[index] <= target) {
-            currSeq.add(candidates[index]);
-            helper(candidates, target - candidates[index], index + 1);
-            currSeq.removeLast();
-
-            //below logic is to remove duplicate elements
-            int newIndex = index + 1;
-            while(newIndex < candidates.length && candidates[newIndex] == candidates[newIndex - 1]) {
-                newIndex++;
+        for(int i = index; i < candidates.length; i++) {
+            if(i != index && candidates[i] == candidates[i - 1]) continue;
+            if(target >= candidates[i]) {
+                currSeq.add(candidates[i]);
+                helper(candidates, target - candidates[i], answer, currSeq, i + 1);
+                currSeq.removeLast();
             }
-            helper(candidates, target, newIndex);
         }
-
-
     }
 }
