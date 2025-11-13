@@ -2,15 +2,14 @@ class Solution {
     public List<List<Integer>> permute(int[] nums) {
 
         List<List<Integer>> answer = new ArrayList<>();
-        List<Integer> currSeq = new ArrayList<>();
-        helper(answer, nums, 0, currSeq);
+        helper(answer, nums, 0);
         return answer;
     }
 
-    public void helper(List<List<Integer>> answer, int[] nums, int index, List<Integer> currSeq) {
+    public void helper(List<List<Integer>> answer, int[] nums, int index) {
         //base case
         if(index >= nums.length) {
-            currSeq = new ArrayList<>();
+            List<Integer> currSeq = new ArrayList<>();
             for(int num : nums) {
                 currSeq.add(num);
             }
@@ -21,7 +20,7 @@ class Solution {
         //recursive case
         for(int i = index; i < nums.length; i++) {
             swap(nums, i, index);
-            helper(answer, nums, index + 1, currSeq);
+            helper(answer, nums, index + 1);
             swap(nums, i, index);
         }
     }
