@@ -1,31 +1,30 @@
 class Solution {
-
-    List<List<Integer>> answer = new ArrayList<>();
-    List<Integer> currSeq = new ArrayList<>();
-    
     public List<List<Integer>> combinationSum3(int k, int n) {
-        
-        helper(k, n, 1);
+
+        List<List<Integer>> answer = new ArrayList<>();
+        List<Integer> currSeq = new ArrayList<>();
+        int num = 1;
+        helper( answer, currSeq, num, k, n);
         return answer;
     }
 
-    public void helper(int k, int n, int index) {
+    public void helper(List<List<Integer>> answer, List<Integer> currSeq, int num, int k, int target) {
 
         //base cases
-        //1.
-        if(n == 0 && currSeq.size() == k) {
+        if(target == 0 && currSeq.size() == k) {
             answer.add(new ArrayList<>(currSeq));
             return;
         }
 
-        //2.
-        if(index > 9) return;
+        if(num > 9) return;
 
-        if(index <= n) {
-            currSeq.add(index);
-            helper(k, n - index, index + 1);
-            currSeq.removeLast();
-            helper(k, n , index + 1);
+        //recursive case
+        for(int i = num; i <= 9; i++) {
+            if(target >= i) {
+                currSeq.add(i);
+                helper(answer, currSeq, i + 1, k, target - i);
+                currSeq.removeLast();
+            }
         }
     }
 }
