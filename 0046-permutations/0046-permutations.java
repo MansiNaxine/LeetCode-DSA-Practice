@@ -20,13 +20,15 @@ class Solution {
 
         //recursive case
         for(int i = index; i < nums.length; i++) {
-            int temp1 = nums[i];
-            nums[i] = nums[index];
-            nums[index] = temp1;
+            swap(nums, i, index);
             helper(answer, nums, index + 1, currSeq);
-            int temp2 = nums[i];
-            nums[i] = nums[index];
-            nums[index] = temp2;
+            swap(nums, i, index);
         }
+    }
+
+    public static void swap(int[]nums,int i,int index){
+        int temp = nums[i];
+        nums[i] = nums[index];
+        nums[index] = temp;
     }
 }
