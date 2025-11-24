@@ -8,20 +8,17 @@ class Solution {
         
     }
 
-
     public void helper(int[] nums, List<List<Integer>> answer, List<Integer> currSeq, int index) {
-        //base case
+        // base case
         if(index >= nums.length) {
             answer.add(new ArrayList<>(currSeq));
             return;
         }
 
-        //recursive case
-        
+        // recursive case
         currSeq.add(nums[index]);
         helper(nums, answer, currSeq, index + 1);
         currSeq.removeLast();
         helper(nums, answer, currSeq, index + 1);
-
     }
 }
