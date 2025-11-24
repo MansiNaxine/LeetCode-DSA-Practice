@@ -19,9 +19,9 @@ class Solution {
 
         //recursive case
         for(int i = index; i < nums.length; i++) {
-            swap(nums, i, index);
+            if(i != index) swap(nums, i, index);
             helper(answer, nums, index + 1);
-            swap(nums, i, index);
+            if(i != index) swap(nums, i, index);
         }
     }
 
