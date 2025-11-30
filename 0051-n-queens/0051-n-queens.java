@@ -1,97 +1,75 @@
 class Solution {
-
-    List<List<String>> answer = new ArrayList<>();
-    List<StringBuilder> chessBoard = new ArrayList<>();
-
     public List<List<String>> solveNQueens(int n) {
-        
-        //for the empty chessboard
-        for(int i = 0; i < n; i++) {
-            StringBuilder sb = new StringBuilder("");
-            for(int j = 0; j < n; j++) {
-                sb.append(".");
-            }
-            chessBoard.add(sb);
-        }
-
-        //For optimization
-        int[] colArr = new int[n];
-        int[] left_diagonal = new int[2*n - 1];
-        int[] right_diagonal = new int[2*n - 1];
-        solveNQueensHelper(n, chessBoard, 0, colArr, left_diagonal, right_diagonal);
+        List<List<String>> answer = new ArrayList<>();
+        char[][] chessBoard = new char[n][n];
+        helper(answer, chessBoard, n, 0);
         return answer;
     }
 
-    public void solveNQueensHelper(int n, List<StringBuilder> chessBoard, int row, int[] colArr, int[] left_diagonal, int[] right_diagonal) {
-
+     public void helper(List<List<String>> answer, char[][] chessBoard, int n, int col) {
         //base case
-        if(row == n) {
+        if(col == n) {
+           //print the chessboard
             List<String> currSeq = new ArrayList<>();
-            for(int i = 0; i < chessBoard.size(); i++) {
-                currSeq.add(chessBoard.get(i).toString());
-            }
-
+            printChessBoard(currSeq, chessBoard);
             answer.add(new ArrayList<>(currSeq));
             return;
         }
 
         //recursive case
-        for(int j = 0; j < n; j++) {
-            if(isSafe(chessBoard, n,row, j, colArr, left_diagonal, right_diagonal)) {
-                chessBoard.get(row).setCharAt(j, 'Q');
-                colArr[j] = 1;
-                left_diagonal[row-j+n-1] = 1;
-                right_diagonal[row+j] = 1;
-                solveNQueensHelper(n, chessBoard, row + 1, colArr, left_diagonal, right_diagonal);
-                colArr[j] = 0;
-                left_diagonal[row-j+n-1] = 0;
-                right_diagonal[row+j] = 0;
-                chessBoard.get(row).setCharAt(j, '.');
+        //iterate through each row for given column
+        for(int row = 0; row < n; row++) {
+            if(isSafe(chessBoard, row, col, n)) {
+                chessBoard[row][col] = 'Q';
+                helper(answer, chessBoard, n, col + 1);
+                chessBoard[row][col] = '.';
             }
         }
     }
 
-
-    public boolean isSafe(List<StringBuilder> chessBoard, int n, int row, int col, int[] colArr,int[] left_diagonal, int[] right_diagonal) {
-
-        //check top left
-        // int r = row;
-        // int c = col;
-
-        // while(r >= 0 && c >= 0) {
-        //     if(chessBoard.get(r).charAt(c) == 'Q') return false;
-        //     r--;
-        //     c--;
-        // }
-
-        //for optimization purpose of left diagonal
-        if(left_diagonal[row-col+n-1] == 1) return false;
-
-        //check for top
-
-        // r = row;
-
-        // while(r >= 0) {
-        //     if(chessBoard.get(r).charAt(col) == 'Q') return false;
-        //     r--;
-        // }
-
-        //for optimization purpose
-        if(colArr[col] == 1) return false;
-
-        //top right
-        // r = row;
-        // c = col;
-
-        // while(r >= 0 && c < n) {
-        //     if(chessBoard.get(r).charAt(c) == 'Q') return false;
-        //     r--;
-        //     c++;
-        // }
-
-        //for optimization purpose of right diagonal
-        if(right_diagonal[row+col] == 1) return false;
-
-        return true;
+    public void printChessBoard(List<String> completeOneChessBoard, char[][] chessBoard) {
+        for(char[] firstRow : chessBoard) {
+            StringBuilder sb = new StringBuilder();
+            for(char ch : firstRow) {
+                if(ch != 'Q') sb.append('.');
+                else sb.append(ch);
+            }
+            completeOneChessBoard.add(sb.toString());
+        }
     }
+
+    public boolean isSafe(char[][] chessBoard,int row, int col, int n) {
+        //we have to check for the three left side
+        int i = row;
+        int j = col;
+
+        //straight left
+        while(j >= 0) {
+            if(chessBoard[i][j] == 'Q') return false;
+            else j--;
+        }
+        //left upper diagonal
+        i = row;
+        j = col;
+        while(i >= 0 && j >= 0) {
+            if(chessBoard[i][j] == 'Q') return false;
+            else {
+                i--;
+                j--;
+            }
+        }
+        //left lower diagonal
+        i = row;
+        j = col;
+        while(i < n && j >= 0) {
+            if(chessBoard[i][j] == 'Q') return false;
+            else {
+                i++;
+                j--;
+            }
+        }
+       return true;
+    }
+
+
 }
