@@ -3,28 +3,29 @@ class Solution {
 
         int count = 0;
         int col = 0;
-        helper(board);
+        helper(board, 0);
         return;
     }
 
-    public boolean helper(char[][] board) {
-        //recursive case
-        for(int col = 0; col < board.length; col++) {
-            for(int row = 0; row < board.length; row++) {
-                if(board[row][col] == '.') {
-                    for(char validNum = '1'; validNum <= '9'; validNum++) {
-                        if(isValid(board, col, row, validNum)) {
-                            board[row][col] = validNum;
-                            if (helper(board)) return true;
-                            else board[row][col] = '.';
-                        }
-                    }
-                    return false;
-                }
-             }
+    public boolean helper(char[][] board, int pos) {
+        if (pos == board.length * board.length) return true; // finished all cells
+
+        int row = pos / board.length;
+        int col = pos % board.length;
+
+        if (board[row][col] != '.') {
+            return helper(board, pos + 1); // skip filled cells
         }
-        return true;
-    }
+
+        for (char num = '1'; num <= '9'; num++) {
+            if (isValid(board, col, row, num)) {
+                board[row][col] = num;
+                if (helper(board, pos + 1)) return true;
+                board[row][col] = '.';
+            }
+        }
+    return false;
+}
 
     public boolean isValid(char[][] board, int col, int row, char validNum) {
 
