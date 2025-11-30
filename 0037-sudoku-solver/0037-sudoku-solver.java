@@ -8,9 +8,6 @@ class Solution {
     }
 
     public boolean helper(char[][] board) {
-        // if(col == board.length) {
-        //     return true;
-        // }
         //recursive case
         for(int col = 0; col < board.length; col++) {
             for(int row = 0; row < board.length; row++) {
@@ -26,7 +23,6 @@ class Solution {
                 }
              }
         }
-        
         return true;
     }
 
