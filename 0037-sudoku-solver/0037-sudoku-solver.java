@@ -1,45 +1,47 @@
 class Solution {
     public void solveSudoku(char[][] board) {
 
-        int count = 0;
-        int col = 0;
         helper(board);
-        return;
+        return ;
+        
     }
 
     public boolean helper(char[][] board) {
-        //recursive case
+
         for(int col = 0; col < board.length; col++) {
             for(int row = 0; row < board.length; row++) {
                 if(board[row][col] == '.') {
-                    for(char validNum = '1'; validNum <= '9'; validNum++) {
-                        if(isValid(board, col, row, validNum)) {
-                            board[row][col] = validNum;
-                            if (helper(board)) return true;
+                    for(char ch = '1'; ch <= '9'; ch++) {
+                        if(isValid(board, row, col, ch)) { // Check if given char can be place at current position
+                            board[row][col] = ch;
+
+                            if(helper(board)) return true;
                             else board[row][col] = '.';
                         }
                     }
+
                     return false;
                 }
-             }
+            }
         }
+
         return true;
     }
 
-    public boolean isValid(char[][] board, int col, int row, char validNum) {
+    public boolean isValid(char[][] board, int row, int col, int ch) {
 
-        
-        for( int i = 0;  i < 9; i++) {
-            //check for entire row
-            if(board[row][i] == validNum) return false;
+        for(int i = 0; i < board.length; i++) {
 
-            //check for entire col
-            if(board[i][col] == validNum) return false;
+            //Check for Entire row
+            if(board[row][i] == ch) return false;
 
-            //check 3 * 3 matrix
-            if(board[(3 * (row/3)) + (i/3)][ (3 * (col/3)) + (i % 3)] == validNum) return false;
+            //Check for Entire column
+            if(board[i][col] == ch) return false;
+
+            //Check for 3 * 3 matrix
+            if(board[(3 * (row/3)) + i/3][(3 * ( col/3)) + i%3] == ch) return false;
         }
-        
+
         return true;
     }
 }
