@@ -1,43 +1,46 @@
 class Solution {
     public int totalNQueens(int n) {
         
-        List<List<String>> answer = new ArrayList<>();
+        // List<List<String>> answer = new ArrayList<>();
         char[][] chessBoard = new char[n][n];
-        helper(chessBoard, answer, n, 0);
-        return answer.size();
+        return helper(chessBoard, n, 0);
+        // return answer.size();
     }
 
-    public void helper(char[][] chessBoard, List<List<String>> answer, int n, int col) {
+    public int helper(char[][] chessBoard, int n, int col) {
         //base case
+        int count = 0;
         if(col == n) {
-            List<String> completeOneChessBoard = new ArrayList<>();
-            printAllChessBoard(completeOneChessBoard, n, chessBoard);
-            answer.add(new ArrayList<>(completeOneChessBoard));
-            return;
+            // List<String> completeOneChessBoard = new ArrayList<>();
+            // printAllChessBoard(completeOneChessBoard, n, chessBoard);
+            // answer.add(new ArrayList<>(completeOneChessBoard));
+            return 1;
         }
 
         //recursive case
         for(int row = 0; row < n; row++) {
             if(isSafe(chessBoard, row, col, n)){
                 chessBoard[row][col] = 'Q';
-                helper(chessBoard, answer, n , col + 1);
+                count += helper(chessBoard, n , col + 1);
                 chessBoard[row][col] = '.';
             }
         }
+
+        return count ;
     }
 
-    public void printAllChessBoard(List<String> completeOneChessBoard, int n, char[][] chessBoard) {
+    // public void printAllChessBoard(List<String> completeOneChessBoard, int n, char[][] chessBoard) {
         
-        for(char[] chRow : chessBoard) {
-            StringBuilder sb = new StringBuilder();
-            for(char ch : chRow) {
-                if(ch != 'Q') sb.append('.');
-                else sb.append(ch);
-            }
+    //     for(char[] chRow : chessBoard) {
+    //         StringBuilder sb = new StringBuilder();
+    //         for(char ch : chRow) {
+    //             if(ch != 'Q') sb.append('.');
+    //             else sb.append(ch);
+    //         }
 
-            completeOneChessBoard.add(sb.toString());
-        }
-    }
+    //         completeOneChessBoard.add(sb.toString());
+    //     }
+    // }
 
     public boolean isSafe(char[][] chessBoard, int row, int col, int n) {
         int r = row;
