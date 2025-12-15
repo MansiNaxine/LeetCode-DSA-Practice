@@ -25,6 +25,7 @@ class Solution {
         //Space Complexity :- O(1)
         int i = 0;
         int j = 0;
+        //Basically it is not a good practice to alter the array data, so please check with interviewer before doing this if he is okay with this
         while(i < n && j < n) {
             if(nums[j] != 0) {
                 nums[i] = nums[j];
