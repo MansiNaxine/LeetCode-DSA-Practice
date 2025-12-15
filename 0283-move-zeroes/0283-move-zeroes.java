@@ -21,8 +21,8 @@ class Solution {
         // }
 
         //Optimal Approach
-        //Time Complexity :- O(2N)
-        //Space Complexity :- O(No. of non zero elements)
+        //Time Complexity :- O(N)
+        //Space Complexity :- O(1)
         int i = 0;
         int j = 0;
         while(i < n && j < n) {
