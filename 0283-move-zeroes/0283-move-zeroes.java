@@ -1,19 +1,27 @@
 class Solution {
     public void moveZeroes(int[] nums) {
-
+        
+        //BruteForce Approach
+        //Time Complexity :- O(2N)
+        //Space Complexity :- O(No. of non zero elements)
         int n = nums.length;
-        int index = 0;
+        List<Integer> list = new ArrayList<>();
 
+        for(int num : nums) {
+            if(num != 0) list.add(num);
+        }
+
+        int index = 0;
         for(int i = 0; i < n; i++) {
-            if (nums[i] != 0) {
-                nums[index] = nums[i];
+            if(i > (list.size() -  1)) nums[i] = 0;
+            else {
+                nums[i] = list.get(index);
                 index++;
             }
         }
 
-        while(index < n) {
-            nums[index] = 0;
-            index++;
-        }
+        //Optimal Approach
+        //Time Complexity :- O(2N)
+        //Space Complexity :- O(No. of non zero elements)
     }
 }
