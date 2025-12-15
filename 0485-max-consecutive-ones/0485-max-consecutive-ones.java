@@ -4,10 +4,14 @@ class Solution {
         int count = 0;
         int answer = 0;
         for(int num : nums) {
-            count = (num == 0) ? 0 :  (count += 1);
-            answer = Math.max(answer, count);
+            if(num == 0) {
+                answer = Math.max(answer, count);
+                count = 0;
+            } else {
+                count++;
+            }
         }
         
-        return answer;
+        return Math.max(answer, count);
     }
 }
