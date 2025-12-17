@@ -1,7 +1,44 @@
 class Solution {
     public void rotate(int[][] matrix) {
+    
+      //Time Complexity :-  O(2(n^2))
+      //Space Complexity :-  O(n^2)
+      //bruteForceApproach(matrix); 
+    
+      //Just to Avoid Space Complexity'
+      optimalApproach(matrix);
+    }
 
-      bruteForceApproach(matrix); 
+    public void optimalApproach(int[][] matrix) {
+
+        int n = matrix.length;
+        for(int i = 0; i < matrix.length; i++) {
+            for(int j = i; j < matrix.length; j++) {
+                if(i != j)  {
+                    int temp = matrix[i][j];
+                    matrix[i][j] = matrix[j][i];
+                    matrix[j][i] = temp;
+                }
+            }
+        }
+
+        for(int i = 0; i < n; i++) {
+            reverese(matrix[i]);
+        }
+
+    }
+
+    public void reverese(int[] arr) {
+        int i = 0; 
+        int j = arr.length - 1;
+
+        while(i < j) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            i++;
+            j--;
+        }
     }
 
     public void bruteForceApproach(int[][] matrix) {
