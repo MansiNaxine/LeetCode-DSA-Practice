@@ -21,6 +21,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0049-group-anagrams](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0049-group-anagrams) |
 | [0051-n-queens](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0051-n-queens) |
 | [0053-maximum-subarray](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0053-maximum-subarray) |
+| [0054-spiral-matrix](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0054-spiral-matrix) |
 | [0056-merge-intervals](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0056-merge-intervals) |
 | [0074-search-a-2d-matrix](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0074-search-a-2d-matrix) |
 | [0075-sort-colors](https://github.com/MansiNaxine/LeetCode/tree/master/0075-sort-colors) |
@@ -107,6 +108,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0037-sudoku-solver](https://github.com/MansiNaxine/LeetCode/tree/master/0037-sudoku-solver) |
 | [0048-rotate-image](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0048-rotate-image) |
+| [0054-spiral-matrix](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0054-spiral-matrix) |
 | [0074-search-a-2d-matrix](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0074-search-a-2d-matrix) |
 | [0085-maximal-rectangle](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0085-maximal-rectangle) |
 | [0240-search-a-2d-matrix-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0240-search-a-2d-matrix-ii) |
@@ -306,6 +308,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Simulation
 |  |
 | ------- |
+| [0054-spiral-matrix](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0054-spiral-matrix) |
 | [0861-flipping-an-image](https://github.com/MansiNaxine/LeetCode/tree/master/0861-flipping-an-image) |
 | [0874-backspace-string-compare](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0874-backspace-string-compare) |
 | [1505-create-target-array-in-the-given-order](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1505-create-target-array-in-the-given-order) |
