@@ -1,34 +1,25 @@
 class Solution {
     public void rotate(int[][] matrix) {
-        
-        int n = matrix.length;
-        for(int i = 0; i < n; i++) {
-            for(int j = i; j < n; j++) {
-                if( i != j) {
-                    int temp = matrix[i][j];
-                    matrix[i][j] = matrix[j][i];
-                    matrix[j][i] = temp;
-                }
-            }
-        }
-        
-        for(int i = 0; i < n; i++) {
-            reverse(matrix[i]);
-        }
+
+      bruteForceApproach(matrix); 
     }
 
-    public void reverse(int[] matrix) {
-        int i = 0; 
-        int j = matrix.length - 1;
+    public void bruteForceApproach(int[][] matrix) {
 
-        while(i < j) {
+        //though it's given that , no need to use anoth 2D matrix still for bruteForceApproach Using 1
+        int n = matrix.length;
+        int[][] answer = new int[n][n];
 
-            int temp = matrix[i];
-            matrix[i] = matrix[j];
-            matrix[j] = temp;
+        for(int j = 0; j < n; j++) {
+            for(int i = n - 1; i >= 0; i--) {
+                answer[j][n - i - 1] = matrix[i][j];
+            }
+        }
 
-            i++;
-            j--;
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n; j++) {
+                matrix[i][j] = answer[i][j];
+            }
         }
     }
 }
