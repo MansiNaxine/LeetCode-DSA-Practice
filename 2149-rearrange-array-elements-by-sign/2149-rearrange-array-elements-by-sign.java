@@ -1,0 +1,45 @@
+class Solution {
+    public int[] rearrangeArray(int[] nums) {
+        
+        int n = nums.length;
+        int pos[] = new int[n/2];
+        int neg[] = new int[n/2];
+
+        int posI = 0;
+        int negI = 0;
+
+        //For adding elemnts to +ve and -ve Arrays
+        for(int i = 0; i < n ; i++) {
+            if (nums[i] < 0) {
+                neg[negI] = nums[i];
+                negI++;
+            } 
+            else {
+                pos[posI] = nums[i];
+                posI++;
+            }
+        }
+
+        posI = 0;
+        negI = 0;
+        int index = 0;
+        int answer[] = new int[n];
+
+        while(index < n) {
+            if ((index % 2) == 0) {
+                answer[index] = pos[posI];
+                posI++;
+            }
+            else {
+                answer[index] = neg[negI];
+                negI++;
+            }
+
+            index++;
+        }
+
+
+        return answer;
+
+    }
+}
