@@ -23,15 +23,15 @@ class Solution {
         posI = 0;
         negI = 0;
         int index = 0;
-        int answer[] = new int[n];
+        // int answer[] = new int[n];
 
         while(index < n) {
             if ((index % 2) == 0) {
-                answer[index] = pos[posI];
+                nums[index] = pos[posI];
                 posI++;
             }
             else {
-                answer[index] = neg[negI];
+                nums[index] = neg[negI];
                 negI++;
             }
 
@@ -39,7 +39,7 @@ class Solution {
         }
 
 
-        return answer;
+        return nums;
 
     }
 }
