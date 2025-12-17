@@ -9,13 +9,13 @@ class Solution {
         int negI = 0;
 
         //For adding elemnts to +ve and -ve Arrays
-        for(int i = 0; i < n ; i++) {
-            if (nums[i] < 0) {
-                neg[negI] = nums[i];
+        for(int num : nums) {
+            if (num < 0) {
+                neg[negI] = num;
                 negI++;
             } 
             else {
-                pos[posI] = nums[i];
+                pos[posI] = num;
                 posI++;
             }
         }
@@ -23,7 +23,6 @@ class Solution {
         posI = 0;
         negI = 0;
         int index = 0;
-        // int answer[] = new int[n];
 
         while(index < n) {
             if ((index % 2) == 0) {
