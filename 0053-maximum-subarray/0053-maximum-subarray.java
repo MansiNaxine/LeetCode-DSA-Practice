@@ -14,9 +14,9 @@ class Solution {
         int sum = 0;
         int maxSum = Integer.MIN_VALUE;
 
-        for(int num : nums) {
+        for(int i = 0; i < nums.length; i++) {
             
-            sum += num;
+            sum += nums[i];
             maxSum = sum > maxSum ? sum : maxSum;
             sum = sum < 0 ? 0 : sum;
         }
