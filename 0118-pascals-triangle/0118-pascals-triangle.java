@@ -1,38 +1,30 @@
 class Solution {
     public List<List<Integer>> generate(int numRows) {
-        
-        List<List<Integer>> answer = new ArrayList<>();
 
-        for(int row = 1; row <= numRows; row++) {
-            List<Integer> currRow = gievCompleteRowElements(row);
+        List<List<Integer>>  answer = new ArrayList<>();
+        List<Integer> firstRow = new ArrayList<>();
+        firstRow.add(1);
 
-            answer.add(new ArrayList<>(currRow));
+        answer.add(new ArrayList<>(firstRow));
+
+        int midElement = 0;
+
+        for(int i = 1; i < numRows; i++) {
+            List<Integer> currentRow = new ArrayList<>();
+            currentRow.add(1); // first column of row
+
+            //adding middle element logic
+            for(int j = 1; j <= midElement; j++) {
+                int midCalc = answer.get(i - 1).get(j - 1) + answer.get(i - 1).get(j);
+                currentRow.add(midCalc) ;
+            }
+
+            midElement ++;
+            currentRow.add(1);//last column of first row
+            answer.add(new ArrayList<>(currentRow));
         }
 
         return answer;
-    }
-
-    public int giveElement(int row, int column) {
-
-        int res = 1;
-        int len = (row - column);
-        for(int i = 0; i < len; i++) {
-            res = res * (row - i);
-            res = res / (i + 1);
-        }
-
-        return res;
-    }
-
-    public List<Integer> gievCompleteRowElements(int nthRow) {
-
-        List<Integer> currRow = new ArrayList<>();
-
-        for(int col = 1; col <= nthRow; col++) {
-            int element = giveElement(nthRow - 1, col - 1);
-            currRow.add(element);
-        }
-
-        return currRow;
+        
     }
 }
