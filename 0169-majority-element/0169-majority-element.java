@@ -21,13 +21,13 @@ class Solution {
             }
         }
 
-        int occurence = nums.length/2;
-        count = 0;
-        for(int num :  nums) {
-            if(element == num) count++;
-        }
+        // int occurence = nums.length/2;
+        // count = 0;
+        // for(int num :  nums) {
+        //     if(element == num) count++;
+        // }
 
-        if(count > occurence) return element;
+        // if(count > occurence) return element;
 
         return element;
         
