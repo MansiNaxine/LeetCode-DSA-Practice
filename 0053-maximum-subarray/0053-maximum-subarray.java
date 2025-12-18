@@ -17,11 +17,8 @@ class Solution {
         for(int num : nums) {
             
             sum += num;
-            maxSum = Math.max(sum, maxSum);
-
-            if(sum < 0) {
-                sum = 0;
-            }
+            maxSum = sum > maxSum ? sum : maxSum;
+            sum = sum < 0 ? 0 : sum;
         }
 
         return maxSum;
