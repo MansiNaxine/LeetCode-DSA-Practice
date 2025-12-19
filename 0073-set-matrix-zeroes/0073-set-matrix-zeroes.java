@@ -24,15 +24,23 @@ class Solution {
             }
         }
 
-        for(int j = 0; j < cols.length; j++) {
-            if(cols[j] == 1) {
-                setEntireColumntoZero(matrix, j);
-            }
-        }
+        // for(int j = 0; j < cols.length; j++) {
+        //     if(cols[j] == 1) {
+        //         setEntireColumntoZero(matrix, j);
+        //     }
+        // }
 
-         for(int i = 0; i < rows.length; i++) {
-            if(rows[i] == 1) {
-                setEntireRowtoZero(matrix, i);
+        //  for(int i = 0; i < rows.length; i++) {
+        //     if(rows[i] == 1) {
+        //         setEntireRowtoZero(matrix, i);
+        //     }
+        // }
+
+         for(int i = 0; i < n ; i++) {
+            for(int j = 0; j < matrix[0].length; j++) {
+                    if(rows[i] == 1 || cols[j] == 1) {
+                        matrix[i][j] = 0;
+                    }
             }
         }
     }
