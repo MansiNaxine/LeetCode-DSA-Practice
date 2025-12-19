@@ -12,24 +12,15 @@ class Solution {
 
     public void optimalApproach(int[][] matrix) {
         int n = matrix.length;
-        // int colZero = 0;
         int[] rows = new int[n];
         int[] cols = new int[matrix[0].length];
 
         for(int i = 0; i < n ; i++) {
             for(int j = 0; j < matrix[0].length; j++) {
-                // if(j != 0) {
                     if(matrix[i][j] == 0) {
                         cols[j] = 1;
                         rows[i] = 1;
                     }
-                // }
-                // else if (j == 0) {
-                //     if(matrix[i][j] == 0) {
-                //         colZero = 1;
-                //         rows[i] = 1;
-                //     }
-                // }
             }
         }
 
@@ -44,10 +35,6 @@ class Solution {
                 setEntireRowtoZero(matrix, i);
             }
         }
-
-        // if(colZero == 1) {
-        //     setEntireColumntoZero(matrix, 0);
-        // }
     }
 
     public void setEntireColumntoZero(int[][] matrix, int col) {
