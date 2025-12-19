@@ -4,6 +4,8 @@ class Solution {
         //BruteForce Approach will take O(n^2)
         //Directly jump onto Optimal Approach
         //We will use MOORE'S VOTING ALGORTIHM
+        //Time Complexity :-  O(2n)
+        //Space Complexity :- O(1)
         int ele1 = Integer.MIN_VALUE;
         int ele2 = Integer.MIN_VALUE;
         int count1 = 0;
