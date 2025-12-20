@@ -1,45 +1,62 @@
 class Solution {
     public int[][] merge(int[][] intervals) {
-        
-        ArrayList<ArrayList<Integer>> arr = new ArrayList<>();
+
+        //Sort the intervals 2D array based on first element
+
         int n = intervals.length;
+        int m = 2;
 
-        for (int i = 0; i < n; i++) {
-            ArrayList<Integer> currSeq = new ArrayList<>();
-            currSeq.add(intervals[i][0]);
-            currSeq.add(intervals[i][1]);
+        List<List<Integer>> intervalsList = new ArrayList<>();
 
-            arr.add(new ArrayList<>(currSeq));
-        }
-
-        Collections.sort(arr, (x, y) -> Integer.compare(x.get(0), y.get(0)));
-
-        ArrayList<ArrayList<Integer>> answer = new ArrayList<>();
-        answer.add(new ArrayList<>(arr.get(0)));
-
-        int Left = arr.get(0).get(0);
-        int Right = arr.get(0).get(1);
-
-        for(int i = 1 ; i < arr.size(); i++) {
-            if (arr.get(i).get(0) >= Left && arr.get(i).get(0) <= Right) {
-                answer.get(answer.size() - 1).set(1, Math.max(arr.get(i).get(1), Right));
-            } else {
-                answer.add(new ArrayList<>(arr.get(i)));
+        //first copy all elements for intervals array to intervals to list
+        for(int i = 0; i < n; i++) {
+            List<Integer> currList = new ArrayList<>();
+            for(int j = 0; j < m; j++) {
+                    currList.add(intervals[i][j]);
             }
-
-            Left = answer.get(answer.size() - 1).get(0);
-            Right = answer.get(answer.size() - 1).get(1);
+            intervalsList.add(new ArrayList<>(currList));
         }
 
-        int N = answer.size();
-        int answerFinal[][] = new int[N][2];
+        
 
-        for(int i = 0; i < N; i++) {
-            answerFinal[i][0] = answer.get(i).get(0);
-            answerFinal[i][1] = answer.get(i).get(1);
+        Collections.sort(intervalsList, (a, b) -> Integer.compare(a.get(0), b.get(0)));
+
+        List<List<Integer>> answerList = new ArrayList<>();
+
+        answerList.add(new ArrayList<>(intervalsList.get(0)));
+
+        for(int i = 1; i < n; i++) {
+            if(!answerList.isEmpty()) {
+                int secondNum = answerList.getLast().get(1);
+                int firstCurrentINum = intervalsList.get(i).get(0);
+                int secondCurrentINum = intervalsList.get(i).get(1);
+                if( firstCurrentINum <= secondNum && secondCurrentINum > secondNum) {
+                    int actualNum = intervalsList.get(i).get(1);
+                    answerList.getLast().set(1, actualNum);
+                }
+                else if (secondCurrentINum <= secondNum) {
+                    continue;
+                }
+                else {
+                    List<Integer> currList = new ArrayList<>();
+                    currList.add(intervalsList.get(i).get(0));
+                    currList.add(intervalsList.get(i).get(1));
+
+                    answerList.add(new ArrayList<>(currList));
+                }
+            }
         }
 
-        return answerFinal;
+        int[][] answer = new int[answerList.size()][2];
+
+        for(int i = 0; i < answerList.size(); i++) {
+            for(int j = 0; j < 2; j++) {
+                answer[i][j] = answerList.get(i).get(j);
+            }
+        }
+
+        return answer;
+        
 
     }
 }
