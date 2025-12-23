@@ -3,7 +3,7 @@ class Solution {
 
         //Optimal Solution
         //this is only to reduce space complexity
-        firstOptimalSolution(nums1, m, nums2, n);
+        // firstOptimalSolution(nums1, m, nums2, n);
 
         //optimalSolutionUsingShellSort()
         optimalSolutionUsingShellSort(nums1, m, nums2, n);
@@ -19,13 +19,13 @@ class Solution {
         while(gap > 0) {
             int left = 0;
             int right = gap + left;
-            while(left < len && right < n) {
+            while(left < len && right < len) {
                 //1st case will include arr1 and arr2
-                if (left < m && right < n) {
-                    swapElements(nums1, nums2, left, right);
+                if (left < m && right >= m) {
+                    swapElements(nums1, nums2, left, right - m);
                 }
-                else if (left >= m && right < n) { // both will present in 2nd array
-                    swapElements(nums2, nums2, left, right);
+                else if (left >= m && right >= m) { // both will present in 2nd array
+                    swapElements(nums2, nums2, left - m, right - m);
                 }
                 else { //both will present in 1st array
                     swapElements(nums1, nums1, left, right);
@@ -35,6 +35,12 @@ class Solution {
             }
             if(gap == 1) break;
             gap = (gap/2) + (gap%2);
+        }
+
+        int index = m;
+        int j = 0;
+        while(index < len) {
+            nums1[index++] = nums2[j++];
         }
     }
 
