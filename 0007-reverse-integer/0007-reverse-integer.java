@@ -1,26 +1,24 @@
 class Solution {
     public int reverse(int x) {
         
-        long ans = 0;
-        //find the last digit
-
-        //multiply last digit by 10
-        //the do the addition with next digit
-        
-        while(x != 0) {
-            ans  = ans + (x % 10);
-            ans = ans * 10;
-            x = x / 10;
+        int origNum = x;
+        if(x < 0) {
+            x = Math.abs(x);
         }
 
-        ans = ans/10;
+        long answer = 0;
+        while(x > 0) {
+            answer = (answer * 10) ;
+            answer += (x%10);
+            x = x/10;
+        }
 
-        if(ans < Integer.MIN_VALUE || ans > Integer.MAX_VALUE) return 0;
+        if(answer < Integer.MIN_VALUE || answer > Integer.MAX_VALUE) return 0;
 
-        if( x < 0) ans = -ans;
+        if(origNum < 0) {
+            return -(int)answer;
+        }
 
-
-        return (int)ans;
-
+        return (int)answer;
     }
 }
