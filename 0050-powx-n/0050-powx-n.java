@@ -1,26 +1,37 @@
 class Solution {
-
     public double myPow(double x, int n) {
-        if(n == 0) return 1.0;
-        int origN = n;
-        double answer = helper(x,(long) n);
 
-        if(origN < 0) {
-            return 1/answer ; 
-        } else {
-            return answer;
+        int origN = n;
+        
+        if(n < 0) {
+            if(n == Integer.MIN_VALUE) n = Integer.MAX_VALUE;
+            if(origN%2 == 0) return Math.abs(1.0/calculatPower(x, Math.abs(n)));
+            else return 1.0/calculatPower(x, Math.abs(n));
+        }
+        else {
+            if(origN%2 == 0) return Math.abs(calculatPower(x, n));
+            else return calculatPower(x, n);
         }
     }
 
-    public double helper(double x, long n) {
-            if(n == 0) return 1.0;
-            //below solution won't work incase of large n values
-            //double answer = x * negativeCaseHelper(x , Math.abs(n) -  1);
-            double partialAns = helper(x, n/2);
-            if(n%2 == 0) {
-                return partialAns * partialAns;
-            } else {
-                return partialAns * partialAns * x;
+    public double calculatPower(double x, long n) {
+        double ans = 1.0;
+
+        if(n == 0) {
+            return ans;
+        }
+
+        while (n > 0) {
+            if (n%2 == 1) {
+                ans = ans * x;
+                n = n - 1;
             }
+            else {
+                x = x * x;
+                n = n/2;
+            }
+        }
+
+        return ans;
     }
 }
