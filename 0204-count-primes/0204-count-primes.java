@@ -20,7 +20,6 @@ class Solution {
 
         for(int i = 2; i < primeNumArray.length - 1; i++) {
             count += primeNumArray[i];
-            primeNumArray[i] = count;
         }
 
         return count;
