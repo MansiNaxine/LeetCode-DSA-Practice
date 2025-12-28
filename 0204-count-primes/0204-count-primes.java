@@ -18,7 +18,7 @@ class Solution {
 
         int count = 0;
 
-        for(int i = 2; i < primeNumArray.length - 1; i++) {
+        for(int i = 2; i < n; i++) {
             count += primeNumArray[i];
         }
 
