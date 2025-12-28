@@ -1,36 +1,29 @@
 class Solution {
-
-    int N = 5000000;
-    boolean arr[] = new boolean[N];
-
     public int countPrimes(int n) {
 
-        for(int i = 0; i < n; i++) {
-            arr[i] = true;
+         int[] primeNumArray = new int[n + 1];
+        
+        for(int i = 2; i < primeNumArray.length; i++) {
+            primeNumArray[i] = 1;
         }
 
-        arr[0] = false;
-        arr[1] = false;
-
-        for(int i = 4; i < n; i+=2) {
-            arr[i] = false;
-        }
-
-        for(long i = 3; i < n; i+=2) {
-            if(arr[(int)i]) {
-                for(long j = i * i ; j < n; j+=i) {
-                    arr[(int)j] = false;
+        //Using Seive of Eratosthenes
+        for(int i = 2; i * i <= n; i++) {
+            if(primeNumArray[i] == 1) {
+                for(int j = i * i; j <= n; j += i) {
+                    primeNumArray[j] = 0;
                 }
             }
         }
 
-        int answer = 0;
-        for(int i = 0; i < n; i++) {
-            if(arr[i]) {
-                answer++;
-            }
+        int count = 0;
+
+        for(int i = 2; i < primeNumArray.length - 1; i++) {
+            count += primeNumArray[i];
+            primeNumArray[i] = count;
         }
 
-        return answer;
+        return count;
+        
     }
 }
