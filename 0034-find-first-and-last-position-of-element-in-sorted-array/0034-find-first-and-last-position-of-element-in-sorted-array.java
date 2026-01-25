@@ -1,39 +1,64 @@
 class Solution {
     public int[] searchRange(int[] nums, int target) {
-        
-        //to find the first and last position we have to calculate upper and lower bound
+
         int n = nums.length;
-        int answer[] = {-1, -1};
+        int firstOccu = findFirstOccurence(nums, target);
+        int secondOccu = -1;
+        if(firstOccu != -1) {
+            secondOccu = findSecondOccurence(nums, target);
+        }
+        else {
+            return new int[]{-1, -1};
+        }
+
+        return new int[]{firstOccu, secondOccu};
+    }
+
+    public int findFirstOccurence(int[] nums, int target) {
+
+        int ans = -1;
+        int n = nums.length;
         int start = 0;
         int end = n - 1;
 
         while(start <= end) {
-            int mid = (start + end) / 2;
-            if(nums[mid] >= target) {
-                
+
+            int mid = (start + end) /2;
+
+            if (nums[mid] >= target) {
+                ans = mid;
                 end = mid - 1;
-                if(nums[mid] == target) {
-                    answer[0] = mid;
-                }
-            } else {
+            }
+            else {
                 start = mid + 1;
             }
         }
 
-        start = 0;
-        end = n - 1;
+        if(ans >= 0 && nums[ans] != target) return -1;
+        return ans;
+    }
+
+    public int findSecondOccurence(int[] nums, int target) {
+
+        int ans = -1;
+        int n = nums.length;
+        int start = 0;
+        int end = n - 1;
+
         while(start <= end) {
-            int mid = (start + end) / 2;
-            if(nums[mid] <= target) {
+
+            int mid = (start + end) /2;
+
+            if (nums[mid] <= target) {
+                ans = mid;
                 start = mid + 1;
-                if(nums[mid] == target) {
-                    answer[1] = mid;
-                }
-            } else {
+            }
+            else {
                 end = mid - 1;
             }
         }
-        
-        return answer;
+
+        if(ans >= 0 && nums[ans] != target) return -1;
+        return ans;
     }
 }
