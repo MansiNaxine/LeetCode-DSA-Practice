@@ -5,7 +5,9 @@ class Solution {
         int max = Integer.MIN_VALUE;
 
         for(int num : nums) {
-            max = Math.max(max, num);
+            if(num > max) {
+                max = num;
+            }
         }
 
         int start = 1;
