@@ -35,7 +35,7 @@ class Solution {
 
         for(int num : nums) {
                 ans += num/mid;
-                if((num%mid) != 0) ans += 1;
+                if((num%mid) > 0 && (num % mid) <= mid) ans += 1;
         }
 
         return ans;
