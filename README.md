@@ -91,6 +91,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold) |
 | [1458-sort-integers-by-the-number-of-1-bits](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1458-sort-integers-by-the-number-of-1-bits) |
 | [1482-how-many-numbers-are-smaller-than-the-current-number](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1482-how-many-numbers-are-smaller-than-the-current-number) |
+| [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
 | [1505-create-target-array-in-the-given-order](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1505-create-target-array-in-the-given-order) |
 | [1528-kids-with-the-greatest-number-of-candies](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1528-kids-with-the-greatest-number-of-candies) |
 | [1580-shuffle-the-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1580-shuffle-the-array) |
@@ -154,6 +155,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0907-koko-eating-bananas](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0907-koko-eating-bananas) |
 | [1046-max-consecutive-ones-iii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1046-max-consecutive-ones-iii) |
 | [1408-find-the-smallest-divisor-given-a-threshold](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1408-find-the-smallest-divisor-given-a-threshold) |
+| [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
 | [1605-minimum-number-of-days-to-make-m-bouquets](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1605-minimum-number-of-days-to-make-m-bouquets) |
 | [1646-kth-missing-positive-number](https://github.com/MansiNaxine/LeetCode/tree/master/1646-kth-missing-positive-number) |
 | [1886-minimum-limit-of-balls-in-a-bag](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1886-minimum-limit-of-balls-in-a-bag) |
