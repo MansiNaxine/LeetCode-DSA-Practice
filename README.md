@@ -79,6 +79,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0882-peak-index-in-a-mountain-array](https://github.com/MansiNaxine/LeetCode/tree/master/0882-peak-index-in-a-mountain-array) |
 | [0907-koko-eating-bananas](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0907-koko-eating-bananas) |
 | [0948-sort-an-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0948-sort-an-array) |
+| [1011-capacity-to-ship-packages-within-d-days](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1011-capacity-to-ship-packages-within-d-days) |
 | [1016-subarray-sums-divisible-by-k](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1016-subarray-sums-divisible-by-k) |
 | [1019-squares-of-a-sorted-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1019-squares-of-a-sorted-array) |
 | [1036-rotting-oranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1036-rotting-oranges) |
@@ -154,6 +155,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0875-koko-eating-bananas](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0875-koko-eating-bananas) |
 | [0882-peak-index-in-a-mountain-array](https://github.com/MansiNaxine/LeetCode/tree/master/0882-peak-index-in-a-mountain-array) |
 | [0907-koko-eating-bananas](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0907-koko-eating-bananas) |
+| [1011-capacity-to-ship-packages-within-d-days](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1011-capacity-to-ship-packages-within-d-days) |
 | [1046-max-consecutive-ones-iii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1046-max-consecutive-ones-iii) |
 | [1283-find-the-smallest-divisor-given-a-threshold](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1283-find-the-smallest-divisor-given-a-threshold) |
 | [1408-find-the-smallest-divisor-given-a-threshold](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1408-find-the-smallest-divisor-given-a-threshold) |
