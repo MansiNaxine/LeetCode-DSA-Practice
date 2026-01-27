@@ -34,13 +34,13 @@ class Solution {
         int ans = 0;
 
         for(int num : nums) {
-            if(num <= mid) {
-                ans += 1;
-            }
-            else {
+            // if(num <= mid) {
+            //     ans += 1;
+            // }
+            // else {
                 ans += num/mid;
                 if((num%mid) > 0 && (num % mid) <= mid) ans += 1;
-            }
+            // }
         }
 
         return ans;
