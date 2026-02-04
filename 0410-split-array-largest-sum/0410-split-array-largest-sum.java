@@ -1,39 +1,54 @@
 class Solution {
     public int splitArray(int[] nums, int k) {
-        int start=0;
-        int end=0;
 
-        for(int i=0;i<nums.length;i++){
-            start=Math.max(start,nums[i]);
-            end +=nums[i];
-        }
-        
-        while(start<end){
-            int mid=start+(end-start)/2;
+        int n = nums.length;
+        int max = Integer.MIN_VALUE;
+        int sum = 0;
 
-                int sum=0;
-                int pieces=1;
-
-            for(int num:nums){
-                //If sum with the next number has been increased than mid then form next array and increase the   array count accordingly else individual element will be the sum
-                if(sum+num>mid){
-                    sum=num;
-                    pieces++;
-                }else{
-                    sum +=num;
-                }
-            }
-
-            if(pieces<=k){
-                end=mid;
-            }else{
-                start=mid+1;
-            }
-
-           
+        for(int num : nums) {
+            max = Math.max(max, num);
+            sum += num;
         }
 
-        //return start or end both will be same.
-         return start;
+        //Edge case
+        if(k == n) return max;
+
+        int start = max;
+        int end = sum;
+        int ans = -1;
+
+        while(start <= end) {
+
+            int mid = (start + end)/2;
+            int possibleSplit = getNoOfSubArrays(nums, mid);
+
+            if (possibleSplit <= k) {
+                ans = mid;
+                end = mid - 1;
+            }
+            else {
+                start = mid + 1;
+            }
+        }
+
+        return ans;
+    }
+
+    public int getNoOfSubArrays(int[] nums, int mid) {
+
+        int sum = 0;
+        int count = 1;
+
+        for(int num : nums) {
+            if((num + sum) <= mid) {
+                sum += num;
+            }
+            else {
+                count += 1;
+                sum = num;
+            }
+        }
+
+        return count;
     }
 }
