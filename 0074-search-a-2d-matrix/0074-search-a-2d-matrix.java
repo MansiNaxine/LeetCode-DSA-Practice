@@ -1,46 +1,25 @@
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
-        
-        //we have to find the solution in O(log (m * n))
-        int m = matrix.length;
-        int n = matrix[0].length;
-        int i = 0; 
-        int j = n - 1;
 
-        //first get the row by performing binary search on last column
-        int row = 0;
-        int start = 0;
-        int end = m - 1;
+        int n = matrix.length;
+        int m = matrix[0].length;
+        //Convert 2D matrix into 1D, by keeping below low and high at specified indexes
+        int low = 0;
+        int high = (n * m) - 1;
 
-        //if row i single then no need to apply binary search over last column
-        if(m > 1) {
-            while(start <= end) {
-                int mid = (start + end) / 2;
-                 if(matrix[mid][n - 1] >= target) {
-                    row = mid; 
-                    end = mid - 1;
-                } else {
-                    start = mid + 1;
-                }
-             }
-        } 
+        while(low <= high) {
+            int mid = (low + high)/2;
+            //We have to get the row and column using mid
+            int row = mid/m;
+            int col = mid%m;
 
-        //row = (row == -1) ? 0 : row;
-        
+            if(matrix[row][col] == target) return true;
+            else if (matrix[row][col] < target) low = mid + 1;
+            else high = mid - 1;
 
-        start = 0;
-        end = n - 1;
-        while(start <= end) {
-            int mid = (start + end) / 2;
-            if(matrix[row][mid] == target) {
-                return true;
-            } else if (matrix[row][mid] > target) {
-                end = mid - 1;
-            } else {
-                start = mid + 1;
-            }
         }
 
         return false;
+        
     }
 }
