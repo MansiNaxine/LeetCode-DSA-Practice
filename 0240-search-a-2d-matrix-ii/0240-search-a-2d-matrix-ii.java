@@ -1,22 +1,26 @@
 class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
 
-        //apply staircase search
-        int i = 0;
-        int m = matrix.length;
-        int n = matrix[0].length;
-        int j = n - 1;
+        int n = matrix.length;
+        int m = matrix[0].length;
 
-        while(i < m && j >= 0) {
-            if(matrix[i][j] == target) {
+        int row = 0;
+        int col = m - 1;
+
+        while(row < n && col >= 0) {
+
+            if(matrix[row][col] == target) {
                 return true;
-            } else if(matrix[i][j] > target) {
-                j--;
-            } else {
-                i++;
+            }
+            else if (matrix[row][col] < target) {
+                row++;
+            }
+            else {
+                col--;
             }
         }
-        
+
         return false;
+        
     }
 }
