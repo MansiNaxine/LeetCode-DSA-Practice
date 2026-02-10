@@ -21,7 +21,7 @@ class Solution {
             }
 
             len = (r - l + 1);
-            maxF = calculateMaxF(map);
+            maxF = Math.max(maxF, map.get(s.charAt(r)));
             diff = len - maxF;
 
             if(diff > k && l <= r) {
@@ -29,7 +29,7 @@ class Solution {
                 if(map.get(s.charAt(l)) == 0) {
                     map.remove(s.charAt(l));
                     len = (r - l + 1);
-                    maxF = calculateMaxF(map);
+                    maxF = Math.max(maxF, map.get(s.charAt(r)));
                     diff = len - maxF;
                 }
                 l++;
