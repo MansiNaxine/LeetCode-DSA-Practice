@@ -2,12 +2,6 @@ class Solution {
     public int numberOfSubstrings(String s) {
 
         int ans1 = getNumberOfStrings(s);
-        // StringBuilder sb = new StringBuilder();
-        // sb.append(s);
-        // sb = sb.reverse();
-        // int ans2 = getNumberOfStrings(sb.toString());;
-
-        // return Math.max(ans1, ans2);
         return ans1;
         
     }
