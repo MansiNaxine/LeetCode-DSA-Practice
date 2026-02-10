@@ -26,12 +26,12 @@ class Solution {
 
             if(diff > k && l <= r) {
                 map.put(s.charAt(l), map.get(s.charAt(l)) - 1);
-                if(map.get(s.charAt(l)) == 0) {
-                    map.remove(s.charAt(l));
-                    len = (r - l + 1);
-                    maxF = Math.max(maxF, map.get(s.charAt(r)));
-                    diff = len - maxF;
-                }
+                // if(map.get(s.charAt(l)) == 0) {
+                //     map.remove(s.charAt(l));
+                //     len = (r - l + 1);
+                //     maxF = Math.max(maxF, map.get(s.charAt(l)));
+                //     diff = len - maxF;
+                // }
                 l++;
             }
 
