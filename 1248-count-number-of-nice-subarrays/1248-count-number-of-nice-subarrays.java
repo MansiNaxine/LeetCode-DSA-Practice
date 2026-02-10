@@ -2,9 +2,9 @@ class Solution {
     public int numberOfSubarrays(int[] nums, int k) {
 
         int n = nums.length;
-        // for(int i = 0 ; i < n; i++) {
-        //     nums[i] = nums[i]%2;
-        // }
+        for(int i = 0 ; i < n; i++) {
+            nums[i] = nums[i]%2;
+        }
 
         int ans1 = findanswer(nums, n, k);
         int ans2 = 0;
@@ -22,10 +22,10 @@ class Solution {
 
         while(r < n) {
 
-            sum += (nums[r] % 2);
+            sum += nums[r];
 
             while(sum > k) {
-                sum -= (nums[l] % 2);
+                sum -= nums[l];
                 l++;
             }
 
