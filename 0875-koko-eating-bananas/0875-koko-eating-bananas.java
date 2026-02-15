@@ -15,9 +15,9 @@ class Solution {
         while(start <= end) {
 
             long mid = (long)(start + end)/2;
-            long possibleHours = getPossibleHours(mid, piles);
+            // long possibleHours = getPossibleHours(mid, piles, int h);
 
-            if(possibleHours <= h) {
+            if(getPossibleHours(mid, piles, h)) {
                 ans = (int) mid;
                 end = mid - 1;
             }
@@ -30,7 +30,7 @@ class Solution {
         
     }
 
-    public long getPossibleHours(long mid, int[] piles) {
+    public boolean getPossibleHours(long mid, int[] piles, int h) {
 
         long ans = 0;
         for(int num : piles) {
@@ -43,6 +43,6 @@ class Solution {
             }
         }
 
-        return ans;
+        return ans <= h;
     }
 }
