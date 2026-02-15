@@ -1,22 +1,24 @@
 class Solution {
     public int minEatingSpeed(int[] piles, int h) {
         
-        long max = Integer.MIN_VALUE;
+        int n = piles.length;
+        long start = 1;
+        int max = Integer.MIN_VALUE;
 
         for(int num : piles) {
-            max = Math.max(max, num);
+            max = Math.max(num, max);
         }
 
-        long start = 1;
         long end = max;
-        long ans = -1;
+        int ans = max;
 
         while(start <= end) {
 
-            long mid = (start + end)/2;
-            long actualHours = isPossible(mid, piles);
-            if (actualHours <= h) {
-                ans = mid;
+            long mid = (long)(start + end)/2;
+            long possibleHours = getPossibleHours(mid, piles);
+
+            if(possibleHours <= h) {
+                ans = (int) mid;
                 end = mid - 1;
             }
             else {
@@ -24,22 +26,23 @@ class Solution {
             }
         }
 
-        return (int)ans;
+        return ans;
+        
     }
 
-    public long isPossible(long mid, int[] piles) {
+    public long getPossibleHours(long mid, int[] piles) {
 
-        long count = 0;
+        long ans = 0;
         for(int num : piles) {
-            if(num <= mid) {
-                count += 1;
-            } 
+            if (num <= mid) {
+                ans += 1;
+            }
             else {
-                count += (num/mid);
-                if(num%mid > 0 && num%mid <= mid) count += 1;
+                ans += (num/mid);
+                if(num%mid > 0) ans += 1;
             }
         }
 
-        return count;
+        return ans;
     }
 }
