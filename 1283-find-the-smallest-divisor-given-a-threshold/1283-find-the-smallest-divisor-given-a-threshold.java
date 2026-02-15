@@ -2,24 +2,22 @@ class Solution {
     public int smallestDivisor(int[] nums, int threshold) {
 
         int n = nums.length;
+        int start = 1;
         int max = Integer.MIN_VALUE;
 
-        for(int num : nums) {
-            if(num > max) {
-                max = num;
-            }
+        for(int num :  nums) {
+            max = Math.max(num, max);
         }
 
-        int start = 1;
         int end = max;
         int ans = -1;
 
         while(start <= end) {
 
             int mid = (start + end)/2;
-            int thresholdCalculated = getThreshold(nums, mid);
+            int possibleThreshold = getPossibleThreshold(nums, mid);
 
-            if(thresholdCalculated <= threshold) {
+            if (possibleThreshold <= threshold) {
                 ans = mid;
                 end = mid - 1;
             }
@@ -29,17 +27,21 @@ class Solution {
         }
 
         return ans;
-        
     }
 
-    public int getThreshold(int[] nums, int mid) {
-        int ans = 0;
+    public int getPossibleThreshold(int[] nums, int mid) {
 
+        int cnt = 0;
         for(int num : nums) {
-                ans += num/mid;
-                if((num%mid) > 0 && (num % mid) <= mid) ans += 1;
+            if(num <= mid) {
+                cnt += 1;
+            }
+            else {
+                cnt += (num/mid);
+                if(num%mid > 0) cnt += 1;
+            }
         }
 
-        return ans;
+        return cnt;
     }
 }
