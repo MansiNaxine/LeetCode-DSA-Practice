@@ -1,27 +1,26 @@
 class Solution {
     public int minDays(int[] bloomDay, int m, int k) {
 
+        int n = bloomDay.length;
         int min = Integer.MAX_VALUE;
         int max = Integer.MIN_VALUE;
-        int n = bloomDay.length;
-
-        if((m * k) > n) return -1;
-
-        for(int num :  bloomDay) {
-            min = Math.min(num, min);
-            max = Math.max(num, max);
+        for(int flow : bloomDay) {
+            min = Math.min(min, flow);
+            max = Math.max(max, flow);
         }
+
+        int ans = -1;
+        if((m * k) > n) return -1;
 
         int start = min;
         int end = max;
-        int ans = -1;
 
         while(start <= end) {
 
-            int mid = (start + end)/2;
-            int possibleBouquets = noOfBouquets(mid, bloomDay, k);
+            int mid = (start + end) /2;
+            int possibleBouque = getNOfBouquets(bloomDay, mid, k);
 
-            if(possibleBouquets >= m) {
+            if(possibleBouque >= m) {
                 ans = mid;
                 end = mid - 1;
             }
@@ -34,27 +33,30 @@ class Solution {
         
     }
 
-    public int noOfBouquets(int mid, int[] bloomDay, int k) {
+    public int getNOfBouquets(int[] bloomDay, int mid, int k) {
 
-        int cnt1 = k;
-        int cnt2 = 0;
-        int bouquets = 0;
+        int i = 0;
+        int j = 0;
+        int n = bloomDay.length;
+        int cnt = 0;
+        int bouque = 0;
 
-        for(int num : bloomDay) {
-            if(cnt1 == 0) cnt1 = k;
-            if(num <= mid) {
-                cnt2 += 1;
-            } else {
-                cnt2 = 0;
+        while(j < n) {
+            if(bloomDay[j] <= mid) {
+                cnt += 1;
             }
-            
-            cnt1 -= 1;
-            if(cnt2 == k) {
-                bouquets += 1;
-                cnt2 = 0;
+            else {
+                cnt = 0;
             }
+
+            if(cnt == k) {
+                bouque += 1;
+                cnt = 0;
+            }
+
+            j++;
         }
 
-        return bouquets;
+        return bouque;
     }
 }
