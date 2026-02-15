@@ -34,8 +34,7 @@ class Solution {
     }
 
     public int getNOfBouquets(int[] bloomDay, int mid, int k) {
-
-        int i = 0;
+        
         int j = 0;
         int n = bloomDay.length;
         int cnt = 0;
