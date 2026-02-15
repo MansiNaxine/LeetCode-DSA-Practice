@@ -1,7 +1,6 @@
 class Solution {
     public int minEatingSpeed(int[] piles, int h) {
         
-        int n = piles.length;
         long start = 1;
         int max = Integer.MIN_VALUE;
 
@@ -15,7 +14,6 @@ class Solution {
         while(start <= end) {
 
             long mid = (long)(start + end)/2;
-            // long possibleHours = getPossibleHours(mid, piles, int h);
 
             if(getPossibleHours(mid, piles, h)) {
                 ans = (int) mid;
