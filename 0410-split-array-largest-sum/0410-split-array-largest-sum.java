@@ -10,19 +10,20 @@ class Solution {
             sum += num;
         }
 
-        //Edge case
-        if(k == n) return max;
-
         int start = max;
         int end = sum;
-        int ans = -1;
+        int ans = max;
+
+        //Edge Case
+        if(k == 1) return sum;
+        else if(k == n) return max;
 
         while(start <= end) {
 
-            int mid = (start + end)/2;
-            int possibleSplit = getNoOfSubArrays(nums, mid);
+            int mid = (start + end) /2;
+            int possibleDivision = getPossibleDivision(mid, nums);
 
-            if (possibleSplit <= k) {
+            if(possibleDivision <= k) {
                 ans = mid;
                 end = mid - 1;
             }
@@ -32,23 +33,24 @@ class Solution {
         }
 
         return ans;
+        
     }
 
-    public int getNoOfSubArrays(int[] nums, int mid) {
+    public int getPossibleDivision(int mid, int[] nums) {
 
+        int cnt = 0;
         int sum = 0;
-        int count = 1;
 
-        for(int num : nums) {
-            if((num + sum) <= mid) {
+        for(int num :  nums) {
+            if((sum + num) <= mid) {
                 sum += num;
             }
             else {
-                count += 1;
+                cnt += 1;
                 sum = num;
             }
         }
 
-        return count;
+        return cnt + 1;
     }
 }
