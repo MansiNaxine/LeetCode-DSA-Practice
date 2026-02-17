@@ -12,11 +12,11 @@ class Solution {
             if(matrix[row][col] == target) {
                 return true;
             }
-            else if (matrix[row][col] < target) {
-                row++;
+            else if (matrix[row][col] < target){
+                row += 1;
             }
             else {
-                col--;
+                col -= 1;
             }
         }
 
