@@ -3,19 +3,22 @@ class Solution {
 
         int n = mat.length;
         int m = mat[0].length;
+
         int low = 0;
         int high = m - 1;
 
         while(low <= high) {
-            int mid = (low + high)/2;
-            int row = calculateMaxElementInColumn(mat, mid, n, m);
-            int left = (mid - 1) >= 0 ? mat[row][mid - 1] : -1;
-            int right = (mid + 1) < m ? mat[row][mid + 1] : -1;
 
-            if (mat[row][mid] > left && mat[row][mid] > right) {
-                return new int[]{row, mid};
+            int mid = (low + high)/2;
+            int row = calculateRow(mid, mat);
+            int col = mid;
+            int left = col - 1 >= 0 ? mat[row][col - 1] : -1;
+            int right = col + 1 <= m - 1 ? mat[row][col + 1] : -1;
+
+            if (mat[row][col] > left && mat[row][col] > right) {
+                return new int[]{row, col};
             }
-            else if (mat[row][mid] < left ) {
+            else if (mat[row][col] < left) {
                 high = mid - 1;
             }
             else {
@@ -27,18 +30,18 @@ class Solution {
         
     }
 
-    public int calculateMaxElementInColumn(int[][] mat, int col, int n, int m) {
-        
-        int maxElement = Integer.MIN_VALUE;
+    public int calculateRow(int mid, int[][] mat) {
+
         int row = -1;
-        
-        for(int i = 0; i < n; i++) {
-            if(mat[i][col] > maxElement) {
-                maxElement = mat[i][col];
+        int maxEle = Integer.MIN_VALUE;;
+
+        for(int i = 0; i < mat.length; i++) {
+            if(mat[i][mid] > maxEle) {
+                maxEle = mat[i][mid];
                 row = i;
             }
         }
 
-        return row;
+        return row;                                                                                                 
     }
 }
