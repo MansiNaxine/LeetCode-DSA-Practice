@@ -11,12 +11,7 @@ class Solution {
         while(j < n) {
 
             //Storing frequency of each character inside map
-            if(!map.containsKey(s.charAt(j))) {
-                map.put(s.charAt(j), 1);
-            } else {
-                map.put(s.charAt(j), map.get(s.charAt(j)) + 1);
-            }
-
+            map.put(s.charAt(j), map.getOrDefault(s.charAt(j), 0) + 1);
             
             int len = j - i + 1;
             maxF = Math.max(maxF, map.get(s.charAt(j)));
