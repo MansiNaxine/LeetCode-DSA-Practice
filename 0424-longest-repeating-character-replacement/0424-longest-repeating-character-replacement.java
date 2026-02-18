@@ -2,41 +2,55 @@ class Solution {
     public int characterReplacement(String s, int k) {
 
         int n = s.length();
-        int r = 0;
-        int l = 0;
+        int i = 0;
+        int j = 0;
         int maxLen = 1;
-        int diff = 0;
-        int maxF = 0;
-        int len = 0;
-        
-        //map will be of 26 size as uestion only contains 26 UPPERCASE letters
         Map<Character, Integer> map = new HashMap<>();
-        
-        while(r < n) {
-            if (!map.containsKey(s.charAt(r))) {
-                map.put(s.charAt(r), 1);
-            }
-            else {
-                map.put(s.charAt(r), map.get(s.charAt(r)) + 1);
+
+        while(j < n) {
+
+            //Storing frequency of each character inside map
+            if(!map.containsKey(s.charAt(j))) {
+                map.put(s.charAt(j), 1);
+            } else {
+                map.put(s.charAt(j), map.get(s.charAt(j)) + 1);
             }
 
-            len = (r - l + 1);
-            maxF = Math.max(maxF, map.get(s.charAt(r)));
-            diff = len - maxF;
+            
+            int len = j - i + 1;
+            int maxF = getMaxFreq(map);
+            int diff = len - maxF;
+            while(diff > k) {
+                map.put(s.charAt(i), map.get(s.charAt(i)) - 1);
+                if(map.get(s.charAt(i)) == 0) {
+                    map.remove(s.charAt(i));
+                }
+                i++;
+                len = j - i + 1;
+                maxF = getMaxFreq(map);
+                diff = len - maxF;
 
-            if(diff > k && l <= r) {
-                map.put(s.charAt(l), map.get(s.charAt(l)) - 1);
-                l++;
             }
 
             if(diff <= k) {
                 maxLen = Math.max(maxLen, len);
             }
 
-            r++;
+            j++;
         }
 
-
         return maxLen;
+        
+    }
+
+    public int getMaxFreq(Map<Character, Integer> map) {
+
+        int maxF = 0;
+        for(Integer val : map.values()) {
+            if(val > maxF) {
+                maxF = val;
+            }
+        }
+        return maxF;
     }
 }
