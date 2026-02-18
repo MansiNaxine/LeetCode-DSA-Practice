@@ -12,7 +12,7 @@ class Solution {
             map.put(s.charAt(i), i);
 
             if(map.size() == 3) {
-                cnt = cnt + Math.min(map.get('a'), Math.min(map.get('b'), map.get('c'))) + 1;
+                cnt +=  (Math.min(map.get('a'), Math.min(map.get('b'), map.get('c'))) + 1);
             }
             i++;
         }
