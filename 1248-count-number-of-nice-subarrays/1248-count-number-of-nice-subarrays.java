@@ -1,39 +1,37 @@
 class Solution {
     public int numberOfSubarrays(int[] nums, int k) {
 
-        int n = nums.length;
-        for(int i = 0 ; i < n; i++) {
+        for(int i = 0; i < nums.length; i++) {
             nums[i] = nums[i]%2;
         }
-
-        int ans1 = findanswer(nums, n, k);
+        
+        int ans1 = numSubarraysWithSumAndLess(nums, k);
         int ans2 = 0;
-        if(k - 1 < 0) ans2 = 0;
-        ans2 = findanswer(nums, n , k - 1);
+        if(k - 1 < 0) return ans1;
+        else ans2 = numSubarraysWithSumAndLess(nums, k - 1);
 
-        return ans1 - ans2;
+        return ans1- ans2;
     }
 
-    public int findanswer(int[] nums, int n, int k) {
+    public int numSubarraysWithSumAndLess(int[] nums, int goal) {
+
+        int n = nums.length;
+        int left = 0;
+        int right = 0;
         int sum = 0;
         int cnt = 0;
-        int r = 0;
-        int l = 0;
 
-        while(r < n) {
+        while(right < n) {
 
-            sum += nums[r];
+            sum += nums[right];
 
-            while(sum > k) {
-                sum -= nums[l];
-                l++;
+            while(sum > goal) {
+                sum -= nums[left];
+                left += 1;
             }
 
-            if(sum <= k) {
-                cnt += (r - l + 1);
-            }
-
-            r++;
+            if(sum <= goal) cnt += (right - left + 1);
+            right++;
         }
 
         return cnt;
