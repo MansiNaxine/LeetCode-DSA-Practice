@@ -13,7 +13,6 @@ class Solution {
                 if(len > maxLength) {
                     maxLength = len;
                 }
-                map.put(s.charAt(j), j);
             }
             else {
                 int newIndex = map.get(s.charAt(j));
@@ -21,8 +20,8 @@ class Solution {
                     map.remove(s.charAt(i));
                     i += 1;
                 }
-                map.put(s.charAt(j), j);
             }
+            map.put(s.charAt(j), j);
             j++;
         }
 
