@@ -3,7 +3,6 @@ class Solution {
 
         int n = s.length();
         int sum = 0;
-        // Map<Character, Integer> map = new HashMap<>();
         int[] freq = {-1, -1, -1};
         int i = 0;
         int cnt = 0;
