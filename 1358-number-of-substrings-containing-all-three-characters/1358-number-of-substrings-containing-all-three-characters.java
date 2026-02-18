@@ -3,16 +3,17 @@ class Solution {
 
         int n = s.length();
         int sum = 0;
-        Map<Character, Integer> map = new HashMap<>();
+        // Map<Character, Integer> map = new HashMap<>();
+        int[] freq = {-1, -1, -1};
         int i = 0;
         int cnt = 0;
 
         while(i < n) {
             //inserting frequencies of characters
-            map.put(s.charAt(i), i);
+            freq[(int) (s.charAt(i) - 'a')] = i;
 
-            if(map.size() == 3) {
-                cnt +=  (Math.min(map.get('a'), Math.min(map.get('b'), map.get('c'))) + 1);
+            if(freq[0] != -1 && freq[1] != -1 && freq[2] != -1) {
+                cnt +=  (Math.min(freq[0], Math.min(freq[1], freq[2])) + 1);
             }
             i++;
         }
