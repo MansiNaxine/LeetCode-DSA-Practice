@@ -5,6 +5,7 @@ class Solution {
         int i = 0;
         int j = 0;
         int maxLen = 1;
+        int maxF = 0;
         Map<Character, Integer> map = new HashMap<>();
 
         while(j < n) {
@@ -18,7 +19,7 @@ class Solution {
 
             
             int len = j - i + 1;
-            int maxF = getMaxFreq(map);
+            maxF = Math.max(maxF, map.get(s.charAt(j)));
             int diff = len - maxF;
             while(diff > k) {
                 map.put(s.charAt(i), map.get(s.charAt(i)) - 1);
@@ -27,7 +28,7 @@ class Solution {
                 }
                 i++;
                 len = j - i + 1;
-                maxF = getMaxFreq(map);
+                maxF = Math.max(maxF, map.get(s.charAt(i)));
                 diff = len - maxF;
 
             }
