@@ -8,22 +8,21 @@ class Solution {
         int zeros = 0;
 
         while(j < n) {
+            if(nums[j] == 0) {
+                zeros += 1;
+            }
+
+            if(zeros <= k) {
+                maxLen = Math.max(maxLen, (j - i + 1));
+            }
+
             while(zeros > k && i < j) {
                 if(nums[i] == 0) {
                     zeros -= 1;
                 }
                 i++;
             }
-
-            if(nums[j] == 0) {
-                    zeros += 1;
-                }
-
-            if(zeros <= k) {
-                
-                maxLen = Math.max(maxLen, (j - i + 1));
-                
-            }
+            
             j++;
         }
 
