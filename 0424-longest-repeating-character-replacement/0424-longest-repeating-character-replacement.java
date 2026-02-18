@@ -28,8 +28,7 @@ class Solution {
                 }
                 i++;
                 len -= 1;
-                maxF = Math.max(maxF, map.get(s.charAt(i)));
-                diff = len - maxF;
+                diff = len - Math.max(maxF, map.get(s.charAt(i)));
 
             }
 
