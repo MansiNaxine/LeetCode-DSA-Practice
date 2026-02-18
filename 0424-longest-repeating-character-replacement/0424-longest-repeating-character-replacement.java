@@ -28,7 +28,7 @@ class Solution {
                 }
                 i++;
                 len = j - i + 1;
-                maxF = Math.max(maxF, map.get(s.charAt(i)));
+                maxF = Math.max(maxF, map.get(s.charAt(j)));
                 diff = len - maxF;
 
             }
@@ -42,16 +42,5 @@ class Solution {
 
         return maxLen;
         
-    }
-
-    public int getMaxFreq(Map<Character, Integer> map) {
-
-        int maxF = 0;
-        for(Integer val : map.values()) {
-            if(val > maxF) {
-                maxF = val;
-            }
-        }
-        return maxF;
     }
 }
