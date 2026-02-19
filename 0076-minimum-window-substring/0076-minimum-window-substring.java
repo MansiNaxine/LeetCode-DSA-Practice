@@ -3,58 +3,47 @@ class Solution {
 
         int n = s.length();
         int m = t.length();
-        int cnt = 0;
-        int sIndex = -1;
-        int endIndex = n;
         Map<Character, Integer> map = new HashMap<>();
-        int l = 0;
-        int r = 0;
-        int mIndex = 0;
-        int minLen = Integer.MAX_VALUE;
 
-        while(mIndex < m) {
-            if (!map.containsKey(t.charAt(mIndex))) {
-                map.put(t.charAt(mIndex), 1);
-            }
-            else {
-                map.put(t.charAt(mIndex), map.get(t.charAt(mIndex)) + 1);
-            }
-            mIndex++;
+        for(int i = 0; i < m; i++) {
+            map.put(t.charAt(i), map.getOrDefault(t.charAt(i), 0) + 1);
         }
 
-        while(r < n) {
+        int i = 0;
+        int j = 0;
+        int cnt = 0;
+        int minLen = Integer.MAX_VALUE;
+        int endIndex = -1;
+        int startindex = -1;
 
-            if (!map.containsKey(s.charAt(r))) {
-                map.put(s.charAt(r), -1);
+        while(j < n) {
+            if(!map.containsKey(s.charAt(j))) {
+                map.put(s.charAt(j), -1 );
             }
             else {
-                if(map.get(s.charAt(r)) > 0) {
+                if(map.get(s.charAt(j)) > 0) {
                     cnt += 1;
                 }
-                map.put(s.charAt(r), map.get(s.charAt(r)) - 1);
+                map.put(s.charAt(j),  map.get(s.charAt(j)) - 1 );
             }
 
             while(cnt == m) {
-                if((r - l + 1) < minLen) {
-                    minLen = r - l + 1;
-                    endIndex = r + 1;
-                    sIndex = l;
+                int len = j - i + 1;
+                if(len < minLen ) {
+                    minLen = len;
+                    endIndex = j + 1;
+                    startindex = i;
                 }
-
-                map.put(s.charAt(l), map.get(s.charAt(l)) + 1);
-
-                if(map.get(s.charAt(l)) > 0) {
-                    cnt -= map.get(s.charAt(l));
-                }
-
-                l++;   
-
+                map.put(s.charAt(i),  map.get(s.charAt(i)) + 1 );
+                if(map.get(s.charAt(i)) > 0) cnt -= 1;
+                
+                i++;
             }
 
-            r++;
+            j++;
         }
 
-        return sIndex == -1 ? "" : s.substring(sIndex, endIndex);
+        return startindex == -1 ? "" : s.substring(startindex, endIndex);
         
     }
 }
