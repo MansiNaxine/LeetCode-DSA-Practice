@@ -21,7 +21,7 @@ class Solution {
 
             map.put(nums[j], map.getOrDefault(nums[j], 0) + 1);
 
-            while(map.size() > k) {
+            while(map.size() > k && i <= j) {
                 map.put(nums[i] , map.get(nums[i]) - 1);
                 if(map.get(nums[i]) == 0) {
                     map.remove(nums[i]);
