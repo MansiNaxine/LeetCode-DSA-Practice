@@ -23,9 +23,8 @@ class Solution {
 
             while(map.size() > k) {
                 map.put(nums[i] , map.get(nums[i]) - 1);
-                if(map.get(nums[i]) == 0) {
-                    map.remove(nums[i]);
-                }
+                if(map.get(nums[i]) == 0) map.remove(nums[i]);
+                
                 i++;
             }
 
