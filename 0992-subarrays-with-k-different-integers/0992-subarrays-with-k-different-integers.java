@@ -19,13 +19,13 @@ class Solution {
 
         while(j < n) {
 
-            // map.put(nums[j], map.getOrDefault(nums[j], 0) + 1);
-            if(!map.containsKey(nums[j])) {
-                map.put(nums[j], 1);
-            }
-            else {
-                map.put(nums[j], map.get(nums[j]) + 1);
-            }
+             map.put(nums[j], map.getOrDefault(nums[j], 0) + 1);
+            // if(!map.containsKey(nums[j])) {
+            //     map.put(nums[j], 1);
+            // }
+            // else {
+            //     map.put(nums[j], map.get(nums[j]) + 1);
+            // }
 
             while(map.size() > k) {
                 map.put(nums[i] , map.get(nums[i]) - 1);
