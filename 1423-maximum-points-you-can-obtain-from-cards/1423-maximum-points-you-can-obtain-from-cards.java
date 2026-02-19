@@ -1,32 +1,31 @@
 class Solution {
     public int maxScore(int[] cardPoints, int k) {
-
+        
         int n = cardPoints.length;
-        //first travel from 0 till kth elements and calculate the maxScore
-        int maxScore = 0;
-        int leftSum = 0;
-        int rightSum = 0;
-        int lIn = -1;
-
-        for(int i = 0; i < k; i++) {
-            leftSum += cardPoints[i];
-            lIn += 1;
-        }
-        
-        //Boundry Case
-        if(k == n) return leftSum;
-
-        maxScore = leftSum;
-        int rIn = n - 1;
-        for(int i = lIn ; i >= 0; i--) {
-            leftSum = leftSum - cardPoints[i];
-            rightSum = rightSum + cardPoints[rIn];
-            rIn--;
-
-            maxScore = Math.max(maxScore, (leftSum + rightSum));
-        }
+        int left = 0;
+        int right = 0;
+        int lI = 0;
         
 
-        return maxScore;
+        while(lI < k) {
+            left += cardPoints[lI];
+            lI++;
+        }
+
+        int maxPoints = left;
+
+        //Some Edge cases
+        if(k == 1) return Math.max(cardPoints[0] , cardPoints[n - 1]);
+        if(k == n) return left;
+        int len = n - k - 1;
+        for(int i = n - 1; i > len; i--) {
+            right += cardPoints[i];
+            lI -= 1;
+            if(lI >= 0) left -= cardPoints[lI];
+            maxPoints = Math.max(maxPoints, left + right);
+
+        }
+
+        return maxPoints;
     }
 }
