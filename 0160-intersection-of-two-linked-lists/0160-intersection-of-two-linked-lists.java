@@ -18,7 +18,6 @@ public class Solution {
 
         while(temp1 != null && temp2 != null) {
             if(temp1 == temp2) return temp1;
-
             temp1 = temp1.next;
             temp2 = temp2.next;
 
@@ -26,6 +25,7 @@ public class Solution {
                 temp1 = headB;
                 cnt += 1;
             }
+
             if(temp2 == null) {
                 temp2 = headA;
                 cnt += 1;
@@ -33,7 +33,8 @@ public class Solution {
 
             if(cnt > 2) break;
         }
-        
+
         return null;
+        
     }
 }
