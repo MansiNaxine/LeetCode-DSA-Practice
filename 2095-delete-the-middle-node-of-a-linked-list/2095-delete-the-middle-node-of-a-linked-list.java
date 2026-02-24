@@ -24,10 +24,8 @@ class Solution {
             fast = fast.next.next;
             
         }
-
-        // if(temp != null && temp.next != null) {
-            temp.next = temp.next.next;
-        // }
+        
+        temp.next = temp.next.next;
 
         return head;
     }
