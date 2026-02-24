@@ -25,9 +25,9 @@ class Solution {
             
         }
 
-        if(temp != null && temp.next != null) {
+        // if(temp != null && temp.next != null) {
             temp.next = temp.next.next;
-        }
+        // }
 
         return head;
     }
