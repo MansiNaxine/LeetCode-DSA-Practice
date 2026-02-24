@@ -10,6 +10,7 @@
  */
 class Solution {
     public ListNode oddEvenList(ListNode head) {
+
          //Edge case
         if(head == null || head.next == null) return head;
 
@@ -29,5 +30,6 @@ class Solution {
             odd.next = evenHead;
         }
         return oddHead;
+        
     }
 }
