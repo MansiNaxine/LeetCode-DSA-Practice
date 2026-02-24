@@ -13,7 +13,7 @@ public class Solution {
     public boolean hasCycle(ListNode head) {
 
         //Edeg case
-        if(head == null || head.next == null) return false;
+        // if(head == null || head.next == null) return false;
         ListNode slow = head;
         ListNode fast = head;
 
