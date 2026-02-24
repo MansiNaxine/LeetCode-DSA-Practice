@@ -20,9 +20,8 @@ class Solution {
 
         while(temp1 != null && temp2 != null) {
             sum = temp1.val + temp2.val + carry;
-            if(newNode == null) {
-                newNode.val = sum%10;
-            } else {
+            if(newNode == null) newNode.val = sum%10;
+            else {
                 ListNode currNode = new ListNode(sum%10);
                 newNode.next = currNode;
                 newNode = currNode;
@@ -34,9 +33,8 @@ class Solution {
 
         while(temp1 != null) {
             sum = temp1.val + carry;
-            if(newNode == null) {
-                newNode.val = sum%10;
-            } else {
+            if(newNode == null) newNode.val = sum%10;
+            else {
                 ListNode currNode = new ListNode(sum%10);
                 newNode.next = currNode;
                 newNode = currNode;
@@ -47,9 +45,8 @@ class Solution {
 
         while(temp2 != null) {
             sum = temp2.val + carry;
-            if(newNode == null) {
-                newNode.val = sum%10;
-            } else {
+            if(newNode == null) newNode.val = sum%10;
+            else {
                 ListNode currNode = new ListNode(sum%10);
                 newNode.next = currNode;
                 newNode = currNode;
