@@ -19,12 +19,12 @@ class Solution {
             newHead = newHead.next;
             cnt = 1;
         }
-        
         ListNode temp = newHead;
         
 
         while(temp != null && temp.next != null) {
             cnt += 1;
+            if(cnt > n - 1) break;
             if(cnt == n - 1) {
                 temp.next = temp.next.next;
             }
