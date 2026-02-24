@@ -11,25 +11,51 @@
 class Solution {
     public ListNode oddEvenList(ListNode head) {
 
-         //Edge case
-        if(head == null || head.next == null) return head;
-
-        ListNode odd = head;
-        ListNode even = head.next;
-        ListNode oddHead = odd;
-        ListNode evenHead = even;
-
-        while(odd != null && odd.next != null && even != null && even.next != null) {
-            odd.next = odd.next.next;
-            odd = odd.next;
-            even.next = even.next.next;
-            even = even.next;
+        if(head == null) {
+            return head;
         }
 
-        if(odd != null) {
-            odd.next = evenHead;
-        }
-        return oddHead;
-        
+            ListNode oH = null;
+            ListNode oT = null;
+            ListNode eH = null;
+            ListNode eT = null;
+
+            ListNode temp = head;
+            int index = 1;
+
+            while (temp != null) {
+                
+                if (index % 2 == 0) {
+
+                    if(eH == null && eT == null) {
+                        eH = temp;
+                        eT = temp;
+                    } else {
+                        eT.next = temp;
+                        eT = temp;
+                    }
+
+                } else {
+
+                    if(oH == null && oT == null) {
+                        oH = temp;
+                        oT = temp;
+                    } else {
+                        oT.next = temp;
+                        oT = temp;
+                    }
+                }
+
+                temp = temp.next;
+                index++;
+            }
+
+            oT.next = eH;
+
+            if(eT != null) {
+                eT.next = null;
+            }
+
+        return oH;
     }
 }
