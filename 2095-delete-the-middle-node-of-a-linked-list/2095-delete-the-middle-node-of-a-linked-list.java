@@ -16,23 +16,17 @@ class Solution {
 
         ListNode slow = head;
         ListNode fast = head;
-        //first find the middle element
-        int cnt = 0;
+        ListNode temp = null;
 
         while(fast != null && fast.next != null) {
-            cnt += 1;
+            temp = slow;
             slow = slow.next;
             fast = fast.next.next;
+            
         }
 
-        int k = 0;
-        ListNode temp = head;
-        while(temp != null && temp.next != null) {
-            k += 1;
-            if(k == cnt) {
-                temp.next = temp.next.next;
-            }
-            temp = temp.next;
+        if(temp != null && temp.next != null) {
+            temp.next = temp.next.next;
         }
 
         return head;
