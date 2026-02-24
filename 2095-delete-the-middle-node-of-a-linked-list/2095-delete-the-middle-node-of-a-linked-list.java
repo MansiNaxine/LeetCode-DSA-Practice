@@ -27,7 +27,6 @@ class Solution {
 
         int k = 0;
         ListNode temp = head;
-        ListNode newHead = temp;
         while(temp != null && temp.next != null) {
             k += 1;
             if(k == cnt) {
@@ -36,6 +35,6 @@ class Solution {
             temp = temp.next;
         }
 
-        return newHead;
+        return head;
     }
 }
