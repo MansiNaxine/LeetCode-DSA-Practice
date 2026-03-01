@@ -34,19 +34,15 @@ class Solution {
                     }
                         res = tail;
                         temp = nextNode;
+                        cnt = 0;
             }
-
-            
-            if (cnt < k){
+            else {
                 temp = temp.next;
+                if(temp == null && cnt < k) {
+                    res.next = tail;
+                    break;
+                } 
             }
-            
-            if(temp == null && cnt < k) {
-                res.next = tail;
-                break;
-            } 
-
-            if(cnt == k) cnt = 0;
 
         }
 
