@@ -14,29 +14,23 @@ public class Solution {
 
         ListNode slow = head;
         ListNode fast = head;
-        boolean isCycle = false;
 
         while(fast != null && fast.next != null) {
             slow = slow.next;
             fast = fast.next.next;
 
             if(slow == fast) {
-                isCycle = true;
-                break;
+                slow = head;
+                while(slow != fast) {
+                    slow = slow.next;
+                    fast = fast.next;
+                }
+                return slow;
             }
-        }
-
-        if(isCycle) {
-            fast = head;
-            while(slow != fast) {
-                slow = slow.next;
-                fast = fast.next;
-            }
-
-            return slow;
         }
 
         return null;
+
         
     }
 }
