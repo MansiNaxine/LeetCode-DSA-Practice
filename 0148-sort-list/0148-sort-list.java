@@ -53,15 +53,9 @@ class Solution {
             }
         }
 
-        if(temp1 != null) {
-            res.next = temp1;
-            res = temp1;
-        }
+        if(temp1 != null) res.next = temp1;
 
-        if(temp2 != null) {
-            res.next = temp2;
-            res = temp2;
-        }
+        if(temp2 != null) res.next = temp2;
 
         return dummyNode.next;
 
