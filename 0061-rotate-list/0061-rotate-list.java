@@ -12,7 +12,7 @@ class Solution {
     public ListNode rotateRight(ListNode head, int k) {
 
         //Edge case
-        if(head == null || head.next == null || k == 0) return head;
+        if(head == null || head.next == null) return head;
 
         //First find the length of the given Node list
         int len = 0;
