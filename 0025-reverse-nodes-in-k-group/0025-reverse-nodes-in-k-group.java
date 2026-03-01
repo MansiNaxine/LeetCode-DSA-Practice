@@ -24,7 +24,7 @@ class Solution {
             if(cnt == 1) tail = temp;
             if(cnt == k) {
                 nextNode = temp.next;
-                if(temp != null) temp.next = null;
+                temp.next = null;
                 reverseHead = getReverseHead(tail);
 
                     if(dummynode.next == null) {
