@@ -10,7 +10,10 @@
  */
 class Solution {
     public ListNode sortList(ListNode head) {
+        return bruteForceApproach(head);
+    }
 
+    public ListNode bruteForceApproach(ListNode head) {
         List<Integer> arr = new ArrayList<>();
         ListNode temp = head;
         while(temp != null) {
@@ -28,6 +31,5 @@ class Solution {
         }
 
         return head;
-        
     }
 }
