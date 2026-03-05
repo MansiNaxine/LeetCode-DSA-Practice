@@ -12,6 +12,7 @@ class MinStack {
 
         if(st.isEmpty()) min = Math.min(Integer.MAX_VALUE, val);
         else min = Math.min(st.peek().get(1), val);
+        
         LinkedList<Integer> list = new LinkedList<>();
         list.add(val);
         list.add(min);
