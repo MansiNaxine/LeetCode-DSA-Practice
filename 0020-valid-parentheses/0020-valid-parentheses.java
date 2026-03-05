@@ -1,35 +1,34 @@
 class Solution {
     public boolean isValid(String s) {
 
-        Stack<Character> st = new Stack<>();
         int n = s.length();
-        int count = 0;
+        Stack<Character> st = new Stack<>();
+        boolean ans = false;
 
         for(int i = 0; i < n; i++) {
-            if(st.isEmpty()) {
-                if(s.charAt(i) == '(' || s.charAt(i) == '{' || s.charAt(i) == '[') {
-                    count++;
-                    st.push(s.charAt(i));
-                } else{
-                    return false;
-                }
-            }else{
-                 if(s.charAt(i) == '(' || s.charAt(i) == '{' || s.charAt(i) == '[') {
-                    count++;
-                    st.push(s.charAt(i));
-                }else {
-                    if(s.charAt(i) == ')' && st.pop() != '(' ||
-                       s.charAt(i) == '}' && st.pop() != '{' ||
-                       s.charAt(i) == ']' && st.pop() != '[') {
-                        return false;
-                       } else if(s.charAt(i) == ')' || s.charAt(i) == '}' || s.charAt(i) == ']' ){
-                        count--;
+            char ch = s.charAt(i);
+            if(ch == '(' || ch == '{' || ch == '[') {
+                st.push(ch);
+            }
+            else {
+                if(st.size() >= 1) {
+                    int topElement = st.pop();
+                    if((ch == ')' && topElement == '(')) ans = true;
+                    else if((ch == '}' && topElement == '{')) ans = true;
+                    else if((ch == ']' && topElement == '[')) ans = true;
+                    else  {
+                        ans = false;
+                        break;
                     }
+                }
+                else {
+                    ans = false;
+                    break;
                 }
             }
         }
 
-        return count == 0;
+        return st.size() >= 1 ? false : ans;
         
     }
 }
