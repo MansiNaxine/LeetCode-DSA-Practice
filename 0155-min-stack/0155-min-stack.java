@@ -10,7 +10,7 @@ class MinStack {
     
     public void push(int val) {
 
-        if(st.isEmpty()) min = Math.min(Integer.MAX_VALUE, val);
+        if(st.isEmpty()) min = val;
         else min = Math.min(st.peek().get(1), val);
         LinkedList<Integer> list = new LinkedList<>();
         list.add(val);
