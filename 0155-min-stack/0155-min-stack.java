@@ -1,46 +1,35 @@
 class MinStack {
 
-    Stack stack;
-    Stack miStack;
-    int minValue;
+    Stack<LinkedList<Integer>> st;
+    int min;
 
     public MinStack() {
-        stack = new Stack();
-        miStack = new Stack();
-        minValue = Integer.MAX_VALUE;
+        st = new Stack<>();
+        min = Integer.MAX_VALUE;
     }
     
     public void push(int val) {
-        if(stack.isEmpty()) {
-            minValue = val;
-        } else {
-            minValue = Math.min((int)miStack.peek(), val);
-        }
 
-        stack.push(val);
-        miStack.push(minValue);
-           
+        if(st.isEmpty()) min = Integer.MAX_VALUE;
+        else min = st.peek().get(1);
+        min = Math.min(min, val);
+        LinkedList<Integer> list = new LinkedList<>();
+        list.add(val);
+        list.add(min);
+
+        st.push(list);
     }
     
     public void pop() {
-        stack.pop();
-        miStack.pop();
+        st.pop();
     }
     
     public int top() {
-        if(stack.isEmpty()) {
-            return 0;
-        } else {
-            return (int)stack.peek();
-        }
-       
+        return st.peek().get(0);
     }
     
     public int getMin() {
-        // if(stack.isEmpty()) {
-        //     return 0;
-        // }
-       return (int)miStack.peek();
+        return st.peek().get(1);
     }
 }
 
