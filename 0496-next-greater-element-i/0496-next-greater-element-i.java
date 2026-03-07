@@ -23,7 +23,6 @@ class Solution {
             st.push(nums2[i]);
         }
 
-        int index = 0;
         for(int i = 0; i < n ; i++ ) {
             for(int j = 0; j < m; j++) {
                 if(nums2[j] == nums1[i]) {
