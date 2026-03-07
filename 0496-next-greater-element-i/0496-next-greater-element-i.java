@@ -28,6 +28,7 @@ class Solution {
             for(int j = 0; j < m; j++) {
                 if(nums2[j] == nums1[i]) {
                     ngeNw[i] = nge[j];
+                    break;
                 }
             }
         }
