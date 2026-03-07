@@ -4,7 +4,7 @@ class Solution {
         int n = nums1.length;
         int m = nums2.length;
         int[] nge = new int[m];
-        int[] ngeNw = new int[n];
+        // int[] ngeNw = new int[n];
         Stack<Integer> st = new Stack<>();
 
         for(int i = m - 1; i >= 0; i--) {
@@ -26,13 +26,13 @@ class Solution {
         for(int i = 0; i < n ; i++ ) {
             for(int j = 0; j < m; j++) {
                 if(nums2[j] == nums1[i]) {
-                    ngeNw[i] = nge[j];
+                    nums1[i] = nge[j];
                     break;
                 }
             }
         }
 
-        return ngeNw;
+        return nums1;
         
     }
 }
