@@ -13,17 +13,16 @@ class Solution {
         Stack<Integer> st = new Stack<>();
         int[] nge = new int[n];
 
+        for(int i = 0; i < n; i++) {
+            nge[i] = -1;
+        }
+
         for(int i = newN - 1; i >= 0; i--) {
             while(!st.isEmpty() && st.peek() <= nums[i%n]) {
                 st.pop();
             }
 
-            if(st.isEmpty()) {
-                nge[i%n] = -1;
-            }
-            else {
-                nge[i%n] = st.peek();
-            }
+            if(!st.isEmpty()) nge[i%n] = st.peek();
 
             st.push(nums[i%n]);
         }
