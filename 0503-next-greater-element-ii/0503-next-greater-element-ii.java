@@ -17,15 +17,6 @@ class Solution {
                 }
             }
 
-            // if(nge[i] == ele) {
-            //     for(int j = 0 ; j < i; j++) {
-            //         if(nums[j] > nums[i]) {
-            //             nge[i] = nums[j];
-            //             break;
-            //         }
-            //     }
-            // }
-
             if(nge[i] == ele) nge[i] = -1;
             
         }
