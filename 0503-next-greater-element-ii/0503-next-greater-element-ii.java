@@ -1,6 +1,12 @@
 class Solution {
     public int[] nextGreaterElements(int[] nums) {
 
+        return bruteForceApproach(nums);
+        
+    }
+
+    public int[] bruteForceApproach(int[] nums) {
+
         int n = nums.length;
         int[] nge = new int[n];
 
@@ -22,6 +28,5 @@ class Solution {
         }
 
         return nge;
-        
     }
 }
