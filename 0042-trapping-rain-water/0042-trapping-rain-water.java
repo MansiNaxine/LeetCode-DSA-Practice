@@ -4,12 +4,12 @@ class Solution {
         //First calculate the prefix sum
         int pm = Integer.MIN_VALUE;
         int n = height.length;
-        int[] pmax = new int[n];
+        // int[] pmax = new int[n];
 
-        for(int i = 0 ; i < n; i++) {
-            pm = Math.max(pm, height[i]);
-            pmax[i] = pm;
-        }
+        // for(int i = 0 ; i < n; i++) {
+        //     pm = Math.max(pm, height[i]);
+        //     pmax[i] = pm;
+        // }
         
         //Calculate Suffiox Sum
         int sm = Integer.MIN_VALUE;
@@ -22,10 +22,10 @@ class Solution {
         //Calculate the area
         int area = 0;
         for(int i = 0; i < n; i++) {
-            int left = pmax[i];
+            pm = Math.max(pm, height[i]);
             int right = smax[i];
-            if(height[i] < left && height[i] < right) {
-                int min = Math.min(left, right);
+            if(height[i] < pm && height[i] < right) {
+                int min = Math.min(pm, right);
                 area += (min - height[i]);
             }
         }
