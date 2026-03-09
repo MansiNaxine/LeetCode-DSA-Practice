@@ -18,6 +18,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0039-combination-sum](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0039-combination-sum) |
 | [0040-combination-sum-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0040-combination-sum-ii) |
 | [0041-first-missing-positive](https://github.com/MansiNaxine/LeetCode/tree/master/0041-first-missing-positive) |
+| [0042-trapping-rain-water](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0042-trapping-rain-water) |
 | [0046-permutations](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0046-permutations) |
 | [0048-rotate-image](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0048-rotate-image) |
 | [0049-group-anagrams](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0049-group-anagrams) |
@@ -181,6 +182,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0022-generate-parentheses](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0022-generate-parentheses) |
+| [0042-trapping-rain-water](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0042-trapping-rain-water) |
 | [0053-maximum-subarray](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0053-maximum-subarray) |
 | [0085-maximal-rectangle](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0085-maximal-rectangle) |
 | [0118-pascals-triangle](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0118-pascals-triangle) |
@@ -338,6 +340,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0027-remove-element](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0027-remove-element) |
 | [0028-find-the-index-of-the-first-occurrence-in-a-string](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0028-find-the-index-of-the-first-occurrence-in-a-string) |
 | [0031-next-permutation](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0031-next-permutation) |
+| [0042-trapping-rain-water](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0042-trapping-rain-water) |
 | [0061-rotate-list](https://github.com/MansiNaxine/LeetCode/tree/master/0061-rotate-list) |
 | [0075-sort-colors](https://github.com/MansiNaxine/LeetCode/tree/master/0075-sort-colors) |
 | [0088-merge-sorted-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0088-merge-sorted-array) |
@@ -491,6 +494,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0020-valid-parentheses](https://github.com/MansiNaxine/LeetCode/tree/master/0020-valid-parentheses) |
+| [0042-trapping-rain-water](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0042-trapping-rain-water) |
 | [0084-largest-rectangle-in-histogram](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0084-largest-rectangle-in-histogram) |
 | [0085-maximal-rectangle](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0085-maximal-rectangle) |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/MansiNaxine/LeetCode/tree/master/0114-flatten-binary-tree-to-linked-list) |
@@ -666,6 +670,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Monotonic Stack
 |  |
 | ------- |
+| [0042-trapping-rain-water](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0042-trapping-rain-water) |
 | [0084-largest-rectangle-in-histogram](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0084-largest-rectangle-in-histogram) |
 | [0085-maximal-rectangle](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0085-maximal-rectangle) |
 | [0496-next-greater-element-i](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0496-next-greater-element-i) |
