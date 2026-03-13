@@ -120,6 +120,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [2048-build-array-from-permutation](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2048-build-array-from-permutation) |
 | [2058-concatenation-of-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2058-concatenation-of-array) |
 | [2099-number-of-strings-that-appear-as-substrings-in-word](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2099-number-of-strings-that-appear-as-substrings-in-word) |
+| [2104-sum-of-subarray-ranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2104-sum-of-subarray-ranges) |
 | [2144-maximum-difference-between-increasing-elements](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2144-maximum-difference-between-increasing-elements) |
 | [2149-rearrange-array-elements-by-sign](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2149-rearrange-array-elements-by-sign) |
 | [2270-find-all-lonely-numbers-in-the-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2270-find-all-lonely-numbers-in-the-array) |
@@ -520,6 +521,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1128-remove-all-adjacent-duplicates-in-string](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1128-remove-all-adjacent-duplicates-in-string) |
 | [1320-remove-all-adjacent-duplicates-in-string-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1320-remove-all-adjacent-duplicates-in-string-ii) |
 | [1737-maximum-nesting-depth-of-the-parentheses](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1737-maximum-nesting-depth-of-the-parentheses) |
+| [2104-sum-of-subarray-ranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2104-sum-of-subarray-ranges) |
 ## Design
 |  |
 | ------- |
@@ -684,6 +686,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0581-shortest-unsorted-continuous-subarray](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0581-shortest-unsorted-continuous-subarray) |
 | [0739-daily-temperatures](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0739-daily-temperatures) |
 | [0907-sum-of-subarray-minimums](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0907-sum-of-subarray-minimums) |
+| [2104-sum-of-subarray-ranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2104-sum-of-subarray-ranges) |
 ## Enumeration
 |  |
 | ------- |
