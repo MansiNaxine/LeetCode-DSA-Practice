@@ -1,62 +1,59 @@
 class Solution {
-
-    public int[] previousSmallElement(int[] arr) {
-        int n = arr.length;
-        int[] result = new int[n];
-
-        Stack<Integer> st = new Stack<>();
-
-        for(int i = 0; i < n; i++) {
-            result[i] = -1;
-        }
-
-        for(int i = n-1; i >= 0; i--) {
-            while(!st.isEmpty() && arr[i] < arr[st.peek()]) {
-                result[st.pop()] = i;
-            }
-
-            st.push(i);
-        }
-
-        return result;
-    }
-
-     public int[] nextSmallElement(int[] arr) {
-        int n = arr.length;
-        int[] result = new int[n];
-
-        Stack<Integer> st = new Stack<>();
-
-        for(int i = 0; i < n; i++) {
-            result[i] = n;
-        }
-
-        for(int i = 0; i < n; i++) {
-            while(!st.isEmpty() && arr[i] < arr[st.peek()]) {
-                result[st.pop()] = i;
-            }
-
-            st.push(i);
-        }
-
-        return result;
-    }
-
     public int largestRectangleArea(int[] heights) {
 
         int n = heights.length;
-        int maxArea = 0;
-
-        int[] prevSmall = previousSmallElement(heights);
-        int[] nextSmall = nextSmallElement(heights);
+        int[] prev = previousSmaller(heights);
+        int[] next = nextSmaller(heights);
+        int maxArea = Integer.MIN_VALUE;
 
         for(int i = 0; i < n; i++) {
-            int area = heights[i] * (nextSmall[i] - prevSmall[i] - 1);
-
+            int diff = next[i] - prev[i] - 1;
+            int area = heights[i] * diff;
             maxArea = Math.max(maxArea, area);
         }
 
         return maxArea;
+    }
+
+    public int[] nextSmaller(int[] arr) {
+
+        int n = arr.length;
+        Stack<Integer> st = new Stack<>();
+        int[] ans = new int[n];
+
+        for(int i = n - 1; i >= 0; i--) {
+
+            while(!st.isEmpty() && arr[st.peek()] >= arr[i]) {
+                st.pop();
+            }
+
+            if(st.isEmpty()) ans[i] = n;
+            else ans[i] = st.peek();
+
+            st.push(i);
+        }
+
+        return ans;
+    }
+
+    public int[] previousSmaller(int[] arr) {
         
+        int n = arr.length;
+        Stack<Integer> st = new Stack<>();
+        int[] ans = new int[n];
+
+        for(int i = 0; i < n; i++) {
+
+            while(!st.isEmpty() && arr[st.peek()] >= arr[i]) {
+                st.pop();
+            }
+
+            if(st.isEmpty()) ans[i] = -1;
+            else ans[i] = st.peek();
+
+            st.push(i);
+        }
+
+        return ans;
     }
 }
