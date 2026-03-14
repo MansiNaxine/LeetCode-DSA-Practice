@@ -1,98 +1,83 @@
 class Solution {
-
-    public int[] previousSmallElement(int[] arr) {
-
-        int n = arr.length;
-        Stack<Integer> st = new Stack<>();
-        int[] result = new int[n];
-
-        for(int i = 0; i < n; i++) {
-            result[i] = -1;
-        }
-
-        for(int i = n - 1; i>=0; i--) {
-            while(!st.isEmpty() && arr[i] < arr[st.peek()]) {
-                result[st.pop()] = i;
-            }
-
-            st.push(i);
-        }
-
-        return result;
-    }
-
-
-     public int[] nextGreaterElement(int[] arr) {
-
-        int n = arr.length;
-        Stack<Integer> st = new Stack<>();
-        int[] result = new int[n];
-
-        for(int i = 0; i < n; i++) {
-            result[i] = n;
-        }
-
-        for(int i = 0; i < n; i++) {
-            while(!st.isEmpty() && arr[i] < arr[st.peek()]) {
-                result[st.pop()] = i;
-            }
-
-            st.push(i);
-        }
-
-        return result;
-    }
-    
-
-    public int maxAreaByRow(int[] arr) {
-
-        int n = arr.length;
-
-        int[] prevSmall = previousSmallElement(arr);
-        int[] nxtSmall = nextGreaterElement(arr);
-
-        int maxArea = 0;
-
-        for(int i = 0; i < n; i++) {
-            int area = arr[i] * (nxtSmall[i] - prevSmall[i] - 1);
-
-            maxArea = Math.max(maxArea, area);
-
-        }
-
-        return maxArea;
-    }
-
     public int maximalRectangle(char[][] matrix) {
-
+        
+        //First calculate sumMatrix
         int n = matrix.length;
-        int m = matrix[0].length;
+        int[][] ans = new int[n][matrix[0].length];
 
-        int[][] result = new int[n][m];
-
-        for(int i = 0; i < m; i++) {
+        for(int j = 0 ; j < matrix[0].length; j++) {
             int sum = 0;
-            for(int j = 0 ; j < n; j++) {
-                if(matrix[j][i] == '1') {
-                    sum += 1;
-                } else {
-                    sum = 0;
-                }
-
-                result[j][i] = sum;
+            for(int i = 0 ; i < n; i++) {
+                if(matrix[i][j] == '1') sum += 1;
+                else if(matrix[i][j] == '0') sum = 0;
+                ans[i][j] = sum;
             }
         }
 
-        //now we will calculate maximum area by each row
-        int maxArea = 0;
+        int maxArea = Integer.MIN_VALUE;
         for(int i = 0; i < n; i++) {
-            int area = maxAreaByRow(result[i]);
-
-            maxArea = Math.max(maxArea, area);
-
+            int maxEachRowArea = largestRectangleArea(ans[i]);
+            maxArea = Math.max(maxArea, maxEachRowArea);
         }
 
         return maxArea;
+    }
+
+    public int largestRectangleArea(int[] heights) {
+
+        int n = heights.length;
+        int[] prev = previousSmaller(heights);
+        int[] next = nextSmaller(heights);
+        int maxArea = Integer.MIN_VALUE;
+
+        for(int i = 0; i < n; i++) {
+            int diff = next[i] - prev[i] - 1;
+            int area = heights[i] * diff;
+            maxArea = Math.max(maxArea, area);
+        }
+
+        return maxArea;
+    }
+
+    public int[] nextSmaller(int[] arr) {
+
+        int n = arr.length;
+        Stack<Integer> st = new Stack<>();
+        int[] ans = new int[n];
+
+        for(int i = n - 1; i >= 0; i--) {
+
+            while(!st.isEmpty() && arr[st.peek()] >= arr[i]) {
+                st.pop();
+            }
+
+            if(st.isEmpty()) ans[i] = n;
+            else ans[i] = st.peek();
+
+            st.push(i);
+        }
+
+        return ans;
+    }
+
+    public int[] previousSmaller(int[] arr) {
         
+        int n = arr.length;
+        Stack<Integer> st = new Stack<>();
+        int[] ans = new int[n];
+
+        for(int i = 0; i < n; i++) {
+
+            while(!st.isEmpty() && arr[st.peek()] >= arr[i]) {
+                st.pop();
+            }
+
+            if(st.isEmpty()) ans[i] = -1;
+            else ans[i] = st.peek();
+
+            st.push(i);
+        }
+
+        return ans;
     }
 }
