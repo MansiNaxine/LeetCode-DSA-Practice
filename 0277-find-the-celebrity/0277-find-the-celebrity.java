@@ -4,9 +4,9 @@
 public class Solution extends Relation {
     public int findCelebrity(int n) {
 
-    //    return optimalApproach(n);
+      return optimalApproach(n);
 
-    return bruteForceApproach(n);
+    //return bruteForceApproach(n);
         
     }
 
