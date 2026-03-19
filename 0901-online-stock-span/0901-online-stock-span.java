@@ -2,12 +2,10 @@ class StockSpanner {
 
     ArrayList<Integer> list ;
     Stack<Integer> st ;
-    ArrayList<Integer> answer ;
 
     public StockSpanner() {
         list = new ArrayList<>();
         st = new Stack<>();
-        answer = new ArrayList<>();
     }
     
     public int next(int price) {
