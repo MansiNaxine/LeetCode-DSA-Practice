@@ -519,6 +519,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0735-asteroid-collision](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0735-asteroid-collision) |
 | [0739-daily-temperatures](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0739-daily-temperatures) |
 | [0874-backspace-string-compare](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0874-backspace-string-compare) |
+| [0901-online-stock-span](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0901-online-stock-span) |
 | [0907-sum-of-subarray-minimums](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0907-sum-of-subarray-minimums) |
 | [0957-minimum-add-to-make-parentheses-valid](https://github.com/MansiNaxine/LeetCode/tree/master/0957-minimum-add-to-make-parentheses-valid) |
 | [1128-remove-all-adjacent-duplicates-in-string](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1128-remove-all-adjacent-duplicates-in-string) |
@@ -534,6 +535,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0303-range-sum-query-immutable](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0303-range-sum-query-immutable) |
 | [0304-range-sum-query-2d-immutable](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0304-range-sum-query-2d-immutable) |
 | [0838-design-linked-list](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0838-design-linked-list) |
+| [0901-online-stock-span](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0901-online-stock-span) |
 ## Queue
 |  |
 | ------- |
@@ -689,6 +691,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0503-next-greater-element-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0503-next-greater-element-ii) |
 | [0581-shortest-unsorted-continuous-subarray](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0581-shortest-unsorted-continuous-subarray) |
 | [0739-daily-temperatures](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0739-daily-temperatures) |
+| [0901-online-stock-span](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0901-online-stock-span) |
 | [0907-sum-of-subarray-minimums](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0907-sum-of-subarray-minimums) |
 | [2104-sum-of-subarray-ranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2104-sum-of-subarray-ranges) |
 ## Enumeration
@@ -745,4 +748,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0173-binary-search-tree-iterator](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0173-binary-search-tree-iterator) |
+## Data Stream
+|  |
+| ------- |
+| [0901-online-stock-span](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0901-online-stock-span) |
 <!---LeetCode Topics End-->
