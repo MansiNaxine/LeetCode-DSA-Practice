@@ -18,12 +18,11 @@ class StockSpanner {
             st.pop();
         }
 
-        if (st.isEmpty()) answer.add(i - (-1));
-        else answer.add(i - st.peek()) ;
+        int ans = st.isEmpty() ? i + 1 : i - st.peek();
 
         st.push(i);
 
-        return answer.getLast();
+        return ans;
         
     }
 }
