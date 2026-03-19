@@ -253,6 +253,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Interactive
 |  |
 | ------- |
+| [0277-find-the-celebrity](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0277-find-the-celebrity) |
 | [0374-guess-number-higher-or-lower](https://github.com/MansiNaxine/LeetCode/tree/master/0374-guess-number-higher-or-lower) |
 ## Hash Table
 |  |
@@ -359,6 +360,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0189-rotate-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0189-rotate-array) |
 | [0202-happy-number](https://github.com/MansiNaxine/LeetCode/tree/master/0202-happy-number) |
 | [0234-palindrome-linked-list](https://github.com/MansiNaxine/LeetCode/tree/master/0234-palindrome-linked-list) |
+| [0277-find-the-celebrity](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0277-find-the-celebrity) |
 | [0283-move-zeroes](https://github.com/MansiNaxine/LeetCode/tree/master/0283-move-zeroes) |
 | [0287-find-the-duplicate-number](https://github.com/MansiNaxine/LeetCode/tree/master/0287-find-the-duplicate-number) |
 | [0557-reverse-words-in-a-string-iii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0557-reverse-words-in-a-string-iii) |
@@ -752,4 +754,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0901-online-stock-span](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0901-online-stock-span) |
+## Graph Theory
+|  |
+| ------- |
+| [0277-find-the-celebrity](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0277-find-the-celebrity) |
 <!---LeetCode Topics End-->
