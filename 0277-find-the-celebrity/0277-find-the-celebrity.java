@@ -4,6 +4,11 @@
 public class Solution extends Relation {
     public int findCelebrity(int n) {
 
+       return optimalApproach(n);
+        
+    }
+
+    public int optimalApproach(int n) {
         int top = 0;
         int down = n - 1;
 
@@ -27,10 +32,8 @@ public class Solution extends Relation {
             }
             
         }
-
-
-
-        return cnt == n - 1 ? top : -1;
         
+        return cnt == n - 1 ? top : -1;
+
     }
 }
