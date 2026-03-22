@@ -1,32 +1,33 @@
 class Solution {
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
 
-        //first of all sort the array
         Arrays.sort(candidates);
+        int n = candidates.length;
         List<List<Integer>> answer = new ArrayList<>();
-        List<Integer> currSeq = new ArrayList<>();
-        int index = 0;
-        helper(candidates, target, answer, currSeq, index);
+        helper(candidates, n, target, 0, answer, new ArrayList<>());
         return answer;
+        
     }
 
-    public void helper(int[] candidates, int target, List<List<Integer>> answer, List<Integer> currSeq, int index) {
-        //base case
-            if(target == 0) {
+    public void helper(int[] candidates, int n, int target, int index, List<List<Integer>> answer, List<Integer> currSeq) {
+        //Base case
+        if(target == 0) {
             answer.add(new ArrayList<>(currSeq));
             return;
-            }
-
-            if(index >= candidates.length) return;
-
-        //recursive case
-        for(int i = index; i < candidates.length; i++) {
-            if(i != index && candidates[i] == candidates[i - 1]) continue;
-            if(target >= candidates[i]) {
-                currSeq.add(candidates[i]);
-                helper(candidates, target - candidates[i], answer, currSeq, i + 1);
-                currSeq.removeLast();
-            }
         }
+
+        if(index >= n) return;
+
+        //Recursive case
+        if(target >= candidates[index]) {
+            currSeq.add(candidates[index]);
+            helper(candidates, n, target - candidates[index], index + 1, answer, currSeq);
+            currSeq.removeLast();
+        }
+        int currIndex = index + 1;
+        while(currIndex > 0 && currIndex < n && candidates[currIndex] == candidates[currIndex - 1]) {
+            currIndex++;
+        }
+        helper(candidates, n, target, currIndex, answer, currSeq);
     }
 }
