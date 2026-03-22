@@ -31,9 +31,7 @@ class Solution {
         // helper(candidates, n, target, currIndex, answer, currSeq);
 
         for(int i = index; i < n; i++) {
-            while(i != index && i < n && candidates[i] == candidates[i - 1]) {
-                i++;
-            }
+            if(i != index && i < n && candidates[i] == candidates[i - 1]) continue;
             if(i < n && target >= candidates[i]) {
                 currSeq.add(candidates[i]);
                 helper(candidates, n, target - candidates[i], i + 1, answer, currSeq);
