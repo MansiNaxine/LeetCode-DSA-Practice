@@ -32,7 +32,7 @@ class Solution {
 
         for(int i = index; i < n; i++) {
             if(i != index && i < n && candidates[i] == candidates[i - 1]) continue;
-            if(i < n && target >= candidates[i]) {
+            if(target >= candidates[i]) {
                 currSeq.add(candidates[i]);
                 helper(candidates, n, target - candidates[i], i + 1, answer, currSeq);
                 currSeq.removeLast();
