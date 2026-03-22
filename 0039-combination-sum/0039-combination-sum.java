@@ -1,30 +1,27 @@
 class Solution {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
-
-        List<List<Integer>> answer = new ArrayList<>();
-        List<Integer> currSeq = new ArrayList<>();
-        helper(candidates, target, answer, currSeq, 0);
-        return answer;
         
+        int n = candidates.length;
+        List<List<Integer>> answer = new ArrayList<>();
+        helper(candidates, n, target, 0, answer, new ArrayList<>());
+        return answer;
     }
 
-    public void helper(int[] candidates, int target, List<List<Integer>> answer, List<Integer> currSeq, int index) {
-
-        //base case
-        if(index >= candidates.length) return;
-
+    public void helper(int[] candidates, int n, int target, int index, List<List<Integer>> answer, List<Integer> currSeq) {
+        //Base case
         if(target == 0) {
             answer.add(new ArrayList<>(currSeq));
             return;
         }
 
-        //recursive case
-        for(int i = index; i < candidates.length; i++) {
-            if(target >= candidates[i]) {
-                currSeq.add(candidates[i]);
-                helper(candidates, target - candidates[i], answer, currSeq, i);
-                currSeq.removeLast();
-            }
+        if(index >= n) return;
+
+        //Recursive case
+        if(target >= candidates[index]) {
+            currSeq.add(candidates[index]);
+            helper(candidates, n, target - candidates[index], index, answer, currSeq);
+            currSeq.removeLast();
         }
+        helper(candidates, n, target, index + 1, answer, currSeq);
     }
 }
