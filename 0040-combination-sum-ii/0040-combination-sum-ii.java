@@ -19,15 +19,26 @@ class Solution {
         if(index >= n) return;
 
         //Recursive case
-        if(target >= candidates[index]) {
-            currSeq.add(candidates[index]);
-            helper(candidates, n, target - candidates[index], index + 1, answer, currSeq);
-            currSeq.removeLast();
+        // if(target >= candidates[index]) {
+        //     currSeq.add(candidates[index]);
+        //     helper(candidates, n, target - candidates[index], index + 1, answer, currSeq);
+        //     currSeq.removeLast();
+        // }
+        // int currIndex = index + 1;
+        // while(currIndex > 0 && currIndex < n && candidates[currIndex] == candidates[currIndex - 1]) {
+        //     currIndex++;
+        // }
+        // helper(candidates, n, target, currIndex, answer, currSeq);
+
+        for(int i = index; i < n; i++) {
+            while(i != index && i < n && candidates[i] == candidates[i - 1]) {
+                i++;
+            }
+            if(i < n && target >= candidates[i]) {
+                currSeq.add(candidates[i]);
+                helper(candidates, n, target - candidates[i], i + 1, answer, currSeq);
+                currSeq.removeLast();
+            }
         }
-        int currIndex = index + 1;
-        while(currIndex > 0 && currIndex < n && candidates[currIndex] == candidates[currIndex - 1]) {
-            currIndex++;
-        }
-        helper(candidates, n, target, currIndex, answer, currSeq);
     }
 }
