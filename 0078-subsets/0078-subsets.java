@@ -17,10 +17,10 @@ class Solution {
         currSeq.add(nums[index]);
         helper(answer, nums, index + 1, currSeq);
         currSeq.removeLast();
-        int currIndex = index + 1;
-        while(currIndex < nums.length && nums[currIndex] == nums[currIndex - 1]) {
-            currIndex++;
-        }
-        helper(answer, nums, currIndex, currSeq);
+        // int currIndex = index + 1;
+        // while(currIndex < nums.length && nums[currIndex] == nums[currIndex - 1]) {
+        //     currIndex++;
+        // }
+        helper(answer, nums, index + 1, currSeq);
     }
 }
