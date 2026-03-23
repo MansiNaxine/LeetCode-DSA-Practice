@@ -1,6 +1,6 @@
 class Solution {
     public List<List<Integer>> subsets(int[] nums) {
-        Arrays.sort(nums);
+        // Arrays.sort(nums);
         List<List<Integer>> answer = new ArrayList<>();
         helper(answer, nums, 0, new ArrayList<>());
         return answer;
