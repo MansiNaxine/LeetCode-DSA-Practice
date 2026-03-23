@@ -1,30 +1,27 @@
 class Solution {
     public List<List<Integer>> subsetsWithDup(int[] nums) {
-        
-        List<List<Integer>> answer = new ArrayList<>();
-        List<Integer> currSeq = new ArrayList<>();
-        Arrays.sort(nums);
-        helper(answer, currSeq, 0,  nums);
-        return answer;
 
+        Arrays.sort(nums);
+        List<List<Integer>> answer = new ArrayList<>();
+        helper(answer, nums, 0, new ArrayList<>());
+        return answer;
     }
 
-    public void helper(List<List<Integer>> answer, List<Integer> currSeq, int index, int[] nums) {
+    public void helper(List<List<Integer>> answer, int[] nums, int index, List<Integer> currSeq) {
         //base case
         if(index >= nums.length) {
             answer.add(new ArrayList<>(currSeq));
             return;
         }
-        
 
         //recursive case
-            currSeq.add(nums[index]);
-            helper(answer, currSeq, index + 1, nums);
-            currSeq.removeLast();
-            int newIndex = index + 1;
-            while(newIndex > 0 && newIndex < nums.length && nums[newIndex] == nums[newIndex - 1]){
-                newIndex++;
-            }
-            helper(answer, currSeq, newIndex, nums);
+        currSeq.add(nums[index]);
+        helper(answer, nums, index + 1, currSeq);
+        currSeq.removeLast();
+        int currIndex = index + 1;
+        while(currIndex < nums.length && nums[currIndex] == nums[currIndex - 1]) {
+            currIndex++;
+        }
+        helper(answer, nums, currIndex, currSeq);
     }
 }
