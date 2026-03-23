@@ -1,23 +1,26 @@
 class Solution {
     public List<List<Integer>> subsets(int[] nums) {
+        Arrays.sort(nums);
+        List<List<Integer>> answer = new ArrayList<>();
+        helper(answer, nums, 0, new ArrayList<>());
+        return answer;
+    }
 
-        //Will Solve Using Bit Manipulation
-        int n = nums.length;
-        int k  = (1 << n); //Total numbers of list of subsets we will have in k
-        List<List<Integer>> answerlist = new ArrayList<>();
-
-        for(int i = 0 ; i < k; i++) {
-            List<Integer> subsetList = new ArrayList<>();
-            for(int j = 0; j < n; j++) {
-                int pos = 1 << j;
-                if((i & ( 1 << j)) == pos) {
-                    subsetList.add(nums[j]);
-                }
-            }
-            answerlist.add(new ArrayList<>(subsetList));
+    public void helper(List<List<Integer>> answer, int[] nums, int index, List<Integer> currSeq) {
+        //base case
+        if(index >= nums.length) {
+            answer.add(new ArrayList<>(currSeq));
+            return;
         }
 
-        return answerlist;
-        
+        //recursive case
+        currSeq.add(nums[index]);
+        helper(answer, nums, index + 1, currSeq);
+        currSeq.removeLast();
+        int currIndex = index + 1;
+        while(currIndex < nums.length && nums[currIndex] == nums[currIndex - 1]) {
+            currIndex++;
+        }
+        helper(answer, nums, currIndex, currSeq);
     }
 }
