@@ -1,36 +1,32 @@
 class Solution {
     public List<String> generateParenthesis(int n) {
-        // we have to make 1 helper function
-
+        
         List<String> answer = new ArrayList<>();
-        StringBuilder sb = new StringBuilder();
-        int len = 2 * n;
-        helper(answer, len, 0, 0, sb);//answer, length, sum and index
+        StringBuilder sb = new StringBuilder("");
+        helper(answer, 2*n, sb, 0, 0);
         return answer;
     }
 
-    public void helper(List<String> answer, int len, int sum, int index, StringBuilder result) {
+    public void helper(List<String> answer, int n, StringBuilder sb, int index, int sum) {
         //base case
-        if(index == len) {
-            if(sum == 0) {
-                answer.add(result.toString());
+        if(index >= n) {
+            if(sum == 0){
+                answer.add(sb.toString());
             }
             return;
         }
 
         //recursive case
-        //first should be the opening bracket
-        if(sum < len/2) {
-            result.append('(');
-            helper(answer, len, sum + 1, index + 1, result);
-            result.deleteCharAt(result.length() -  1);
+        if(sum < n/2) {
+            sb.append('(');
+            helper(answer, n, sb, index + 1, sum + 1);
+            sb.deleteCharAt(sb.length()-1);
         }
-        //condition for closing bracket
-        if(sum > 0) {
-            result.append(')');
-            helper(answer, len, sum - 1, index + 1, result);
-            result.deleteCharAt(result.length() -  1);
-        } 
 
+        if(sum > 0) {
+            sb.append(')');
+            helper(answer, n, sb, index + 1, sum - 1);
+            sb.deleteCharAt(sb.length()-1);
+        }
     }
 }
