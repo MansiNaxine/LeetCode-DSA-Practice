@@ -1,16 +1,14 @@
 class Solution {
     public List<List<String>> partition(String s) {
-
         List<List<String>> answer = new ArrayList<>();
-        List<String> currSeq = new ArrayList<>();
+        List<String> currSeq  = new ArrayList<>();
         helper(s, answer, currSeq, 0);
         return answer;
-        
     }
 
-    public void helper(String s, List<List<String>> answer, List<String> currSeq, int index) {
+    public void helper(String s, List<List<String>> answer, List<String> currSeq , int index) {
         //base case
-        if(index == s.length()) {
+        if(index >= s.length()) {
             answer.add(new ArrayList<>(currSeq));
             return;
         }
@@ -23,12 +21,16 @@ class Solution {
                 currSeq.removeLast();
             }
         }
-
     }
 
     public boolean isPalindrome(String s) {
-        for(int i = 0; i < s.length(); i++) {
-            if(s.charAt(i) != s.charAt(s.length() - i - 1)) return false;
+        int low = 0;
+        int high = s.length()-1;
+
+        while(low < high) {
+            if(s.charAt(low) != s.charAt(high)) return false;
+            low++;
+            high--;
         }
 
         return true;
