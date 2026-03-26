@@ -36,7 +36,14 @@ class Solution {
         //Recursive case
 
         //UP direction
-
+        if((i-1) >= 0 && board[i-1][j] == word.charAt(index) && valid[i-1][j] == 0) {
+            valid[i-1][j] = 1;
+            sb.append(board[i-1][j]);
+            if(helper(valid, i-1, j, word, board, index + 1, sb, rows, cols)) return true;
+            valid[i-1][j] = 0;
+            sb.deleteCharAt(sb.length()-1);
+        }
+        
         //DOWN direction
         if((i+1) <= rows-1 && board[i+1][j] == word.charAt(index) && valid[i+1][j] == 0) {
             valid[i+1][j] = 1;
@@ -61,13 +68,7 @@ class Solution {
             valid[i][j+1] = 0;
             sb.deleteCharAt(sb.length()-1);
         }
-        if((i-1) >= 0 && board[i-1][j] == word.charAt(index) && valid[i-1][j] == 0) {
-            valid[i-1][j] = 1;
-            sb.append(board[i-1][j]);
-            if(helper(valid, i-1, j, word, board, index + 1, sb, rows, cols)) return true;
-            valid[i-1][j] = 0;
-            sb.deleteCharAt(sb.length()-1);
-        }
+        
 
         return false;
     }
