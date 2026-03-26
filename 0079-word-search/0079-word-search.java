@@ -15,50 +15,37 @@ class Solution {
                 if(board[i][j] == ch) {
                     row[i]++;
                     col[j]++;
-                }
-            }
-        }
-        // return checkFirstLetter(word, board, rows, cols, row, 0, valid, sb);
-        for(int i = 0; i < rows; i++) {
-            if(row[i] >= 1) {
-                for(int j = 0; j < cols; j++) {
-                    if(col[j] >= 1) {
-                        valid[i][j] = 1;
-                        sb.append(board[i][j]);
-                        if( helper(valid, i, j, word, board, 1, sb, rows, cols)) return true;
-                        else {
-                            sb.deleteCharAt(sb.length()-1);
-                            valid[i][j] = 0;
-                        }
+                    valid[i][j] = 1;
+                    sb.append(board[i][j]);
+                    if( helper(valid, i, j, word, board, 1, sb, rows, cols)) return true;
+                    else {
+                        sb.deleteCharAt(sb.length()-1);
+                        valid[i][j] = 0;
                     }
                 }
             }
-            
         }
+        // // return checkFirstLetter(word, board, rows, cols, row, 0, valid, sb);
+        // for(int i = 0; i < rows; i++) {
+        //     if(row[i] >= 1) {
+        //         for(int j = 0; j < cols; j++) {
+        //             if(col[j] >= 1) {
+        //                 valid[i][j] = 1;
+        //                 sb.append(board[i][j]);
+        //                 if( helper(valid, i, j, word, board, 1, sb, rows, cols)) return true;
+        //                 else {
+        //                     sb.deleteCharAt(sb.length()-1);
+        //                     valid[i][j] = 0;
+        //                 }
+        //             }
+        //         }
+        //     }
+            
+        // }
 
         return false;
         
     }
-
-    // public boolean checkFirstLetter(String word, char[][] board, int rows, int cols, int row, int col, int[][] valid, StringBuilder sb) {
-    //    if(row >= rows || col >= cols) return false;
-
-    //     for(int j = col; j < cols; j++) {
-    //         if(board[row][j] == word.charAt(0)) {
-    //             valid[row][j] = 1;
-    //             col = j;
-    //             sb.append(board[row][j]);
-    //             if(helper(valid, row, col, word, board, 1, sb, rows, cols)) return true;
-    //             else {
-    //                 sb.deleteCharAt(sb.length()-1);
-    //                 valid[row][col] = 0;
-    //                 if(checkFirstLetter(word, board, rows, cols, row , col + 1, valid, sb)) return true;
-    //             }
-    //         }
-    //     }
-
-    //     return checkFirstLetter(word, board, rows, cols, row + 1, 0, valid, sb);
-    // }
 
     public boolean helper(int[][] valid, int i, int j, String word, char[][] board, int index, StringBuilder sb, int rows, int cols) {
        //Base case
