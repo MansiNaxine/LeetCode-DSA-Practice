@@ -11,8 +11,6 @@ class Solution {
         for(int i = 0 ; i < rows; i++) {
             for(int j = 0; j < cols; j++) {
                 if(board[i][j] == ch) {
-                    // row[i]++;
-                    // col[j]++;
                     valid[i][j] = 1;
                     sb.append(board[i][j]);
                     if( helper(valid, i, j, word, board, 1, sb, rows, cols)) return true;
