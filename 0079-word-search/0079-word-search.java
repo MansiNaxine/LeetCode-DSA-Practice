@@ -6,15 +6,13 @@ class Solution {
         int[][] valid = new int[rows][cols];
         StringBuilder sb = new StringBuilder("");
         char ch = word.charAt(0);
-        int[] row = new int[rows];
-        int[] col = new int[cols];
 
         //Check first letter
         for(int i = 0 ; i < rows; i++) {
             for(int j = 0; j < cols; j++) {
                 if(board[i][j] == ch) {
-                    row[i]++;
-                    col[j]++;
+                    // row[i]++;
+                    // col[j]++;
                     valid[i][j] = 1;
                     sb.append(board[i][j]);
                     if( helper(valid, i, j, word, board, 1, sb, rows, cols)) return true;
@@ -25,23 +23,6 @@ class Solution {
                 }
             }
         }
-        // // return checkFirstLetter(word, board, rows, cols, row, 0, valid, sb);
-        // for(int i = 0; i < rows; i++) {
-        //     if(row[i] >= 1) {
-        //         for(int j = 0; j < cols; j++) {
-        //             if(col[j] >= 1) {
-        //                 valid[i][j] = 1;
-        //                 sb.append(board[i][j]);
-        //                 if( helper(valid, i, j, word, board, 1, sb, rows, cols)) return true;
-        //                 else {
-        //                     sb.deleteCharAt(sb.length()-1);
-        //                     valid[i][j] = 0;
-        //                 }
-        //             }
-        //         }
-        //     }
-            
-        // }
 
         return false;
         
