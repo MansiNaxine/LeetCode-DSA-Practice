@@ -1,74 +1,69 @@
 class Solution {
     public List<List<String>> solveNQueens(int n) {
-        
+
         List<List<String>> answer = new ArrayList<>();
         char[][] chessBoard = new char[n][n];
-        helper(chessBoard, answer, n, 0);
+        int col = 0;
+        
+        helper(answer, col, n, chessBoard);
         return answer;
     }
 
-    public void helper(char[][] chessBoard, List<List<String>> answer, int n, int col) {
+    public void helper(List<List<String>> answer, int col, int n, char[][] chessBoard) {
         //base case
-        if(col == n) {
-            List<String> completeOneChessBoard = new ArrayList<>();
-            printAllChessBoard(completeOneChessBoard, n, chessBoard);
-            answer.add(new ArrayList<>(completeOneChessBoard));
+        if(col >= n) {
+            List<String> currSeq = new ArrayList<>();
+            for(int i = 0; i < n; i++) {
+                StringBuilder sb = new StringBuilder("");
+                for(int j = 0 ; j < n ; j++) {
+                    if(chessBoard[i][j] == 'Q') sb.append('Q');
+                    else sb.append('.');
+                }
+                currSeq.add(sb.toString());
+            }
+            answer.add(new ArrayList<>(currSeq));
             return;
         }
 
         //recursive case
         for(int row = 0; row < n; row++) {
-            if(isSafe(chessBoard, row, col, n)){
+            if(isSafe(col, row, n, chessBoard)) {
                 chessBoard[row][col] = 'Q';
-                helper(chessBoard, answer, n , col + 1);
+                helper(answer, col + 1, n, chessBoard);
                 chessBoard[row][col] = '.';
             }
         }
     }
 
-    public void printAllChessBoard(List<String> completeOneChessBoard, int n, char[][] chessBoard) {
-        
-        for(char[] chRow : chessBoard) {
-            StringBuilder sb = new StringBuilder();
-            for(char ch : chRow) {
-                if(ch != 'Q') sb.append('.');
-                else sb.append(ch);
-            }
+    public boolean isSafe(int col, int row, int n, char[][] chessBoard) {
+        //check left side
+        int R = row;
+        int C = col;
 
-            completeOneChessBoard.add(sb.toString());
+        while(C >= 0) {
+            if(chessBoard[R][C] == 'Q') return false;
+            C--;
         }
-    }
+        //check left side upper diagonal
+        R = row;
+        C = col;
 
-    public boolean isSafe(char[][] chessBoard, int row, int col, int n) {
-        int r = row;
-        int c = col;
-
-        //Check left side
-        while(c >= 0) {
-            if(chessBoard[r][c] == 'Q') return false;
-            else c--;
+        while(R >= 0 && C >= 0) {
+            if(chessBoard[R][C] == 'Q') return false;
+            R--;
+            C--;
         }
+        //check left side lower diagonal
+        R = row;
+        C = col;
 
-        //Check left upper diagonal
-        c = col;
-        while(r >= 0 && c >= 0) {
-            if(chessBoard[r][c] == 'Q') return false;
-            else {
-                r--;
-                c--;
-            }
+        while(R < n && C >= 0) {
+            if(chessBoard[R][C] == 'Q') return false;
+            R++;
+            C--;
         }
 
-        //Check left lower diagonal
-        r = row;
-        c = col;
-        while(r < n && c >= 0) {
-            if(chessBoard[r][c] == 'Q') return false;
-            else {
-                r++;
-                c--;
-            }
-        }
+
         return true;
     }
 }
