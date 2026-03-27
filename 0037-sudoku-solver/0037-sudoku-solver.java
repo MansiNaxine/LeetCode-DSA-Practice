@@ -1,34 +1,35 @@
 class Solution {
     public void solveSudoku(char[][] board) {
-
         helper(board);
-        return ;
-        
+        return;
     }
 
     public boolean helper(char[][] board) {
-
-        for(int col = 0; col < board.length; col++) {
-            for(int row = 0; row < board.length; row++) {
-                if(board[row][col] == '.') {
-                    for(char ch = '1'; ch <= '9'; ch++) {
-                        if(isValid(board, row, col, ch)) { // Check if given char can be place at current position
-                            board[row][col] = ch;
-
+        //Traverse from 1 to 9
+        int n = board.length;
+    
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n; j++) {
+                if(board[i][j] == '.') {
+                    for(char index = '1'; index <= '9'; index++) {
+                        if(isValid(board, i, j, index)) {
+                            board[i][j] = (char)index;
                             if(helper(board)) return true;
-                            else board[row][col] = '.';
+                            else board[i][j] = '.';
                         }
                     }
-
                     return false;
                 }
+                
             }
         }
 
         return true;
+
     }
 
-    public boolean isValid(char[][] board, int row, int col, int ch) {
+
+    public boolean isValid(char[][] board, int row, int col, char ch) {
 
         for(int i = 0; i < board.length; i++) {
 
