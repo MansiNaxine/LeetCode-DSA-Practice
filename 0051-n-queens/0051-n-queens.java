@@ -4,6 +4,11 @@ class Solution {
         List<List<String>> answer = new ArrayList<>();
         char[][] chessBoard = new char[n][n];
         int col = 0;
+        for(int i = 0; i < n; i++) {
+            for(int j = 0; j < n; j++) {
+                chessBoard[i][j] = '.';  // Initialize all positions
+            }
+        }
         
         helper(answer, col, n, chessBoard);
         return answer;
@@ -16,8 +21,7 @@ class Solution {
             for(int i = 0; i < n; i++) {
                 StringBuilder sb = new StringBuilder("");
                 for(int j = 0 ; j < n ; j++) {
-                    if(chessBoard[i][j] == 'Q') sb.append('Q');
-                    else sb.append('.');
+                    sb.append(chessBoard[i][j]);
                 }
                 currSeq.add(sb.toString());
             }
