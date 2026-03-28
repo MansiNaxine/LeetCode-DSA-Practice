@@ -24,25 +24,7 @@ class Solution {
             else {
                 if(!sb.isEmpty()) {
                     String answer = sb.toString();
-                    BigInteger answerInt = new BigInteger(answer);
-
-                    // handle negative
-                    if (neg) {
-                        answerInt = answerInt.negate();
-                    }
-
-                    // bounds check
-                    BigInteger min = BigInteger.valueOf(Integer.MIN_VALUE);
-                    BigInteger max = BigInteger.valueOf(Integer.MAX_VALUE);
-
-                    if (answerInt.compareTo(min) < 0) {
-                        return Integer.MIN_VALUE;
-                    }
-                    if (answerInt.compareTo(max) > 0) {
-                        return Integer.MAX_VALUE;
-                    }
-
-                    return answerInt.intValue();
+                    return returnAnswer(answer, neg);
                 }
                 else return 0;
              }
@@ -50,16 +32,19 @@ class Solution {
         }
 
         String answer = sb.toString();
-        if (answer.length() == 0) return 0;
+        return returnAnswer(answer, neg);
+    }
 
+    public int returnAnswer(String answer, boolean neg) {
+
+        if(answer.length() == 0) return 0;
         BigInteger answerInt = new BigInteger(answer);
-
         // handle negative
         if (neg) {
             answerInt = answerInt.negate();
         }
 
-        // bounds check
+                    // bounds check
         BigInteger min = BigInteger.valueOf(Integer.MIN_VALUE);
         BigInteger max = BigInteger.valueOf(Integer.MAX_VALUE);
 
@@ -71,5 +56,5 @@ class Solution {
         }
 
         return answerInt.intValue();
-            }
+    }
 }
