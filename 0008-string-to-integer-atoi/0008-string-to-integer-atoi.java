@@ -24,7 +24,12 @@ class Solution {
             else {
                 if(!sb.isEmpty()) {
                     String answer = sb.toString();
-                    return returnAnswer(answer, neg);
+                    // return returnAnswer(answer, neg);
+                    if((answer.length() > 10 && !neg) || (!neg && Long.parseLong(answer) > Integer.MAX_VALUE)) return Integer.MAX_VALUE;
+                    else if((answer.length() > 10 && neg) || (neg && Long.parseLong(answer) > ((long)Integer.MAX_VALUE + 1))) return Integer.MIN_VALUE;
+                    long val = Long.parseLong(answer);
+                    int finalAnswer = (int)val;
+                    return neg ? -finalAnswer: finalAnswer;
                 }
                 else return 0;
              }
@@ -32,29 +37,15 @@ class Solution {
         }
 
         String answer = sb.toString();
-        return returnAnswer(answer, neg);
-    }
-
-    public int returnAnswer(String answer, boolean neg) {
-
         if(answer.length() == 0) return 0;
-        BigInteger answerInt = new BigInteger(answer);
-        // handle negative
-        if (neg) {
-            answerInt = answerInt.negate();
-        }
+        
 
-                    // bounds check
-        BigInteger min = BigInteger.valueOf(Integer.MIN_VALUE);
-        BigInteger max = BigInteger.valueOf(Integer.MAX_VALUE);
-
-        if (answerInt.compareTo(min) < 0) {
-            return Integer.MIN_VALUE;
-        }
-        if (answerInt.compareTo(max) > 0) {
-            return Integer.MAX_VALUE;
-        }
-
-        return answerInt.intValue();
+        if((answer.length() > 10 && !neg) || (!neg && Long.parseLong(answer) > Integer.MAX_VALUE)) return Integer.MAX_VALUE;
+        else if((answer.length() > 10 && neg) || (neg && Long.parseLong(answer) > ((long)Integer.MAX_VALUE + 1))) return Integer.MIN_VALUE;
+        long val = Long.parseLong(answer);
+        int finalAnswer = (int)val;
+        return neg ? -finalAnswer: finalAnswer;
     }
+
+    
 }
