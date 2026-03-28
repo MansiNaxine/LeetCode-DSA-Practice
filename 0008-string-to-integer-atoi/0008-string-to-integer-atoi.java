@@ -24,12 +24,7 @@ class Solution {
             else {
                 if(!sb.isEmpty()) {
                     String answer = sb.toString();
-                    // return returnAnswer(answer, neg);
-                    if((answer.length() > 10 && !neg) || (!neg && Long.parseLong(answer) > Integer.MAX_VALUE)) return Integer.MAX_VALUE;
-                    else if((answer.length() > 10 && neg) || (neg && Long.parseLong(answer) > ((long)Integer.MAX_VALUE + 1))) return Integer.MIN_VALUE;
-                    long val = Long.parseLong(answer);
-                    int finalAnswer = (int)val;
-                    return neg ? -finalAnswer: finalAnswer;
+                    return returnAnswer(answer, neg);
                 }
                 else return 0;
              }
@@ -38,8 +33,11 @@ class Solution {
 
         String answer = sb.toString();
         if(answer.length() == 0) return 0;
+        else return returnAnswer(answer, neg);
         
+    }
 
+    public int returnAnswer(String answer, boolean neg){
         if((answer.length() > 10 && !neg) || (!neg && Long.parseLong(answer) > Integer.MAX_VALUE)) return Integer.MAX_VALUE;
         else if((answer.length() > 10 && neg) || (neg && Long.parseLong(answer) > ((long)Integer.MAX_VALUE + 1))) return Integer.MIN_VALUE;
         long val = Long.parseLong(answer);
