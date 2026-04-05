@@ -80,6 +80,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0739-daily-temperatures](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0739-daily-temperatures) |
 | [0745-find-smallest-letter-greater-than-target](https://github.com/MansiNaxine/LeetCode/tree/master/0745-find-smallest-letter-greater-than-target) |
 | [0792-binary-search](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0792-binary-search) |
+| [0860-lemonade-change](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0860-lemonade-change) |
 | [0861-flipping-an-image](https://github.com/MansiNaxine/LeetCode/tree/master/0861-flipping-an-image) |
 | [0875-koko-eating-bananas](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0875-koko-eating-bananas) |
 | [0882-peak-index-in-a-mountain-array](https://github.com/MansiNaxine/LeetCode/tree/master/0882-peak-index-in-a-mountain-array) |
@@ -210,6 +211,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0455-assign-cookies](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0455-assign-cookies) |
 | [0581-shortest-unsorted-continuous-subarray](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0581-shortest-unsorted-continuous-subarray) |
 | [0680-valid-palindrome-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0680-valid-palindrome-ii) |
+| [0860-lemonade-change](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0860-lemonade-change) |
 | [0957-minimum-add-to-make-parentheses-valid](https://github.com/MansiNaxine/LeetCode/tree/master/0957-minimum-add-to-make-parentheses-valid) |
 ## Prefix Sum
 |  |
