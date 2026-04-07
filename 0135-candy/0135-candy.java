@@ -4,23 +4,20 @@ class Solution {
        int n = ratings.length;
        int[] pre = new int[n];
        int[] suf = new int[n];
-       int cnt = 1;
+       int cnt1 = 1;
        pre[0] = 1;
-
-       //for prefix calculation
+       int cnt2 = 1;
+       suf[n - 1] = cnt2;
+       
        for(int i = 1; i < n; i++) {
-            if(ratings[i] > ratings[i-1]) cnt += 1;
-            else cnt = 1;
-            pre[i] = cnt;
-        }
-
-        cnt = 1;
-        suf[n - 1] = cnt;
-        //for suffix Calculation
-        for(int i = n - 2; i >= 0; i--) {
-            if(ratings[i] > ratings[i+1]) cnt += 1;
-            else cnt = 1;
-            suf[i] = cnt;
+            //for prefix calculation
+            if(ratings[i] > ratings[i-1]) cnt1 += 1;
+            else cnt1 = 1;
+            pre[i] = cnt1;
+            //for suffix Calculation
+            if(ratings[n - i - 1] > ratings[(n - i - 1) + 1]) cnt2 += 1;
+            else cnt2 = 1;
+            suf[n - i - 1] = cnt2;
         }
 
         //Calculate answer
