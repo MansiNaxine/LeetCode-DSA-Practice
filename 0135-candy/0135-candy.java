@@ -14,6 +14,8 @@ class Solution {
             pre[i] = cnt;
         }
 
+        //To reduce the space complexity we can fill the suffix array in prefix calculation itself but it will take extra time and will reduce the space
+
         cnt = 1;
         suf[n - 1] = cnt;
         //for suffix Calculation
