@@ -19,7 +19,6 @@ class Solution {
             int newEnd = intervals[i][1];
 
             if(newStart <= end) {
-                // int min = Math.min(start, newStart);
                 int max = Math.max(end, newEnd);
                 
                 answer.get(answer.size()-1).set(0, start);
