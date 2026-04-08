@@ -1,53 +1,57 @@
 class Solution {
     public int[][] merge(int[][] intervals) {
 
-        //Sort the intervals 2D array based on first element
-
-        return bruteForceApproach(intervals);
-
-    }
-
-    public int[][] bruteForceApproach(int[][] intervals) {
+        List<List<Integer>> list = new ArrayList<>();
+        List<List<Integer>> answer = new ArrayList<>();
         int n = intervals.length;
-        int m = 2;
 
-        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
+        for(int i = 0 ; i < n; i++) {
+            List<Integer> currSeq = new ArrayList<>();
+            currSeq.add(intervals[i][0]);
+            currSeq.add(intervals[i][1]);
 
-        List<List<Integer>> answerList = new ArrayList<>();
-        List<Integer> currList1 = new ArrayList<>();
-        currList1.add(intervals[0][0]);
-        currList1.add(intervals[0][1]);
+            list.add(new ArrayList<>(currSeq));
+        }
 
-        answerList.add(new ArrayList<>(currList1));
+        Collections.sort(list, (a, b) -> a.get(0).compareTo(b.get(0)));
+
+        int start = list.get(0).get(0);
+        int end = list.get(0).get(1);
+        List<Integer> currSeq = new ArrayList<>();
+        currSeq.add(start);
+        currSeq.add(end);
+        answer.add(new ArrayList<>(currSeq));
 
         for(int i = 1; i < n; i++) {
-            if(!answerList.isEmpty()) {
-                int secondNum = answerList.getLast().get(1);
-                int firstCurrentINum = intervals[i][0];
-                int secondCurrentINum = intervals[i][1];
-                if( firstCurrentINum <= secondNum ) {
-                    int actualNum = intervals[i][1];
-                    answerList.getLast().set(1, Math.max(actualNum, secondNum));
-                }
-                else {
-                    List<Integer> currList = new ArrayList<>();
-                    currList.add(intervals[i][0]);
-                    currList.add(intervals[i][1]);
+            int newStart = list.get(i).get(0);
+            int newEnd = list.get(i).get(1);
 
-                    answerList.add(new ArrayList<>(currList));
-                }
+            if(newStart <= end) {
+                int min = Math.min(start, newStart);
+                int max = Math.max(end, newEnd);
+                
+                answer.get(answer.size()-1).set(0, min);
+                answer.get(answer.size()-1).set(1, max);
+                
             }
+            else {
+                List<Integer> curr = new ArrayList<>();
+                curr.add(newStart);
+                curr.add(newEnd);
+                answer.add(new ArrayList<>(curr));
+            }
+            start = answer.get(answer.size()-1).get(0);
+            end = answer.get(answer.size()-1).get(1);
         }
 
-        int[][] answer = new int[answerList.size()][2];
+        int[][] answerArr = new int[answer.size()][2];
 
-        for(int i = 0; i < answerList.size(); i++) {
-            for(int j = 0; j < 2; j++) {
-                answer[i][j] = answerList.get(i).get(j);
-            }
+        for(int i = 0; i < answer.size(); i++) {
+            answerArr[i][0] = answer.get(i).get(0);
+            answerArr[i][1] = answer.get(i).get(1);
         }
 
-        return answer;
+        return answerArr;
         
     }
 }
