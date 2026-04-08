@@ -1,24 +1,11 @@
 class Solution {
     public int[][] merge(int[][] intervals) {
 
-        List<List<Integer>> list = new ArrayList<>();
         List<List<Integer>> answer = new ArrayList<>();
         int n = intervals.length;
 
-        // for(int i = 0 ; i < n; i++) {
-        //     List<Integer> currSeq = new ArrayList<>();
-        //     currSeq.add(intervals[i][0]);
-        //     currSeq.add(intervals[i][1]);
-
-        //     list.add(new ArrayList<>(currSeq));
-        // }
-
-        // Collections.sort(list, (a, b) -> a.get(0).compareTo(b.get(0)));
-
         Arrays.sort(intervals, (a, b) -> Integer.compare(a[0],b[0]));
 
-        // int start = list.get(0).get(0);
-        // int end = list.get(0).get(1);
         int start = intervals[0][0];
         int end = intervals[0][1];
 
@@ -28,8 +15,6 @@ class Solution {
         answer.add(new ArrayList<>(currSeq));
 
         for(int i = 1; i < n; i++) {
-            // int newStart = list.get(i).get(0);
-            // int newEnd = list.get(i).get(1);
             int newStart = intervals[i][0];
             int newEnd = intervals[i][1];
 
