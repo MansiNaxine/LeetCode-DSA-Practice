@@ -21,10 +21,8 @@ class Solution {
         int rH = height(root.right);
 
         maxDia = Math.max(maxDia, lH + rH);
-        int lDia = diameterOfBinaryTree(root.left);
-        int rDia = diameterOfBinaryTree(root.right);
 
-        return Math.max(maxDia, Math.max(lDia , rDia));
+        return Math.max(maxDia, Math.max(diameterOfBinaryTree(root.left) , diameterOfBinaryTree(root.right)));
     }
 
     public int height(TreeNode root) {
