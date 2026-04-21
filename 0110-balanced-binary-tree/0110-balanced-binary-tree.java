@@ -18,7 +18,6 @@ class Solution {
         if(root == null) return true;
         int lH = maxDepth(root.left);
         int rH = maxDepth(root.right);
-        boolean right = isBalanced(root.right);
 
         if(Math.abs(rH - lH) > 1) return false;
 
