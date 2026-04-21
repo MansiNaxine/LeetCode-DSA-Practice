@@ -14,58 +14,24 @@
  * }
  */
 class Solution {
-
-    class Pair {
-    int num;
-    boolean flag;
-
-    Pair(int num,boolean flag) {
-        this.num = num;
-        this.flag = flag;
-    }
-}
-
-    // public int recursion(TreeNode root) {
-
-    //     if(root == null) return 0;
-
-    //     return Math.max(recursion(root.left), recursion(root.right)) + 1;
-    // }
     public boolean isBalanced(TreeNode root) {
-        // if (root == null) return true ;
+        if(root == null) return true;
+        int lH = maxDepth(root.left);
+        int rH = maxDepth(root.right);
+        boolean right = isBalanced(root.right);
 
-        // int Left = recursion(root.left);
-        // int Right = recursion(root.right);
+        if(Math.abs(rH - lH) > 1) return false;
 
-        // int answer = Math.abs((recursion(root.left) - recursion(root.right)));
-
-        // return answer > 1 ? false : isBalanced(root.left) && isBalanced(root.right);
-
-        Pair answer = isBalancedHelper(root);
-
-        return answer.flag;
+        return isBalanced(root.left) && isBalanced(root.right);
     }
 
-    public Pair isBalancedHelper(TreeNode root) {
+    public int maxDepth(TreeNode root) {
 
-        if(root == null) {
+        if(root == null) return 0;
+        int lH = maxDepth(root.left);
+        int rH = maxDepth(root.right);
 
-            return new Pair(0, true);
-        }
-
-        Pair left = isBalancedHelper(root.left);
-        Pair right = isBalancedHelper(root.right);
-
-        int height = Math.max(left.num, right.num) + 1;
-
-        int diff = Math.abs(left.num - right.num);
-
-        if(diff > 1) {
-            return new Pair(height, false);
-        } else {
-
-            return new Pair(height, left.flag && right.flag);
-        }
+        return 1 + Math.max(lH, rH);
+        
     }
 }
-
