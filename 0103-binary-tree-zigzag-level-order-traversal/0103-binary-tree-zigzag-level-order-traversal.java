@@ -15,50 +15,47 @@
  */
 class Solution {
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+        List<List<Integer>> answer = new ArrayList<>();
+        if(root == null) return answer;
+        recursion(answer, root);
+        return answer;
+    }
 
-        List<List<Integer>> resultList=new ArrayList<>();
-        if(root==null){
-            return resultList;
-        }
+    public void recursion(List<List<Integer>> answer, TreeNode root) {
+
+        Queue<TreeNode> que = new LinkedList<>();
+        que.add(root);
+        boolean flag = true;
         
-        Deque<TreeNode> queue=new LinkedList<>();
-        queue.offer(root);
-        int count=0;
-        boolean reverse=false;
-        while(!queue.isEmpty()){
-            int levelSize=queue.size();
-            List<Integer> list=new ArrayList<>(levelSize);
-            
-            for(int i=0;i<levelSize;i++){
-
-                if(!reverse){
-                         TreeNode node=queue.pollFirst();
-                        list.add(node.val);
-                        if(node.left!=null){
-                            queue.addLast(node.left);
-                        }
-                        if(node.right!=null){
-                            queue.addLast(node.right);
-                        }
-                }else{
-                        TreeNode node=queue.pollLast();
-                        list.add(node.val);
-                        if(node.right!=null){
-                            queue.addFirst(node.right);
-                        }
-                        if(node.left!=null){
-                            queue.addFirst(node.left);
-                        }
-
-                }
+        while(!que.isEmpty()) {
+            int len = que.size();
+            List<Integer> list = new ArrayList<>();
+            for(int i = 0 ; i < len; i++) {
+                TreeNode node = que.peek();
+                que.remove();
+                if(node.left != null) que.add(node.left);
+                if(node.right != null) que.add(node.right);
+                list.add(node.val);
 
                 
             }
-                reverse=!reverse;
-
-            resultList.add(list);
+            if(!flag) reverse(list);
+            answer.add(new ArrayList<>(list));
+            flag = !flag;
         }
-
-        return resultList;
     }
-}
+
+    public void reverse(List<Integer> list) {
+        int start = 0;
+        int end = list.size() - 1;
+
+        while(start < end) {
+            int temp = list.get(start);
+            list.set(start, list.get(end));
+            list.set(end, temp);
+
+            start++;
+            end--;
+        }
+    }
+}   
