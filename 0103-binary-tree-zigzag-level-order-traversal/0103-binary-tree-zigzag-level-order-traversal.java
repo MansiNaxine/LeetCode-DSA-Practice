@@ -36,8 +36,6 @@ class Solution {
                 if(node.left != null) que.add(node.left);
                 if(node.right != null) que.add(node.right);
                 list.add(node.val);
-
-                
             }
             if(!flag) reverse(list);
             answer.add(new ArrayList<>(list));
