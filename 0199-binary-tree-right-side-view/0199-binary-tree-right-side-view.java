@@ -17,6 +17,28 @@ class Solution {
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if(root == null) return result;
+        // else returnAnswer(root, result);
+        // return result;
+        Map<Integer, Integer> map = new TreeMap<>();
+        returnRecursiveAnswer(root, map, 0);
+        for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            result.add(entry.getValue());
+        }
+        return result;
+        
+    }
+
+    public void returnRecursiveAnswer( TreeNode root, Map<Integer, Integer> map, int count) {
+            if(root == null) return;
+            if(!map.containsKey(count)) {
+                map.put(count, root.val);
+            }
+            returnRecursiveAnswer(root.right, map, count + 1);
+            returnRecursiveAnswer(root.left, map, count + 1);
+        }
+
+    public void returnAnswer(TreeNode root, List<Integer> result) {
+        
         Queue<Pair> que = new LinkedList<>();
         Pair p =new Pair();
         p.node = root;
@@ -58,8 +80,6 @@ class Solution {
         for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
             result.add(entry.getValue());
         }
-        
-        return result;
         
     }
 }
