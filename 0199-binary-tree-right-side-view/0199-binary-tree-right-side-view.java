@@ -15,34 +15,62 @@
  */
 class Solution {
     public List<Integer> rightSideView(TreeNode root) {
-        List<Integer> result=new ArrayList<>();
-
-        if(root==null){
-            return result;
-        }
-
-        Queue<TreeNode> queue=new LinkedList<>();
-        queue.offer(root);
-
-        while(!queue.isEmpty()){
-            int levelSize=queue.size();
-
-            for(int i=0;i<levelSize;i++){
-                TreeNode currentNode=queue.poll();
-                if(i==levelSize-1){
-                    result.add(currentNode.val);
+        List<Integer> result = new ArrayList<>();
+        if(root == null) return result;
+        Queue<Pair> que = new LinkedList<>();
+        Pair p =new Pair();
+        p.node = root;
+        p.cnt = 0;
+        que.add(p);
+        Map<Integer, Integer> map = new TreeMap<>();
+        
+        while(!que.isEmpty()) {
+            int size = que.size();
+            
+            for(int i = 0; i < size; i++) {
+                Pair pNew = que.peek();
+                TreeNode newNode = pNew.node;
+                int count = pNew.cnt;
+                que.remove();
+                
+                if(!map.containsKey(count)) {
+                    map.put(count, newNode.val);
+                }
+                
+                if(newNode.right != null) {
+                    Pair innerP = new Pair();
+                    innerP.node = newNode.right;
+                    innerP.cnt = count + 1;
+                    que.add(innerP);
                 }
 
-                if(currentNode.left!=null){
-                    queue.offer(currentNode.left);
+                if(newNode.left != null) {
+                    Pair innerP = new Pair();
+                    innerP.node = newNode.left;
+                    innerP.cnt = count + 1;
+                    que.add(innerP);
                 }
-                if(currentNode.right!=null){
-                    queue.offer(currentNode.right);
-                }
+                
             }
         }
-
+        
+        
+        for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            result.add(entry.getValue());
+        }
+        
         return result;
         
     }
+}
+
+class Pair {
+    TreeNode node;
+    int cnt;
+
+    Pair() {
+        this.node = null;
+        cnt = 0;
+    }
+
 }
