@@ -20,21 +20,19 @@ class Solution {
         // else returnAnswer(root, result);
         // return result;
         Map<Integer, Integer> map = new TreeMap<>();
-        returnRecursiveAnswer(root, map, 0);
-        for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            result.add(entry.getValue());
-        }
+        returnRecursiveAnswer(root, map, 0, result);
         return result;
         
     }
 
-    public void returnRecursiveAnswer( TreeNode root, Map<Integer, Integer> map, int count) {
+    public void returnRecursiveAnswer( TreeNode root, Map<Integer, Integer> map, int count, List<Integer> result) {
             if(root == null) return;
             if(!map.containsKey(count)) {
                 map.put(count, root.val);
+                result.add(root.val);
             }
-            returnRecursiveAnswer(root.right, map, count + 1);
-            returnRecursiveAnswer(root.left, map, count + 1);
+            returnRecursiveAnswer(root.right, map, count + 1, result);
+            returnRecursiveAnswer(root.left, map, count + 1, result);
         }
 
     // public void returnAnswer(TreeNode root, List<Integer> result) {
