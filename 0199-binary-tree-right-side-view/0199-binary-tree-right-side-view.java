@@ -37,60 +37,60 @@ class Solution {
             returnRecursiveAnswer(root.left, map, count + 1);
         }
 
-    public void returnAnswer(TreeNode root, List<Integer> result) {
+    // public void returnAnswer(TreeNode root, List<Integer> result) {
         
-        Queue<Pair> que = new LinkedList<>();
-        Pair p =new Pair();
-        p.node = root;
-        p.cnt = 0;
-        que.add(p);
-        Map<Integer, Integer> map = new TreeMap<>();
+    //     Queue<Pair> que = new LinkedList<>();
+    //     Pair p =new Pair();
+    //     p.node = root;
+    //     p.cnt = 0;
+    //     que.add(p);
+    //     Map<Integer, Integer> map = new TreeMap<>();
         
-        while(!que.isEmpty()) {
-            int size = que.size();
+    //     while(!que.isEmpty()) {
+    //         int size = que.size();
             
-            for(int i = 0; i < size; i++) {
-                Pair pNew = que.peek();
-                TreeNode newNode = pNew.node;
-                int count = pNew.cnt;
-                que.remove();
+    //         for(int i = 0; i < size; i++) {
+    //             Pair pNew = que.peek();
+    //             TreeNode newNode = pNew.node;
+    //             int count = pNew.cnt;
+    //             que.remove();
                 
-                if(!map.containsKey(count)) {
-                    map.put(count, newNode.val);
-                }
+    //             if(!map.containsKey(count)) {
+    //                 map.put(count, newNode.val);
+    //             }
                 
-                if(newNode.right != null) {
-                    Pair innerP = new Pair();
-                    innerP.node = newNode.right;
-                    innerP.cnt = count + 1;
-                    que.add(innerP);
-                }
+    //             if(newNode.right != null) {
+    //                 Pair innerP = new Pair();
+    //                 innerP.node = newNode.right;
+    //                 innerP.cnt = count + 1;
+    //                 que.add(innerP);
+    //             }
 
-                if(newNode.left != null) {
-                    Pair innerP = new Pair();
-                    innerP.node = newNode.left;
-                    innerP.cnt = count + 1;
-                    que.add(innerP);
-                }
+    //             if(newNode.left != null) {
+    //                 Pair innerP = new Pair();
+    //                 innerP.node = newNode.left;
+    //                 innerP.cnt = count + 1;
+    //                 que.add(innerP);
+    //             }
                 
-            }
-        }
+    //         }
+    //     }
         
         
-        for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            result.add(entry.getValue());
-        }
+    //     for(Map.Entry<Integer, Integer> entry : map.entrySet()) {
+    //         result.add(entry.getValue());
+    //     }
         
-    }
+    // }
 }
 
-class Pair {
-    TreeNode node;
-    int cnt;
+// class Pair {
+//     TreeNode node;
+//     int cnt;
 
-    Pair() {
-        this.node = null;
-        cnt = 0;
-    }
+//     Pair() {
+//         this.node = null;
+//         cnt = 0;
+//     }
 
-}
+// }
