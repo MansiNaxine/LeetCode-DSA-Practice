@@ -595,6 +595,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/MansiNaxine/LeetCode/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0543-diameter-of-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/0543-diameter-of-binary-tree) |
+| [0545-boundary-of-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0545-boundary-of-binary-tree) |
 | [0637-average-of-levels-in-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/0637-average-of-levels-in-binary-tree) |
 | [0783-search-in-a-binary-search-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0783-search-in-a-binary-search-tree) |
 | [0975-range-sum-of-bst](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0975-range-sum-of-bst) |
@@ -644,6 +645,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/MansiNaxine/LeetCode/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0543-diameter-of-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/0543-diameter-of-binary-tree) |
+| [0545-boundary-of-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0545-boundary-of-binary-tree) |
 | [0637-average-of-levels-in-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/0637-average-of-levels-in-binary-tree) |
 | [0783-search-in-a-binary-search-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0783-search-in-a-binary-search-tree) |
 | [0975-range-sum-of-bst](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0975-range-sum-of-bst) |
@@ -672,6 +674,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0235-lowest-common-ancestor-of-a-binary-search-tree](https://github.com/MansiNaxine/LeetCode/tree/master/0235-lowest-common-ancestor-of-a-binary-search-tree) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0543-diameter-of-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/0543-diameter-of-binary-tree) |
+| [0545-boundary-of-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0545-boundary-of-binary-tree) |
 | [0637-average-of-levels-in-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/0637-average-of-levels-in-binary-tree) |
 | [0975-range-sum-of-bst](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0975-range-sum-of-bst) |
 | [1035-cousins-in-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/1035-cousins-in-binary-tree) |
