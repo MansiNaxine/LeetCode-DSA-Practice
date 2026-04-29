@@ -10,27 +10,15 @@
 class Solution {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
 
-        if(root == null) return null;
+        //base case
+        if(root == null || root == p || root == q) return root;
+        //recursive case
+        TreeNode left = lowestCommonAncestor(root.left, p, q);
+        TreeNode right = lowestCommonAncestor(root.right, p, q);
+        
+        if(left != null && right != null) return root;
 
-        if(root.val == p.val || root.val == q.val) return root;
-
-        // int left = root.left == null ? 0 : root.left.val;
-        // int right = root.right == null ? 0 : root.right.val;
-
-        // if(left != p.val || right != q.val) {
-            TreeNode leftPart = lowestCommonAncestor(root.left , p , q);
-            TreeNode rightPart = lowestCommonAncestor(root.right , p , q);
-        // }
-            
-        if(leftPart != null && rightPart != null) {
-            return root;
-        }
-            
-        if(leftPart != null) {
-            return leftPart;
-        }
-
-        return rightPart;
+        return left != null ? left : right;
         
     }
 }
