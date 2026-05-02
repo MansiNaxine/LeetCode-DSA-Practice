@@ -16,9 +16,7 @@
 class Solution {
     public int widthOfBinaryTree(TreeNode root) {
         Queue<Pair> que = new LinkedList<>();
-        Pair pOuter = new Pair();
-        pOuter.node = root;
-        pOuter.index = 0;
+        Pair pOuter = new Pair(root, 0);
         que.add(pOuter);
         int max = Integer.MIN_VALUE;
 
@@ -35,20 +33,16 @@ class Solution {
                 que.remove();
 
                 if(innerNode.left != null) {
-                    Pair p  = new Pair();
-                    p.node = innerNode.left;
-                    p.index = (2 * indexVal) + 1;
-                    leftVal = Math.min(leftVal, p.index);
-                    if(innerNode.right == null) rightVal = Math.max(rightVal, p.index);
+                    Pair p  = new Pair(innerNode.left, (2 * indexVal) + 1);
+                    leftVal = Math.min(leftVal, (2 * indexVal) + 1);
+                    if(innerNode.right == null) rightVal = Math.max(rightVal, (2 * indexVal) + 1);
                     que.add(p);
                 }
 
                 if(innerNode.right != null) {
-                    Pair p  = new Pair();
-                    p.node = innerNode.right;
-                    p.index = (2 * indexVal) + 2;
-                    if(innerNode.left == null) leftVal = Math.min(leftVal, p.index);
-                    rightVal = Math.max(rightVal, p.index);
+                    Pair p  = new Pair(innerNode.right, (2 * indexVal) + 2);
+                    if(innerNode.left == null) leftVal = Math.min(leftVal, (2 * indexVal) + 2);
+                    rightVal = Math.max(rightVal, (2 * indexVal) + 2);
                     que.add(p);
                 } 
             }
@@ -65,8 +59,8 @@ public class Pair {
     
     TreeNode node;
     int index;
-    Pair() {
-        this.node = null;
-        this.index = 0;
+    Pair(TreeNode node, int index) {
+        this.node = node;
+        this.index = index;
     }
 }
