@@ -50,12 +50,9 @@ class Solution {
                     if(innerNode.left == null) leftVal = Math.min(leftVal, p.index);
                     rightVal = Math.max(rightVal, p.index);
                     que.add(p);
-                }
-
-                max = (leftVal == Integer.MAX_VALUE && rightVal == Integer.MIN_VALUE) ? Math.max(max, 1) : Math.max(max, rightVal - leftVal + 1);
-                   
-
+                } 
             }
+            max = (leftVal == Integer.MAX_VALUE && rightVal == Integer.MIN_VALUE) ? Math.max(max, 1) : Math.max(max, rightVal - leftVal + 1);
         }
 
 
