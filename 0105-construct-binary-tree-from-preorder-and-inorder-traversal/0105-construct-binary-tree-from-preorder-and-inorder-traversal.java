@@ -14,38 +14,33 @@
  * }
  */
 class Solution {
-    int index = 0;
-    public TreeNode recursion(int[] preorder, int[] inorder, int start, int end) {
+    public TreeNode buildTree(int[] preorder, int[] inorder) {
+        
+        Map<Integer, Integer> map = new HashMap<>();
+        int n = inorder.length;
+
+        for(int i = 0 ; i < n; i++) {
+            map.put(inorder[i], i);
+        }
+
+        TreeNode root = recursiveApproach(preorder, 0, n - 1, inorder, 0, n - 1, map);
+
+        return root;
+    }
+
+    public TreeNode recursiveApproach(int[] preorder, int ps, int pe, int[] inorder, int is, int ie, Map<Integer, Integer> map) {
         //base case
-        if(start > end) {
+        if(ps > pe || is > ie) {
             return null;
         }
 
-        //recursive case
-        
-        int newIndex = -1;
-        for(int i = start; i <= end; i++) {
-            if(inorder[i] == preorder[index]) {
-                newIndex = i;
-                index++;
-                break;
-            }
+        TreeNode root = new TreeNode(preorder[ps]);
+        int iRootIndex = map.get(preorder[ps]);
+        int preOrderIndex = iRootIndex - is;
 
-        }
-
-        TreeNode root = new TreeNode(inorder[newIndex]);
-        root.left = recursion(preorder, inorder, start, newIndex - 1);
-        root.right = recursion(preorder, inorder, newIndex + 1, end);
+        root.left = recursiveApproach(preorder, ps + 1, ps + preOrderIndex, inorder, is, iRootIndex - 1, map);
+        root.right = recursiveApproach(preorder, ps + preOrderIndex + 1, pe, inorder, iRootIndex + 1, ie, map);
 
         return root;
-
-    }
-
-    public TreeNode buildTree(int[] preorder, int[] inorder) {
-
-        int n = inorder.length;
-        
-        return recursion(preorder, inorder, 0, n - 1);
-        
     }
 }
