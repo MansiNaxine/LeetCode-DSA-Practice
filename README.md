@@ -314,6 +314,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1635-number-of-good-pairs](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1635-number-of-good-pairs) |
 | [1960-check-if-the-sentence-is-pangram](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1960-check-if-the-sentence-is-pangram) |
 | [2270-find-all-lonely-numbers-in-the-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2270-find-all-lonely-numbers-in-the-array) |
+| [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2385-amount-of-time-for-binary-tree-to-be-infected) |
 | [3420-find-occurrences-of-an-element-in-an-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/3420-find-occurrences-of-an-element-in-an-array) |
 ## Bit Manipulation
 |  |
@@ -610,6 +611,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1035-cousins-in-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/1035-cousins-in-binary-tree) |
 | [2384-root-equals-sum-of-children](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2384-root-equals-sum-of-children) |
+| [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2385-amount-of-time-for-binary-tree-to-be-infected) |
 ## Breadth-First Search
 |  |
 | ------- |
@@ -629,6 +631,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1035-cousins-in-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/1035-cousins-in-binary-tree) |
 | [1036-rotting-oranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1036-rotting-oranges) |
+| [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2385-amount-of-time-for-binary-tree-to-be-infected) |
 ## Binary Tree
 |  |
 | ------- |
@@ -667,6 +670,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1035-cousins-in-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/1035-cousins-in-binary-tree) |
 | [2384-root-equals-sum-of-children](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2384-root-equals-sum-of-children) |
+| [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2385-amount-of-time-for-binary-tree-to-be-infected) |
 ## Depth-First Search
 |  |
 | ------- |
@@ -697,6 +701,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0975-range-sum-of-bst](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0975-range-sum-of-bst) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1035-cousins-in-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/1035-cousins-in-binary-tree) |
+| [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2385-amount-of-time-for-binary-tree-to-be-infected) |
 ## Binary Search Tree
 |  |
 | ------- |
