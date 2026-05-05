@@ -15,20 +15,36 @@
  */
 class Solution {
     public List<Integer> preorderTraversal(TreeNode root) {
+        
 
+        //Morris Traversal
         List<Integer> answer = new ArrayList<>();
-        Stack<TreeNode> st = new Stack<>();
-        if(root == null) return answer;
+        TreeNode curr = root;
 
-        st.push(root);
-        while(!st.isEmpty()) {
-            TreeNode node = st.pop();
-            answer.add(node.val);
-            if(node.right != null) st.push(node.right);
-            if(node.left != null) st.push(node.left);
+        while(curr != null) {
+            if(curr.left == null) {
+                answer.add(curr.val);
+                curr = curr.right;
+            }
+            else {
+                TreeNode prev = curr.left;
+                while(prev.right != null && prev.right != curr) {
+                    prev = prev.right;
+                }
+
+                if(prev.right == null) {
+                    answer.add(curr.val);
+                    prev.right = curr;
+                    curr = curr.left;
+                }
+                else {
+                    
+                    curr = curr.right;
+                    prev.right = null;
+                }
+            }
         }
 
         return answer;
-        
     }
 }
