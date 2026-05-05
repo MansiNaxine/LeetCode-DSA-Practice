@@ -16,30 +16,34 @@
 class Solution {
     public List<Integer> inorderTraversal(TreeNode root) {
 
-        Stack<TreeNode> st = new Stack<>();
-        List<Integer> list = new ArrayList<>();
-        if(root == null) return list;
-        st.push(root);
-        while(!st.isEmpty()) {
-            TreeNode node = st.peek();
-            while(node.left != null) {
-                node = node.left;
-                st.push(node);
+        //Morris Traversal
+        List<Integer> answer = new ArrayList<>();
+        TreeNode curr = root;
+
+        while(curr != null) {
+            if(curr.left == null) {
+                answer.add(curr.val);
+                curr = curr.right;
             }
-            while(!st.isEmpty() && st.peek().right == null) {
-                list.add(st.peek().val);
-                st.pop();
-            }
-            if(st.isEmpty()) break;
-            TreeNode node2 = st.peek();
-            if(node2.right != null) {
-                list.add(node2.val);
-                st.pop();
-                st.push(node2.right);
+            else {
+                TreeNode prev = curr.left;
+                while(prev.right != null && prev.right != curr) {
+                    prev = prev.right;
+                }
+
+                if(prev.right == null) {
+                    prev.right = curr;
+                    curr = curr.left;
+                }
+                else {
+                    answer.add(curr.val);
+                    curr = curr.right;
+                    prev.right = null;
+                }
             }
         }
 
-        return list;
+        return answer;
         
     }
 }
