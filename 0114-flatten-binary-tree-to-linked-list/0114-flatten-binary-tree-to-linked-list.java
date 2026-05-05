@@ -14,23 +14,25 @@
  * }
  */
 class Solution {
+
     public void flatten(TreeNode root) {
 
-        TreeNode current=root;
-        while(current!=null){
-            if(current.left!=null){
-                TreeNode temp=current.left;
-                while(temp.right!=null){
-                    temp=temp.right;
-                }
-
-                temp.right=current.right;
-                current.right=current.left;
-                current.left=null;
-            }
-
-            current=current.right;
+        List<TreeNode> list = new ArrayList<>();
+        recursiveApproach(list, root);
+        for(int i = 1; i < list.size(); i++) {
+            root.right = list.get(i);
+            root.left = null;
+            root = root.right;
         }
+        return;
         
+    }
+
+    public void recursiveApproach(List<TreeNode> list, TreeNode root) {
+        if(root == null) return;
+
+        list.add(root);
+        recursiveApproach(list, root.left);
+        recursiveApproach(list, root.right);
     }
 }
