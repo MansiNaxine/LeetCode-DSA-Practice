@@ -14,18 +14,17 @@
  * }
  */
 class Solution {
-  public TreeNode insertIntoBST(TreeNode root, int val) {
+    
+    public TreeNode insertIntoBST(TreeNode root, int val) {
         TreeNode ans = new TreeNode(val);
         if(root == null) return ans;
         TreeNode ans1 = null;
         TreeNode leftNode = findMaxFork(root, val, ans1);
         
-
         if(leftNode != null && val > leftNode.val) {
-                TreeNode newNode = leftNode.right;
-                leftNode.right = new TreeNode(val);
-                leftNode.right.right = newNode;
-                // if(rightNode != null && val < rightNode.val) newNode.right = rightNode;
+            TreeNode newNode = leftNode.right;
+            leftNode.right = new TreeNode(val);
+            leftNode.right.right = newNode;
         }
         else {
             TreeNode ans2 = null; 
@@ -34,8 +33,6 @@ class Solution {
         }
 
         return root;
-
-        
     }
 
     public TreeNode findCeil(TreeNode root, int x, TreeNode ans2) {
