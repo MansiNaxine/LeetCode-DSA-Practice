@@ -25,14 +25,15 @@ class Solution {
             TreeNode newNode = leftNode.right;
             leftNode.right = new TreeNode(val);
             leftNode.right.right = newNode;
+
+            return root;
         }
         else {
             TreeNode ans2 = null; 
             TreeNode rightNode = findCeil(root, val, ans2);
             if(rightNode != null && val < rightNode.val) rightNode.left = new TreeNode(val);
+            return root;
         }
-
-        return root;
     }
 
     public TreeNode findCeil(TreeNode root, int x, TreeNode ans2) {
