@@ -14,26 +14,32 @@
  * }
  */
 class Solution {
-
-    public boolean recursion(TreeNode root, long start, long end) {
+    public boolean isValidBST(TreeNode root) {
         
         if(root == null) return true;
 
-        if(start > root.val || end < root.val) return false;
+        TreeNode left = helperLeft(root.left);
+        TreeNode right = helperRight(root.right);
 
-        boolean left = recursion(root.left, start, (long)root.val - 1);
-        boolean right = recursion(root.right, (long)root.val + 1, end);
+        if(left != null && left.val >= root.val) return false;
+        else if(right != null && right.val <= root.val) return false;
 
-        return left && right;
+        return isValidBST(root.left) && isValidBST(root.right);
     }
 
-    public boolean isValidBST(TreeNode root) {
+    public TreeNode helperRight(TreeNode root) {
 
-        long max = Integer.MAX_VALUE;
-        long min = Integer.MIN_VALUE;
+        if(root == null) return null;
 
-        return recursion(root, min, max);
+        return (root.left != null && root.left.val < root.val) ? helperRight(root.left) : (root.right != null && root.right.val < root.val) ? helperRight(root.right) : root;
 
-        
+    }
+
+    public TreeNode helperLeft(TreeNode root) {
+
+        if(root == null) return null;
+
+        return (root.left != null && root.left.val > root.val) ? helperLeft(root.left) : (root.right != null && root.right.val > root.val) ? helperLeft(root.right) : root;
+
     }
 }
