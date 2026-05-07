@@ -11,29 +11,14 @@
 class Solution {
     public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
 
-        if (root == null) return null;
+        if(root == null || root == p || root == q) return root;
 
-        if(root.val == p.val || root.val == q.val) return root;
-        
-        if(p.val < root.val && q.val < root.val) {
+        TreeNode leftNode = lowestCommonAncestor(root.left, p, q);
+        TreeNode rightNode = lowestCommonAncestor(root.right, p, q);
 
-         
-         return lowestCommonAncestor(root.left, p, q);
+        if((leftNode == p && rightNode == q) || (leftNode == q && rightNode == p)) return root;
 
-        } else if(p.val > root.val && q.val > root.val) {
-
-         return  lowestCommonAncestor(root.right, p, q);
-        }
-        
-        // if(leftPart != null && rightPart != null) {
-        //     return root;
-        // }
-
-        // if(leftPart != null) {
-        //     return leftPart;
-        // }
-
-         return root;
+        return leftNode == null ? rightNode : rightNode == null ? leftNode : null;
         
     }
 }
