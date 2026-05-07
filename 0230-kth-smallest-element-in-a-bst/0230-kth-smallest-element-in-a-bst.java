@@ -14,26 +14,20 @@
  * }
  */
 class Solution {
-
-    //List<Integer> list = new ArrayList<>();
-    int answer = 0;
-    int count = 0;
-
-    void recursion(TreeNode root, int k) {
-        if(root == null) {
-            return ;
-        }
-        recursion(root.left, k);
-        count++;
-        if(count == k) {
-            answer = root.val;
-        }
-        recursion(root.right, k);
-       
-
-    }
     public int kthSmallest(TreeNode root, int k) {
-        recursion(root, k);
-        return answer;
+        
+        List<Integer> list = new ArrayList<>();
+        helper(root, list);
+        return list.get(k - 1);
+    }
+
+    public void helper(TreeNode root, List<Integer> list) {
+        //base case
+        if(root == null) return ;
+
+        //recursivce case
+        helper(root.left, list);
+        list.add(root.val);
+        helper(root.right, list);
     }
 }
