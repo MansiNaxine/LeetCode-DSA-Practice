@@ -95,6 +95,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0948-sort-an-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0948-sort-an-array) |
 | [0992-subarrays-with-k-different-integers](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0992-subarrays-with-k-different-integers) |
 | [1004-max-consecutive-ones-iii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1004-max-consecutive-ones-iii) |
+| [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1008-construct-binary-search-tree-from-preorder-traversal) |
 | [1011-capacity-to-ship-packages-within-d-days](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1011-capacity-to-ship-packages-within-d-days) |
 | [1016-subarray-sums-divisible-by-k](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1016-subarray-sums-divisible-by-k) |
 | [1019-squares-of-a-sorted-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1019-squares-of-a-sorted-array) |
@@ -557,6 +558,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0901-online-stock-span](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0901-online-stock-span) |
 | [0907-sum-of-subarray-minimums](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0907-sum-of-subarray-minimums) |
 | [0957-minimum-add-to-make-parentheses-valid](https://github.com/MansiNaxine/LeetCode/tree/master/0957-minimum-add-to-make-parentheses-valid) |
+| [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1008-construct-binary-search-tree-from-preorder-traversal) |
 | [1128-remove-all-adjacent-duplicates-in-string](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1128-remove-all-adjacent-duplicates-in-string) |
 | [1320-remove-all-adjacent-duplicates-in-string-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1320-remove-all-adjacent-duplicates-in-string-ii) |
 | [1737-maximum-nesting-depth-of-the-parentheses](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1737-maximum-nesting-depth-of-the-parentheses) |
@@ -615,6 +617,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0863-all-nodes-distance-k-in-binary-tree) |
 | [0975-range-sum-of-bst](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0975-range-sum-of-bst) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
+| [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1008-construct-binary-search-tree-from-preorder-traversal) |
 | [1035-cousins-in-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/1035-cousins-in-binary-tree) |
 | [2384-root-equals-sum-of-children](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2384-root-equals-sum-of-children) |
 | [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2385-amount-of-time-for-binary-tree-to-be-infected) |
@@ -677,6 +680,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0863-all-nodes-distance-k-in-binary-tree) |
 | [0975-range-sum-of-bst](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0975-range-sum-of-bst) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
+| [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1008-construct-binary-search-tree-from-preorder-traversal) |
 | [1035-cousins-in-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/1035-cousins-in-binary-tree) |
 | [2384-root-equals-sum-of-children](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2384-root-equals-sum-of-children) |
 | [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2385-amount-of-time-for-binary-tree-to-be-infected) |
@@ -723,6 +727,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0701-insert-into-a-binary-search-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0701-insert-into-a-binary-search-tree) |
 | [0783-search-in-a-binary-search-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0783-search-in-a-binary-search-tree) |
 | [0975-range-sum-of-bst](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0975-range-sum-of-bst) |
+| [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1008-construct-binary-search-tree-from-preorder-traversal) |
 ## Counting
 |  |
 | ------- |
@@ -767,6 +772,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0739-daily-temperatures](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0739-daily-temperatures) |
 | [0901-online-stock-span](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0901-online-stock-span) |
 | [0907-sum-of-subarray-minimums](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0907-sum-of-subarray-minimums) |
+| [1008-construct-binary-search-tree-from-preorder-traversal](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1008-construct-binary-search-tree-from-preorder-traversal) |
 | [2104-sum-of-subarray-ranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2104-sum-of-subarray-ranges) |
 ## Enumeration
 |  |
