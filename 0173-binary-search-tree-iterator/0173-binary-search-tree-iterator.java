@@ -15,36 +15,37 @@
  */
 class BSTIterator {
 
-    Queue<Integer> st;
-
+    TreeNode root;
+    List<TreeNode> list = new ArrayList<>();
     public BSTIterator(TreeNode root) {
-
-        st = new LinkedList<>();
-        insert(root);
-
+        this.root = root;
+        addElements(root, list);
     }
     
-    public void insert(TreeNode root) {
-        //base case
-        if(root == null) return;
-
-        //recursive case
-        insert(root.left);
-        st.add(root.val);
-        insert(root.right);
-
-    }
     public int next() {
+        int ans = 0;
+        if(!list.isEmpty()) {
+            ans = list.get(0).val;
+        }
 
-        int answer = st.remove();
+        list.remove(list.get(0));
+        return ans;
 
-        return answer;
-        
     }
     
     public boolean hasNext() {
+
+        return !list.isEmpty();
+    }
+
+    public void addElements(TreeNode root, List<TreeNode> list) {
+        if(root == null) return;
+
         
-        return st.size() != 0;
+        addElements(root.left, list);
+        list.add(root);
+        addElements(root.right, list);
+
     }
 }
 
