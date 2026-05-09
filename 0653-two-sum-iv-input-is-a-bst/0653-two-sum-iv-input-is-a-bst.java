@@ -24,35 +24,35 @@
     BSTIterator(TreeNode root, boolean flag) {
         this.root = root;
         this.flag = flag;
-        addAllNodesToStack(st1, st2, root);
+        addAllNodesToStack(root);
     }
 
     public int next() {
         TreeNode newNode = null;
-        int val = -10001;
+        int val = 0;
         if(!flag && !st1.isEmpty()) {
             newNode = st1.pop();
             val = newNode.val;
-            if(newNode.right != null) addAllNodesToStack(st1, st2, newNode.right);
+            if(newNode.right != null) addAllNodesToStack(newNode.right);
         }
         else if (!st2.isEmpty()) {
             newNode = st2.pop();
             val = newNode.val;
-            if(newNode.left != null) addAllNodesToStack(st1, st2, newNode.left);
+            if(newNode.left != null) addAllNodesToStack(newNode.left);
         }
         return val;
     }
 
-    public void addAllNodesToStack(Stack<TreeNode> st1, Stack<TreeNode> st2, TreeNode root) {
+    public void addAllNodesToStack(TreeNode root) {
         if(root == null) return;
 
         if (!flag) {
             st1.push(root);
-            addAllNodesToStack(st1, st2, root.left);
+            addAllNodesToStack(root.left);
         }
         else {
             st2.push(root);
-            addAllNodesToStack(st2, st2,  root.right);
+            addAllNodesToStack(root.right);
         }
         
     }
@@ -67,7 +67,7 @@ class Solution {
         int val1 = bs1.next();
         int val2 = bs2.next();
 
-        while(val1 != -10001 && val2 != -10001 && val1 != val2) {
+        while(val1 < val2) {
             if(val1 + val2 == k) return true;
             else if (val1 + val2 < k) {
                 val1 = bs1.next();
