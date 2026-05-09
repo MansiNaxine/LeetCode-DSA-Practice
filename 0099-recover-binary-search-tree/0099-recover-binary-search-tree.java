@@ -15,10 +15,45 @@
  */
 class Solution {
 
+    TreeNode first = null;
+    TreeNode middle = null;
+    TreeNode last = null;
+    TreeNode prev = null;
     public void recoverTree(TreeNode root) {
         //BruteForceapproach
-        bruteForceApproach(root);
+        // bruteForceApproach(root);
+        optimalApproach(root);
+        if(first != null && last != null) {
+            int temp = first.val;
+            first.val = last.val;
+            last.val = temp;
+        }
+        else if (first != null && middle != null) {
+            int temp = first.val;
+            first.val = middle.val;
+            middle.val = temp;
+        }
         return ;
+    }
+
+    public void optimalApproach(TreeNode root) {
+        if(root == null) return;
+
+        optimalApproach(root.left);
+        if(prev != null && prev.val > root.val ) {
+            if(first == null) {
+                first = prev;
+                middle = root;
+            }
+            else {
+                last = root;
+            }
+        }
+
+        prev = root;
+        optimalApproach(root.right);
+        //prev = root;
+
     }
 
     public void bruteForceApproach(TreeNode root) {
