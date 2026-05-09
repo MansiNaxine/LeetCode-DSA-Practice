@@ -52,7 +52,6 @@ class Solution {
 
         prev = root;
         optimalApproach(root.right);
-        //prev = root;
 
     }
 
