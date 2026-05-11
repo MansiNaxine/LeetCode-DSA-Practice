@@ -26,7 +26,7 @@ class Solution {
                 node = node.left;
                 st.push(node);
             }
-            while(!st.isEmpty() && (st.peek().right == null || (nodes.size() > 0 && nodes.get(list.size() - 1) == st.peek().right))) {
+            while(!st.isEmpty() && (st.peek().right == null || (nodes.size() > 0 && nodes.get(list.size() - 1) == st.peek().right))) { //Different List i hv used just to apply check for duplicates
                 nodes.add(st.peek());
                 list.add(st.peek().val);
                 st.pop();
