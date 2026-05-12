@@ -15,37 +15,58 @@
  */
 class BSTIterator {
 
-    Queue<Integer> st;
-
+    TreeNode root;
+    // List<TreeNode> list = new ArrayList<>(); //Better can go with Stack
+    Stack<TreeNode> st = new Stack<>();
     public BSTIterator(TreeNode root) {
-
-        st = new LinkedList<>();
-        insert(root);
-
+        this.root = root;
+        // addElements(root, list);
+        pushAll(root, st);
     }
     
-    public void insert(TreeNode root) {
-        //base case
-        if(root == null) return;
-
-        //recursive case
-        insert(root.left);
-        st.add(root.val);
-        insert(root.right);
-
-    }
     public int next() {
+        // int ans = 0;
+        // if(!list.isEmpty()) {
+        //     ans = list.get(0).val;
+        // }
 
-        int answer = st.remove();
+        // list.remove(list.get(0));
+        // return ans;
+        // if()
+        // TreeNode node = st.pop();
+        // // if(node.right != null) pushAll(node.right, st);
 
-        return answer;
-        
+        // return node.val;
+
+        return !st.isEmpty() ? st.pop().val : 0;
+
     }
     
     public boolean hasNext() {
-        
-        return st.size() != 0;
+
+        // return !list.isEmpty();
+
+        return !st.isEmpty();
     }
+
+    public void pushAll(TreeNode root, Stack<TreeNode> st) {
+        if(root == null) return;
+
+        
+        pushAll(root.right, st);
+        st.push(root);
+        pushAll(root.left, st);
+    }
+
+    // public void addElements(TreeNode root, List<TreeNode> list) {
+    //     if(root == null) return;
+
+        
+    //     addElements(root.left, list);
+    //     list.add(root);
+    //     addElements(root.right, list);
+
+    // }
 }
 
 /**
