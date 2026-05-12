@@ -21,8 +21,7 @@ class Solution {
         TreeNode left = helperLeft(root.left);
         TreeNode right = helperRight(root.right);
 
-        if(left != null && left.val >= root.val) return false;
-        else if(right != null && right.val <= root.val) return false;
+        if((left != null && left.val >= root.val) || (right != null && right.val <= root.val)) return false;
 
         return isValidBST(root.left) && isValidBST(root.right);
     }
