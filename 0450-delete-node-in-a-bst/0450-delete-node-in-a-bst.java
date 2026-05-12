@@ -57,7 +57,7 @@ class Solution {
                     }
                     else {
                         parentNode.left = leftPart;
-                    }
+                    } 
                 }
                 else {
                     foundNode = parentNode.right;
@@ -97,21 +97,9 @@ class Solution {
     //First find out the parent node
     public TreeNode findParentNode(TreeNode root, int key) {
         // base case
-        if(root == null) return null;
+        if(root == null || (root.left != null && root.left.val == key) || (root.right != null && root.right.val == key)) return root;
 
-        TreeNode leftPart = findParentNode(root.left, key);
-        TreeNode rightPart = findParentNode(root.right, key);
-
-        if((root.left != null && root.left.val == key) || (root.right != null && root.right.val == key)) return root;
-
-        return leftPart == null ? rightPart : leftPart;
+        return key < root.val ? findParentNode(root.left, key) : findParentNode(root.right, key);
 
     }
-
-    // public boolean checkifExists(TreeNode root, int key) {
-    //     if(root == null) return false;
-    //     if(root.val == key) return true;
-
-    //     return checkifExists(root.left, key) || checkifExists(root.right, key);
-    // }
 }
