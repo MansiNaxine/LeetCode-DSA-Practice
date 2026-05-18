@@ -103,6 +103,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1011-capacity-to-ship-packages-within-d-days](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1011-capacity-to-ship-packages-within-d-days) |
 | [1016-subarray-sums-divisible-by-k](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1016-subarray-sums-divisible-by-k) |
 | [1019-squares-of-a-sorted-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1019-squares-of-a-sorted-array) |
+| [1020-number-of-enclaves](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1020-number-of-enclaves) |
 | [1036-rotting-oranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1036-rotting-oranges) |
 | [1039-find-the-town-judge](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1039-find-the-town-judge) |
 | [1046-max-consecutive-ones-iii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1046-max-consecutive-ones-iii) |
@@ -157,6 +158,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0733-flood-fill](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0733-flood-fill) |
 | [0861-flipping-an-image](https://github.com/MansiNaxine/LeetCode/tree/master/0861-flipping-an-image) |
 | [0994-rotting-oranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0994-rotting-oranges) |
+| [1020-number-of-enclaves](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1020-number-of-enclaves) |
 | [1036-rotting-oranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1036-rotting-oranges) |
 | [1791-richest-customer-wealth](https://github.com/MansiNaxine/LeetCode/tree/master/1791-richest-customer-wealth) |
 | [1901-find-a-peak-element-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1901-find-a-peak-element-ii) |
@@ -659,6 +661,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0863-all-nodes-distance-k-in-binary-tree) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [0994-rotting-oranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0994-rotting-oranges) |
+| [1020-number-of-enclaves](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1020-number-of-enclaves) |
 | [1035-cousins-in-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/1035-cousins-in-binary-tree) |
 | [1036-rotting-oranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1036-rotting-oranges) |
 | [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2385-amount-of-time-for-binary-tree-to-be-infected) |
@@ -744,6 +747,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0863-all-nodes-distance-k-in-binary-tree) |
 | [0975-range-sum-of-bst](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0975-range-sum-of-bst) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
+| [1020-number-of-enclaves](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1020-number-of-enclaves) |
 | [1035-cousins-in-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/1035-cousins-in-binary-tree) |
 | [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2385-amount-of-time-for-binary-tree-to-be-infected) |
 ## Binary Search Tree
@@ -877,4 +881,5 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0130-surrounded-regions](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0130-surrounded-regions) |
 | [0547-number-of-provinces](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0547-number-of-provinces) |
+| [1020-number-of-enclaves](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1020-number-of-enclaves) |
 <!---LeetCode Topics End-->
