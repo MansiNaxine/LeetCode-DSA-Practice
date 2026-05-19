@@ -2,22 +2,12 @@ class Solution {
     public boolean isBipartite(int[][] graph) {
         
         int n = graph.length;
-        //Create an adjancey List
-        // List<List<Integer>> adjancyList = new ArrayList<>();
-        // for(int i = 0; i < n; i++) {
-        //     adjancyList.add(new ArrayList<>());
-        // }
-
-        // for(int i = 0; i < n; i++) {
-        //     for(int j = 0 ; j < graph[i].length; j++) {
-        //         adjancyList.get(i).add(graph[i][j]);
-        //     }
-        // }
-
+        //make sure that not traversing again
         int[] visited = new int[n];
+        //maintain the colours
         int[] visitedColour = new int[n];
         
-
+        //Apply BFs for each given node
         for(int i = 0 ; i < n; i++) {
 
             if(visited[i] == 1) continue;
