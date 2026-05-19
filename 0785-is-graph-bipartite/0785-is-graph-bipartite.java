@@ -3,16 +3,16 @@ class Solution {
         
         int n = graph.length;
         //Create an adjancey List
-        List<List<Integer>> adjancyList = new ArrayList<>();
-        for(int i = 0; i < n; i++) {
-            adjancyList.add(new ArrayList<>());
-        }
+        // List<List<Integer>> adjancyList = new ArrayList<>();
+        // for(int i = 0; i < n; i++) {
+        //     adjancyList.add(new ArrayList<>());
+        // }
 
-        for(int i = 0; i < n; i++) {
-            for(int j = 0 ; j < graph[i].length; j++) {
-                adjancyList.get(i).add(graph[i][j]);
-            }
-        }
+        // for(int i = 0; i < n; i++) {
+        //     for(int j = 0 ; j < graph[i].length; j++) {
+        //         adjancyList.get(i).add(graph[i][j]);
+        //     }
+        // }
 
         int[] visited = new int[n];
         int[] visitedColour = new int[n];
@@ -30,7 +30,7 @@ class Solution {
                 int root = que.remove();
                 int colour = visitedColour[root];
 
-                for(int element : adjancyList.get(root)) {
+                for(int element : graph[root]) {
                     if(visited[element] == 0) {
                         visited[element] = 1;
                         if(colour == 0) visitedColour[element] = 1;
