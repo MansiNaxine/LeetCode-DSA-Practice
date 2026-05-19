@@ -1,7 +1,39 @@
 class Solution {
     public boolean isBipartite(int[][] graph) {
         
-        return bfsTraversal(graph);
+        // return bfsTraversal(graph);
+
+        return dfsTraversal(graph);
+    }
+
+    public boolean dfsTraversal(int[][] graph) {
+        int n = graph.length;
+        int visited[] = new int[n];
+        int visitedColour[] = new int[n];
+
+        for(int i = 0; i < n; i++) {
+            if(visited[i] == 0) {
+                visitedColour[i] = 0;
+                if(!(dfsRecursion(visited, graph, i, n, visitedColour))) return false;
+            }
+        }
+
+        return true;
+    }
+
+    public boolean dfsRecursion(int visited[], int[][] graph, int root, int n, int[] visitedColour) {
+        visited[root] = 1;
+
+        for(int ele : graph[root]) {
+            if(visited[ele] == 0) {
+                if (visitedColour[root] == 0) visitedColour[ele] = 1;
+                else visitedColour[ele] = 0;
+                if(!(dfsRecursion(visited, graph, ele, n, visitedColour))) return false;
+            }
+            else if (visitedColour[ele] == visitedColour[root]) return false;
+        }
+
+        return true;
     }
 
     public boolean bfsTraversal(int[][] graph) {
