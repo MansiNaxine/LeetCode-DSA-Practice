@@ -1,6 +1,10 @@
 class Solution {
     public boolean isBipartite(int[][] graph) {
         
+        return bfsTraversal(graph);
+    }
+
+    public boolean bfsTraversal(int[][] graph) {
         int n = graph.length;
         //make sure that not traversing again
         int[] visited = new int[n];
