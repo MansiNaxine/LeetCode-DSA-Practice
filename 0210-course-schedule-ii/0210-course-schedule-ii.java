@@ -5,10 +5,10 @@ class Solution {
         int[] inArr = new int[numCourses];
         int n = prerequisites.length;
 
-        //inArr implementation
-        for(int i = 0; i < n; i++) {
-            inArr[prerequisites[i][0]]++;
-        }
+        // //inArr implementation
+        // for(int i = 0; i < n; i++) {
+        //     inArr[prerequisites[i][0]]++;
+        // }
 
         //Adjancy List Implementation
         List<List<Integer>> adjancyList = new ArrayList<>();
@@ -22,6 +22,7 @@ class Solution {
             int v = prerequisites[i][1];
 
             adjancyList.get(v).add(u);
+            inArr[u]++;
         }
 
         Queue<Integer> que = new LinkedList<>();
