@@ -29,7 +29,6 @@ class Solution {
             if(inArr[i] == 0) que.add(i);
         }
 
-        // List<Integer> topoArr = new ArrayList<>();
         int[] ans = new int[numCourses];
         int index = 0;
         while(!que.isEmpty()) {
