@@ -40,12 +40,15 @@ class Solution {
             }
         }
 
-        int[] ans = new int[topoArr.size()];
-        for(int i = 0; i < ans.length; i++) {
-            ans[i] = topoArr.get(i);
+        
+        if(topoArr.size() == numCourses) {
+            int[] ans = new int[topoArr.size()];
+            for(int i = 0; i < ans.length; i++) {
+                ans[i] = topoArr.get(i);
+            }
+            return ans;
         }
-
-
-        return ans.length == numCourses ? ans : new int[]{};
+        
+        return new int[]{};
     }
 }
