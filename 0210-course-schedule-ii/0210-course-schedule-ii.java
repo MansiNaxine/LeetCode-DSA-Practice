@@ -29,10 +29,13 @@ class Solution {
             if(inArr[i] == 0) que.add(i);
         }
 
-        List<Integer> topoArr = new ArrayList<>();
+        // List<Integer> topoArr = new ArrayList<>();
+        int[] ans = new int[numCourses];
+        int index = 0;
         while(!que.isEmpty()) {
             int top = que.remove();
-            topoArr.add(top);
+            ans[index] = top;
+            index++;
 
             for(int ele : adjancyList.get(top)) {
                 inArr[ele]--;
@@ -40,15 +43,6 @@ class Solution {
             }
         }
 
-        
-        if(topoArr.size() == numCourses) {
-            int[] ans = new int[topoArr.size()];
-            for(int i = 0; i < ans.length; i++) {
-                ans[i] = topoArr.get(i);
-            }
-            return ans;
-        }
-        
-        return new int[]{};
+        return index == numCourses ? ans : new int[]{};
     }
 }
