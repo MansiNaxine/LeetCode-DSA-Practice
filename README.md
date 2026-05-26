@@ -126,6 +126,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1580-shuffle-the-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1580-shuffle-the-array) |
 | [1603-running-sum-of-1d-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1603-running-sum-of-1d-array) |
 | [1605-minimum-number-of-days-to-make-m-bouquets](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1605-minimum-number-of-days-to-make-m-bouquets) |
+| [1631-path-with-minimum-effort](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1631-path-with-minimum-effort) |
 | [1635-number-of-good-pairs](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1635-number-of-good-pairs) |
 | [1646-kth-missing-positive-number](https://github.com/MansiNaxine/LeetCode/tree/master/1646-kth-missing-positive-number) |
 | [1651-shuffle-string](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1651-shuffle-string) |
@@ -164,6 +165,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1020-number-of-enclaves](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1020-number-of-enclaves) |
 | [1036-rotting-oranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1036-rotting-oranges) |
 | [1091-shortest-path-in-binary-matrix](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1091-shortest-path-in-binary-matrix) |
+| [1631-path-with-minimum-effort](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1631-path-with-minimum-effort) |
 | [1791-richest-customer-wealth](https://github.com/MansiNaxine/LeetCode/tree/master/1791-richest-customer-wealth) |
 | [1901-find-a-peak-element-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1901-find-a-peak-element-ii) |
 ## Binary Search
@@ -203,6 +205,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
 | [1539-kth-missing-positive-number](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1539-kth-missing-positive-number) |
 | [1605-minimum-number-of-days-to-make-m-bouquets](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1605-minimum-number-of-days-to-make-m-bouquets) |
+| [1631-path-with-minimum-effort](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1631-path-with-minimum-effort) |
 | [1646-kth-missing-positive-number](https://github.com/MansiNaxine/LeetCode/tree/master/1646-kth-missing-positive-number) |
 | [1886-minimum-limit-of-balls-in-a-bag](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1886-minimum-limit-of-balls-in-a-bag) |
 | [1901-find-a-peak-element-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1901-find-a-peak-element-ii) |
@@ -681,6 +684,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1035-cousins-in-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/1035-cousins-in-binary-tree) |
 | [1036-rotting-oranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1036-rotting-oranges) |
 | [1091-shortest-path-in-binary-matrix](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1091-shortest-path-in-binary-matrix) |
+| [1631-path-with-minimum-effort](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1631-path-with-minimum-effort) |
 | [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2385-amount-of-time-for-binary-tree-to-be-infected) |
 ## Binary Tree
 |  |
@@ -771,6 +775,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1020-number-of-enclaves](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1020-number-of-enclaves) |
 | [1035-cousins-in-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/1035-cousins-in-binary-tree) |
+| [1631-path-with-minimum-effort](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1631-path-with-minimum-effort) |
 | [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2385-amount-of-time-for-binary-tree-to-be-infected) |
 ## Binary Search Tree
 |  |
@@ -851,6 +856,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0239-sliding-window-maximum](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0239-sliding-window-maximum) |
 | [0451-sort-characters-by-frequency](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0451-sort-characters-by-frequency) |
 | [0948-sort-an-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0948-sort-an-array) |
+| [1631-path-with-minimum-effort](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1631-path-with-minimum-effort) |
 ## Bucket Sort
 |  |
 | ------- |
@@ -910,6 +916,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0547-number-of-provinces](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0547-number-of-provinces) |
 | [0785-is-graph-bipartite](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0785-is-graph-bipartite) |
 | [1020-number-of-enclaves](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1020-number-of-enclaves) |
+| [1631-path-with-minimum-effort](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1631-path-with-minimum-effort) |
 ## Topological Sort
 |  |
 | ------- |
