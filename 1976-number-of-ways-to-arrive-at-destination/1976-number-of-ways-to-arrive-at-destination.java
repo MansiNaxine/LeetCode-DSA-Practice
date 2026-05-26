@@ -43,7 +43,7 @@ class Solution {
             int currNode = inner.node;
 
             for(List<Integer> list : adjancyList.get(currNode)) {
-                int innerDist = list.get(1);
+                long innerDist = list.get(1);
                 int innerNode = list.get(0);
                 if((currDist + innerDist) < distance[innerNode]) {
                     path[innerNode] = path[currNode];
