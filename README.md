@@ -109,6 +109,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1039-find-the-town-judge](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1039-find-the-town-judge) |
 | [1046-max-consecutive-ones-iii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1046-max-consecutive-ones-iii) |
 | [1055-pairs-of-songs-with-total-durations-divisible-by-60](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1055-pairs-of-songs-with-total-durations-divisible-by-60) |
+| [1091-shortest-path-in-binary-matrix](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1091-shortest-path-in-binary-matrix) |
 | [1248-count-number-of-nice-subarrays](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1248-count-number-of-nice-subarrays) |
 | [1283-find-the-smallest-divisor-given-a-threshold](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1283-find-the-smallest-divisor-given-a-threshold) |
 | [1284-four-divisors](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1284-four-divisors) |
@@ -162,6 +163,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0994-rotting-oranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0994-rotting-oranges) |
 | [1020-number-of-enclaves](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1020-number-of-enclaves) |
 | [1036-rotting-oranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1036-rotting-oranges) |
+| [1091-shortest-path-in-binary-matrix](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1091-shortest-path-in-binary-matrix) |
 | [1791-richest-customer-wealth](https://github.com/MansiNaxine/LeetCode/tree/master/1791-richest-customer-wealth) |
 | [1901-find-a-peak-element-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1901-find-a-peak-element-ii) |
 ## Binary Search
@@ -678,6 +680,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1020-number-of-enclaves](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1020-number-of-enclaves) |
 | [1035-cousins-in-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/1035-cousins-in-binary-tree) |
 | [1036-rotting-oranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1036-rotting-oranges) |
+| [1091-shortest-path-in-binary-matrix](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1091-shortest-path-in-binary-matrix) |
 | [2385-amount-of-time-for-binary-tree-to-be-infected](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2385-amount-of-time-for-binary-tree-to-be-infected) |
 ## Binary Tree
 |  |
