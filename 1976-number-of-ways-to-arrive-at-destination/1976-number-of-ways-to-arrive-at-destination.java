@@ -26,7 +26,7 @@ class Solution {
 
         //take Path arrays
         //also take distance array
-        long[] distance = new long[n];
+        long[] distance = new long[n]; //Distance can be long
         int[] path = new int[n];
         Arrays.fill(distance, Long.MAX_VALUE);
         distance[0] = 0;
@@ -43,7 +43,7 @@ class Solution {
             int currNode = inner.node;
 
             for(List<Integer> list : adjancyList.get(currNode)) {
-                long innerDist = list.get(1);
+                int innerDist = list.get(1);
                 int innerNode = list.get(0);
                 if((currDist + innerDist) < distance[innerNode]) {
                     path[innerNode] = path[currNode];
