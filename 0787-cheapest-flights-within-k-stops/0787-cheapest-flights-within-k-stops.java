@@ -31,8 +31,6 @@ class Solution {
             int step = innerInfo.steps;
             int root = innerInfo.destination;
             int cost = innerInfo.price;
-
-            if(step > k + 1) continue;
             
             for(List<Integer> list : adjancyList.get(root)) {
 
