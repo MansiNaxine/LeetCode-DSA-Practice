@@ -52,7 +52,7 @@ class Solution {
                     que.add(innerP);
                 }
                 else if ((currDist + innerDist) == distance[innerNode]) {
-                    path[innerNode] = (path[innerNode] + path[currNode])%modVal;;
+                    path[innerNode] = (path[innerNode] + path[currNode])%modVal;
                 }
             }
         }
