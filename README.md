@@ -68,6 +68,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0287-find-the-duplicate-number](https://github.com/MansiNaxine/LeetCode/tree/master/0287-find-the-duplicate-number) |
 | [0303-range-sum-query-immutable](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0303-range-sum-query-immutable) |
 | [0304-range-sum-query-2d-immutable](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0304-range-sum-query-2d-immutable) |
+| [0305-number-of-islands-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0305-number-of-islands-ii) |
 | [0410-split-array-largest-sum](https://github.com/MansiNaxine/LeetCode/tree/master/0410-split-array-largest-sum) |
 | [0435-non-overlapping-intervals](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0435-non-overlapping-intervals) |
 | [0442-find-all-duplicates-in-an-array](https://github.com/MansiNaxine/LeetCode/tree/master/0442-find-all-duplicates-in-an-array) |
@@ -320,6 +321,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0205-isomorphic-strings](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0205-isomorphic-strings) |
 | [0229-majority-element-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0229-majority-element-ii) |
 | [0268-missing-number](https://github.com/MansiNaxine/LeetCode/tree/master/0268-missing-number) |
+| [0305-number-of-islands-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0305-number-of-islands-ii) |
 | [0340-longest-substring-with-at-most-k-distinct-characters](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0340-longest-substring-with-at-most-k-distinct-characters) |
 | [0424-longest-repeating-character-replacement](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0424-longest-repeating-character-replacement) |
 | [0442-find-all-duplicates-in-an-array](https://github.com/MansiNaxine/LeetCode/tree/master/0442-find-all-duplicates-in-an-array) |
@@ -934,6 +936,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0130-surrounded-regions](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0200-number-of-islands) |
+| [0305-number-of-islands-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0305-number-of-islands-ii) |
 | [0547-number-of-provinces](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0547-number-of-provinces) |
 | [0721-accounts-merge](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0721-accounts-merge) |
 | [0785-is-graph-bipartite](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0785-is-graph-bipartite) |
