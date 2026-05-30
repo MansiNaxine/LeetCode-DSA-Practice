@@ -83,6 +83,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0645-set-mismatch](https://github.com/MansiNaxine/LeetCode/tree/master/0645-set-mismatch) |
 | [0704-binary-search](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0704-binary-search) |
 | [0713-subarray-product-less-than-k](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0713-subarray-product-less-than-k) |
+| [0721-accounts-merge](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0721-accounts-merge) |
 | [0724-find-pivot-index](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0724-find-pivot-index) |
 | [0733-flood-fill](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0733-flood-fill) |
 | [0735-asteroid-collision](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0735-asteroid-collision) |
@@ -328,6 +329,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0560-subarray-sum-equals-k](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0560-subarray-sum-equals-k) |
 | [0645-set-mismatch](https://github.com/MansiNaxine/LeetCode/tree/master/0645-set-mismatch) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0653-two-sum-iv-input-is-a-bst) |
+| [0721-accounts-merge](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0721-accounts-merge) |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0863-all-nodes-distance-k-in-binary-tree) |
 | [0930-binary-subarrays-with-sum](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0930-binary-subarrays-with-sum) |
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0947-most-stones-removed-with-same-row-or-column) |
@@ -382,6 +384,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0455-assign-cookies](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0455-assign-cookies) |
 | [0581-shortest-unsorted-continuous-subarray](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0581-shortest-unsorted-continuous-subarray) |
 | [0645-set-mismatch](https://github.com/MansiNaxine/LeetCode/tree/master/0645-set-mismatch) |
+| [0721-accounts-merge](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0721-accounts-merge) |
 | [0948-sort-an-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0948-sort-an-array) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1019-squares-of-a-sorted-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1019-squares-of-a-sorted-array) |
@@ -468,6 +471,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0557-reverse-words-in-a-string-iii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0557-reverse-words-in-a-string-iii) |
 | [0647-palindromic-substrings](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0647-palindromic-substrings) |
 | [0680-valid-palindrome-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0680-valid-palindrome-ii) |
+| [0721-accounts-merge](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0721-accounts-merge) |
 | [0727-minimum-window-subsequence](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0727-minimum-window-subsequence) |
 | [0874-backspace-string-compare](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0874-backspace-string-compare) |
 | [0957-minimum-add-to-make-parentheses-valid](https://github.com/MansiNaxine/LeetCode/tree/master/0957-minimum-add-to-make-parentheses-valid) |
@@ -678,6 +682,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0637-average-of-levels-in-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/0637-average-of-levels-in-binary-tree) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0662-maximum-width-of-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0662-maximum-width-of-binary-tree) |
+| [0721-accounts-merge](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0721-accounts-merge) |
 | [0733-flood-fill](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0733-flood-fill) |
 | [0785-is-graph-bipartite](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0785-is-graph-bipartite) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0787-cheapest-flights-within-k-stops) |
@@ -773,6 +778,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0637-average-of-levels-in-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/0637-average-of-levels-in-binary-tree) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0662-maximum-width-of-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0662-maximum-width-of-binary-tree) |
+| [0721-accounts-merge](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0721-accounts-merge) |
 | [0733-flood-fill](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0733-flood-fill) |
 | [0785-is-graph-bipartite](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0785-is-graph-bipartite) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0787-cheapest-flights-within-k-stops) |
@@ -929,6 +935,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0130-surrounded-regions](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0130-surrounded-regions) |
 | [0200-number-of-islands](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0200-number-of-islands) |
 | [0547-number-of-provinces](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0547-number-of-provinces) |
+| [0721-accounts-merge](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0721-accounts-merge) |
 | [0785-is-graph-bipartite](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0785-is-graph-bipartite) |
 | [0947-most-stones-removed-with-same-row-or-column](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0947-most-stones-removed-with-same-row-or-column) |
 | [1020-number-of-enclaves](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1020-number-of-enclaves) |
