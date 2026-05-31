@@ -218,6 +218,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0042-trapping-rain-water](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0042-trapping-rain-water) |
 | [0053-maximum-subarray](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0053-maximum-subarray) |
 | [0055-jump-game](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0055-jump-game) |
+| [0070-climbing-stairs](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0070-climbing-stairs) |
 | [0085-maximal-rectangle](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0085-maximal-rectangle) |
 | [0118-pascals-triangle](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0118-pascals-triangle) |
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0121-best-time-to-buy-and-sell-stock) |
@@ -276,6 +277,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0048-rotate-image](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0048-rotate-image) |
 | [0050-powx-n](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0050-powx-n) |
 | [0069-sqrtx](https://github.com/MansiNaxine/LeetCode/tree/master/0069-sqrtx) |
+| [0070-climbing-stairs](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0070-climbing-stairs) |
 | [0150-evaluate-reverse-polish-notation](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0150-evaluate-reverse-polish-notation) |
 | [0189-rotate-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0189-rotate-array) |
 | [0202-happy-number](https://github.com/MansiNaxine/LeetCode/tree/master/0202-happy-number) |
@@ -963,4 +965,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [1192-critical-connections-in-a-network](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1192-critical-connections-in-a-network) |
+## Memoization
+|  |
+| ------- |
+| [0070-climbing-stairs](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0070-climbing-stairs) |
 <!---LeetCode Topics End-->
