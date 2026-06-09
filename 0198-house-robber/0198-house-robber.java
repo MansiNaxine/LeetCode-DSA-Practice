@@ -12,7 +12,26 @@ class Solution {
         // return memoRecursion(nums, n - 1, dp);
 
         //TBAULATION - Space Complexity Optimization
-        return dpTabulation(nums, n, dp);
+        // return dpTabulation(nums, n, dp);
+
+        //More optimized way with constant time complexity
+        return tabulationOptimizeSpaceCom(nums, n);
+    }
+
+    public int tabulationOptimizeSpaceCom(int[] nums, int n) {
+        int prev = nums[0];
+        int prev1 = 0;
+
+        for(int i = 1; i < n; i++) {
+            int last = nums[i] + prev1;
+            int sLast = prev;
+
+            int currSum = Math.max(last, sLast);
+            prev1 = prev;
+            prev = currSum;
+        }
+
+        return prev;
     }
 
     public int dpTabulation(int[] nums, int n, int[] dp) {
