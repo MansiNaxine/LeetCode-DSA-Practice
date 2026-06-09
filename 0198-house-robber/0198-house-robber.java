@@ -9,7 +9,25 @@ class Solution {
         //Solve using Memoization (1D array)
         int[] dp = new int[n];
         Arrays.fill(dp, -1);
-        return memoRecursion(nums, n - 1, dp);
+        // return memoRecursion(nums, n - 1, dp);
+
+        //TBAULATION - Space Complexity Optimization
+        return dpTabulation(nums, n, dp);
+    }
+
+    public int dpTabulation(int[] nums, int n, int[] dp) {
+        //base case
+        dp[0] = nums[0];
+
+        for(int i = 1; i < n; i++) {
+            int last = nums[i] + ((i - 2 >= 0) ? dp[i - 2] : 0);
+            int secLast = dp[i - 1];
+
+            dp[i] = Math.max(last, secLast);
+
+        }
+
+        return dp[n - 1];
     }
 
     public int recursion(int[] nums, int n) {
