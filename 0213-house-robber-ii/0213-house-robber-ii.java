@@ -43,17 +43,33 @@ class Solution {
     }
 
     public int tabulationMinSpcaComp(int[] nums, int[] dp) {
-        dp[0] = nums[0];
+        // dp[0] = nums[0];
+        // int n = nums.length;
+
+        // for(int i = 1; i < n; i++) {
+        //     int left = nums[i] + ((i - 2) >= 0 ? dp[i - 2] : 0);
+        //     int right = dp[i - 1];
+
+        //     dp[i] = Math.max(left, right);
+        // }
+
+        // return dp[n - 1];
+
+        int prev = nums[0];
+        int prev1 = 0;
         int n = nums.length;
 
         for(int i = 1; i < n; i++) {
-            int left = nums[i] + ((i - 2) >= 0 ? dp[i - 2] : 0);
-            int right = dp[i - 1];
+            int left = nums[i] + prev1;
+            int right = prev;
 
-            dp[i] = Math.max(left, right);
+            int currI = Math.max(left, right);
+            prev1 = prev;
+            prev = currI;
         }
 
-        return dp[n - 1];
+        return prev;
+
     }
 
     public int memoization(int[] nums, int index, int[] dp) {
