@@ -31,10 +31,29 @@ class Solution {
         int[] dp2 = new int[ind2];
         Arrays.fill(dp2, -1);
 
-        int ans1 = memoization(arr1, ind1 - 1, dp1);
-        int ans2 = memoization(arr2, ind2 - 1, dp2);
+        // int ans1 = memoization(arr1, ind1 - 1, dp1);
+        // int ans2 = memoization(arr2, ind2 - 1, dp2);
 
-        return Math.max(ans1, ans2);
+        // return Math.max(ans1, ans2);
+
+         int ans1 = tabulationMinSpcaComp(arr1, dp1);
+         int ans2 = tabulationMinSpcaComp(arr2, dp2);
+
+         return Math.max(ans1, ans2);
+    }
+
+    public int tabulationMinSpcaComp(int[] nums, int[] dp) {
+        dp[0] = nums[0];
+        int n = nums.length;
+
+        for(int i = 1; i < n; i++) {
+            int left = nums[i] + ((i - 2) >= 0 ? dp[i - 2] : 0);
+            int right = dp[i - 1];
+
+            dp[i] = Math.max(left, right);
+        }
+
+        return dp[n - 1];
     }
 
     public int memoization(int[] nums, int index, int[] dp) {
@@ -52,15 +71,15 @@ class Solution {
     }
 
     //Time Limit Exceeded
-    // public int basicRecursion(int[] nums, int index) {
-    //     //base case
-    //     if(index == 0) return nums[index];
-    //     if(index < 0) return 0;
+    public int basicRecursion(int[] nums, int index) {
+        //base case
+        if(index == 0) return nums[index];
+        if(index < 0) return 0;
 
-    //     //recursive case
-    //     int left = nums[index] + basicRecursion(nums, index - 2);
-    //     int right = basicRecursion(nums, index - 1);
+        //recursive case
+        int left = nums[index] + basicRecursion(nums, index - 2);
+        int right = basicRecursion(nums, index - 1);
 
-    //     return Math.max(left, right);
-    // }
+        return Math.max(left, right);
+    }
 }
