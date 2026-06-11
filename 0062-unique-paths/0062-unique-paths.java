@@ -13,7 +13,26 @@ class Solution {
         // return memoRecursion(dp, row, col);
 
         //Cut down to Spcae Complexity -- avoid unnecessary Recursive space
-        return tabulationDP(dp, m, n);
+        // return tabulationDP(dp, m, n);
+
+        //We can cut down to more space optimization
+        int[] dps = new int[n];
+        return tabulationMoreSpcaeOpti(dps, m, n);
+    }
+
+    public int tabulationMoreSpcaeOpti(int[] dp, int m, int n) {
+        dp[0] = 1;
+
+        for(int i = 0; i < m ; i++) {
+            int temp[] = new int[n];
+            for(int j = 0; j < n; j++) {
+                temp[j] = dp[j] + ((j > 0) ? temp[j - 1] : 0);
+            }
+
+            dp = temp;
+        }
+
+        return dp[n - 1];
     }
 
     public int tabulationDP(int[][] dp, int row, int col) {
