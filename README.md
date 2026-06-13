@@ -125,6 +125,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1423-maximum-points-you-can-obtain-from-cards](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1423-maximum-points-you-can-obtain-from-cards) |
 | [1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1445-number-of-sub-arrays-of-size-k-and-average-greater-than-or-equal-to-threshold) |
 | [1458-sort-integers-by-the-number-of-1-bits](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1458-sort-integers-by-the-number-of-1-bits) |
+| [1463-cherry-pickup-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1463-cherry-pickup-ii) |
 | [1482-how-many-numbers-are-smaller-than-the-current-number](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1482-how-many-numbers-are-smaller-than-the-current-number) |
 | [1482-minimum-number-of-days-to-make-m-bouquets](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1482-minimum-number-of-days-to-make-m-bouquets) |
 | [1505-create-target-array-in-the-given-order](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1505-create-target-array-in-the-given-order) |
@@ -174,6 +175,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1020-number-of-enclaves](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1020-number-of-enclaves) |
 | [1036-rotting-oranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1036-rotting-oranges) |
 | [1091-shortest-path-in-binary-matrix](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1091-shortest-path-in-binary-matrix) |
+| [1463-cherry-pickup-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1463-cherry-pickup-ii) |
 | [1631-path-with-minimum-effort](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1631-path-with-minimum-effort) |
 | [1791-richest-customer-wealth](https://github.com/MansiNaxine/LeetCode/tree/master/1791-richest-customer-wealth) |
 | [1901-find-a-peak-element-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1901-find-a-peak-element-ii) |
@@ -247,6 +249,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0787-cheapest-flights-within-k-stops](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0907-sum-of-subarray-minimums](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0907-sum-of-subarray-minimums) |
 | [1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
+| [1463-cherry-pickup-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1463-cherry-pickup-ii) |
 | [1976-number-of-ways-to-arrive-at-destination](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1976-number-of-ways-to-arrive-at-destination) |
 ## Greedy
 |  |
