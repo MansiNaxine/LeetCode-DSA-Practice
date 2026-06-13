@@ -12,7 +12,28 @@ class Solution {
         // return memoRecursion(obstacleGrid, n - 1, m - 1, dp);
 
         //Optimal Solution - TABULATION
-        return tabulationAns(obstacleGrid, n, m,  dp);
+        // return tabulationAns(obstacleGrid, n, m,  dp);
+
+        //In tabulation itself more space optimization
+        int[] dpT = new int[m];
+        return tabuMoreSpaceOpti(obstacleGrid, n, m, dpT);
+
+    }
+
+    public int tabuMoreSpaceOpti(int[][] obstacleGrid, int n, int m, int[] dp) {
+        //base case
+        dp[0] = 1;
+
+        for(int i = 0; i < n; i++) {
+            int[] temp = new int[m];
+            for(int j = 0 ; j < m; j++) {
+                if(obstacleGrid[i][j] == 1) temp[j] = 0;
+                else temp[j] = ((j > 0) ? temp[j - 1] : 0) + dp[j];
+            }
+            dp = temp;
+        }
+
+        return dp[m - 1];
     }
 
     public int tabulationAns(int[][] obstacleGrid, int n, int m, int[][] dp) {
