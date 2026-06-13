@@ -8,8 +8,33 @@ class Solution {
 
         //better Solution
         //MEMOIZATION
-        int[][] dp = new int[n][m];
-        return (int)memoRecursion(grid, n - 1, m - 1, dp);
+         int[][] dp = new int[n][m];
+        // return (int)memoRecursion(grid, n - 1, m - 1, dp);
+
+        //MOST OPTIMAL SOLUTION
+        //TABULATION
+        long[][] dpL = new long[n][m];
+        return tabulation(grid, dpL, n, m);
+    }
+
+    public int tabulation(int[][] grid, long[][] dp, int row, int col) {
+        //base case
+        dp[0][0] = grid[0][0];
+
+        //expose all indexes in the form of loops
+        for(int i = 0; i < row; i++) {
+            for(int j = 0; j < col; j++) {
+                if(i == 0 && j == 0) continue;
+                else {
+                    long up = (long)(grid[i][j] + ((i > 0) ? dp[i - 1][j] : Integer.MAX_VALUE));
+                    long left = (long)(grid[i][j] + ((j > 0) ? dp[i][j - 1] : Integer.MAX_VALUE));
+
+                    dp[i][j] = Math.min(up, left);
+                }
+            }
+        }
+
+        return (int)dp[row - 1][col - 1];
     }
 
     public long memoRecursion(int[][] grid, int row, int col, int[][] dp) {
