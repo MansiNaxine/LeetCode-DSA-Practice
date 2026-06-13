@@ -33,10 +33,6 @@ class Solution {
             }
         }
 
-        for(int[] num : dp) {
-            System.out.println(Arrays.toString(num));
-        }
-
         return dp[0][0];
     }
 
