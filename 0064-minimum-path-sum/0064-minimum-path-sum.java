@@ -13,8 +13,31 @@ class Solution {
 
         //MOST OPTIMAL SOLUTION
         //TABULATION
-        long[][] dpL = new long[n][m];
-        return tabulation(grid, dpL, n, m);
+        // long[][] dpL = new long[n][m];
+        // return tabulation(grid, dpL, n, m);
+
+        long[] dpN = new long[m];
+        return tabulationSpaceOpti(grid, dpN, n, m);
+    }
+
+    public int tabulationSpaceOpti(int[][] grid, long[] dp, int row, int col) {
+        dp[0] = grid[0][0];
+
+        for(int i = 0; i < row; i++) {
+            long temp[] = new long[col];
+            long min = Integer.MAX_VALUE;
+            for(int j = 0; j < col; j++) {
+                if(i == 0 && j == 0) temp[0] = dp[0];
+                else {
+                    long val1 = (long)(grid[i][j] + ((j > 0) ? temp[j - 1] : Integer.MAX_VALUE ));
+                    long val2 = (i > 0) ? (long)(grid[i][j] + dp[j]) : Integer.MAX_VALUE;
+                    temp[j] = Math.min(val1, val2);
+                }
+            }
+            dp = temp;
+        }
+
+        return (int)dp[col - 1];
     }
 
     public int tabulation(int[][] grid, long[][] dp, int row, int col) {
