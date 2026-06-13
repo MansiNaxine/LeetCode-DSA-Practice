@@ -9,7 +9,32 @@ class Solution {
 
         //Next best approach will be MEMOIZATION
         int[][] dp = new int[n][m];
-        return memoRecursion(obstacleGrid, n - 1, m - 1, dp);
+        // return memoRecursion(obstacleGrid, n - 1, m - 1, dp);
+
+        //Optimal Solution - TABULATION
+        return tabulationAns(obstacleGrid, n, m,  dp);
+    }
+
+    public int tabulationAns(int[][] obstacleGrid, int n, int m, int[][] dp) {
+        //first write down all the base cases
+        dp[0][0] = 1;
+
+        //Expose all indexes in a form of loop
+        for(int i = 0; i < n; i++) {
+            for(int j = 0 ; j < m; j++) {
+                if(i == 0 && j == 0) continue;
+                else {
+                    int up = 0;
+                    int left = 0;
+                    if(i > 0) up = (obstacleGrid[i - 1][j] == 1) ? 0 : dp[i - 1][j];
+                    if(j > 0) left = (obstacleGrid[i][j - 1] == 1) ? 0 : dp[i][j - 1];
+
+                    dp[i][j] = up + left;
+                }
+            }
+        }
+
+        return dp[n - 1][m - 1];
     }
 
     public int memoRecursion(int[][] obstacleGrid , int row, int col, int[][] dp) {
