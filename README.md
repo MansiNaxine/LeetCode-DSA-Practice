@@ -75,6 +75,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0304-range-sum-query-2d-immutable](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0304-range-sum-query-2d-immutable) |
 | [0305-number-of-islands-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0305-number-of-islands-ii) |
 | [0410-split-array-largest-sum](https://github.com/MansiNaxine/LeetCode/tree/master/0410-split-array-largest-sum) |
+| [0416-partition-equal-subset-sum](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0416-partition-equal-subset-sum) |
 | [0435-non-overlapping-intervals](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0435-non-overlapping-intervals) |
 | [0442-find-all-duplicates-in-an-array](https://github.com/MansiNaxine/LeetCode/tree/master/0442-find-all-duplicates-in-an-array) |
 | [0448-find-all-numbers-disappeared-in-an-array](https://github.com/MansiNaxine/LeetCode/tree/master/0448-find-all-numbers-disappeared-in-an-array) |
@@ -242,6 +243,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0213-house-robber-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0213-house-robber-ii) |
 | [0338-counting-bits](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0338-counting-bits) |
 | [0410-split-array-largest-sum](https://github.com/MansiNaxine/LeetCode/tree/master/0410-split-array-largest-sum) |
+| [0416-partition-equal-subset-sum](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0416-partition-equal-subset-sum) |
 | [0435-non-overlapping-intervals](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0435-non-overlapping-intervals) |
 | [0542-01-matrix](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0542-01-matrix) |
 | [0647-palindromic-substrings](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0647-palindromic-substrings) |
