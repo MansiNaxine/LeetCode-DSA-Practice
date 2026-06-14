@@ -18,7 +18,32 @@ class Solution {
         // return memoRecursion(nums, n - 1, sum, dp);
 
         //TBAULATION
-        return tabulationSol(nums, n, sum, dp);
+        // return tabulationSol(nums, n, sum, dp);
+
+        //More Space optimization
+        return moreSpaceOptimal(nums, n, sum, totalSum);
+    }
+
+    public boolean moreSpaceOptimal(int[] nums, int n, int target, int totalSum) {
+        boolean[] prev = new boolean[totalSum + 1];
+        prev[0] = true;
+        prev[nums[0]] = true;
+
+        for(int i = 1; i < n; i++) {
+            boolean[] curr = new boolean[totalSum + 1];
+            curr[0] = true;
+            for(int t = 1; t <= target; t++) {
+                boolean take = false;
+                if(nums[i] <= t) take = prev[t - nums[i]];
+                boolean notTake = prev[t];
+
+                curr[t] = take || notTake;
+            }
+            prev = curr;
+        }
+
+        return prev[target];
+
     }
 
     public boolean tabulationSol(int[] nums, int n, int target, boolean[][] dp) {
