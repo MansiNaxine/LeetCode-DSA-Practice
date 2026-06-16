@@ -74,6 +74,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0303-range-sum-query-immutable](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0303-range-sum-query-immutable) |
 | [0304-range-sum-query-2d-immutable](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0304-range-sum-query-2d-immutable) |
 | [0305-number-of-islands-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0305-number-of-islands-ii) |
+| [0322-coin-change](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0322-coin-change) |
 | [0410-split-array-largest-sum](https://github.com/MansiNaxine/LeetCode/tree/master/0410-split-array-largest-sum) |
 | [0416-partition-equal-subset-sum](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0416-partition-equal-subset-sum) |
 | [0435-non-overlapping-intervals](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0435-non-overlapping-intervals) |
@@ -241,6 +242,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0152-maximum-product-subarray](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0152-maximum-product-subarray) |
 | [0198-house-robber](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0198-house-robber) |
 | [0213-house-robber-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0213-house-robber-ii) |
+| [0322-coin-change](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0322-coin-change) |
 | [0338-counting-bits](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0338-counting-bits) |
 | [0410-split-array-largest-sum](https://github.com/MansiNaxine/LeetCode/tree/master/0410-split-array-largest-sum) |
 | [0416-partition-equal-subset-sum](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0416-partition-equal-subset-sum) |
@@ -700,6 +702,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0207-course-schedule](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0207-course-schedule) |
 | [0210-course-schedule-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0210-course-schedule-ii) |
 | [0226-invert-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/0226-invert-binary-tree) |
+| [0322-coin-change](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0322-coin-change) |
 | [0542-01-matrix](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0542-01-matrix) |
 | [0547-number-of-provinces](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0547-number-of-provinces) |
 | [0637-average-of-levels-in-binary-tree](https://github.com/MansiNaxine/LeetCode/tree/master/0637-average-of-levels-in-binary-tree) |
