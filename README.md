@@ -250,6 +250,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0416-partition-equal-subset-sum](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0416-partition-equal-subset-sum) |
 | [0435-non-overlapping-intervals](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0435-non-overlapping-intervals) |
 | [0494-target-sum](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0494-target-sum) |
+| [0516-longest-palindromic-subsequence](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0516-longest-palindromic-subsequence) |
 | [0518-coin-change-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0518-coin-change-ii) |
 | [0542-01-matrix](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0542-01-matrix) |
 | [0647-palindromic-substrings](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0647-palindromic-substrings) |
@@ -498,6 +499,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0402-remove-k-digits](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0402-remove-k-digits) |
 | [0424-longest-repeating-character-replacement](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0424-longest-repeating-character-replacement) |
 | [0451-sort-characters-by-frequency](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0451-sort-characters-by-frequency) |
+| [0516-longest-palindromic-subsequence](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0516-longest-palindromic-subsequence) |
 | [0557-reverse-words-in-a-string-iii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0557-reverse-words-in-a-string-iii) |
 | [0647-palindromic-substrings](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0647-palindromic-substrings) |
 | [0680-valid-palindrome-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0680-valid-palindrome-ii) |
