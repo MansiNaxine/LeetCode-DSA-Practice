@@ -10,10 +10,10 @@ class Solution {
 
         //Memoization
         int[][] dp = new int[n + 1][m + 1];
-        int ans = meomRecursion(word1, word2, n, m, dp);
+        // int ans = meomRecursion(word1, word2, n, m, dp);
 
         //tabulation
-        // int ans = tabulation(word1, word2, n, m, dp);
+        int ans = tabulation(word1, word2, n, m, dp);
         return totalLen - (2 * ans);
     }
 
