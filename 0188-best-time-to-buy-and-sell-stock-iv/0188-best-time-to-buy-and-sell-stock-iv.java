@@ -6,10 +6,10 @@ class Solution {
         // return recursion(prices, n, 0, 1, k);
 
          int[][][] dp = new int[n + 1][2][k + 1];
-         return memoRecursion(prices, n, 0, 1, k, dp);
+        //  return memoRecursion(prices, n, 0, 1, k, dp);
 
         //TABULATION
-        // return tabulation(prices, n, dp);
+         return tabulation(prices, n, dp, k);
 
         // return spaceOptimalSolution(prices, n);
     }
@@ -31,17 +31,17 @@ class Solution {
         return ahead[1][2];
     }
 
-    public int tabulation(int[] prices, int n, int[][][] dp) {
+    public int tabulation(int[] prices, int n, int[][][] dp, int k) {
         for(int i = n - 1; i >= 0; i--) {
             for(int j = 0; j < 2; j++) {
-                for(int o = 1; o < 3; o++) {
+                for(int o = 1; o <= k; o++) {
                     if(j == 1) dp[i][j][o] = Math.max((-prices[i] + dp[i + 1][0][o]) , dp[i + 1][1][o]);
                     else  dp[i][j][o] = Math.max((prices[i] + dp[i + 1][1][o - 1]) , dp[i + 1][0][o]);
                 }
             }
         }
 
-        return dp[0][1][2];
+        return dp[0][1][k];
     }
 
     public int memoRecursion(int[] prices, int n, int index, int buy, int operation, int[][][] dp) {
