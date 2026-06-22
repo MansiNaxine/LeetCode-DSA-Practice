@@ -9,18 +9,18 @@ class Solution {
         //  return memoRecursion(prices, n, 0, 1, k, dp);
 
         //TABULATION
-         return tabulation(prices, n, dp, k);
+        //  return tabulation(prices, n, dp, k);
 
-        // return spaceOptimalSolution(prices, n);
+        return spaceOptimalSolution(prices, n, k);
     }
 
-    public int spaceOptimalSolution(int[] prices, int n) {
-        int[][] ahead = new int[2][3];
+    public int spaceOptimalSolution(int[] prices, int n, int k) {
+        int[][] ahead = new int[2][k + 1];
 
         for(int i = n - 1; i >= 0; i--) {
-            int[][] curr = new int[2][3];
+            int[][] curr = new int[2][k + 1];
             for(int j = 0; j < 2; j++) {
-                for(int o = 1; o < 3; o++) {
+                for(int o = 1; o <= k; o++) {
                     if(j == 1) curr[j][o] = Math.max((-prices[i] + ahead[0][o]) , ahead[1][o]);
                     else  curr[j][o] = Math.max((prices[i] + ahead[1][o - 1]) , ahead[0][o]);
                 }
@@ -28,7 +28,7 @@ class Solution {
             ahead = curr;
         }
 
-        return ahead[1][2];
+        return ahead[1][k];
     }
 
     public int tabulation(int[] prices, int n, int[][][] dp, int k) {
