@@ -8,19 +8,19 @@ class Solution {
         int[][] dp = new int[n + 1][2];
         // return memoRecursion(prices, 0, 1, n, dp, fee);
 
-        return tabulation(prices, n, dp, fee);
+        // return tabulation(prices, n, dp, fee);
 
         //return space Optimization
-        // return spaceOptimalsolution(prices, n);
+        return spaceOptimalsolution(prices, n, fee);
     }
 
-    public int spaceOptimalsolution(int[] prices, int n) {
+    public int spaceOptimalsolution(int[] prices, int n, int fee) {
         int[] ahead = new int[2];
 
         for(int i = n - 1; i >= 0; i--) {
             int[] curr = new int[2];
             for(int j = 0; j <= 1; j++) {
-                if(j == 1) curr[j] = Math.max((-prices[i] + ahead[0]), ahead[1]);
+                if(j == 1) curr[j] = Math.max((-prices[i] - fee + ahead[0]), ahead[1]);
                 else curr[j] = Math.max((prices[i] + ahead[1]), ahead[0]);
             }
 
