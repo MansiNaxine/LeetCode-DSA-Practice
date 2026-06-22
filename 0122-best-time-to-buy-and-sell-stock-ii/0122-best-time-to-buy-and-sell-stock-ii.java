@@ -8,7 +8,27 @@ class Solution {
         int[][] dp = new int[n + 1][2];
         //return memoRecursion(prices, 0, 1, n, dp);
 
-        return tabulation(prices, n, dp);
+        // return tabulation(prices, n, dp);
+
+        //return space Optimization
+        return spaceOptimalsolution(prices, n);
+    }
+
+    public int spaceOptimalsolution(int[] prices, int n) {
+        int[] ahead = new int[2];
+
+        for(int i = n - 1; i >= 0; i--) {
+            int[] curr = new int[2];
+            for(int j = 0; j <= 1; j++) {
+                if(j == 1) curr[j] = Math.max((-prices[i] + ahead[0]), ahead[1]);
+                else curr[j] = Math.max((prices[i] + ahead[1]), ahead[0]);
+            }
+
+            ahead = curr;
+        }
+
+        return ahead[1];
+
     }
 
     public int tabulation(int[] prices, int n, int[][] dp) {
