@@ -20,14 +20,6 @@ class Solution {
     }
 
     public int tabulation(String s1, String s2, int n, int m, int[][] dp) {
-        //when i = 0
-        for(int j = 0 ; j <= m; j++) {
-            dp[0][j] = 0;
-        }
-
-        for(int i = 0 ; i <= n; i++) {
-            dp[i][0] = 0;
-        }
 
         for(int i = 1; i <= n; i++) {
             for(int j = 1; j<= m; j++) {
