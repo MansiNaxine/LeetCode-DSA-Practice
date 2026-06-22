@@ -9,7 +9,26 @@ class Solution {
         // return memoRecursion(prices, n, 0, 1, 2, dp);
 
         //TABULATION
-        return tabulation(prices, n, dp);
+        // return tabulation(prices, n, dp);
+
+        return spaceOptimalSolution(prices, n);
+    }
+
+    public int spaceOptimalSolution(int[] prices, int n) {
+        int[][] ahead = new int[2][3];
+
+        for(int i = n - 1; i >= 0; i--) {
+            int[][] curr = new int[2][3];
+            for(int j = 0; j < 2; j++) {
+                for(int o = 1; o < 3; o++) {
+                    if(j == 1) curr[j][o] = Math.max((-prices[i] + ahead[0][o]) , ahead[1][o]);
+                    else  curr[j][o] = Math.max((prices[i] + ahead[1][o - 1]) , ahead[0][o]);
+                }
+            }
+            ahead = curr;
+        }
+
+        return ahead[1][2];
     }
 
     public int tabulation(int[] prices, int n, int[][][] dp) {
