@@ -126,6 +126,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1036-rotting-oranges](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1036-rotting-oranges) |
 | [1039-find-the-town-judge](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1039-find-the-town-judge) |
 | [1046-max-consecutive-ones-iii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1046-max-consecutive-ones-iii) |
+| [1048-longest-string-chain](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1048-longest-string-chain) |
 | [1055-pairs-of-songs-with-total-durations-divisible-by-60](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1055-pairs-of-songs-with-total-durations-divisible-by-60) |
 | [1091-shortest-path-in-binary-matrix](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1091-shortest-path-in-binary-matrix) |
 | [1248-count-number-of-nice-subarrays](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1248-count-number-of-nice-subarrays) |
@@ -276,6 +277,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0727-minimum-window-subsequence](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0727-minimum-window-subsequence) |
 | [0787-cheapest-flights-within-k-stops](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0787-cheapest-flights-within-k-stops) |
 | [0907-sum-of-subarray-minimums](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0907-sum-of-subarray-minimums) |
+| [1048-longest-string-chain](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1048-longest-string-chain) |
 | [1092-shortest-common-supersequence](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1092-shortest-common-supersequence) |
 | [1143-longest-common-subsequence](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1143-longest-common-subsequence) |
 | [1312-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1312-minimum-insertion-steps-to-make-a-string-palindrome) |
@@ -393,6 +395,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0992-subarrays-with-k-different-integers](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0992-subarrays-with-k-different-integers) |
 | [1016-subarray-sums-divisible-by-k](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1016-subarray-sums-divisible-by-k) |
 | [1039-find-the-town-judge](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1039-find-the-town-judge) |
+| [1048-longest-string-chain](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1048-longest-string-chain) |
 | [1055-pairs-of-songs-with-total-durations-divisible-by-60](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1055-pairs-of-songs-with-total-durations-divisible-by-60) |
 | [1248-count-number-of-nice-subarrays](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1248-count-number-of-nice-subarrays) |
 | [1358-number-of-substrings-containing-all-three-characters](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1358-number-of-substrings-containing-all-three-characters) |
@@ -445,6 +448,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0948-sort-an-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0948-sort-an-array) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 | [1019-squares-of-a-sorted-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1019-squares-of-a-sorted-array) |
+| [1048-longest-string-chain](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1048-longest-string-chain) |
 | [1458-sort-integers-by-the-number-of-1-bits](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1458-sort-integers-by-the-number-of-1-bits) |
 | [1482-how-many-numbers-are-smaller-than-the-current-number](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1482-how-many-numbers-are-smaller-than-the-current-number) |
 ## Two Pointers
@@ -485,6 +489,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0876-middle-of-the-linked-list](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0876-middle-of-the-linked-list) |
 | [0908-middle-of-the-linked-list](https://github.com/MansiNaxine/LeetCode/tree/master/0908-middle-of-the-linked-list) |
 | [1019-squares-of-a-sorted-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1019-squares-of-a-sorted-array) |
+| [1048-longest-string-chain](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1048-longest-string-chain) |
 | [2095-delete-the-middle-node-of-a-linked-list](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2095-delete-the-middle-node-of-a-linked-list) |
 | [2149-rearrange-array-elements-by-sign](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2149-rearrange-array-elements-by-sign) |
 | [2271-rearrange-array-elements-by-sign](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/2271-rearrange-array-elements-by-sign) |
@@ -537,6 +542,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0727-minimum-window-subsequence](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0727-minimum-window-subsequence) |
 | [0874-backspace-string-compare](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/0874-backspace-string-compare) |
 | [0957-minimum-add-to-make-parentheses-valid](https://github.com/MansiNaxine/LeetCode/tree/master/0957-minimum-add-to-make-parentheses-valid) |
+| [1048-longest-string-chain](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1048-longest-string-chain) |
 | [1092-shortest-common-supersequence](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1092-shortest-common-supersequence) |
 | [1128-remove-all-adjacent-duplicates-in-string](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1128-remove-all-adjacent-duplicates-in-string) |
 | [1143-longest-common-subsequence](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1143-longest-common-subsequence) |
