@@ -16,8 +16,27 @@ class Solution {
         // return recursion(1, m, arr);
 
         //MEMOIZATION
-        int[][] dp = new int[m + 1][m + 1];
-        return memoRecursion(1, m, arr, dp);
+        int[][] dp = new int[m + 2][m + 1];
+        // return memoRecursion(1, m, arr, dp);
+
+        //TABULATION
+        return tabulation(m, arr, dp);
+    }
+
+    public int tabulation(int m, List<Integer> arr, int[][] dp) {
+
+        for(int i = m; i >= 1; i--) {
+            for(int j = i; j <= m ; j++) {
+                int min = Integer.MAX_VALUE;
+                for(int index = i; index <= j; index++) {
+                    int cost = arr.get(j + 1) - arr.get(i - 1) + dp[i][index - 1] + dp[index + 1][j];
+                    min = Math.min(cost, min);
+                }
+                dp[i][j] = min;
+            }
+        }
+
+        return dp[1][m];
     }
 
     public int memoRecursion(int i, int j, List<Integer> arr, int[][] dp) {
