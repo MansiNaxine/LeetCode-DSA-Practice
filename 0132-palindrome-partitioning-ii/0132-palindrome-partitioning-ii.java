@@ -14,9 +14,11 @@ class Solution {
         // StringBuilder sb = new StringBuilder(s);
         // if(sb.reverse().toString().equals(s)) return 0;
         // else return tabulation(n, s, dp);
+        
+        // return tabulation(n, s, dp);
     }
 
-    public int tabulation(int n, String s, int[][] dp) {
+    public int tabulation(int n, String s, int[] dp) {
         for(int i = n - 1; i >= 0; i--) {
             for(int j = i + 1; j < n; j++) {
                 if(i >= j || isPalindrome(s.substring(i, j + 1))) continue;
@@ -24,16 +26,16 @@ class Solution {
                     int minPart = 2000;
                     for(int index = i; index <= j; index++) {
                         if(isPalindrome(s.substring(i, index + 1))) {
-                            int partition = 1 + dp[index + 1][j];
+                            int partition = 1 + dp[index + 1];
                             minPart = Math.min(minPart, partition);
                         }
                     }
-                    dp[i][j] = minPart;
+                    dp[i] = minPart;
                 }
             }
         }
 
-        return dp[0][n - 1];
+        return dp[0];
     }
 
     public int memoRecursion(int i, int j, String s, int[][] dp) {
