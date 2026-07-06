@@ -2,12 +2,38 @@ class Solution {
     public int minCut(String s) {
         
         int n = s.length();
+        
         //recursive approach
         // return recursion(0, n - 1, s);
 
         //memoization
-        int[][] dp = new int[n + 1][n + 1];
+        int[][] dp = new int[n + 1][n];
         return memoRecursion(0, n - 1, s, dp);       
+
+        //TABULATION
+        // StringBuilder sb = new StringBuilder(s);
+        // if(sb.reverse().toString().equals(s)) return 0;
+        // else return tabulation(n, s, dp);
+    }
+
+    public int tabulation(int n, String s, int[][] dp) {
+        for(int i = n - 1; i >= 0; i--) {
+            for(int j = i + 1; j < n; j++) {
+                if(i >= j || isPalindrome(s.substring(i, j + 1))) continue;
+                else {
+                    int minPart = 2000;
+                    for(int index = i; index <= j; index++) {
+                        if(isPalindrome(s.substring(i, index + 1))) {
+                            int partition = 1 + dp[index + 1][j];
+                            minPart = Math.min(minPart, partition);
+                        }
+                    }
+                    dp[i][j] = minPart;
+                }
+            }
+        }
+
+        return dp[0][n - 1];
     }
 
     public int memoRecursion(int i, int j, String s, int[][] dp) {
