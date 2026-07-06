@@ -7,7 +7,29 @@ class Solution {
 
         //MEMOIZATION
         int[] dp = new int[n + 1];
-        return memoRecursion(0, n, arr, k, dp);
+        // return memoRecursion(0, n, arr, k, dp);
+
+        //TABULATION
+        return tabulation(n, arr, k, dp);
+    }
+
+    public int tabulation(int n, int[] arr, int k, int[] dp) {
+
+        for(int i = n - 1; i >= 0; i--) {
+            int len = 0;
+            int maxVal = Integer.MIN_VALUE;
+            int maxAns = Integer.MIN_VALUE;
+            for(int index = i; index < Math.min(n , i + k); index++) {
+                len++;
+                maxVal = Math.max(maxVal, arr[index]);
+                int cost = (maxVal * len) + dp[index + 1];
+                maxAns = Math.max(maxAns, cost);
+            }
+
+            dp[i] = maxAns;
+        }
+
+        return dp[0];
     }
 
     public int memoRecursion(int i, int n, int[] arr, int k, int[] dp) {
