@@ -144,6 +144,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1505-create-target-array-in-the-given-order](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1505-create-target-array-in-the-given-order) |
 | [1528-kids-with-the-greatest-number-of-candies](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1528-kids-with-the-greatest-number-of-candies) |
 | [1539-kth-missing-positive-number](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1539-kth-missing-positive-number) |
+| [1547-minimum-cost-to-cut-a-stick](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1547-minimum-cost-to-cut-a-stick) |
 | [1580-shuffle-the-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1580-shuffle-the-array) |
 | [1603-running-sum-of-1d-array](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1603-running-sum-of-1d-array) |
 | [1605-minimum-number-of-days-to-make-m-bouquets](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1605-minimum-number-of-days-to-make-m-bouquets) |
@@ -285,6 +286,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1312-minimum-insertion-steps-to-make-a-string-palindrome](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1312-minimum-insertion-steps-to-make-a-string-palindrome) |
 | [1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1334-find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance) |
 | [1463-cherry-pickup-ii](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1463-cherry-pickup-ii) |
+| [1547-minimum-cost-to-cut-a-stick](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1547-minimum-cost-to-cut-a-stick) |
 | [1976-number-of-ways-to-arrive-at-destination](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1976-number-of-ways-to-arrive-at-destination) |
 ## Greedy
 |  |
@@ -453,6 +455,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [1048-longest-string-chain](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1048-longest-string-chain) |
 | [1458-sort-integers-by-the-number-of-1-bits](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1458-sort-integers-by-the-number-of-1-bits) |
 | [1482-how-many-numbers-are-smaller-than-the-current-number](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1482-how-many-numbers-are-smaller-than-the-current-number) |
+| [1547-minimum-cost-to-cut-a-stick](https://github.com/MansiNaxine/LeetCode-DSA-Practice/tree/master/1547-minimum-cost-to-cut-a-stick) |
 ## Two Pointers
 |  |
 | ------- |
