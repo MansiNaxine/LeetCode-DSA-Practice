@@ -15,8 +15,28 @@ class Solution {
         // return recursion(1, n, list);      
 
         //MEMOIZATION
-        int[][] dp = new int[n + 1][n + 1];
-        return memoRecursion(1, n, list, dp);
+        int[][] dp = new int[n + 2][n + 1];
+        // return memoRecursion(1, n, list, dp);
+
+        //TABULATION
+        return tabulation(n, list, dp);
+
+    }
+
+    public int tabulation(int n, List<Integer> list, int[][] dp) {
+        for(int i = n; i >= 1; i--) {
+            for(int j = i; j <= n; j++) {
+                int maxVal = Integer.MIN_VALUE;
+                for(int index = i; index <= j; index++) {
+                    int cost = list.get(j + 1) * list.get(index) * list.get(i - 1) + dp[i][index - 1] + dp[index + 1][j];
+                    maxVal = Math.max(cost, maxVal);
+                }
+
+                dp[i][j] = maxVal;
+            }
+        }
+
+        return dp[1][n];
     }
 
     public int memoRecursion(int i, int j, List<Integer> list, int[][] dp) {
