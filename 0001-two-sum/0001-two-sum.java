@@ -1,58 +1,43 @@
-import java.util.*;
-
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        
+        // for storing answer
+        int[] ans = new int[2];
+        ans[0] = -100000;
+        ans[1] = -100000;
         int n = nums.length;
-        int nums1[] = Arrays.copyOf(nums, nums.length);
-        Arrays.sort(nums1);
-        return calculateIndices(nums1, target, n, nums);
-    }
+        int[] originArr = new int[nums.length];
 
-    public int[] calculateIndices(int[] nums, int target, int n, int[] nums1) {
-        
-        int[] answer = new int[2];
+        for(int i = 0; i < n; i++) {
+            originArr[i] = nums[i];
+        }
+
+        //Logic
+        //first sort the array
+        Arrays.sort(nums);
+
         int i = 0;
         int j = n - 1;
-        int a = -1;
-        int b = -1;
 
         while(i < j) {
-            int sum = nums[i] + nums[j] ;
-            if(sum == target) {
-                a = nums[i];
-                b = nums[j];
-                break;
-            } 
-            else if (sum < target) {
-                i++;
-            } 
+
+            if(nums[i] + nums[j] < target) i++;
+            else if (nums[i] + nums[j] > target) j--;
             else {
-                j--;
+                ans[0] = i;
+                ans[1] = j;
+                break;
             }
         }
-
-        int startI = -1;
-        for(int k = 0; k < n; k++) {
-            if(a == b) {
-              if(nums1[k] == a) {
-                if(startI < 0) {
-                    startI = k;
-                    answer[0] = startI;
-                } else if (k != startI && startI != -1){
-                    answer[1] = k;
-                }
-              }
-            } 
-            else if(nums1[k] == a) {
-                answer[0] = k;
-            }
-            else if (nums1[k] == b) {
-                answer[1] = k;
-            }
+        
+        int first = -100000;
+        int second = -100000;
+        for(int k = 0 ; k < n; k++) {
+            if(originArr[k] == nums[ans[0]] && first == -100000) first = k;
+            else if(originArr[k] == nums[ans[1]] && second == -100000) second = k;
         }
 
-        return answer;
-
+        ans[0] = first;
+        ans[1] = second;
+        return ans;
     }
 }
