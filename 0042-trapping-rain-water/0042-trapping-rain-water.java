@@ -1,35 +1,55 @@
 class Solution {
     public int trap(int[] height) {
-        
-        //First calculate the prefix sum
-        int pm = Integer.MIN_VALUE;
-        int n = height.length;
-        // int[] pmax = new int[n];
+        //    int n = height.length;
+    //    int[] suffixMax = new int[n];
+    //    suffixMax[n - 1] = height[n - 1];
+    //    int rightMax = height[n - 1];
 
-        // for(int i = 0 ; i < n; i++) {
-        //     pm = Math.max(pm, height[i]);
-        //     pmax[i] = pm;
-        // }
-        
-        //Calculate Suffiox Sum
-        int sm = Integer.MIN_VALUE;
-        int[] smax = new int[n];
-        for(int i = n - 1 ; i >= 0; i--) {
-            sm = Math.max(sm, height[i]);
-            smax[i] = sm;
+
+    //    for(int i = n - 2; i >= 0; i--) {
+    //         if(height[i] > rightMax) {
+    //             rightMax = height[i];
+    //         }
+    //         suffixMax[i] = rightMax;
+    //    }
+
+    //    int leftMax = height[0];
+    //    int area = 0;
+
+    //    for(int i = 1; i < n; i++) {
+    //         int num = height[i];
+    //         if(leftMax > num && suffixMax[i] > num) {
+    //             area += Math.min(leftMax, suffixMax[i]) - height[i];
+    //         }
+
+    //         if(leftMax < num) leftMax = num;
+    //    }
+
+    //    return area;
+
+    int n = height.length;
+    int left = 0;
+    int right = n - 1;
+    int leftMax = 0;
+    int rightMax = 0;
+    int area = 0;
+
+    while(left <= right) {
+        if(leftMax <= rightMax) {
+
+            if(leftMax > height[left]) area += leftMax - height[left];
+            else leftMax = height[left];
+
+            left += 1;
         }
+        else {
+            if(rightMax > height[right]) area += rightMax - height[right];
+            else rightMax = height[right];
 
-        //Calculate the area
-        int area = 0;
-        for(int i = 0; i < n; i++) {
-            pm = Math.max(pm, height[i]);
-            int right = smax[i];
-            if(height[i] < pm && height[i] < right) {
-                int min = Math.min(pm, right);
-                area += (min - height[i]);
-            }
+            right -= 1;
         }
+    }
 
-        return area;
+    return area;
     }
 }
