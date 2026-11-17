@@ -10,59 +10,47 @@
  */
 class Solution {
     public ListNode reverseKGroup(ListNode head, int k) {
-        
-        int cnt = 0;
-        ListNode temp = head;
-        ListNode dummynode = new ListNode(-1);
-        ListNode res = dummynode;
+      ListNode firstHead = null;
         ListNode reverseHead = null;
-        ListNode tail = null;
-        ListNode nextNode = null;
+        ListNode temp = head;
+        ListNode changingHead = temp;
+        ListNode nextHead = null;
+        ListNode finalHead = null;
+        int cnt = 0;
 
         while(temp != null) {
             cnt += 1;
-            if(cnt == 1) tail = temp;
+            nextHead = null;
             if(cnt == k) {
-                nextNode = temp.next;
+                cnt = 0;
+                nextHead = temp.next;
                 temp.next = null;
-                reverseHead = getReverseHead(tail);
-
-                    if(dummynode.next == null) {
-                        res.next = reverseHead;
-                    } else {
-                        res.next = reverseHead;
-                    }
-                        res = tail;
-                        temp = nextNode;
-                        cnt = 0;
+                reverseHead = reverseList(changingHead);
+                if(finalHead == null) finalHead = reverseHead;
+                if(firstHead != null) firstHead.next = reverseHead;
+                firstHead = changingHead;
+                changingHead = nextHead;
             }
-            else {
-                temp = temp.next;
-                if(temp == null && cnt < k) {
-                    res.next = tail;
-                    break;
-                } 
-            }
-
+            temp = nextHead != null ? nextHead : temp.next;
         }
 
-        return dummynode.next;
-        
+        if(cnt < k && firstHead != null) firstHead.next = changingHead;
+
+        return finalHead;
     }
 
-    public ListNode getReverseHead(ListNode head) {
-
+    public ListNode reverseList(ListNode head) {
         ListNode temp = head;
-        ListNode prevNode = null;
-        ListNode nextNode = null;
+        ListNode prev = null;
 
         while(temp != null) {
-            nextNode = temp.next;
-            temp.next = prevNode;
-            prevNode = temp;
-            temp = nextNode;
+            ListNode nH = temp.next;
+            temp.next = prev;
+            prev = temp;
+            temp = nH;
         }
 
-        return prevNode;
+        return prev;
+
     }
 }
