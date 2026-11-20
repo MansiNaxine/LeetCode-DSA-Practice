@@ -20,16 +20,16 @@ class Solution {
     }
 
     public int helperHeight(TreeNode root) {
-        //base case
+         //base case
         if(root == null) return 0;
+
+
         //recursive case
+        int left = helperHeight(root.left);
+        int right = helperHeight(root.right);
 
-        if(Math.abs(helperHeight(root.left) - helperHeight(root.right)) > 1) return -1;
-        else {
-            int left = helperHeight(root.left);
-            int right = helperHeight(root.right);
-
-            return (left == -1 || right == -1) ? -1 : Math.max(left, right) + 1;
-        }
+        
+        if(Math.abs(left - right) > 1) return -1;
+        return (left == -1 || right == -1) ? -1 : Math.max(left, right) + 1;
     }
 }
