@@ -1,49 +1,33 @@
-
-import java.math.BigInteger;
-
 class Solution {
-    public int myAtoi(String s) {
+    long answerNum = 0;
+    public int myAtoi(String input) {
+        // Your code goes here
 
-        StringBuilder sb = new StringBuilder("");
-        boolean neg = false;
-        boolean pos = false;
-        s = s.trim();
-        int i = 0;
-        while(i < s.length()) {
-
-
-            if (s.charAt(i) == '-' && i == 0) neg = true;
-            else if (s.charAt(i) == '+' && i == 0) pos = true;
-            else if (s.charAt(i) == 48 && sb.isEmpty()) {
-                i++;
-                continue;
-            }
-            else if(s.charAt(i) >= 48 && s.charAt(i) <= 57 ) {
-                sb.append(s.charAt(i));
-            }
-            else {
-                if(!sb.isEmpty()) {
-                    String answer = sb.toString();
-                    return returnAnswer(answer, neg);
-                }
-                else return 0;
-             }
-            i++;
+        input = input.trim();
+        if(input.length() == 0) return 0;
+        int zerothChar = input.charAt(0);
+        boolean negative = false;
+        int index = 0;
+        if(zerothChar == '-') {
+            negative = true;
+            index = 1;
         }
+        else if (zerothChar == '+') index = 1;
+        helper(index, input);
 
-        String answer = sb.toString();
-        if(answer.length() == 0) return 0;
-        else return returnAnswer(answer, neg);
-        
+        return negative ? ((int) Math.max(-answerNum, Integer.MIN_VALUE)) : (int) Math.min(answerNum, Integer.MAX_VALUE);
     }
 
-    public int returnAnswer(String answer, boolean neg){
-        if((answer.length() > 10 && !neg) || (!neg && Long.parseLong(answer) > Integer.MAX_VALUE)) return Integer.MAX_VALUE;
-        else if((answer.length() > 10 && neg) || (neg && Long.parseLong(answer) > ((long)Integer.MAX_VALUE + 1))) return Integer.MIN_VALUE;
-        long val = Long.parseLong(answer);
-        int finalAnswer = (int)val;
-        return neg ? -finalAnswer: finalAnswer;
-    }
 
-    
+    public void helper(int index, String input) {
+        //base case
+        if(index >= input.length()) return;
+        if(-answerNum < Integer.MIN_VALUE || answerNum > Integer.MAX_VALUE) return;
+
+        char currCharacter = input.charAt(index);
+        if(currCharacter >= '0' && currCharacter <= '9') {
+            answerNum  = (answerNum * 10) + (int)(currCharacter - '0');
+            helper(index + 1, input);
+        }
+    }
 }
